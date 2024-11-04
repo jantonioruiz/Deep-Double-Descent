@@ -3,8 +3,11 @@ Deep Double Descent is a phenomenon seen in deep learning models where the test 
 
 The aim of this repository is to reproduce and expand on discoveries regarding Deep Double Descent through conducting various experiments on common datasets, serving as a guide for researchers exploring this phenomenon.
 
+The repository is organized as follows:
+
+```plaintext
 deep-double-descent/
-├── experiments/              # Experiments (jupyter notebook)
-├── results/                  # Results obtained from NGPU
+├── experiments/              # Experiment scripts and Jupyter notebooks for analysis
+├── results/                  # Results obtained from experiments (processed on NGPU)
 ├── models/                   # Model definitions and architectures
-├── README.md                 # Project README
+├── README.md                 # Project README and project overview
