@@ -1,6 +1,6 @@
-PWD c:\Users\Juan Antonio\Desktop\ProyectoLaTex
+PWD c:\Users\Juan Antonio\Desktop\GitHub\Deep-Double-Descent\LaTex
 INPUT C:\Users\Juan Antonio\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\Juan Antonio\Desktop\ProyectoLaTex\tfg.tex
+INPUT c:\Users\Juan Antonio\Desktop\GitHub\Deep-Double-Descent\LaTex\tfg.tex
 OUTPUT tfg.log
 INPUT .\ugrTFG.cls
 INPUT ugrTFG.cls

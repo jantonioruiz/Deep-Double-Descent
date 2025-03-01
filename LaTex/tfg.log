@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.14)  23 FEB 2025 20:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.14)  1 MAR 2025 13:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/Juan Antonio/Desktop/ProyectoLaTex/tfg.tex"
-(c:/Users/Juan Antonio/Desktop/ProyectoLaTex/tfg.tex
+**"c:/Users/Juan Antonio/Desktop/GitHub/Deep-Double-Descent/LaTex/tfg.tex"
+(c:/Users/Juan Antonio/Desktop/GitHub/Deep-Double-Descent/LaTex/tfg.tex
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
 (ugrTFG.cls
@@ -2712,14 +2712,14 @@ Package rerunfilecheck Info: File `tfg.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  24124 strings out of 473536
- 428518 string characters out of 5711532
+ 429088 string characters out of 5711532
  983904 words of memory out of 5000000
  45827 multiletter control sequences out of 15000+600000
  815064 words of font info for 681 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 122i,16n,131p,10945b,919s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 122i,16n,131p,10964b,919s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/impallari/cabin/Cabin-Bold.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/impallari/cabin/Cabin-Regular.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/fpl/fplbj8a.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbb.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/fpl/fplrc8a.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/fpl/fplrij8a.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplbi8a.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on tfg.pdf (91 pages, 2028718 bytes).
+Output written on tfg.pdf (91 pages, 2028713 bytes).
 PDF statistics:
  1357 PDF objects out of 1440 (max. 8388607)
  380 named destinations out of 1000 (max. 500000)
