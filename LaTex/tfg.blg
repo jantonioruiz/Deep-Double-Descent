@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: tfg.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: alpha-es.bst
+Reallocating 'name_of_file' (item size: 1) to 12 items.
+Database file #1: library.bib
+Warning--can't use both author and editor fields in Bishop2023
+Warning--empty publisher in Bishop2023
+You've used 56 entries,
+            2543 wiz_defined-function locations,
+            912 strings with 13670 characters,
+and the built_in function-call counts, 21894 in all, are:
+= -- 2025
+> -- 1246
+< -- 34
++ -- 443
+- -- 434
+* -- 1551
+:= -- 3643
+add.period$ -- 163
+call.type$ -- 56
+change.case$ -- 375
+chr.to.int$ -- 56
+cite$ -- 58
+duplicate$ -- 831
+empty$ -- 1571
+format.name$ -- 500
+if$ -- 4434
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 55
+newline$ -- 272
+num.names$ -- 170
+pop$ -- 500
+preamble$ -- 1
+purify$ -- 446
+quote$ -- 0
+skip$ -- 718
+stack$ -- 0
+substring$ -- 828
+swap$ -- 128
+text.length$ -- 34
+text.prefix$ -- 21
+top$ -- 0
+type$ -- 376
+warning$ -- 2
+while$ -- 174
+width$ -- 61
+write$ -- 687
+(There were 2 warnings)

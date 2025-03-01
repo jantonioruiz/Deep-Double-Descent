@@ -1,0 +1,121 @@
+% !TEX program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% Plantilla, basada en la clase `scrbook` del paquete KOMA-script,  para la elaboración de un TFG siguiendo las directrices del la comisión del Grado en Matemáticas de la Universidad de Granada.
+
+% Francisco Torralbo Torralbo
+
+\documentclass[print, color]{ugrTFG}
+
+% VERSIÓN ELECTRÓNICA PARA TABLETA
+% Cambiando la opción "print" por "tablet" generaremos un pdf adaptado para leerlo en tabletas de 9 pulgadas.
+
+% -------------------------------------------------------------------
+% INFORMACIÓN DEL TFG Y EL AUTOR
+% -------------------------------------------------------------------
+
+\newcommand{\miTitulo}{Análisis teórico y empírico del Deep Double Descent\xspace}
+\newcommand{\miNombre}{Juan Antonio Ruiz Arévalo\xspace}
+\newcommand{\miGrado}{Doble Grado en Ingeniería Informática y Matemáticas}
+\newcommand{\miFacultad}{Escuela Técnica Superior de Ingenierías Informática y de Telecomunicación y Facultad de Ciencias}
+\newcommand{\miUniversidad}{Universidad de Granada}
+\newcommand{\misTutores}{\newline Francisco Javier Merí de la Maza \\ Pablo Mesejo Santiago\newline}
+
+% Añadir tantos tutores como sea necesario separando cada uno de ellos mediante el comando `\medskip` y una línea en blanco
+\newcommand{\miTutor}{
+  Francisco Javier Merí de la Maza \\ \emph{Departamento de Análisis Matemático} 
+
+  % Añadir tantos tutores como sea necesario. 
+
+  \medskip
+  Pablo Mesejo Santiago \\ \emph{Departamento de Ciencias de la Computación e Inteligencia Artificial}
+}
+\newcommand{\miCurso}{2024-2025\xspace}
+
+\hypersetup{
+	pdftitle={\miTitulo},
+	pdfauthor={\textcopyright\ \miNombre, \miFacultad, \miUniversidad}
+}
+
+\let\cleardoublepage\clearpage
+
+\usepackage{subcaption}
+
+
+\begin{document}
+
+\maketitle
+
+% -------------------------------------------------------------------
+% FRONTMATTER
+% -------------------------------------------------------------------
+\frontmatter % Desactiva la numeración de capítulos y usa numeración romana para las páginas
+
+\input{preliminares/declaracion-originalidad}   
+\input{preliminares/dedicatoria}                % Opcional
+\input{preliminares/agradecimientos}            % Opcional
+
+\input{preliminares/resumen1}
+\input{preliminares/summary1}                    
+
+\input{preliminares/tablacontenidos}            
+\input{preliminares/introduccion}               
+
+
+% -------------------------------------------------------------------
+% MAINMATTER
+% -------------------------------------------------------------------
+\mainmatter % activa la numeración de capítulos, resetea la numeración de las páginas y usa números arábigos
+
+\part{Fundamentos Teóricos}
+\input{capitulos/fundamentos_matematicos}
+\input{capitulos/fundamentos_informaticos}
+
+\part{Estado del Arte}
+\input{capitulos/estado_arte}
+
+\part{Desarrollo Teórico y Empírico}
+\input{capitulos/desarrollo_matematico}
+\input{capitulos/desarrollo_informatico}
+
+\part{Conclusiones y Trabajos Futuros}
+\input{capitulos/conclusiones_trabajosfuturos}
+
+% Añadir tantos capítulos como sea necesario
+
+% \cleardoublepage\part{Segunda parte}
+% \input{capitulos/capitulo-ejemplo}
+
+% -------------------------------------------------------------------
+% APPENDIX: Opcional
+% -------------------------------------------------------------------
+
+\appendix % Reinicia la numeración de los capítulos y usa letras para numerarlos
+\pdfbookmark[-1]{Apéndices}{appendix} % Alternativamente podemos agrupar los apéndices con un nuevo \part{Apéndices}
+
+% \input{apendices/apendice-ejemplo}
+% Añadir tantos apéndices como sea necesario 
+
+% -------------------------------------------------------------------
+% GLOSARIO: Opcional
+% -------------------------------------------------------------------
+
+\input{glosario} 
+
+% -------------------------------------------------------------------
+% BACKMATTER
+% -------------------------------------------------------------------
+
+\backmatter % Desactiva la numeración de los capítulos
+\pdfbookmark[-1]{Referencias}{BM-Referencias}
+
+% BIBLIOGRAFÍA
+%-------------------------------------------------------------------
+
+\bibliographystyle{alpha-es} 
+\begin{small} 
+  \bibliography{library.bib}
+\end{small}
+
+
+\end{document}

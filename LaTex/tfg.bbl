@@ -1,0 +1,321 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{AMMIL12}
+
+\bibitem[AMMIL12]{Mostafa2012}
+Yaser~S. Abu-Mostafa, Malik Magdon-Ismail, y Hsuan-Tien Lin.
+\newblock {\em Learning From Data}.
+\newblock AMLBook, 2012.
+
+\bibitem[AS17]{Advani2017}
+Madhu~S. Advani y Andrew~M. Saxe.
+\newblock High-dimensional dynamics of generalization error in neural networks,
+  2017.
+
+\bibitem[BB23]{Bishop2023}
+Christopher~Michael Bishop y Hugh Bishop.
+\newblock {\em Deep Learning - Foundations and Concepts}.
+\newblock 1 edici\'on, 2023.
+
+\bibitem[BD09]{Ben-David2009}
+Shai Ben-David.
+\newblock {\em Theory-Practice Interplay in Machine Learning - Emerging
+  Theoretical Challenges}, volumen 5781 de {\em Lecture Notes in Computer
+  Science}.
+\newblock Springer, 2009.
+
+\bibitem[BHMM19]{Belkin2019}
+Mikhail Belkin, Daniel Hsu, Siyuan Ma, y Soumik Mandal.
+\newblock Reconciling modern machine-learning practice and the classical
+  bias–variance trade-off.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  116(32):15849–15854, July 2019.
+
+\bibitem[Bis95]{Bishop1995}
+Christopher~M. Bishop.
+\newblock {\em Neural Networks for Pattern Recognition}.
+\newblock Oxford University Press, 1995.
+
+\bibitem[Bis06]{Bishop2006}
+Christopher~M Bishop.
+\newblock {\em {Pattern Recognition and Machine Learning}}, volumen~4 de {\em
+  Information science and statistics}.
+\newblock Springer, 2006.
+
+\bibitem[Blu21]{Blum2021}
+Avrim Blum.
+\newblock Mathematical toolkit spring 2021, lecture 5, April 13 2021.
+\newblock Notes based on notes from Madhur Tulsiani.
+
+\bibitem[Bry95]{Bryc1995TheND}
+Włodzimierz Bryc.
+\newblock {\em The Normal Distribution: Characterizations with Applications}.
+\newblock Springer New York, NY, 1995.
+
+\bibitem[CJvdS23]{Curth2023}
+Alicia Curth, Alan Jeffares, y Mihaela van~der Schaar.
+\newblock A u-turn on double descent: Rethinking parameter counting in
+  statistical learning, 2023.
+
+\bibitem[CMBK21]{Chen2021}
+Lin Chen, Yifei Min, Mikhail Belkin, y Amin Karbasi.
+\newblock Multiple descent: Design your own generalization curve, 2021.
+
+\bibitem[Dem14]{Dembo2014}
+Amir Dembo.
+\newblock {\em Probability Theory: STAT310/MATH230}.
+\newblock CreateSpace Independent Publishing Platform, 2014.
+
+\bibitem[DLK23]{Davies2023}
+Xander Davies, Lauro Langosco, y David Krueger.
+\newblock Unifying grokking and double descent, 2023.
+
+\bibitem[dSB21]{d_Ascoli2021}
+Stéphane d’Ascoli, Levent Sagun, y Giulio Biroli.
+\newblock Triple descent and the two kinds of overfitting: where and why do
+  they appear?*.
+\newblock {\em Journal of Statistical Mechanics: Theory and Experiment},
+  2021(12):124002, December 2021.
+
+\bibitem[Dui00]{Duin2000}
+R.P.W. Duin.
+\newblock Classifiers in almost empty spaces.
+\newblock En {\em Proceedings 15th International Conference on Pattern
+  Recognition. ICPR-2000}, volumen~2, páginas 1--7 vol.2, 2000.
+
+\bibitem[FIS14]{Friedberg2014linear}
+S.H. Friedberg, A.J. Insel, y L.E. Spence.
+\newblock {\em Linear Algebra}.
+\newblock Pearson Education, 2014.
+
+\bibitem[GB10]{Bengio2010}
+Xavier Glorot y Yoshua Bengio.
+\newblock Understanding the difficulty of training deep feedforward neural
+  networks.
+\newblock En {\em Proceedings of the Thirteenth International Conference on
+  Artificial Intelligence and Statistics}, volumen~9 de {\em Proceedings of
+  Machine Learning Research}, páginas 249--256. PMLR, 13--15 May 2010.
+
+\bibitem[GBC16]{Goodfellow2016}
+Ian Goodfellow, Yoshua Bengio, y Aaron Courville.
+\newblock {\em Deep Learning}.
+\newblock MIT Press, 2016.
+\newblock Book in preparation for MIT Press.
+
+\bibitem[GBD92]{Geman1992}
+Stuart Geman, Elie Bienenstock, y René Doursat.
+\newblock Neural networks and the bias/variance dilemma.
+\newblock {\em Neural Computation}, 4(1):1--58, 1992.
+
+\bibitem[GSd{\etalchar{+}}19]{Geiger2019}
+Mario Geiger, Stefano Spigler, St\'ephane d'Ascoli, Levent Sagun, Marco
+  Baity-Jesi, Giulio Biroli, y Matthieu Wyart.
+\newblock Jamming transition as a paradigm to understand the loss landscape of
+  deep neural networks.
+\newblock {\em Phys. Rev. E}, 100:012115, Jul 2019.
+
+\bibitem[HCB{\etalchar{+}}19]{Huang2019}
+Yanping Huang, Youlong Cheng, Ankur Bapna, Orhan Firat, Mia~Xu Chen, Dehao
+  Chen, HyoukJoong Lee, Jiquan Ngiam, Quoc~V. Le, Yonghui Wu, y Zhifeng Chen.
+\newblock Gpipe: Efficient training of giant neural networks using pipeline
+  parallelism, 2019.
+
+\bibitem[HT20]{He2020RecentAI}
+Fengxiang He y Dacheng Tao.
+\newblock Recent advances in deep learning theory.
+\newblock {\em ArXiv}, abs/2012.10931, 2020.
+
+\bibitem[HTF01]{Hastie2001}
+Trevor Hastie, Robert Tibshirani, y Jerome Friedman.
+\newblock {\em The Elements of Statistical Learning}.
+\newblock Springer Series in Statistics. Springer New York Inc., New York, NY,
+  USA, 2001.
+
+\bibitem[HY20]{Heckel2020}
+Reinhard Heckel y Fatih~Furkan Yilmaz.
+\newblock Early stopping in deep networks: Double descent and how to eliminate
+  it, 2020.
+
+\bibitem[Kni09]{Knill2009}
+Oliver Knill.
+\newblock {\em Probability Theory and Stochastic Processes with Applications}.
+\newblock Overseas Press, 2009.
+
+\bibitem[Kol56]{Kolmogorov1956}
+A.N. Kolmogorov.
+\newblock {\em Foundations Of The Theory Of Probability}.
+\newblock Chelsea Publising Company, 1956.
+
+\bibitem[KSH12]{Krizhevsky2012}
+Alex Krizhevsky, Ilya Sutskever, y Geoffrey~E Hinton.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock En F.~Pereira, C.J. Burges, L.~Bottou, y K.Q. Weinberger, editores,
+  {\em Advances in Neural Information Processing Systems}, volumen~25. Curran
+  Associates, Inc., 2012.
+
+\bibitem[LBBH98]{LeCun1998}
+Yann LeCun, L{'e}on Bottou, Yoshua Bengio, y Patrick Haffner.
+\newblock Gradient-based learning applied to document recognition.
+\newblock {\em Proceedings of the IEEE}, 86(11):2278–2324, 1998.
+
+\bibitem[LBD{\etalchar{+}}89]{LeCun1989}
+Y.~LeCun, B.~Boser, J.~S. Denker, D.~Henderson, R.~E. Howard, W.~Hubbard, y
+  L.~D. Jackel.
+\newblock Backpropagation applied to handwritten zip code recognition.
+\newblock {\em Neural Computation}, 1:541--551, 1989.
+
+\bibitem[LBH15]{LeCun2015}
+Yann LeCun, Yoshua Bengio, y Geoffrey Hinton.
+\newblock Deep learning.
+\newblock {\em nature}, 521(7553):436, 2015.
+
+\bibitem[LT24]{Lafon2024}
+Marc Lafon y Alexandre Thomas.
+\newblock Understanding the {Double} {Descent} {Phenomenon} in {Deep}
+  {Learning}, March 2024.
+\newblock arXiv:2403.10459.
+
+\bibitem[MCK20]{Ming2020}
+Yifei Min, Lin Chen, y Amin Karbasi.
+\newblock The curious case of adversarially robust models: More data can help,
+  double descend, or hurt generalization, 2020.
+
+\bibitem[Mur22]{Murphy2022}
+Kevin~P. Murphy.
+\newblock {\em Probabilistic Machine Learning: An introduction}.
+\newblock MIT Press, 2022.
+
+\bibitem[Mur23]{Murphy2023}
+Kevin~P. Murphy.
+\newblock {\em Probabilistic Machine Learning: Advanced Topics}.
+\newblock MIT Press, 2023.
+
+\bibitem[NKB{\etalchar{+}}19]{Nakkiran2019}
+Preetum Nakkiran, Gal Kaplun, Yamini Bansal, Tristan Yang, Boaz Barak, y Ilya
+  Sutskever.
+\newblock Deep double descent: Where bigger models and more data hurt, 2019.
+
+\bibitem[NMB{\etalchar{+}}19]{Neal2019}
+Brady Neal, Sarthak Mittal, Aristide Baratin, Vinayak Tantia, Matthew Scicluna,
+  Simon Lacoste-Julien, y Ioannis Mitliagkas.
+\newblock A modern take on the bias-variance tradeoff in neural networks, 2019.
+
+\bibitem[Opp95]{Opper1995}
+Manfred Opper.
+\newblock Statistical mechanics of learning: Generalization.
+\newblock En {\em The Handbook of Brain Theory and Neural Networks}, páginas
+  922--925. Springer-Verlag, 1995.
+
+\bibitem[Opp01]{Opper2001}
+Manfred Opper.
+\newblock Learning to generalize.
+\newblock En {\em Frontiers of Life}, volumen 3, Part 2, páginas 763--775.
+  Academic Press, 2001.
+
+\bibitem[Poo11]{Poole2011}
+David Poole.
+\newblock {\em Álgebra lineal. Una introducción moderna}.
+\newblock Cengage Learning, 3 edici\'on, 2011.
+
+\bibitem[Pri23]{Prince2023}
+Simon~J.D. Prince.
+\newblock {\em Understanding Deep Learning}.
+\newblock MIT Press, 2023.
+
+\bibitem[Rip96]{Ripley1996}
+Brian~D. Ripley.
+\newblock {\em Pattern Recognition and Neural Networks}.
+\newblock Cambridge University Press, 1996.
+
+\bibitem[Sah18]{Saha2018}
+Sumit Saha.
+\newblock A comprehensive guide to convolutional neural networks — the eli5
+  way.
+\newblock
+  \url{https://medium.com/towards-data-science/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53},
+  2018.
+\newblock [Recurso online, accedido el 19 de febrero de 2025].
+
+\bibitem[Sch15]{Schmidhuber2015}
+Jürgen Schmidhuber.
+\newblock Deep learning in neural networks: An overview.
+\newblock {\em Neural Networks}, 61:85--117, January 2015.
+
+\bibitem[Sej20]{Sejnowski2020TheUE}
+Terrence~J. Sejnowski.
+\newblock The unreasonable effectiveness of deep learning in artificial
+  intelligence.
+\newblock {\em Proceedings of the National Academy of Sciences}, 117:30033 --
+  30038, 2020.
+
+\bibitem[SFB{\etalchar{+}}22]{Somepalli2022}
+Gowthami Somepalli, Liam Fowl, Arpit Bansal, Ping Yeh-Chiang, Yehuda Dar,
+  Richard Baraniuk, Micah Goldblum, y Tom Goldstein.
+\newblock Can neural nets learn the same model twice? investigating
+  reproducibility and double descent from the decision boundary perspective,
+  2022.
+
+\bibitem[SGd{\etalchar{+}}19]{Spigler2019}
+S~Spigler, M~Geiger, S~d'Ascoli, L~Sagun, G~Biroli, y M~Wyart.
+\newblock A jamming transition from under- to over-parametrization affects
+  generalization in deep learning.
+\newblock {\em Journal of Physics A: Mathematical and Theoretical},
+  52(47):474001, October 2019.
+
+\bibitem[SHN{\etalchar{+}}24]{Soudry2024}
+Daniel Soudry, Elad Hoffer, Mor~Shpigel Nacson, Suriya Gunasekar, y Nathan
+  Srebro.
+\newblock The implicit bias of gradient descent on separable data, 2024.
+
+\bibitem[SKR{\etalchar{+}}23]{Schaeffer2023}
+Rylan Schaeffer, Mikail Khona, Zachary Robertson, Akhilan Boopathy, Kateryna
+  Pistunova, Jason~W. Rocks, Ila~Rani Fiete, y Oluwasanmi Koyejo.
+\newblock Double descent demystified: Identifying, interpreting \& ablating the
+  sources of a deep learning puzzle, 2023.
+
+\bibitem[SLHS22]{Singh2022}
+Sidak~Pal Singh, Aurelien Lucchi, Thomas Hofmann, y Bernhard Schölkopf.
+\newblock Phenomenology of double descent in finite-width neural networks,
+  2022.
+
+\bibitem[SLJ{\etalchar{+}}14]{Szegedy2014}
+Christian Szegedy, Wei Liu, Yangqing Jia, Pierre Sermanet, Scott Reed, Dragomir
+  Anguelov, Dumitru Erhan, Vincent Vanhoucke, y Andrew Rabinovich.
+\newblock Going deeper with convolutions, 2014.
+
+\bibitem[Str23]{Strang2023}
+Gilbert Strang.
+\newblock {\em Introduction to Linear Algebra}.
+\newblock CUP, 6 edici\'on, 2023.
+
+\bibitem[Swa20]{CNNSwapna}
+Swapna.
+\newblock {C}onvolutional {N}eural {N}etwork | {D}eep {L}earning.
+\newblock
+  \url{https://developersbreach.com/convolution-neural-network-deep-learning/},
+  2020.
+\newblock [Recurso online, accedido el 19 de febrero de 2025].
+
+\bibitem[Vap91]{Vapnik1991}
+V.~Vapnik.
+\newblock Principles of risk minimization for learning theory.
+\newblock En {\em Proceedings of the 5th International Conference on Neural
+  Information Processing Systems}, NIPS'91, página 831–838, San Francisco,
+  CA, USA, 1991. Morgan Kaufmann Publishers Inc.
+
+\bibitem[WH60]{WidrowHoff1960}
+Bernard Widrow y Ted Hoff.
+\newblock Adaptive switching circuits.
+\newblock En {\em 1960 IRE WESCON Convention Record, Part 4}, páginas 96--104.
+  Institute of Radio Engineers, 1960.
+
+\bibitem[YS24]{Yang2024}
+Tian-Le Yang y Joe Suzuki.
+\newblock Dropout drops double descent, 2024.
+
+\bibitem[ZBH{\etalchar{+}}21]{Zhang2021}
+Chiyuan Zhang, Samy Bengio, Moritz Hardt, Benjamin Recht, y Oriol Vinyals.
+\newblock Understanding deep learning (still) requires rethinking
+  generalization.
+\newblock {\em Commun. ACM}, 64(3):107–115, February 2021.
+
+\end{thebibliography}

@@ -1,0 +1,72 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{\nonumberline Agradecimientos}{\es@scroman {iii}}{chapter*.3}%
+\contentsline {chapter}{\nonumberline Resumen}{\es@scroman {v}}{chapter*.4}%
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\nonumberline Summary}{\es@scroman {vi}}{chapter*.5}%
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{\nonumberline \'{I}ndice de figuras}{\es@scroman {x}}{chapter*.9}%
+\contentsline {chapter}{\nonumberline \'{I}ndice de tablas}{\es@scroman {xi}}{chapter*.11}%
+\contentsline {chapter}{\nonumberline Introducción}{\es@scroman {xiii}}{chapter*.12}%
+\contentsline {section}{\numberline {1}Definición del problema}{\es@scroman {xiv}}{section.0.1}%
+\contentsline {section}{\numberline {2}Motivación}{\es@scroman {xv}}{section.0.2}%
+\contentsline {section}{\numberline {3}Objetivos}{\es@scroman {xvi}}{section.0.3}%
+\contentsline {subsection}{\numberline {3.1}Objetivo matemático}{\es@scroman {xvi}}{subsection.0.3.1}%
+\contentsline {subsection}{\numberline {3.2}Objetivo informático}{\es@scroman {xvii}}{subsection.0.3.2}%
+\contentsline {section}{\numberline {4}Planificación del proyecto}{\es@scroman {xvii}}{section.0.4}%
+\contentsline {part}{\numberline {I}Fundamentos Teóricos}{1}{part.1}%
+\contentsline {chapter}{\numberline {1}Teoría de la Probabilidad}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Espacios de probabilidad y $\sigma $-álgebras}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Variables aleatorias y esperanza}{4}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Probabilidad condicional}{6}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Independencia de variables aleatorias}{8}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Propiedades de la esperanza y varianza}{12}{subsection.1.2.3}%
+\contentsline {section}{\numberline {1.3}Distribuciones de probabilidad}{14}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Distribución Normal}{14}{subsection.1.3.1}%
+\contentsline {chapter}{\numberline {2}Álgebra Lineal: Matrices}{16}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Vectores y espacios vectoriales}{16}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Introducción a las matrices}{18}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Rango de una matriz}{20}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Matriz invertible}{22}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}Determinantes, vectores propios y valores propios}{23}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Descomposición en valores singulares y pseudoinversa}{25}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Aprendizaje Automático y Aprendizaje Profundo}{29}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Fundamentos}{29}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Redes neuronales artificiales}{30}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Redes neuronales convolucionales}{31}{subsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.1.1}Capa de convolución}{32}{subsubsection.3.2.1.1}%
+\contentsline {subsubsection}{\numberline {3.2.1.2}Capa de pooling}{34}{subsubsection.3.2.1.2}%
+\contentsline {subsubsection}{\numberline {3.2.1.3}Capa totalmente conectada}{34}{subsubsection.3.2.1.3}%
+\contentsline {subsubsection}{\numberline {3.2.1.4}Capa de activación}{35}{subsubsection.3.2.1.4}%
+\contentsline {chapter}{\numberline {4}El dilema del aprendizaje}{37}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Concepto de aprendizaje}{37}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Descenso de gradiente y aprendizaje}{38}{subsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.1}Aprendizaje en una red neuronal}{40}{subsubsection.4.1.1.1}%
+\contentsline {section}{\numberline {4.2}Bias-variance tradeoff}{41}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Formulación matemática del $E_{out}$}{41}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Equilibrio clásico entre sesgo y varianza}{45}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Curva de aprendizaje}{45}{subsection.4.4.1}%
+\contentsline {section}{\numberline {4.5}Underfitting y overfitting}{47}{section.4.5}%
+\contentsline {part}{\numberline {II}Estado del Arte}{50}{part.2}%
+\contentsline {chapter}{\numberline {5}Evolución del Deep Double Descent}{52}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Origen y primeras manifestaciones del fenómeno}{53}{section.5.1}%
+\contentsline {section}{\numberline {5.2}El nacimiento del Deep Double Descent}{54}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Avances recientes del Deep Double Descent}{55}{section.5.3}%
+\contentsline {part}{\numberline {III}Desarrollo Teórico y Empírico}{57}{part.3}%
+\contentsline {chapter}{\numberline {6}Análisis teórico del Deep Double Descent}{59}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Planteamiento teórico}{59}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Análisis intuitivo en un problema OLS}{59}{subsection.6.1.1}%
+\contentsline {section}{\numberline {6.2}Resto de desarrollos a realizar}{59}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Aproximación no lineal}{59}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Analogía con el deep double descent}{59}{subsection.6.3.1}%
+\contentsline {section}{\numberline {6.4}Conclusión}{59}{section.6.4}%
+\contentsline {chapter}{\numberline {7}Análisis empírico del Deep Double Descent}{60}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Materiales y métodos}{60}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Implementación e infraestructura}{60}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Experimentos}{60}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Conclusión}{60}{section.7.4}%
+\contentsline {part}{\numberline {IV}Conclusiones y Trabajos Futuros}{61}{part.4}%
+\contentsline {chapter}{\numberline {8}Conclusiones}{63}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Trabajos futuros}{64}{chapter.9}%
+\contentsline {chapter}{Glosario}{65}{chapter*.30}%
+\contentsline {chapter}{\nonumberline Bibliograf\'{\i }a}{67}{chapter*.31}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
