@@ -5,31 +5,49 @@
 \addvspace {10\p@ }
 \babel@toc {spanish}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1}{\ignorespaces Ejemplo de doble descenso profundo en ResNet18~\cite {Nakkiran2019}.}}{\es@scroman {xiv}}{figure.caption.13}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Ejemplo de doble descenso profundo en ResNet18~\cite {Nakkiran2019}.}}{\es@scroman {xv}}{figure.caption.13}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Ejemplos de distribuciones normales.}}{15}{figure.caption.14}%
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Ejemplos de problemas de clasificación y regresión.}}{29}{figure.caption.15}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Ejemplos de neurona biológica y neurona artificial extraídos de~\cite {Bishop2023}.}}{30}{figure.caption.16}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Ejemplo de red neuronal convolucional (CNN) utilizada para clasificación de imágenes~\cite {CNNSwapna}.}}{32}{figure.caption.17}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Ejemplo de convolución con padding~\cite {Saha2018}.}}{33}{figure.caption.18}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Ejemplos de pooling utilizados en CNN.}}{34}{figure.caption.19}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Ejemplos de funciones de activación utilizadas en CNN.}}{36}{figure.caption.20}%
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagrama representando el concepto básico de aprendizaje.}}{38}{figure.caption.21}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Distintas tasas de aprendizaje para el descenso de gradiente~\cite {Mostafa2012}.}}{39}{figure.caption.22}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Proceso de aprendizaje mediante descenso de gradiente~\cite {Bishop2006}.}}{40}{figure.caption.23}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Distintos casos del conjunto de hipótesis y de la función objetivo.}}{46}{figure.caption.24}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Ejemplo de curva de aprendizaje tradicional~\cite {Mostafa2012}.}}{46}{figure.caption.25}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Ejemplos de curvas de aprendizaje modificadas para este proyecto.}}{47}{figure.caption.26}%
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Número de publicaciones relativas al Deep Double Descent (ir actualizando histograma de cara a nuevos papers).}}{52}{figure.caption.27}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Deep Double Descent presente en ADALINE.}}{53}{figure.caption.28}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Curva del error unificada entre la teoría clásica y moderna.}}{55}{figure.caption.29}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Ejemplos de distribuciones normales.}}{15}{figure.caption.17}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Ejemplos de problemas de clasificación y regresión.}}{23}{figure.caption.18}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Ejemplos de neurona biológica~\cite {Neves2018} y neurona artificial (basada en~\cite {Li2024}).}}{24}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Ejemplo de CNN utilizada para clasificación de imágenes~\cite {CNNSwapna}.}}{26}{figure.caption.20}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Ejemplo de convolución con padding~\cite {Saha2018}.}}{27}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Ejemplos de pooling utilizados en CNN.}}{28}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Ejemplos de funciones de activación utilizadas en CNN.}}{30}{figure.caption.23}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagrama representando el concepto básico de aprendizaje.}}{32}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Distintas tasas de aprendizaje para el descenso de gradiente~\cite {Mostafa2012}.}}{33}{figure.caption.25}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Proceso de retropropagación del error~\cite {Bishop2006}.}}{34}{figure.caption.26}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Distintos casos del conjunto de hipótesis y de la función objetivo.}}{40}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Ejemplo de curva de aprendizaje tradicional~\cite {Mostafa2012}.}}{41}{figure.caption.28}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Ejemplos de curvas de aprendizaje modificadas para este proyecto.}}{41}{figure.caption.29}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Relación bias/variance con underfitting y overfitting en el contexto clásico.}}{44}{figure.caption.30}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Número de publicaciones relativas al Deep Double Descent (ir actualizando histograma de cara a nuevos papers).}}{48}{figure.caption.31}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Deep Double Descent presente en ADALINE.}}{49}{figure.caption.32}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Curva del error unificada entre la teoría clásica y moderna~\cite {Belkin2019}.}}{51}{figure.caption.33}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Ejemplo de doble descenso con las distintas zonas de parametrización.}}{57}{figure.caption.35}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Ejemplos de distribuciones de Marchenko-Pastur~\cite {Charles2018}.}}{62}{figure.caption.36}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Ejemplos de paisajes de la función de pérdida en redes neuronales~\cite {Liu2021}.}}{70}{figure.caption.37}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Ejemplo de función de pérdida que satisface la condición $\mu $-PL~\cite {Liu2021}.}}{74}{figure.caption.38}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Distintos modelos polinómicos para aproximar una función.}}{75}{figure.caption.39}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Arquitectura ResNet$18$ modificada.}}{80}{figure.caption.43}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Arquitectura $3$CNN.}}{81}{figure.caption.45}%
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Intuición del \textit {Deep Double Descent} usando regresión polinómica.}}{83}{figure.caption.47}%
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Doble descenso al utilizar aproximación polinómica de Legendre.}}{83}{figure.caption.48}%
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Doble descenso para distintos niveles de ruido.}}{84}{figure.caption.49}%
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Umbral de interpolación para el doble descenso con distintos niveles de ruido.}}{85}{figure.caption.50}%
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Ejemplo de \textit {sample-wise double descent}.}}{86}{figure.caption.52}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Doble descenso para distintos tamaños de lote.}}{95}{figure.caption.55}%
+\contentsline {figure}{\numberline {C.2}{\ignorespaces Doble descenso para distintas tasas de aprendizaje.}}{96}{figure.caption.58}%
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

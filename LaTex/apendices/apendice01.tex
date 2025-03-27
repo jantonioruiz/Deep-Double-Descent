@@ -1,0 +1,63 @@
+% !TeX root = ../tfg.tex
+% !TeX encoding = utf8
+
+\chapter{Apéndice}\label{ap:apendiceA}
+
+En este apéndice se muestra la demostración del Lema~\ref{lema:raro-clasificación-gd}, extraída de~\cite{Soudry2024}.\newline
+
+\textbf{Lema}~\ref{lema:raro-clasificación-gd}. Sea $\mathcal{L}(w)$ una función $\beta$-suave no negativa. Si $\eta < \frac{2}{\beta}$, entonces, para cualquier $w_0$ y utilizando el método del descenso de gradiente dado por:
+
+\[
+    \mathbf{w}^{(\tau + 1)} = \mathbf{w}^{(\tau)} - \eta \nabla \mathcal{L}(\mathbf{w})
+\]
+
+se tiene que $\sum_{u=0}^{\infty} \| \nabla\mathcal{L}(w^{(u)}) \|^{2} < \infty$ y, por tanto:
+
+\[
+    \lim \limits_{t \to \infty} \| \nabla\mathcal{L}(w^{(t)}) \|^{2} = 0.
+\]
+
+\begin{proof}
+  Usando una propiedad conocida de las funciones $\beta$-suaves:
+
+  \[
+      | f(x) - f(y) - \nabla f(y)^{T} (x-y) | \leq \| x - y \|^2.
+  \]  
+
+  Dado que la función $\mathcal{L}(w)$ es $\beta$-suave:
+
+  \begin{align}
+      \mathcal{L} (w^{(\tau + 1)}) &\leq \mathcal{L} (w^{(\tau)}) + \nabla \mathcal{L} (w^{\tau})^{T} (w^{(\tau + 1)} - w^{\tau}) + \frac{\beta}{2} \|w^{(\tau + 1)} - w^{(\tau)}\|^2 \notag \\
+      &= \mathcal{L} (w^{(\tau)}) - \eta \|\nabla \mathcal{L} (w^{(\tau)})\|^2 + \frac{\beta \eta^2}{2} \|\nabla \mathcal{L} (w^{(\tau)})\|^2 \notag \\
+      &= \mathcal{L} (w^{(\tau)}) - \eta \left( 1 - \frac{\beta \eta}{2} \right) \|\nabla \mathcal{L} (w^{(\tau)})\|^2.
+  \end{align}
+
+  Así, tenemos:
+
+  \[
+      \frac{\mathcal{L} (w^{(\tau)}) - \mathcal{L} (w^{(\tau + 1)})}{\eta \left( 1 - \frac{\beta \eta}{2} \right)} \geq \|\nabla \mathcal{L} (w^{(\tau)})\|^2
+  \]
+
+  lo que implica
+
+  \[
+      \sum_{u=0}^{t} \|\nabla \mathcal{L} (w^{(u)})\|^2 \leq \sum_{u=0}^{t} \frac{\mathcal{L} (w^{(u)}) - \mathcal{L} (w^{(u+1)})}{\eta \left( 1 - \frac{\beta \eta}{2} \right)} = \frac{\mathcal{L} (w_0) - \mathcal{L} (w^{(\tau + 1)})}{\eta \left( 1 - \frac{\beta \eta}{2} \right)}.
+  \]
+
+  El lado derecho está acotado por una constante finita, dado que $\mathcal{L} (w_0) < \infty$ y $0 \leq \mathcal{L} (w^{(\tau + 1)})$. Por tanto, esto implica que
+
+  \[
+      \sum_{u=0}^{\infty} \|\nabla \mathcal{L} (w^{(u)})\|^2 < \infty,
+  \]
+
+  y, finalmente, nos queda el resultado buscado:
+
+  \[
+      \|\nabla \mathcal{L} (w^{(\tau)})\|^2 \to 0.
+  \]
+\end{proof}
+
+\endinput
+%------------------------------------------------------------------------------------
+% FIN DEL APÉNDICE. 
+%------------------------------------------------------------------------------------

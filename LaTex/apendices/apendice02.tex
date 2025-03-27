@@ -1,0 +1,94 @@
+% !TeX root = ../tfg.tex
+% !TeX encoding = utf8
+
+\chapter{Apéndice}\label{ap:apendiceB}
+
+\textbf{Proposición}~\ref{prop:non-conexity}. Sea $w^{*}$ una solución, es decir, $\mathcal{L}(w^{*}) = 0$, y supongamos que $\frac{d}{dw}\frac{\partial \mathcal{L}}{\partial \mathcal{F}}(w^{*}) \neq 0$ y $rang(H_{\mathcal{F}_{i}}(w^{*})) > 2n$ para algún $i \in \{1, \ldots, n \}$. Entonces $\mathcal{L}(w)$ no es convexa en ninguna vecindad de $w^{*}$.
+
+\begin{proof}
+    La matriz Hessiana de una función de pérdida $\mathcal{L}(\mathcal{F}(w))$ viene dada por:
+
+    \[
+        H_{\mathcal{L}}(w) = D\mathcal{F}(w)^T \frac{\partial^2 \mathcal{L}}{\partial \mathcal{F}^2}(w) D\mathcal{F}(w) + \sum_{i=1}^{n} \frac{\partial \mathcal{L}}{\partial \mathcal{F}_i}(w) H_{\mathcal{F}_i}(w).
+    \]
+
+    Consideramos ahora las matrices Hessianas de dos puntos $w^* + \delta $ y $w^* - \delta $ $(\delta \in \mathbb{R}^{P})$ que están en una vecindad suficientemente pequeña de $w^*$. La Hessiana de la función de pérdida en estos dos puntos es:
+
+    \begin{equation}\label{eq:non-convexity1}
+        \begin{aligned}
+            H_{\mathcal{L}}( w^* + \delta) &=  
+            \underbrace{D\mathcal{F}( w^* + \delta)^T \frac{\partial^2 \mathcal{L}}{\partial \mathcal{F}^2}( w^* + \delta) D\mathcal{F}( w^* + \delta)}_{A( w^* + \delta)} \\
+            &\quad + \sum_{i=1}^{n} \left( \frac{d}{d w} \left( \frac{\partial \mathcal{L}}{\partial \mathcal{F}}( w^*) \right) \delta \right)_i H_{\mathcal{F}_i}( w^* + \delta) + o(\|\delta\|),
+        \end{aligned}
+    \end{equation}
+        
+    \begin{align}
+        H_{\mathcal{L}}( w^* - \delta) &=  
+        \underbrace{D\mathcal{F}( w^* - \delta)^T \frac{\partial^2 \mathcal{L}}{\partial \mathcal{F}^2}( w^* - \delta) D\mathcal{F}( w^* - \delta)}_{A( w^* - \delta)} \nonumber \\
+        &\quad - \sum_{i=1}^{n} \left( \frac{d}{d w} \left( \frac{\partial \mathcal{L}}{\partial \mathcal{F}}( w^*) \right) \delta \right)_i H_{\mathcal{F}_i}( w^* + \delta) + o(\|\delta\|).
+    \end{align}
+        
+
+    donde los términos $ A( w^* + \delta) $ y $ A( w^* - \delta) $ son matrices de rango a lo sumo $ n $, ya que $ D\mathcal{F} $ es de tamaño $ n \times m $ ($o(\|\delta\|)$ representa un término asintóticamente menor que $\| \delta \|$).\newline
+
+    Sabemos que al menos un componente $ H_{\mathcal{F}_k} $ de la matriz Hessiana de $ \mathcal{F} $ satisface que el rango de $ H_{\mathcal{F}_k}( w^*) $ es mayor que $ 2n $. Por continuidad de la Hessiana, si el orden de $ \delta $ es suficientemente pequeño, entonces los rangos de $ H_{\mathcal{F}_k}( w^* + \delta) $ y $ H_{\mathcal{F}_k}( w^* - \delta) $ también son mayores que $ 2n $. Esto nos lleva a que siempre podemos encontrar un vector unitario $v \in \mathbb{R}^P $ que cumpla:
+
+    \[
+        v^T A( w^* + \delta)  v =  v^T A( w^* - \delta)  v = 0.
+    \]
+
+    Sin embargo, dicho vector también verifica:
+
+    \[
+        v^T H_{\mathcal{F}_k}( w^* + \delta)  v \neq 0, \quad  v^T H_{\mathcal{F}_k}( w^* - \delta)  v \neq 0.
+    \]\newline
+
+    De esta manera, el vector $ \langle v^T H_{\mathcal{F}_1}( w^*+\delta)  v, \dots,  v^T H_{\mathcal{F}_n}( w^*+\delta)  v \rangle \neq 0$. El mismo resultado se verifica para el punto $w^* - \delta$. Así, utilizando este vector $v$ en la Hessiana de la función de pérdida en los dos puntos tenemos:
+
+    \begin{align}
+        v^T H_{\mathcal{L}}( w^* + \delta)v &=  
+        \sum_{i=1}^{n} \left( \frac{d}{d w} \left( \frac{\partial \mathcal{L}}{\partial \mathcal{F}}( w^*) \right) \delta \right)_i v^T H_{\mathcal{F}_i}( w^* + \delta) v + o(\|\delta\|),
+    \end{align}
+
+    \begin{align}
+        v^T H_{\mathcal{L}}( w^* - \delta)v &=  
+        - \sum_{i=1}^{n} \left( \frac{d}{d w} \left( \frac{\partial \mathcal{L}}{\partial \mathcal{F}}( w^*) \right) \delta \right)_i v^T H_{\mathcal{F}_i}( w^* - \delta) v + o(\|\delta\|).
+    \end{align}
+
+    Para finalizar tenemos que mostrar que, para un $\delta$ suficientemente pequeño, $v^T H_{\mathcal{L}}(w^* + \delta) v$ y $v^T H_{\mathcal{L}}(w^* - \delta) v$ no pueden ser simultáneamente no negativos, lo que implica inmediatamente que $H_{\mathcal{L}}$ no es semidefinida positiva en una vecindad cercana de $w^*$, y por tanto, $\mathcal{L}$ no es localmente convexa en $w^*$. Usando la condición 
+    \[
+    \frac{d}{dw} (\frac{\partial \mathcal{L}}{\partial \mathcal{F}}(w^*)) = 0,
+    \]
+    para las ecuaciones anteriores, se presentan los siguientes casos:\newline
+
+    \textbf{Caso 1:} Si 
+    \[
+    \sum_{i=1}^{n} \left( \frac{d}{dw} (\frac{\partial \mathcal{L}}{\partial \mathcal{F}}(w^*))\delta \right)_i v^T H_{\mathcal{F}_i}(w^* + \delta) v < 0,
+    \]
+    entonces, directamente, $v^T H_{\mathcal{L}}(w^* + \delta) v < 0$ si $\delta$ es lo suficientemente pequeño.\newline
+
+    \textbf{Caso 2:} De lo contrario, si 
+    \[
+    \sum_{i=1}^{n} \left( \frac{d}{dw} (\frac{\partial \mathcal{L}}{\partial \mathcal{F}}(w^*))\delta \right)_i v^T H_{\mathcal{F}_i}(w^* + \delta) v > 0,
+    \]
+    por la continuidad de cada $H_{\mathcal{F}_i}(\cdot)$, tenemos que
+    \[
+        -\sum_{i=1}^{n} \left( \frac{d}{dw} (\frac{\partial \mathcal{L}}{\partial \mathcal{F}}(w^*))\delta \right)_i v^T H_{\mathcal{F}_i}(w^* - \delta) v
+    \]
+
+    \[
+        \\ = -\sum_{i=1}^{n} \left( \frac{d}{dw} (\frac{\partial \mathcal{L}}{\partial \mathcal{F}}(w^*))\delta \right)_i v^T H_{\mathcal{F}_i}(w^* + \delta) v + \sum_{i=1}^{n} \left( \frac{d}{dw} (\frac{\partial \mathcal{L}}{\partial \mathcal{F}}(w^*))\delta \right)_i v^T (H_{\mathcal{F}_i}(w^* + \delta) v - \mathcal{H}_{\mathcal{F}_i}(w^* - \delta)) v
+    \]
+
+    \[
+        \\ = -\sum_{i=1}^{n} \left( \frac{d}{dw} (\frac{\partial \mathcal{L}}{\partial \mathcal{F}}(w^*))\delta \right)_i v^T H_{\mathcal{F}_i}(w^* + \delta) v + O(\epsilon) < 0,
+    \]
+    
+    cuando $\delta$ es lo suficientemente pequeño. A modo de conclusion, dado un $\delta$ arbitrariamente pequeño, se tiene que $v^T H_{\mathcal{L}}(w^* + \delta) v$ o $v^T H_{\mathcal{L}}(w^* - \delta) v$ es negativo, lo que significa que $\mathcal{L}(w)$ no tiene ninguna vecindad convexa alrededor de $w^*$.
+
+\end{proof}
+
+\endinput
+%------------------------------------------------------------------------------------
+% FIN DEL APÉNDICE. 
+%------------------------------------------------------------------------------------

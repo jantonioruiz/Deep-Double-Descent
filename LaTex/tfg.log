@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.14)  1 MAR 2025 13:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.14)  27 MAR 2025 12:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/Juan Antonio/Desktop/GitHub/Deep-Double-Descent/LaTex/tfg.tex"
-(c:/Users/Juan Antonio/Desktop/GitHub/Deep-Double-Descent/LaTex/tfg.tex
+**"c:/Users/Juan Antonio/Desktop/ProyectoLaTex/tfg.tex"
+(c:/Users/Juan Antonio/Desktop/ProyectoLaTex/tfg.tex
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
 (ugrTFG.cls
@@ -465,7 +465,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 \Hy@SectionHShift=\skip77
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 107.
+Package hyperref Info: Option `colorlinks' set `true' on input line 108.
  (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen167
@@ -556,7 +556,7 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 10.0pt
 (typearea)              \footskip       = 44.10013pt
 (typearea)              \baselineskip   = 12.60004pt
-(typearea)              on input line 230.
+(typearea)              on input line 231.
  (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.sty
 Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
 \ESO@tempdima=\dimen186
@@ -591,16 +591,251 @@ Package caption Info: New subtype `subfigure' on input line 238.
 \c@subfigure=\count323
 Package caption Info: New subtype `subtable' on input line 238.
 \c@subtable=\count324
+) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
+\multirow@colwidth=\skip78
+\multirow@cntb=\count325
+\multirow@dima=\skip79
+\bigstrutjot=\dimen198
+) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
+Package: colortbl 2024/07/06 v1.0i Color table columns (DPC)
+ (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
+\col@sep=\dimen199
+\ar@mcellbox=\box61
+\extrarowheight=\dimen256
+\NC@list=\toks37
+\extratabsurround=\skip80
+\backup@length=\skip81
+\ar@cellbox=\box62
+)
+\everycr=\toks38
+\minrowclearance=\skip82
+\rownum=\count326
+) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/latex/nicematrix\nicematrix.sty (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.sty (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.sty (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
+\pgfutil@everybye=\toks39
+\pgfutil@tempdima=\dimen257
+\pgfutil@tempdimb=\dimen258
+) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def
+\pgfutil@abb=\box63
+) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code.tex (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+)) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+ (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks40
+\pgfkeys@temptoks=\toks41
+ (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks42
+))
+\pgf@x=\dimen259
+\pgf@y=\dimen260
+\pgf@xa=\dimen261
+\pgf@ya=\dimen262
+\pgf@xb=\dimen263
+\pgf@yb=\dimen264
+\pgf@xc=\dimen265
+\pgf@yc=\dimen266
+\pgf@xd=\dimen267
+\pgf@yd=\dimen268
+\w@pgf@writea=\write3
+\r@pgf@reada=\read3
+\c@pgf@counta=\count327
+\c@pgf@countb=\count328
+\c@pgf@countc=\count329
+\c@pgf@countd=\count330
+\t@pgf@toka=\toks43
+\t@pgf@tokb=\toks44
+\t@pgf@tokc=\toks45
+\pgf@sys@id@count=\count331
+ (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-pdftex.def
+ (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
+ (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+))) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count332
+\pgfsyssoftpath@bigbuffer@items=\count333
+) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+ (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex
+\pgfmath@dimen=\dimen269
+\pgfmath@count=\count334
+\pgfmath@box=\box64
+\pgfmath@toks=\toks46
+\pgfmath@stack@operand=\toks47
+\pgfmath@stack@operation=\toks48
+) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.random.code.tex) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.base.code.tex) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.round.code.tex) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex)
+(C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code.tex) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count335
+)) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.tex) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen270
+\pgf@picmaxx=\dimen271
+\pgf@picminy=\dimen272
+\pgf@picmaxy=\dimen273
+\pgf@pathminx=\dimen274
+\pgf@pathmaxx=\dimen275
+\pgf@pathminy=\dimen276
+\pgf@pathmaxy=\dimen277
+\pgf@xx=\dimen278
+\pgf@xy=\dimen279
+\pgf@yx=\dimen280
+\pgf@yy=\dimen281
+\pgf@zx=\dimen282
+\pgf@zy=\dimen283
+) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen284
+\pgf@path@lasty=\dimen285
+) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen286
+\pgf@shorten@start@additional=\dimen287
+) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box65
+\pgf@hbox=\box66
+\pgf@layerbox@main=\box67
+\pgf@picture@serial@count=\count336
+) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen288
+) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen289
+\pgf@pt@y=\dimen290
+\pgf@pt@temp=\dimen291
+) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen292
+) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen293
+\pgf@sys@shading@range@num=\count337
+\pgf@shadingcount=\count338
+) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box68
+) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box69
+) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3keys2e.sty
+Package: l3keys2e 2024-08-16 LaTeX2e option processing using LaTeX3 keys
+)
+Package: nicematrix 2025/03/04 v7.1a Enhanced arrays with the help of PGF/TikZ
+\g__nicematrix_env_int=\count339
+\g__nicematrix_NiceMatrixBlock_int=\count340
+\g__nicematrix_notes_caption_int=\count341
+\l__nicematrix_columns_width_dim=\dimen294
+\l__nicematrix_col_width_dim=\dimen295
+\g__nicematrix_row_total_int=\count342
+\g__nicematrix_col_total_int=\count343
+\g__nicematrix_last_row_node_int=\count344
+\l__nicematrix_key_nb_rows_int=\count345
+\g__nicematrix_blocks_wd_dim=\dimen296
+\g__nicematrix_blocks_ht_dim=\dimen297
+\g__nicematrix_blocks_dp_dim=\dimen298
+\l__nicematrix_width_dim=\dimen299
+\l__nicematrix_tabular_width_dim=\dimen300
+\l__nicematrix_rule_width_dim=\dimen301
+\l__nicematrix_old_iRow_int=\count346
+\l__nicematrix_old_jCol_int=\count347
+\g__nicematrix_total_X_weight_int=\count348
+\l__nicematrix_X_columns_dim=\dimen302
+\l__nicematrix_x_initial_dim=\dimen303
+\l__nicematrix_y_initial_dim=\dimen304
+\l__nicematrix_x_final_dim=\dimen305
+\l__nicematrix_y_final_dim=\dimen306
+\l__nicematrix_tmpc_dim=\dimen307
+\l__nicematrix_tmpd_dim=\dimen308
+\l__nicematrix_tmpe_dim=\dimen309
+\l__nicematrix_tmpf_dim=\dimen310
+\g__nicematrix_dp_row_zero_dim=\dimen311
+\g__nicematrix_ht_row_zero_dim=\dimen312
+\g__nicematrix_ht_row_one_dim=\dimen313
+\g__nicematrix_dp_ante_last_row_dim=\dimen314
+\g__nicematrix_ht_last_row_dim=\dimen315
+\g__nicematrix_dp_last_row_dim=\dimen316
+\g__nicematrix_width_last_col_dim=\dimen317
+\g__nicematrix_width_first_col_dim=\dimen318
+\l__nicematrix_row_min_int=\count349
+\l__nicematrix_row_max_int=\count350
+\l__nicematrix_col_min_int=\count351
+\l__nicematrix_col_max_int=\count352
+\l__nicematrix_start_int=\count353
+\l__nicematrix_end_int=\count354
+\l__nicematrix_local_start_int=\count355
+\l__nicematrix_local_end_int=\count356
+\g__nicematrix_static_num_of_col_int=\count357
+\l__nicematrix_rounded_corners_dim=\dimen319
+\l__nicematrix_tab_rounded_corners_dim=\dimen320
+\l__nicematrix_offset_dim=\dimen321
+\l__nicematrix_line_width_dim=\dimen322
+\g__nicematrix_block_box_int=\count358
+\l__nicematrix_submatrix_extra_height_dim=\dimen323
+\l__nicematrix_submatrix_left_xshift_dim=\dimen324
+\l__nicematrix_submatrix_right_xshift_dim=\dimen325
+\l__nicematrix_first_row_int=\count359
+\l__nicematrix_first_col_int=\count360
+\l__nicematrix_last_row_int=\count361
+\l__nicematrix_last_col_int=\count362
+\c@tabularnote=\count363
+\g__nicematrix_tabularnote_int=\count364
+\c@nicematrix_draft=\count365
+\l__nicematrix_cell_space_top_limit_dim=\dimen326
+\l__nicematrix_cell_space_bottom_limit_dim=\dimen327
+\l__nicematrix_xdots_inter_dim=\dimen328
+\l__nicematrix_xdots_shorten_start_dim=\dimen329
+\l__nicematrix_xdots_shorten_end_dim=\dimen330
+\l__nicematrix_xdots_radius_dim=\dimen331
+\l__nicematrix_notes_above_space_dim=\dimen332
+\l__nicematrix_left_margin_dim=\dimen333
+\l__nicematrix_right_margin_dim=\dimen334
+\l__nicematrix_extra_left_margin_dim=\dimen335
+\l__nicematrix_extra_right_margin_dim=\dimen336
+\c__nicematrix_max_l_dim=\dimen337
+\l__nicematrix_position_int=\count366
+\l__nicematrix_multiplicity_int=\count367
+\l__nicematrix_brace_yshift_dim=\dimen338
+) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/latex/eurosym\eurosym.sty
+Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
+\@eurobox=\box70
 )
 
 LaTeX Warning: Unused global option(s):
     [paper].
 
 (tfg.aux
-LaTeX Info: Redefining \. on input line 11.
-LaTeX Info: Redefining \% on input line 11.
-LaTeX Info: Redefining \. on input line 30.
-LaTeX Info: Redefining \% on input line 30.
+LaTeX Info: Redefining \. on input line 12.
+LaTeX Info: Redefining \% on input line 12.
+LaTeX Info: Redefining \. on input line 31.
+LaTeX Info: Redefining \% on input line 31.
+
+
+LaTeX Warning: Label `' multiply defined.
 
 
 LaTeX Warning: Label `' multiply defined.
@@ -611,37 +846,37 @@ LaTeX Warning: Label `' multiply defined.
 )
 \openout1 = `tfg.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Info: Redefining \. on input line 45.
-LaTeX Info: Redefining \% on input line 45.
-LaTeX Info: Redefining \microtypecontext on input line 45.
-Package microtype Info: Applying patch `item' on input line 45.
-Package microtype Info: Applying patch `toc' on input line 45.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Info: Redefining \. on input line 50.
+LaTeX Info: Redefining \% on input line 50.
+LaTeX Info: Redefining \microtypecontext on input line 50.
+Package microtype Info: Applying patch `item' on input line 50.
+Package microtype Info: Applying patch `toc' on input line 50.
 Package microtype Info: The `eqnum' patch may not be effective because you are
 (microtype)             using the mathtools package. Make sure to insert
 (microtype)             `\leftprotrusion' and `\rightprotrusion' as
 (microtype)             appropriate in mathtools's `\newtagform' command.
-Package microtype Info: Applying patch `eqnum' on input line 45.
-Package microtype Info: Applying patch `footnote' on input line 45.
-Package microtype Info: Applying patch `verbatim' on input line 45.
-LaTeX Info: Redefining \microtypesetup on input line 45.
+Package microtype Info: Applying patch `eqnum' on input line 50.
+Package microtype Info: Applying patch `footnote' on input line 50.
+Package microtype Info: Applying patch `verbatim' on input line 50.
+LaTeX Info: Redefining \microtypesetup on input line 50.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2),
 (microtype)             factor: 1100.
@@ -649,7 +884,7 @@ Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 10, shrink: 10, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 45.
+LaTeX Info: Redefining \showhyphens on input line 50.
 Package microtype Info: Tracking enabled.
 Package microtype Info: Using default tracking set `smallcaps'.
 Package microtype Info: Adjustment of interword spacing enabled.
@@ -659,15 +894,15 @@ Package microtype Info: Using default kerning set `alltext'.
  (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-ppl.cfg
 File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 )
-\c@mv@tabular=\count325
-\c@mv@boldtabular=\count326
+\c@mv@tabular=\count368
+\c@mv@boldtabular=\count369
  (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/latex/upquote\upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
 )
-Package hyperref Info: Link coloring ON on input line 45.
+Package hyperref Info: Link coloring ON on input line 50.
  (tfg.out) (tfg.out)
-\@outlinefile=\write3
-\openout3 = `tfg.out'.
+\@outlinefile=\write4
+\openout4 = `tfg.out'.
 
 Class scrbook Info: loading recommended package `bookmark'.
 (scrbook)           Using `bookmark' together with `hyperref' is recommended,
@@ -676,58 +911,61 @@ Class scrbook Info: loading recommended package `bookmark'.
 (scrbook)           `bookmarkpackage=false' before \begin{document} and
 (scrbook)           you can avoid this message adding:
 (scrbook)             \usepackage{bookmark}
-(scrbook)           before \begin{document} on input line 45.
+(scrbook)           before \begin{document} on input line 50.
  (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
  (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bkm-pdftex.def
 File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO)
-\BKM@id=\count327
+\BKM@id=\count370
 )) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count328
-\scratchdimen=\dimen198
-\scratchbox=\box61
-\nofMPsegments=\count329
-\nofMParguments=\count330
-\everyMPshowfont=\toks37
-\MPscratchCnt=\count331
-\MPscratchDim=\dimen199
-\MPnumerator=\count332
-\makeMPintoPDFobject=\count333
-\everyMPtoPDFconversion=\toks38
+\scratchcounter=\count371
+\scratchdimen=\dimen339
+\scratchbox=\box71
+\nofMPsegments=\count372
+\nofMParguments=\count373
+\everyMPshowfont=\toks49
+\MPscratchCnt=\count374
+\MPscratchDim=\dimen340
+\MPnumerator=\count375
+\makeMPintoPDFobject=\count376
+\everyMPtoPDFconversion=\toks50
 ) (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-\c@lstlisting=\count334
-Package tocbasic Info: setting babel extension for `lol' on input line 45.
-\scr@dte@lstlisting@maxnumwidth=\skip78
+\c@lstlisting=\count377
+Package tocbasic Info: setting babel extension for `lol' on input line 50.
+\scr@dte@lstlisting@maxnumwidth=\skip83
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for T1+Cabin-TLF on input line 47.
+\c__nicematrix_shift_Ldots_last_row_dim=\dimen341
+\c__nicematrix_shift_exterior_Vdots_dim=\dimen342
+\c__nicematrix_innersep_middle_dim=\dimen343
+LaTeX Font Info:    Trying to load font information for T1+Cabin-TLF on input line 52.
  (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/latex/cabin\t1cabin-tlf.fd
 File: T1Cabin-TLF.fd 2020/07/15 (autoinst) Font definitions for T1/Cabin-TLF.
 )
 LaTeX Font Info:    Font shape `T1/Cabin-TLF/m/n' aliased to
-(Font)              `T1/Cabin-TLF/regular/n' on input line 47.
+(Font)              `T1/Cabin-TLF/regular/n' on input line 52.
 LaTeX Font Info:    Font shape `T1/Cabin-TLF/regular/n' will be
-(Font)              scaled to size 11.39996pt on input line 47.
+(Font)              scaled to size 11.39996pt on input line 52.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `Cabin-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/Cabin-TLF/m/n' aliased to
-(Font)              `T1/Cabin-TLF/regular/n' on input line 47.
+(Font)              `T1/Cabin-TLF/regular/n' on input line 52.
 LaTeX Font Info:    Font shape `T1/Cabin-TLF/regular/n' will be
-(Font)              scaled to size 9.49997pt on input line 47.
+(Font)              scaled to size 9.49997pt on input line 52.
 
 
-<img/portada-ugr-color.pdf, id=3, 597.50829pt x 845.0471pt>
+<img/portada-ugr-color.pdf, id=6, 597.50829pt x 845.0471pt>
 File: img/portada-ugr-color.pdf Graphic file (type pdf)
 <use img/portada-ugr-color.pdf>
-Package pdftex.def Info: img/portada-ugr-color.pdf  used on input line 47.
+Package pdftex.def Info: img/portada-ugr-color.pdf  used on input line 52.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 [1
 
@@ -737,7 +975,7 @@ Package pdftex.def Info: img/portada-ugr-color.pdf  used on input line 47.
 [2
 
 ]
-Overfull \hbox (14.41998pt too wide) in paragraph at lines 47--48
+Overfull \hbox (14.41998pt too wide) in paragraph at lines 52--53
 [][] [] [] 
  []
 
@@ -854,16 +1092,26 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 Package tocbasic Info: Using my definition of `\numberline' on input line 11.
 Package tocbasic Info: Using my definition of `\numberline' on input line 12.
+
+Overfull \hbox (3.71997pt too wide) detected at line 12
+ [][]
+ []
+
 Package tocbasic Info: Using my definition of `\numberline' on input line 13.
+
+Overfull \hbox (7.54997pt too wide) detected at line 13
+ [][]
+ []
+
 Package tocbasic Info: Using my definition of `\numberline' on input line 14.
 
-Overfull \hbox (3.71997pt too wide) detected at line 14
+Overfull \hbox (7.54997pt too wide) detected at line 14
  [][]
  []
 
 Package tocbasic Info: Using my definition of `\numberline' on input line 15.
 
-Overfull \hbox (3.71997pt too wide) detected at line 15
+Overfull \hbox (7.54997pt too wide) detected at line 15
  [][]
  []
 
@@ -887,18 +1135,18 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 28.
 Package tocbasic Info: Using my definition of `\numberline' on input line 29.
 Package tocbasic Info: Using my definition of `\numberline' on input line 30.
 Package tocbasic Info: Using my definition of `\numberline' on input line 31.
-Package tocbasic Info: Using my definition of `\numberline' on input line 32.
-Package tocbasic Info: Using my definition of `\numberline' on input line 33.
-Package tocbasic Info: Using my definition of `\numberline' on input line 34.
-Package tocbasic Info: Using my definition of `\numberline' on input line 35.
+Package tocbasic Info: Using my definition of `\numberline' on input line 36.
+Package tocbasic Info: Using my definition of `\numberline' on input line 37.
+Package tocbasic Info: Using my definition of `\numberline' on input line 38.
 Package tocbasic Info: Using my definition of `\numberline' on input line 40.
 Package tocbasic Info: Using my definition of `\numberline' on input line 41.
-Package tocbasic Info: Using my definition of `\numberline' on input line 42.
 
 
 [8
 
 {C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cabin/cbn_meva6t.enc}]
+Package tocbasic Info: Using my definition of `\numberline' on input line 42.
+Package tocbasic Info: Using my definition of `\numberline' on input line 43.
 Package tocbasic Info: Using my definition of `\numberline' on input line 44.
 Package tocbasic Info: Using my definition of `\numberline' on input line 45.
 Package tocbasic Info: Using my definition of `\numberline' on input line 46.
@@ -921,23 +1169,37 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 62.
 Package tocbasic Info: Using my definition of `\numberline' on input line 63.
 Package tocbasic Info: Using my definition of `\numberline' on input line 64.
 Package tocbasic Info: Using my definition of `\numberline' on input line 65.
-Package tocbasic Info: Using my definition of `\numberline' on input line 66.
-Package tocbasic Info: Using my definition of `\numberline' on input line 67.
-Package tocbasic Info: Using my definition of `\numberline' on input line 68.
 Package tocbasic Info: Using my definition of `\numberline' on input line 69.
-Package tocbasic Info: Using my definition of `\numberline' on input line 70.
-Package tocbasic Info: Using my definition of `\numberline' on input line 71.
-)
-\tf@toc=\write4
-\openout4 = `tfg.toc'.
-
+Package tocbasic Info: Using my definition of `\numberline' on input line 73.
+Package tocbasic Info: Using my definition of `\numberline' on input line 74.
+Package tocbasic Info: Using my definition of `\numberline' on input line 75.
+Package tocbasic Info: Using my definition of `\numberline' on input line 79.
+Package tocbasic Info: Using my definition of `\numberline' on input line 80.
+Package tocbasic Info: Using my definition of `\numberline' on input line 81.
+Package tocbasic Info: Using my definition of `\numberline' on input line 82.
+Package tocbasic Info: Using my definition of `\numberline' on input line 83.
+Package tocbasic Info: Using my definition of `\numberline' on input line 84.
+Package tocbasic Info: Using my definition of `\numberline' on input line 85.
+Package tocbasic Info: Using my definition of `\numberline' on input line 86.
 
 
 LaTeX Font Info:    Font shape `T1/pplj/m/sl' in size <10> not available
-(Font)              Font shape `T1/pplj/m/it' tried instead on input line 23.
+(Font)              Font shape `T1/pplj/m/it' tried instead on input line 87.
+LaTeX Info: Redefining \. on input line 87.
+LaTeX Info: Redefining \% on input line 87.
+[9]
+Package tocbasic Info: Using my definition of `\numberline' on input line 87.
+Package tocbasic Info: Using my definition of `\numberline' on input line 88.
+Package tocbasic Info: Using my definition of `\numberline' on input line 89.
+)
+\tf@toc=\write5
+\openout5 = `tfg.toc'.
+
+
+
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
-[9]
+[10]
 Package tocbasic Info: character protrusion at lof deactivated on input line 23.
  (tfg.lof
 LaTeX Info: Redefining \. on input line 1.
@@ -948,6 +1210,11 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 8.
 Package tocbasic Info: Using my definition of `\numberline' on input line 10.
 Package tocbasic Info: Using my definition of `\numberline' on input line 13.
 Package tocbasic Info: Using my definition of `\numberline' on input line 14.
+
+Overfull \hbox (1.08815pt too wide) in paragraph at lines 14--14
+ [][] [][][]\T1/pplj/m/n/10 (-10) Ejemplos de neu-ro-na bio-lÛ-gi-ca [[]] y neu-ro-na ar-ti-fi-cial (ba-sa-da en [[]]).[][] [][]  
+ []
+
 Package tocbasic Info: Using my definition of `\numberline' on input line 15.
 Package tocbasic Info: Using my definition of `\numberline' on input line 16.
 Package tocbasic Info: Using my definition of `\numberline' on input line 17.
@@ -958,16 +1225,31 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 22.
 Package tocbasic Info: Using my definition of `\numberline' on input line 23.
 Package tocbasic Info: Using my definition of `\numberline' on input line 24.
 Package tocbasic Info: Using my definition of `\numberline' on input line 25.
-Package tocbasic Info: Using my definition of `\numberline' on input line 27.
+Package tocbasic Info: Using my definition of `\numberline' on input line 26.
 Package tocbasic Info: Using my definition of `\numberline' on input line 28.
 Package tocbasic Info: Using my definition of `\numberline' on input line 29.
+Package tocbasic Info: Using my definition of `\numberline' on input line 30.
+Package tocbasic Info: Using my definition of `\numberline' on input line 32.
+Package tocbasic Info: Using my definition of `\numberline' on input line 33.
+Package tocbasic Info: Using my definition of `\numberline' on input line 34.
+Package tocbasic Info: Using my definition of `\numberline' on input line 35.
+Package tocbasic Info: Using my definition of `\numberline' on input line 36.
+Package tocbasic Info: Using my definition of `\numberline' on input line 38.
+Package tocbasic Info: Using my definition of `\numberline' on input line 39.
+Package tocbasic Info: Using my definition of `\numberline' on input line 40.
+Package tocbasic Info: Using my definition of `\numberline' on input line 41.
+Package tocbasic Info: Using my definition of `\numberline' on input line 42.
+Package tocbasic Info: Using my definition of `\numberline' on input line 43.
+Package tocbasic Info: Using my definition of `\numberline' on input line 44.
+Package tocbasic Info: Using my definition of `\numberline' on input line 50.
+Package tocbasic Info: Using my definition of `\numberline' on input line 51.
 )
-\tf@lof=\write5
-\openout5 = `tfg.lof'.
+\tf@lof=\write6
+\openout6 = `tfg.lof'.
 
 
 
-[10
+[11
 
 ]
 Package tocbasic Info: character protrusion at lot deactivated on input line 29.
@@ -976,17 +1258,29 @@ LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
+Package tocbasic Info: Using my definition of `\numberline' on input line 8.
+Package tocbasic Info: Using my definition of `\numberline' on input line 9.
+Package tocbasic Info: Using my definition of `\numberline' on input line 15.
+Package tocbasic Info: Using my definition of `\numberline' on input line 17.
+Package tocbasic Info: Using my definition of `\numberline' on input line 19.
+Package tocbasic Info: Using my definition of `\numberline' on input line 20.
+Package tocbasic Info: Using my definition of `\numberline' on input line 21.
+Package tocbasic Info: Using my definition of `\numberline' on input line 22.
+Package tocbasic Info: Using my definition of `\numberline' on input line 23.
+Package tocbasic Info: Using my definition of `\numberline' on input line 24.
+Package tocbasic Info: Using my definition of `\numberline' on input line 30.
+Package tocbasic Info: Using my definition of `\numberline' on input line 31.
 )
-\tf@lot=\write6
-\openout6 = `tfg.lot'.
+\tf@lot=\write7
+\openout7 = `tfg.lot'.
 
 
 
-[11
+[12
 
 ]
 
-[12
+[13
 
 ]) (preliminares/introduccion.tex
 chapter without number
@@ -1010,41 +1304,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--20
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
+
+ []
+
 LaTeX Font Info:    Font shape `T1/Cabin-TLF/b/n' aliased to
-(Font)              `T1/Cabin-TLF/bold/n' on input line 22.
+(Font)              `T1/Cabin-TLF/bold/n' on input line 24.
 LaTeX Font Info:    Font shape `T1/Cabin-TLF/bold/n' will be
-(Font)              scaled to size 13.67995pt on input line 22.
-<img/problem-definition.png, id=305, 1035.87pt x 591.20876pt>
+(Font)              scaled to size 13.67995pt on input line 24.
+<img/problem-definition.png, id=395, 1035.87pt x 591.20876pt>
 File: img/problem-definition.png Graphic file (type png)
 <use img/problem-definition.png>
-Package pdftex.def Info: img/problem-definition.png  used on input line 26.
+Package pdftex.def Info: img/problem-definition.png  used on input line 28.
 (pdftex.def)             Requested size: 408.2971pt x 233.03325pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[13
+[14
 
 ]
 
-LaTeX Info: Redefining \. on input line 37.
-LaTeX Info: Redefining \% on input line 37.
-[14 <./img/problem-definition.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 37--38
+LaTeX Info: Redefining \. on input line 39.
+LaTeX Info: Redefining \% on input line 39.
+[15 <./img/problem-definition.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--42
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 45--46
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
 
  []
 
@@ -1064,11 +1355,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--52
  []
 
 
-
-LaTeX Info: Redefining \. on input line 52.
-LaTeX Info: Redefining \% on input line 52.
-[15]
 Underfull \hbox (badness 10000) in paragraph at lines 53--54
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 54.
+LaTeX Info: Redefining \% on input line 54.
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
  []
 
@@ -1078,50 +1374,160 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--58
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--60
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
+
+ []
+
+
+Underfull \vbox (badness 1270) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 72.
+LaTeX Info: Redefining \% on input line 72.
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 77--78
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
 
 
 
-LaTeX Info: Redefining \. on input line 68.
-LaTeX Info: Redefining \% on input line 68.
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 69--70
+LaTeX Info: Redefining \. on input line 93.
+LaTeX Info: Redefining \% on input line 93.
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--80
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
+
+ []
+
+
+Package nicematrix Warning: Key deprecated.
+(nicematrix)                The key 'color-inside' (and its alias
+(nicematrix)                'colortbl-like') is now point-less and have been
+(nicematrix)                deprecated.
+(nicematrix)                You won't have similar message till the end of the
+(nicematrix)                document.
+
+\g__nicematrix_max_cell_width_dim=\dimen344
+\c@iRow=\count378
+\c@jCol=\count379
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 142.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 142.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 142.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 142.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 142.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 142.
+\l__nicematrix_cell_box=\box72
+\l__nicematrix_the_array_box=\box73
+\l__nicematrix_left_delim_dim=\dimen345
+\l__nicematrix_right_delim_dim=\dimen346
+\g__nicematrix_block_box_1_box=\box74
+\g__nicematrix_block_box_2_box=\box75
+\g__nicematrix_block_box_3_box=\box76
+\g__nicematrix_block_box_4_box=\box77
+\g__nicematrix_block_box_5_box=\box78
+\g__nicematrix_block_box_6_box=\box79
+\g__nicematrix_block_box_7_box=\box80
+\g__nicematrix_block_box_8_box=\box81
+\g__nicematrix_block_box_9_box=\box82
+\g__nicematrix_block_box_10_box=\box83
+\g__nicematrix_block_box_11_box=\box84
+\g__nicematrix_block_box_12_box=\box85
+\g__nicematrix_ddots_int=\count380
+\g__nicematrix_iddots_int=\count381
+\g__nicematrix_delta_x_one_dim=\dimen347
+\g__nicematrix_delta_y_one_dim=\dimen348
+\g__nicematrix_delta_x_two_dim=\dimen349
+\g__nicematrix_delta_y_two_dim=\dimen350
+\l__nicematrix_initial_i_int=\count382
+\l__nicematrix_initial_j_int=\count383
+\l__nicematrix_final_i_int=\count384
+\l__nicematrix_final_j_int=\count385
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--147
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 147.
+LaTeX Info: Redefining \% on input line 147.
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
 
  []
 
 )
 
-LaTeX Info: Redefining \. on input line 68.
-LaTeX Info: Redefining \% on input line 68.
-[17]
-
-[18
-
-
-]
+LaTeX Info: Redefining \. on input line 73.
+LaTeX Info: Redefining \% on input line 73.
+[20]
 part I.
 Package scrkbase Info: You've told me to use the font selection of the element
 (scrkbase)             `partprefix' that is an alias of element `partnumber'
-(scrkbase)              on input line 70.
+(scrkbase)              on input line 75.
 LaTeX Font Info:    Font shape `T1/Cabin-TLF/b/n' aliased to
-(Font)              `T1/Cabin-TLF/bold/n' on input line 70.
+(Font)              `T1/Cabin-TLF/bold/n' on input line 75.
 LaTeX Font Info:    Font shape `T1/Cabin-TLF/bold/n' will be
-(Font)              scaled to size 19.70294pt on input line 70.
+(Font)              scaled to size 19.70294pt on input line 75.
 
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.70 \part{Fundamentos Te√≥ricos}
+l.75 \part{Fundamentos Te√≥ricos}
                                   [1
+
+
 
 ]
 
@@ -1129,7 +1535,7 @@ l.70 \part{Fundamentos Te√≥ricos}
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.70 \part{Fundamentos Te√≥ricos}
+l.75 \part{Fundamentos Te√≥ricos}
                                   [2] (capitulos/fundamentos_matematicos.tex
 chapter 1.
 
@@ -1569,7 +1975,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 463--464
 
  []
 
-<img/distribuciones-normales.png, id=471, 1867.97874pt x 656.4525pt>
+<img/distribuciones-normales.png, id=609, 1867.97874pt x 656.4525pt>
 File: img/distribuciones-normales.png Graphic file (type png)
 <use img/distribuciones-normales.png>
 Package pdftex.def Info: img/distribuciones-normales.png  used on input line 468.
@@ -1586,22 +1992,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 474--475
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 480--481
+Underfull \hbox (badness 10000) in paragraph at lines 478--479
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 494--495
+Underfull \hbox (badness 10000) in paragraph at lines 491--492
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 497--498
+Underfull \hbox (badness 10000) in paragraph at lines 493--494
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 500--501
+Underfull \hbox (badness 10000) in paragraph at lines 496--497
 
  []
 
@@ -1610,41 +2016,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 500--501
 [16
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 509--510
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 517--518
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 539--540
+Underfull \hbox (badness 10000) in paragraph at lines 525--526
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 530--531
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 548--549
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 554--555
 
  []
 
 
 
-LaTeX Info: Redefining \. on input line 546.
-LaTeX Info: Redefining \% on input line 546.
+LaTeX Info: Redefining \. on input line 558.
+LaTeX Info: Redefining \% on input line 558.
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 547--548
+Underfull \hbox (badness 10000) in paragraph at lines 566--567
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 551--552
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 556--557
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 570--571
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 575--576
+Underfull \hbox (badness 10000) in paragraph at lines 578--579
 
  []
 
@@ -1654,26 +2065,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 583--584
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 586--587
 
-LaTeX Info: Redefining \. on input line 584.
-LaTeX Info: Redefining \% on input line 584.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 590--591
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 593--594
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 598.
+LaTeX Info: Redefining \% on input line 598.
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 592--593
+Underfull \hbox (badness 10000) in paragraph at lines 616--617
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 598--599
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 602--603
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 606--607
+Underfull \hbox (badness 10000) in paragraph at lines 620--621
 
  []
 
@@ -1683,218 +2099,54 @@ Underfull \hbox (badness 10000) in paragraph at lines 622--623
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 636--637
 
-LaTeX Info: Redefining \. on input line 638.
-LaTeX Info: Redefining \% on input line 638.
-[19]
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 638--639
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 643--644
+
+LaTeX Info: Redefining \. on input line 639.
+LaTeX Info: Redefining \% on input line 639.
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 664--665
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 647--648
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 651--652
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 659--660
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 663--664
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 667--668
+Underfull \hbox (badness 10000) in paragraph at lines 679--680
 
  []
 
 
 
-LaTeX Info: Redefining \. on input line 673.
-LaTeX Info: Redefining \% on input line 673.
+LaTeX Info: Redefining \. on input line 688.
+LaTeX Info: Redefining \% on input line 688.
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 678--679
+Underfull \hbox (badness 10000) in paragraph at lines 697--698
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 686--687
+Underfull \hbox (badness 10000) in paragraph at lines 711--712
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 691--692
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 709--710
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 715--716
+Underfull \hbox (badness 10000) in paragraph at lines 730--731
 
  []
 
 
 
-LaTeX Info: Redefining \. on input line 721.
-LaTeX Info: Redefining \% on input line 721.
+LaTeX Info: Redefining \. on input line 740.
+LaTeX Info: Redefining \% on input line 740.
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 723--724
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 727--728
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 754--755
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 756--757
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 758--759
-
- []
-
-
-
-LaTeX Info: Redefining \. on input line 761.
-LaTeX Info: Redefining \% on input line 761.
-[22]
-Underfull \hbox (badness 10000) in paragraph at lines 776--777
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 778--779
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 790--791
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 800--801
-
- []
-
-
-
-LaTeX Info: Redefining \. on input line 801.
-LaTeX Info: Redefining \% on input line 801.
-[23]
-Underfull \hbox (badness 10000) in paragraph at lines 810--811
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 835--836
-
- []
-
-
-
-LaTeX Info: Redefining \. on input line 836.
-LaTeX Info: Redefining \% on input line 836.
-[24]
-Underfull \hbox (badness 10000) in paragraph at lines 838--839
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 842--843
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 863--864
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 867--868
-
- []
-
-
-Overfull \hbox (1.58684pt too wide) in paragraph at lines 869--870
-[]\T1/pplj/m/n/10 (-10) Para cons-truir la ma-triz or-to-go-nal $\OML/zplm/m/it/10 V$\T1/pplj/m/n/10 (-10) , hay que en-con-trar una ba-se or-to-nor-mal $\OMS/zplm/m/n/10 f\OML/zplm/m/it/10 v[]\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 v[]\OT1/pplx/m/n/10 , [] , \OML/zplm/m/it/10 v[]\OMS/zplm/m/n/10 g$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 869--870
-
- []
-
-
-
-LaTeX Info: Redefining \. on input line 877.
-LaTeX Info: Redefining \% on input line 877.
-[25]
-Underfull \hbox (badness 10000) in paragraph at lines 883--884
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 885--886
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 911--912
-
- []
-
-
-
-LaTeX Info: Redefining \. on input line 918.
-LaTeX Info: Redefining \% on input line 918.
-[26]
-Underfull \hbox (badness 10000) in paragraph at lines 926--927
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 945--946
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 965--966
-
- []
-
-
-
-LaTeX Info: Redefining \. on input line 968.
-LaTeX Info: Redefining \% on input line 968.
-[27]
-Underfull \hbox (badness 10000) in paragraph at lines 975--976
+Underfull \hbox (badness 10000) in paragraph at lines 740--741
 
  []
 
@@ -1902,7 +2154,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 975--976
 
 LaTeX Info: Redefining \. on input line 4.
 LaTeX Info: Redefining \% on input line 4.
-[28]
+[22]
 chapter 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 7--8
@@ -1914,7 +2166,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
 
-<img/clasi-regresion.png, id=623, 793.7655pt x 325.215pt>
+<img/clasi-regresion.png, id=692, 793.7655pt x 325.215pt>
 File: img/clasi-regresion.png Graphic file (type png)
 <use img/clasi-regresion.png>
 Package pdftex.def Info: img/clasi-regresion.png  used on input line 13.
@@ -1926,7 +2178,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
 
 
-[29
+[23
 
  <./img/clasi-regresion.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 19--20
@@ -1943,37 +2195,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--26
 
  []
 
-<img/neuronasbioyartificial.png, id=640, 611.886pt x 170.43675pt>
-File: img/neuronasbioyartificial.png Graphic file (type png)
-<use img/neuronasbioyartificial.png>
-Package pdftex.def Info: img/neuronasbioyartificial.png  used on input line 29.
-(pdftex.def)             Requested size: 326.63892pt x 90.9838pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
-
- []
-
+<img/biological-neuron.png, id=709, 2577.63pt x 1232.605pt>
+File: img/biological-neuron.png Graphic file (type png)
+<use img/biological-neuron.png>
+Package pdftex.def Info: img/biological-neuron.png  used on input line 29.
+(pdftex.def)             Requested size: 183.73244pt x 87.85222pt.
+<img/artificial-neuron.png, id=710, 734.745pt x 428.35031pt>
+File: img/artificial-neuron.png Graphic file (type png)
+<use img/artificial-neuron.png>
+Package pdftex.def Info: img/artificial-neuron.png  used on input line 31.
+(pdftex.def)             Requested size: 183.73244pt x 107.11345pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 35--36
 
  []
 
 
-
-LaTeX Info: Redefining \. on input line 36.
-LaTeX Info: Redefining \% on input line 36.
-[30 <./img/neuronasbioyartificial.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 37--38
 
  []
 
 
+
+LaTeX Info: Redefining \. on input line 38.
+LaTeX Info: Redefining \% on input line 38.
+[24 <./img/biological-neuron.png> <./img/artificial-neuron.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--44
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
 
  []
 
@@ -1988,44 +2240,45 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--48
  []
 
 
-
-LaTeX Info: Redefining \. on input line 48.
-LaTeX Info: Redefining \% on input line 48.
-[31]
-<img/cnn.png, id=664, 880.4895pt x 387.24675pt>
-File: img/cnn.png Graphic file (type png)
-<use img/cnn.png>
-Package pdftex.def Info: img/cnn.png  used on input line 51.
-(pdftex.def)             Requested size: 326.63892pt x 143.65721pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 60--61
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
 
  []
 
+
+
+LaTeX Info: Redefining \. on input line 50.
+LaTeX Info: Redefining \% on input line 50.
+[25]
+<img/cnn.png, id=736, 880.4895pt x 387.24675pt>
+File: img/cnn.png Graphic file (type png)
+<use img/cnn.png>
+Package pdftex.def Info: img/cnn.png  used on input line 53.
+(pdftex.def)             Requested size: 326.63892pt x 143.65721pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
 
 
-
-LaTeX Info: Redefining \. on input line 64.
-LaTeX Info: Redefining \% on input line 64.
-[32 <./img/cnn.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
 
-<img/convolucion.png, id=673, 263.18324pt x 260.77425pt>
-File: img/convolucion.png Graphic file (type png)
-<use img/convolucion.png>
-Package pdftex.def Info: img/convolucion.png  used on input line 68.
-(pdftex.def)             Requested size: 204.14854pt x 202.28496pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
 
  []
 
+
+
+LaTeX Info: Redefining \. on input line 67.
+LaTeX Info: Redefining \% on input line 67.
+[26 <./img/cnn.png>]
+<img/convolucion.png, id=745, 263.18324pt x 260.77425pt>
+File: img/convolucion.png Graphic file (type png)
+<use img/convolucion.png>
+Package pdftex.def Info: img/convolucion.png  used on input line 70.
+(pdftex.def)             Requested size: 204.14854pt x 202.28496pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
@@ -2037,15 +2290,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--77
  []
 
 
-
-LaTeX Info: Redefining \. on input line 77.
-LaTeX Info: Redefining \% on input line 77.
-[33 <./img/convolucion.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 80--81
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
 
  []
 
 
+
+LaTeX Info: Redefining \. on input line 79.
+LaTeX Info: Redefining \% on input line 79.
+[27 <./img/convolucion.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 82--83
 
  []
@@ -2055,26 +2308,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 84--85
 
  []
 
-<img/pooling.png, id=685, 720.89325pt x 148.75575pt>
-File: img/pooling.png Graphic file (type png)
-<use img/pooling.png>
-Package pdftex.def Info: img/pooling.png  used on input line 88.
-(pdftex.def)             Requested size: 326.63892pt x 67.4025pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
+<img/pooling.png, id=756, 720.89325pt x 148.75575pt>
+File: img/pooling.png Graphic file (type png)
+<use img/pooling.png>
+Package pdftex.def Info: img/pooling.png  used on input line 90.
+(pdftex.def)             Requested size: 326.63892pt x 67.4025pt.
 
-
-LaTeX Info: Redefining \. on input line 95.
-LaTeX Info: Redefining \% on input line 95.
-[34 <./img/pooling.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
  []
 
 
+
+LaTeX Info: Redefining \. on input line 98.
+LaTeX Info: Redefining \% on input line 98.
+[28 <./img/pooling.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 98--99
 
  []
@@ -2096,14 +2349,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 106--107
 
 
 
-LaTeX Info: Redefining \. on input line 113.
-LaTeX Info: Redefining \% on input line 113.
-[35]
+LaTeX Info: Redefining \. on input line 120.
+LaTeX Info: Redefining \% on input line 120.
+[29]
 Underfull \hbox (badness 10000) in paragraph at lines 125--126
 
  []
 
-<img/funcionesactivacion.png, id=702, 925.056pt x 384.2355pt>
+<img/funcionesactivacion.png, id=773, 925.056pt x 384.2355pt>
 File: img/funcionesactivacion.png Graphic file (type png)
 <use img/funcionesactivacion.png>
 Package pdftex.def Info: img/funcionesactivacion.png  used on input line 131.
@@ -2112,7 +2365,7 @@ Package pdftex.def Info: img/funcionesactivacion.png  used on input line 131.
 
 LaTeX Info: Redefining \. on input line 135.
 LaTeX Info: Redefining \% on input line 135.
-[36 <./img/funcionesactivacion.png>]
+[30 <./img/funcionesactivacion.png>]
 chapter 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 137--138
@@ -2134,14 +2387,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 152--153
 
  []
 
-<img/learning-diagram.png, id=710, 478.78876pt x 400.49625pt>
+<img/learning-diagram.png, id=781, 1276.77pt x 1067.99pt>
 File: img/learning-diagram.png Graphic file (type png)
 <use img/learning-diagram.png>
 Package pdftex.def Info: img/learning-diagram.png  used on input line 156.
-(pdftex.def)             Requested size: 285.80672pt x 239.07127pt.
+(pdftex.def)             Requested size: 285.80672pt x 239.06517pt.
 
 
-[37
+[31
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 162--163
@@ -2154,44 +2407,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 164--165
  []
 
 
+
+LaTeX Info: Redefining \. on input line 168.
+LaTeX Info: Redefining \% on input line 168.
+[32 <./img/learning-diagram.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 173--174
 
  []
 
 
-
-LaTeX Info: Redefining \. on input line 174.
-LaTeX Info: Redefining \% on input line 174.
-[38 <./img/learning-diagram.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 175--176
 
  []
 
-<img/gradientdescent.png, id=725, 476.37975pt x 184.2885pt>
+<img/gradientdescent.png, id=797, 1587.9325pt x 614.295pt>
 File: img/gradientdescent.png Graphic file (type png)
 <use img/gradientdescent.png>
 Package pdftex.def Info: img/gradientdescent.png  used on input line 179.
-(pdftex.def)             Requested size: 367.46489pt x 142.15285pt.
+(pdftex.def)             Requested size: 367.46489pt x 142.14722pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 183--184
 
  []
 
 
+
+LaTeX Info: Redefining \. on input line 184.
+LaTeX Info: Redefining \% on input line 184.
+[33 <./img/gradientdescent.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 185--186
 
  []
 
 
-
-LaTeX Info: Redefining \. on input line 186.
-LaTeX Info: Redefining \% on input line 186.
-[39 <./img/gradientdescent.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 190--191
 
  []
 
-<img/aprendizajegd.png, id=735, 167.4255pt x 118.041pt>
+<img/aprendizajegd.png, id=806, 167.4255pt x 118.041pt>
 File: img/aprendizajegd.png Graphic file (type png)
 <use img/aprendizajegd.png>
 Package pdftex.def Info: img/aprendizajegd.png  used on input line 194.
@@ -2208,9 +2461,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 207--208
 
 
 
-LaTeX Info: Redefining \. on input line 209.
-LaTeX Info: Redefining \% on input line 209.
-[40 <./img/aprendizajegd.png>]
+LaTeX Info: Redefining \. on input line 208.
+LaTeX Info: Redefining \% on input line 208.
+[34 <./img/aprendizajegd.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 209--210
 
  []
@@ -2230,6 +2483,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 221--222
 
  []
 
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 12.50409pt on input line 223.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 12.50409pt on input line 223.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 223.
@@ -2251,7 +2508,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 224--225
 
 LaTeX Info: Redefining \. on input line 225.
 LaTeX Info: Redefining \% on input line 225.
-[41]
+[35]
 Underfull \hbox (badness 10000) in paragraph at lines 226--227
 
  []
@@ -2280,7 +2537,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 253--254
 
 LaTeX Info: Redefining \. on input line 254.
 LaTeX Info: Redefining \% on input line 254.
-[42]
+[36]
 Underfull \hbox (badness 10000) in paragraph at lines 261--262
 
  []
@@ -2312,23 +2569,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 294--295
 
 
 
-LaTeX Info: Redefining \. on input line 299.
-LaTeX Info: Redefining \% on input line 299.
-[43]
+LaTeX Info: Redefining \. on input line 297.
+LaTeX Info: Redefining \% on input line 297.
+[37]
 Underfull \hbox (badness 10000) in paragraph at lines 344--345
 
  []
 
 
+
+LaTeX Info: Redefining \. on input line 345.
+LaTeX Info: Redefining \% on input line 345.
+[38]
 Underfull \hbox (badness 10000) in paragraph at lines 349--350
 
  []
 
 
-
-LaTeX Info: Redefining \. on input line 350.
-LaTeX Info: Redefining \% on input line 350.
-[44]
 Underfull \hbox (badness 10000) in paragraph at lines 351--352
 
  []
@@ -2348,11 +2605,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 362--363
 
  []
 
-<img/bias-variance.png, id=781, 386.94562pt x 98.61844pt>
+<img/bias-variance.png, id=853, 1031.855pt x 262.9825pt>
 File: img/bias-variance.png Graphic file (type png)
 <use img/bias-variance.png>
 Package pdftex.def Info: img/bias-variance.png  used on input line 366.
-(pdftex.def)             Requested size: 285.80672pt x 72.84256pt.
+(pdftex.def)             Requested size: 285.80672pt x 72.84006pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -2363,9 +2620,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 372--373
 
 
 
-LaTeX Info: Redefining \. on input line 375.
-LaTeX Info: Redefining \% on input line 375.
-[45]
+LaTeX Info: Redefining \. on input line 373.
+LaTeX Info: Redefining \% on input line 373.
+[39]
 Underfull \hbox (badness 10000) in paragraph at lines 378--379
 
  []
@@ -2375,21 +2632,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 380--381
 
  []
 
-<img/learning-curve.png, id=791, 200.24812pt x 157.33781pt>
+<img/learning-curve.png, id=862, 533.995pt x 419.5675pt>
 File: img/learning-curve.png Graphic file (type png)
 <use img/learning-curve.png>
 Package pdftex.def Info: img/learning-curve.png  used on input line 384.
-(pdftex.def)             Requested size: 163.31635pt x 128.3264pt.
+(pdftex.def)             Requested size: 163.31635pt x 128.3168pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 388--389
 
  []
 
 
-
-LaTeX Info: Redefining \. on input line 389.
-LaTeX Info: Redefining \% on input line 389.
-[46 <./img/bias-variance.png> <./img/learning-curve.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 390--391
 
  []
@@ -2399,7 +2655,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 392--393
 
  []
 
-<img/learning-curve-classicalvsmodern.png, id=802, 1099.7085pt x 328.8285pt>
+
+
+LaTeX Info: Redefining \. on input line 393.
+LaTeX Info: Redefining \% on input line 393.
+[40 <./img/bias-variance.png>]
+<img/learning-curve-classicalvsmodern.png, id=872, 1099.7085pt x 328.8285pt>
 File: img/learning-curve-classicalvsmodern.png Graphic file (type png)
 <use img/learning-curve-classicalvsmodern.png>
 Package pdftex.def Info: img/learning-curve-classicalvsmodern.png  used on input line 396.
@@ -2413,7 +2674,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 402--403
 
 LaTeX Info: Redefining \. on input line 403.
 LaTeX Info: Redefining \% on input line 403.
-[47 <./img/learning-curve-classicalvsmodern.png>]
+[41 <./img/learning-curve.png> <./img/learning-curve-classicalvsmodern.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 404--405
 
  []
@@ -2444,47 +2705,65 @@ Underfull \hbox (badness 10000) in paragraph at lines 430--431
  []
 
 
+
+LaTeX Info: Redefining \. on input line 431.
+LaTeX Info: Redefining \% on input line 431.
+[42]
 Underfull \hbox (badness 10000) in paragraph at lines 438--439
 
  []
 
 
-
-LaTeX Info: Redefining \. on input line 439.
-LaTeX Info: Redefining \% on input line 439.
-[48]
 Underfull \hbox (badness 10000) in paragraph at lines 443--444
 
  []
 
-)
-Underfull \hbox (badness 10000) in paragraph at lines 469--73
+
+
+LaTeX Info: Redefining \. on input line 467.
+LaTeX Info: Redefining \% on input line 467.
+[43]
+Underfull \hbox (badness 10000) in paragraph at lines 469--470
 
  []
 
+<img/biasvarianceunderoverfitting.png, id=901, 694.84593pt x 425.33907pt>
+File: img/biasvarianceunderoverfitting.png Graphic file (type png)
+<use img/biasvarianceunderoverfitting.png>
+Package pdftex.def Info: img/biasvarianceunderoverfitting.png  used on input line 473.
+(pdftex.def)             Requested size: 326.63892pt x 199.94183pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 477--478
 
-LaTeX Info: Redefining \. on input line 74.
-LaTeX Info: Redefining \% on input line 74.
-[49]
+ []
+
+)
+
+LaTeX Info: Redefining \. on input line 79.
+LaTeX Info: Redefining \% on input line 79.
+[44 <./img/biasvarianceunderoverfitting.png>]
+
+LaTeX Info: Redefining \. on input line 79.
+LaTeX Info: Redefining \% on input line 79.
+[45]
 part II.
 Package scrkbase Info: You've told me to use the font selection of the element
 (scrkbase)             `partprefix' that is an alias of element `partnumber'
-(scrkbase)              on input line 74.
+(scrkbase)              on input line 79.
 
 
-[50
+[46
 
 ]
 
-[51] (capitulos/estado_arte.tex
+[47] (capitulos/estado_arte.tex
 chapter 5.
 
 Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
  []
 
-<img/scopus_histogram.png, id=839, 657.95813pt x 368.87813pt>
+<img/scopus_histogram.png, id=921, 657.95813pt x 368.87813pt>
 File: img/scopus_histogram.png Graphic file (type png)
 <use img/scopus_histogram.png>
 Package pdftex.def Info: img/scopus_histogram.png  used on input line 10.
@@ -2501,23 +2780,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
 
 
-[52
+[48
 
  <./img/scopus_histogram.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 20--21
 
  []
 
-<img/estadoarte2.png, id=852, 337.26pt x 236.38312pt>
-File: img/estadoarte2.png Graphic file (type png)
-<use img/estadoarte2.png>
-Package pdftex.def Info: img/estadoarte2.png  used on input line 24.
-(pdftex.def)             Requested size: 326.63892pt x 228.94508pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
+<img/estadoarte2.png, id=934, 899.36pt x 630.355pt>
+File: img/estadoarte2.png Graphic file (type png)
+<use img/estadoarte2.png>
+Package pdftex.def Info: img/estadoarte2.png  used on input line 26.
+(pdftex.def)             Requested size: 326.63892pt x 228.93787pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
@@ -2527,13 +2806,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
 LaTeX Info: Redefining \. on input line 31.
 LaTeX Info: Redefining \% on input line 31.
-[53 <./img/estadoarte2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 34--35
+[49 <./img/estadoarte2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 32--33
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--37
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
  []
 
@@ -2542,13 +2821,1119 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
  []
 
-<img/estadoarte2.2.png, id=883, 419.76825pt x 154.176pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
+
+ []
+
+<img/estadoarte2.2.png, id=961, 1399.2275pt x 513.92pt>
 File: img/estadoarte2.2.png Graphic file (type png)
 <use img/estadoarte2.2.png>
-Package pdftex.def Info: img/estadoarte2.2.png  used on input line 42.
-(pdftex.def)             Requested size: 326.63892pt x 119.97447pt.
+Package pdftex.def Info: img/estadoarte2.2.png  used on input line 48.
+(pdftex.def)             Requested size: 326.63892pt x 119.9635pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 53.
+LaTeX Info: Redefining \% on input line 53.
+[50]
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 64.
+LaTeX Info: Redefining \% on input line 64.
+[51 <./img/estadoarte2.2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
+
+ []
+
+\g__nicematrix_block_box_13_box=\box86
+\g__nicematrix_block_box_14_box=\box87
+\g__nicematrix_block_box_15_box=\box88
+\g__nicematrix_block_box_16_box=\box89
+\g__nicematrix_block_box_17_box=\box90
+\g__nicematrix_block_box_18_box=\box91
+\g__nicematrix_block_box_19_box=\box92
+\g__nicematrix_block_box_20_box=\box93
+\g__nicematrix_block_box_21_box=\box94
+\g__nicematrix_block_box_22_box=\box95
+\g__nicematrix_block_box_23_box=\box96
+\g__nicematrix_block_box_24_box=\box97
+\g__nicematrix_block_box_25_box=\box98
+\g__nicematrix_block_box_26_box=\box99
+\g__nicematrix_block_box_27_box=\box100
+\g__nicematrix_block_box_28_box=\box101
+\g__nicematrix_block_box_29_box=\box102
+\g__nicematrix_block_box_30_box=\box103
+\g__nicematrix_block_box_31_box=\box104
+\g__nicematrix_block_box_32_box=\box105
+\g__nicematrix_block_box_33_box=\box106
+\g__nicematrix_block_box_34_box=\box107
+\g__nicematrix_block_box_35_box=\box108
+\g__nicematrix_block_box_36_box=\box109
+
+Overfull \hbox (10.9994pt too wide) in paragraph at lines 76--94
+ []$[][][][][]$[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+LaTeX Info: Redefining \. on input line 82.
+LaTeX Info: Redefining \% on input line 82.
+[52]
+
+LaTeX Info: Redefining \. on input line 82.
+LaTeX Info: Redefining \% on input line 82.
+[53]
+part III.
+Package scrkbase Info: You've told me to use the font selection of the element
+(scrkbase)             `partprefix' that is an alias of element `partnumber'
+(scrkbase)              on input line 82.
+
+
+[54
+
+]
+
+[55] (capitulos/desarrollo_matematico.tex
+chapter 6.
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+
+ []
+
+
+
+[56
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--39
+
+ []
+
+<img/planteamiento-teorico-dd.png, id=1044, 711.4078pt x 557.83406pt>
+File: img/planteamiento-teorico-dd.png Graphic file (type png)
+<use img/planteamiento-teorico-dd.png>
+Package pdftex.def Info: img/planteamiento-teorico-dd.png  used on input line 42.
+(pdftex.def)             Requested size: 265.39063pt x 208.10625pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 47.
+LaTeX Info: Redefining \% on input line 47.
+[57 <./img/planteamiento-teorico-dd.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 67.
+LaTeX Info: Redefining \% on input line 67.
+[58]
+Underfull \hbox (badness 10000) in paragraph at lines 71--72
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--78
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 100.
+LaTeX Info: Redefining \% on input line 100.
+[59]
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--125
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--138
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 141.
+LaTeX Info: Redefining \% on input line 141.
+[60]
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
+
+ []
+
+
+Overfull \hbox (0.4058pt too wide) in paragraph at lines 163--164
+\T1/pplj/m/n/10 (-10) pre-dic-cio-nes. La zo-na so-bre-pa-ra-me-tri-za-da in-clu-ye el tÈr-mino adi-cio-nal $\OML/zplm/m/it/10 x[] \OMS/zplm/m/n/10 ^^A \OT1/zplm/m/n/10 (\OML/zplm/m/it/10 X[][][]X \OMS/zplm/m/n/10 ^^@
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--166
+
+ []
+
+<img/marchenku-pastor.png, id=1077, 1003.75pt x 819.06pt>
+File: img/marchenku-pastor.png Graphic file (type png)
+<use img/marchenku-pastor.png>
+Package pdftex.def Info: img/marchenku-pastor.png  used on input line 169.
+(pdftex.def)             Requested size: 244.98074pt x 199.90283pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--174
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 175.
+LaTeX Info: Redefining \% on input line 175.
+[61]
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--183
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 186--187
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 187.
+LaTeX Info: Redefining \% on input line 187.
+[62 <./img/marchenku-pastor.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 193--194
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 208--209
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--222
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 222.
+LaTeX Info: Redefining \% on input line 222.
+[63]
+Underfull \hbox (badness 10000) in paragraph at lines 257--258
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 271.
+LaTeX Info: Redefining \% on input line 271.
+[64]
+Underfull \hbox (badness 10000) in paragraph at lines 273--274
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 279--280
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--286
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--292
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 297--298
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 304--305
+
+ []
+
+
+Underfull \vbox (badness 6625) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 309.
+LaTeX Info: Redefining \% on input line 309.
+[65]
+Underfull \hbox (badness 10000) in paragraph at lines 309--310
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 315--316
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 332--333
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--335
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--340
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 344--345
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 349.
+LaTeX Info: Redefining \% on input line 349.
+[66]
+Underfull \hbox (badness 10000) in paragraph at lines 349--350
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 354--355
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 357--358
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--361
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 367--368
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 370--371
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 371.
+LaTeX Info: Redefining \% on input line 371.
+[67]
+Underfull \hbox (badness 10000) in paragraph at lines 378--379
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 384--385
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 401--402
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 417.
+LaTeX Info: Redefining \% on input line 417.
+[68]
+Underfull \hbox (badness 10000) in paragraph at lines 425--426
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 429--430
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 431--432
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 433--434
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 435--436
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 436.
+LaTeX Info: Redefining \% on input line 436.
+[69]
+Underfull \hbox (badness 10000) in paragraph at lines 437--438
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 439--440
+
+ []
+
+<img/localglobalminima.png, id=1158, 1730.465pt x 544.0325pt>
+File: img/localglobalminima.png Graphic file (type png)
+<use img/localglobalminima.png>
+Package pdftex.def Info: img/localglobalminima.png  used on input line 443.
+(pdftex.def)             Requested size: 326.63892pt x 102.68654pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 459--460
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 461.
+LaTeX Info: Redefining \% on input line 461.
+[70 <./img/localglobalminima.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 461--462
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 470--471
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 475--476
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 477--478
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 479--480
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 486.
+LaTeX Info: Redefining \% on input line 486.
+[71]
+Underfull \hbox (badness 10000) in paragraph at lines 486--487
+
+ []
+
+
+Overfull \hbox (2.02144pt too wide) in paragraph at lines 494--495
+[]\T1/pplj/m/it/10 (-10) (\T1/pplj/b/it/10 (-10) Convergencia del GD\T1/pplj/m/it/10 (-10) ). El gra-dien-te des-cen-den-te con un lear-ning ra-te $\OML/zplm/m/it/10 ^^Q \OMS/zplm/m/n/10 ^^T []$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 499--500
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 515--516
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 522.
+LaTeX Info: Redefining \% on input line 522.
+[72]
+Underfull \hbox (badness 10000) in paragraph at lines 524--525
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--533
+
+ []
+
+
+Overfull \hbox (10.01395pt too wide) in paragraph at lines 538--539
+[][]\T1/pplj/b/n/10 (-10) Teorema 6.14 \T1/pplj/m/n/10 (-10) (Con-di-cio-na-mien-to uni-for-me $ \OT1/zplm/m/n/10 =[]\OMS/zplm/m/n/10 ) $ \T1/pplj/m/n/10 (-10) Con-di-ciÛn $\OML/zplm/m/it/10 ^^V$\T1/pplj/m/n/10 (-10) -PL)\T1/pplj/b/n/10 (-10) . []\T1/pplj/m/it/10 (-10) Si $\OMS/zplm/m/n/10 F\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 w\OT1/zplm/m/n/10 )$ \T1/pplj/m/it/10 (-10) es-t· $\OML/zplm/m/it/10 ^^V$\T1/pplj/m/it/10 (-10) -uniformemente
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 563--564
+
+ []
+
+<img/cosarara2.png, id=1186, 2706.11pt x 1324.95pt>
+File: img/cosarara2.png Graphic file (type png)
+<use img/cosarara2.png>
+Package pdftex.def Info: img/cosarara2.png  used on input line 567.
+(pdftex.def)             Requested size: 326.63892pt x 159.91713pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 571--572
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 573.
+LaTeX Info: Redefining \% on input line 573.
+[73]
+Underfull \hbox (badness 10000) in paragraph at lines 573--574
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 575--576
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 579--580
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 581--582
+
+ []
+
+<img/suavidad1.png, id=1199, 740.7675pt x 321.45094pt>
+File: img/suavidad1.png Graphic file (type png)
+<use img/suavidad1.png>
+Package pdftex.def Info: img/suavidad1.png  used on input line 585.
+(pdftex.def)             Requested size: 326.63892pt x 141.74295pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 589--590
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 590.
+LaTeX Info: Redefining \% on input line 590.
+[74 <./img/cosarara2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 591--592
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 593--594
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 595--596
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 603--604
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 604.
+LaTeX Info: Redefining \% on input line 604.
+[75 <./img/suavidad1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 605--606
+
+ []
+
+
+Overfull \hbox (17.54039pt too wide) in paragraph at lines 620--636
+ []$[][][][][]$[][][][][][][][][][][][][][][][][][] 
+ []
+
+) (capitulos/desarrollo_informatico.tex
+
+LaTeX Info: Redefining \. on input line 4.
+LaTeX Info: Redefining \% on input line 4.
+[76]
+chapter 7.
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+
+ []
+
+
+
+[77
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
+
+ []
+
+LaTeX Font Info:    Trying to load font information for TS1+pplj on input line 39.
+(C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1pplj.fd
+File: ts1pplj.fd 2004/09/06 font definitions for TS1/pplj.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 57.
+LaTeX Info: Redefining \% on input line 57.
+[78]
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--69
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 86.
+LaTeX Info: Redefining \% on input line 86.
+[79]
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
+
+ []
+
+<img/experiments/resnet18modified.png, id=1249, 944.7797pt x 249.18094pt>
+File: img/experiments/resnet18modified.png Graphic file (type png)
+<use img/experiments/resnet18modified.png>
+Package pdftex.def Info: img/experiments/resnet18modified.png  used on input line 91.
+(pdftex.def)             Requested size: 408.2971pt x 107.68942pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 100.
+LaTeX Info: Redefining \% on input line 100.
+[80 <./img/experiments/resnet18modified.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 116--117
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
+
+ []
+
+<img/experiments/3CNN.png, id=1260, 1010.27437pt x 280.79906pt>
+File: img/experiments/3CNN.png Graphic file (type png)
+<use img/experiments/3CNN.png>
+Package pdftex.def Info: img/experiments/3CNN.png  used on input line 122.
+(pdftex.def)             Requested size: 408.2971pt x 113.48305pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--144
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 144.
+LaTeX Info: Redefining \% on input line 144.
+[81 <./img/experiments/3CNN.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--156
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
+
+ []
+
+<img/experiments/legendre1.png, id=1272, 377.91188pt x 286.82156pt>
+File: img/experiments/legendre1.png Graphic file (type png)
+<use img/experiments/legendre1.png>
+Package pdftex.def Info: img/experiments/legendre1.png  used on input line 164.
+(pdftex.def)             Requested size: 130.65805pt x 99.1636pt.
+<img/experiments/legendre2.png, id=1273, 377.15906pt x 292.84406pt>
+File: img/experiments/legendre2.png Graphic file (type png)
+<use img/experiments/legendre2.png>
+Package pdftex.def Info: img/experiments/legendre2.png  used on input line 169.
+(pdftex.def)             Requested size: 130.65805pt x 101.44687pt.
+<img/experiments/legendre3.png, id=1274, 379.4175pt x 280.04625pt>
+File: img/experiments/legendre3.png Graphic file (type png)
+<use img/experiments/legendre3.png>
+Package pdftex.def Info: img/experiments/legendre3.png  used on input line 174.
+(pdftex.def)             Requested size: 130.65805pt x 96.43657pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 180.
+LaTeX Info: Redefining \% on input line 180.
+[82]
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
+
+ []
+
+<img/experiments/legendreDDD.png, id=1282, 800.23969pt x 529.22719pt>
+File: img/experiments/legendreDDD.png Graphic file (type png)
+<use img/experiments/legendreDDD.png>
+Package pdftex.def Info: img/experiments/legendreDDD.png  used on input line 185.
+(pdftex.def)             Requested size: 204.14854pt x 135.00363pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--199
+
+ []
+
+
+Underfull \vbox (badness 3769) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 199.
+LaTeX Info: Redefining \% on input line 199.
+[83 <./img/experiments/legendre1.png> <./img/experiments/legendre2.png> <./img/experiments/legendre3.png> <./img/experiments/legendreDDD.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
+
+ []
+
+<img/experiments/noise-wise-dd1.png, id=1292, 671.50874pt x 365.86688pt>
+File: img/experiments/noise-wise-dd1.png Graphic file (type png)
+<use img/experiments/noise-wise-dd1.png>
+Package pdftex.def Info: img/experiments/noise-wise-dd1.png  used on input line 206.
+(pdftex.def)             Requested size: 183.73244pt x 100.10287pt.
+<img/experiments/noise-wise-dd2.png, id=1293, 672.26157pt x 363.60844pt>
+File: img/experiments/noise-wise-dd2.png Graphic file (type png)
+<use img/experiments/noise-wise-dd2.png>
+Package pdftex.def Info: img/experiments/noise-wise-dd2.png  used on input line 210.
+(pdftex.def)             Requested size: 183.73244pt x 99.374pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--216
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 217--218
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
+
+ []
+
+<img/experiments/noise-wise-dd3.png, id=1297, 671.50874pt x 365.11406pt>
+File: img/experiments/noise-wise-dd3.png Graphic file (type png)
+<use img/experiments/noise-wise-dd3.png>
+Package pdftex.def Info: img/experiments/noise-wise-dd3.png  used on input line 223.
+(pdftex.def)             Requested size: 204.14854pt x 111.00027pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--247
+
+ []
+
+
+Underfull \vbox (badness 1939) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 247.
+LaTeX Info: Redefining \% on input line 247.
+[84 <./img/experiments/noise-wise-dd1.png> <./img/experiments/noise-wise-dd2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 248--249
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 250--251
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 252--253
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 253.
+LaTeX Info: Redefining \% on input line 253.
+[85 <./img/experiments/noise-wise-dd3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 254--255
+
+ []
+
+<img/experiments/sample-wise-dd1.png, id=1315, 672.26157pt x 365.86688pt>
+File: img/experiments/sample-wise-dd1.png Graphic file (type png)
+<use img/experiments/sample-wise-dd1.png>
+Package pdftex.def Info: img/experiments/sample-wise-dd1.png  used on input line 260.
+(pdftex.def)             Requested size: 200.06781pt x 108.88443pt.
+<img/experiments/sample-wise-dd2.png, id=1316, 670.75594pt x 365.11406pt>
+File: img/experiments/sample-wise-dd2.png Graphic file (type png)
+<use img/experiments/sample-wise-dd2.png>
+Package pdftex.def Info: img/experiments/sample-wise-dd2.png  used on input line 265.
+(pdftex.def)             Requested size: 200.06781pt x 108.89993pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 271--272
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 273--274
+
+ []
+
+)
+
+LaTeX Info: Redefining \. on input line 86.
+LaTeX Info: Redefining \% on input line 86.
+[86 <./img/experiments/sample-wise-dd1.png> <./img/experiments/sample-wise-dd2.png>]
+part IV.
+Package scrkbase Info: You've told me to use the font selection of the element
+(scrkbase)             `partprefix' that is an alias of element `partnumber'
+(scrkbase)              on input line 86.
+
+
+[87
+
+]
+
+[88] (capitulos/conclusiones_trabajosfuturos.tex
+chapter 8.
+
+
+[89
+
+]
+chapter 9.
+) (apendices/apendice01.tex
+
+[90
+
+]
+chapter A.
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+
+ []
+
+
+
+[91
+
+]) (apendices/apendice02.tex
+
+LaTeX Info: Redefining \. on input line 4.
+LaTeX Info: Redefining \% on input line 4.
+[92]
+chapter B.
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--33
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
+
+ []
+
+
+
+[93
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 61--63
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--69
+
+ []
+
+
+Overfull \hbox (43.97531pt too wide) detected at line 81
+[]  \OT1/zplm/m/n/10 = \OMS/zplm/m/n/10 ^^@ [] [][] \OML/zplm/m/it/10 v[]H[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 w[] \OT1/zplm/m/n/10 + \OML/zplm/m/it/10 ^^N\OT1/zplm/m/n/10 )\OML/zplm/m/it/10 v \OT1/zplm/m/n/10 + [] [][] \OML/zplm/m/it/10 v[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 H[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 w[] \OT1/zplm/m/n/10 + \OML/zplm/m/it/10 ^^N\OT1/zplm/m/n/10 )\OML/zplm/m/it/10 v \OMS/zplm/m/n/10 ^^@ H[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 w[] \OMS/zplm/m/n/10 ^^@ \OML/zplm/m/it/10 ^^N\OT1/zplm/m/n/10 ))\OML/zplm/m/it/10 v
+ []
+
+) (apendices/apendice03.tex
+
+LaTeX Info: Redefining \. on input line 4.
+LaTeX Info: Redefining \% on input line 4.
+[94]
+chapter C.
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+
+ []
+
+<img/experiments/batch_sizes_ddd.png, id=1363, 676.77844pt x 365.11406pt>
+File: img/experiments/batch_sizes_ddd.png Graphic file (type png)
+<use img/experiments/batch_sizes_ddd.png>
+Package pdftex.def Info: img/experiments/batch_sizes_ddd.png  used on input line 12.
+(pdftex.def)             Requested size: 204.14854pt x 110.13675pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+
+ []
+
+<img/experiments/learning_rates_ddd.png, id=1366, 673.01437pt x 364.36125pt>
+File: img/experiments/learning_rates_ddd.png Graphic file (type png)
+<use img/experiments/learning_rates_ddd.png>
+Package pdftex.def Info: img/experiments/learning_rates_ddd.png  used on input line 39.
+(pdftex.def)             Requested size: 204.14854pt x 110.52122pt.
+
+
+[95
+
+ <./img/experiments/batch_sizes_ddd.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
+
+ []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 46--47
@@ -2560,96 +3945,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--49
 
  []
 
-
-
-LaTeX Info: Redefining \. on input line 49.
-LaTeX Info: Redefining \% on input line 49.
-[54]
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 54--55
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
-
- []
-
-
-
-LaTeX Info: Redefining \. on input line 59.
-LaTeX Info: Redefining \% on input line 59.
-[55 <./img/estadoarte2.2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 60--61
-
- []
-
-)
-
-LaTeX Info: Redefining \. on input line 77.
-LaTeX Info: Redefining \% on input line 77.
-[56]
-part III.
-Package scrkbase Info: You've told me to use the font selection of the element
-(scrkbase)             `partprefix' that is an alias of element `partnumber'
-(scrkbase)              on input line 77.
-
-
-[57
-
-]
-
-[58] (capitulos/desarrollo_matematico.tex
-chapter 6.
-) (capitulos/desarrollo_informatico.tex
-
-[59
-
-]
-chapter 7.
-)
-
-[60
-
-]
-part IV.
-Package scrkbase Info: You've told me to use the font selection of the element
-(scrkbase)             `partprefix' that is an alias of element `partnumber'
-(scrkbase)              on input line 81.
-
-
-[61
-
-]
-
-[62] (capitulos/conclusiones_trabajosfuturos.tex
-chapter 8.
-
-
-[63
-
-]
-chapter 9.
 ) (glosario.tex
 
-[64
+LaTeX Info: Redefining \. on input line 4.
+LaTeX Info: Redefining \% on input line 4.
+[96 <./img/experiments/learning_rates_ddd.png>])
 
-])
-
-[65
+[97
 
 ]
 
-[66
+[98
 
 
 ] (tfg.bbl
@@ -2662,42 +3968,42 @@ LaTeX Font Info:    Font shape `T1/Cabin-TLF/b/n' aliased to
 (Font)              `T1/Cabin-TLF/bold/n' on input line 2.
 LaTeX Font Info:    Font shape `T1/Cabin-TLF/bold/n' will be
 (Font)              scaled to size 8.54997pt on input line 2.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 109.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 109.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 109.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 109.
 
 
-[67
+[99
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 234.
+
+LaTeX Info: Redefining \. on input line 217.
+LaTeX Info: Redefining \% on input line 217.
+[100]
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 238.
  (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/latex/inconsolata\t1zi4.fd
 File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 9.0pt on input line 234.
+(Font)              scaled to size 9.0pt on input line 238.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `zi4' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
 
-LaTeX Info: Redefining \. on input line 237.
-LaTeX Info: Redefining \% on input line 237.
-[68])
+LaTeX Info: Redefining \. on input line 330.
+LaTeX Info: Redefining \% on input line 330.
+[101{C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/inconsolata/i4-t1-0.enc}]
 
-LaTeX Info: Redefining \. on input line 121.
-LaTeX Info: Redefining \% on input line 121.
-[69{C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/inconsolata/i4-t1-0.enc}] (tfg.aux
-LaTeX Info: Redefining \. on input line 11.
-LaTeX Info: Redefining \% on input line 11.
-LaTeX Info: Redefining \. on input line 30.
-LaTeX Info: Redefining \% on input line 30.
+LaTeX Info: Redefining \. on input line 440.
+LaTeX Info: Redefining \% on input line 440.
+[102])
+
+LaTeX Info: Redefining \. on input line 128.
+LaTeX Info: Redefining \% on input line 128.
+[103] (tfg.aux
+LaTeX Info: Redefining \. on input line 12.
+LaTeX Info: Redefining \% on input line 12.
+LaTeX Info: Redefining \. on input line 31.
+LaTeX Info: Redefining \% on input line 31.
 )
  ***********
 LaTeX2e <2024-11-01> patch level 1
@@ -2711,17 +4017,17 @@ Package rerunfilecheck Info: File `tfg.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 24124 strings out of 473536
- 429088 string characters out of 5711532
- 983904 words of memory out of 5000000
- 45827 multiletter control sequences out of 15000+600000
- 815064 words of font info for 681 fonts, out of 8000000 for 9000
+ 38600 strings out of 473536
+ 771134 string characters out of 5711532
+ 1310803 words of memory out of 5000000
+ 59918 multiletter control sequences out of 15000+600000
+ 825354 words of font info for 737 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 122i,16n,131p,10964b,919s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/impallari/cabin/Cabin-Bold.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/impallari/cabin/Cabin-Regular.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/fpl/fplbj8a.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbb.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/fpl/fplrc8a.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/fpl/fplrij8a.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplbi8a.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on tfg.pdf (91 pages, 2028713 bytes).
+ 122i,23n,131p,10945b,919s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/impallari/cabin/Cabin-Bold.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/impallari/cabin/Cabin-Regular.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/eurosym/feymr10.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/fpl/fplbj8a.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbb.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/fpl/fplrc8a.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/fpl/fplrij8a.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplbi8a.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on tfg.pdf (127 pages, 7097343 bytes).
 PDF statistics:
- 1357 PDF objects out of 1440 (max. 8388607)
- 380 named destinations out of 1000 (max. 500000)
- 175227 words of extra memory for PDF output out of 184870 (max. 10000000)
+ 1837 PDF objects out of 2073 (max. 8388607)
+ 487 named destinations out of 1000 (max. 500000)
+ 192819 words of extra memory for PDF output out of 221844 (max. 10000000)
 

@@ -5,14 +5,29 @@
 \addvspace {10\p@ }
 \babel@toc {spanish}{}\relax 
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {1}{\ignorespaces Planificación temporal inicial del proyecto.}}{\es@scroman {xx}}{table.caption.14}%
+\contentsline {table}{\numberline {2}{\ignorespaces Estimación del coste del proyecto.}}{\es@scroman {xx}}{table.caption.16}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Resumen de los principales artículos junto con sus contribuciones.}}{53}{table.caption.34}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces \relax }}{76}{table.caption.40}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {7.1}{\ignorespaces Resumen de los datasets utilizados.}}{78}{table.caption.41}%
+\contentsline {table}{\numberline {7.2}{\ignorespaces Resumen de las arquitecturas $2$NN.}}{79}{table.caption.42}%
+\contentsline {table}{\numberline {7.3}{\ignorespaces Número de parámetros de las arquitecturas ResNet$18$ modificadas.}}{81}{table.caption.44}%
+\contentsline {table}{\numberline {7.4}{\ignorespaces Número de parámetros de las arquitecturas $3$CNN.}}{81}{table.caption.46}%
+\contentsline {table}{\numberline {7.5}{\ignorespaces Resumen de los experimentos para el doble descenso por nivel de ruido.}}{85}{table.caption.51}%
+\contentsline {table}{\numberline {7.6}{\ignorespaces Resumen de los experimentos para el doble descenso por número de ejemplos de entrenamiento.}}{86}{table.caption.53}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {C.1}{\ignorespaces Resumen de los experimentos realizados para el doble descenso con distinto tamaño de lote.}}{95}{table.caption.56}%
+\contentsline {table}{\numberline {C.2}{\ignorespaces Resumen de los experimentos realizados para el doble descenso con distintas tasas de aprendizaje.}}{96}{table.caption.59}%
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

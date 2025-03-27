@@ -60,6 +60,7 @@
   \newtheorem{proposicion}[teorema]{Proposición}
   \newtheorem{lema}[teorema]{Lema}
   \newtheorem{corolario}[teorema]{Corolario}
+  \newtheorem{hipotesis}[teorema]{Hipótesis}
 
   \theoremstyle{definition}
   \newtheorem{definicion}[teorema]{Definición}
