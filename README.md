@@ -10,5 +10,5 @@ deep-double-descent/
 ├── LaTex/         # LaTeX document with the project report  
 ├── experiments/   # Experiment scripts and Jupyter notebooks for analysis  
 ├── results/       # Results obtained from experiments (processed on NGPU)  
-├── models/        # Model definitions and architectures  
+├── src/           # Project source code
 ├── README.md      # README with the project description and overview  
