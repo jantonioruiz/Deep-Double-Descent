@@ -7,7 +7,7 @@ En este capítulo, nos vamos a encargar de abordar, de manera teórica, el doble
 
 \section{Planteamiento teórico}\label{sec:planteamiento-teorico}
 
-Siguiendo los resultados expuestos en la Sección~\ref{sec:subsec-underfitting-y-overfitting}, la sabiduría clásica adopta una visión en la cual sostiene que los modelos más grandes tienden a ser peores, ya que su capacidad de generalización empeora. En la práctica moderna, especialmente ahora en la era del deep learning, es cada vez más común el uso de modelos de gran tamaño con suficientes parámetros para reducir el error de entrenamiento casi a cero. A pesar de ajustarse casi perfectamente a los datos, estos modelos logran generalizar sorprendentemente bien e incluso superar en rendimiento a modelos más simples.\newline
+Siguiendo los resultados expuestos en la Sección~\ref{sec:subsec-underfitting-y-overfitting}, la sabiduría clásica adopta una visión en la cual sostiene que los modelos más grandes tienden a ser peores, ya que su capacidad de generalización empeora. En la práctica moderna, especialmente ahora en la era del \textit{deep learning}, es cada vez más común el uso de modelos de gran tamaño con suficientes parámetros para reducir el error de entrenamiento casi a cero. A pesar de ajustarse casi perfectamente a los datos, estos modelos logran generalizar sorprendentemente bien e incluso superar en rendimiento a modelos más simples.\newline
 
 De esta manera, se ha comprobado que, más allá de cierto umbral, el aumento de la capacidad de los modelos resulta beneficioso, ya que no conduce al sobreajuste y, en realidad, disminuye nuevamente el error de generalización. A esta nueva zona de funcionamiento de los modelos la denotaremos como \emph{régimen moderno} o zona sobreparametrizada, mientras que la región previa al umbral, en la que se produce la tradicional curva con forma de ``U'', la denominaremos como \textit{régimen clásico} o zona infraparametrizada.\newline
 
@@ -45,10 +45,21 @@ Esta hipótesis es informal en varios sentidos. En primer lugar, no disponemos d
 
 Por otra parte, la Hipótesis~\ref{hipotesis-general-double-descent} nos ayuda a unificar la sabiduría clásica con los resultados modernos en una curva de aprendizaje que abarca ambos mundos. Hasta el umbral de interpolación, la curva sigue la tradicional forma de ``U'', cuyo mínimo se alcanza en el \textit{sweet spot} (véase Figura~\ref{fig:biasvarianceunderoverfitting}) mientras que, aumentando la capacidad del modelo hasta alcanzar un error de entrenamiento muy próximo a cero, y tras superar la zona crítica donde se encuentra el umbral de interpolación, nos indica que el error de generalización comienza nuevamente a disminuir, pudiendo lograr un error menor que el obtenido en el \textit{sweet spot}.\newline
 
-Este comportamiento, en el que la curva del error de generalización exhibe dos descensos, puede apreciarse en la Figura~\ref{fig:planteamiento-teorico-dd.png} y lo denotaremos por \textbf{doble descenso profundo}, o simplemente \textbf{doble descenso}.\newline
+Este comportamiento, en el que la curva del error de generalización exhibe dos descensos, puede apreciarse en la Figura~\ref{fig:planteamiento-teorico-dd.png} y lo denotaremos como \textbf{doble descenso profundo}, o simplemente \textbf{doble descenso}. En este contexto, el adjetivo \textit{profundo} hace referencia al uso de redes neuronales profundas como modelo base.\newline
 
+Aun habiendo unificado ambos puntos de vista, la descomposición del error en términos de sesgo y varianza, tal como se mencionó en la Sección~\ref{sec:capitulo-bias-variance-tradeoff}, sugiere que uno de estos dos componentes, tras alcanzar el valor máximo de error, comienza nuevamente a disminuir.\newline
 
-De esta manera, estamos separando las distintas zonas de funcionamiento de un modelo en función, en cierta medida, de su conjunto de hipótesis $\mathcal{H}$. En la zona clásica, por lo general, no existe ninguna hipótesis que minimice completamente el riesgo real, es decir, no existe $g \in \mathcal{H}$ tal que $L(g) = 0$. Por el contrario, en la zona moderna, conforme aumenta la capacidad del modelo, aparece un conjunto cada vez más amplio $S \subset \mathcal{H}$ que interpola a la perfección los datos de entrenamiento. Este conjunto se define como:  
+La Figura~\ref{fig:bias-variance-peak} ilustra los tres comportamientos distintos que pueden surgir como resultado de dicha descomposición. Para nuestro análisis, resulta razonable suponer que es la varianza la que disminuye tras alcanzar el punto máximo del error, ya que sabemos que este término predomina a partir del \textit{sweet spot}, dando lugar a una curva unimodal.\newline
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\linewidth]{img/bias-variance-peak.png}
+    \caption[Curvas típicas del error en función del sesgo y la varianza~\cite{Yang2020}.]{Curvas típicas del error (línea negra) en función del sesgo (línea azul) y la varianza (línea roja)~\cite{Yang2020}. A la izquierda, el término de sesgo domina completamente, lo que da lugar a un error decreciente. En la región central, el sesgo y la varianza predominan en zonas distintas, produciéndose así el doble descenso. Finalmente, a la derecha, el término de varianza se vuelve dominante, generando una curva con forma de campana en la que el error inicialmente aumenta.}\label{fig:bias-variance-peak}
+\end{figure}
+
+De este modo, a medida que aumenta la capacidad del modelo, esto implica que, a pesar de disponer de un conjunto de hipótesis más amplio, el modelo se está concentrando en un subconjunto específico de dichas hipótesis, lo que reduce el error asociado a la varianza.\newline
+
+A modo de resumen, estamos separando las distintas zonas de funcionamiento de un modelo en función, en cierta medida, de su conjunto de hipótesis $\mathcal{H}$. En la zona clásica, por lo general, no existe ninguna hipótesis que minimice completamente el riesgo real, es decir, no existe $g \in \mathcal{H}$ tal que $L(g) = 0$. Por el contrario, en la zona moderna, conforme aumenta la capacidad del modelo, aparece un conjunto cada vez más amplio $S \subset \mathcal{H}$ que interpola a la perfección los datos de entrenamiento. Este conjunto se define como:  
 
 \[
     S = \{ g \in \mathcal{H} \mid L(g) = 0 \}.
@@ -181,7 +192,7 @@ A grandes rasgos, esta distribución describe el comportamiento de los valores p
 
 Sin embargo, este escenario es muy poco probable debido a que, en la mayoría de los casos, los datos de entrenamiento se muestrean de manera independiente a partir de variables aleatorias que son i.i.d., lo que resulta en una distribución aleatoria de los datos en todas las dimensiones. Al superar este umbral de interpolación, la varianza explicada por cada dimensión de las covariables se hace más evidente y los valores singulares no nulos más pequeños se alejan de cero, lo que reduce nuevamente el término de varianza en las predicciones, pudiendo provocar el doble descenso.\newline
 
-\section{Sesgo inductivo del descenso de gradiente}\label{sec:sesgo-implicito-descenso-gradiente}
+\section{Convergencia del descenso de gradiente}\label{sec:sesgo-implicito-descenso-gradiente}
 
 En esta sección, de cara a profundizar en la intuición obtenida en la sección anterior, vamos a analizar la influencia de utilizar el descenso de gradiente como método de optimización en problemas de regresión y clasificación, dado que es uno de los métodos más utilizados para entrenar redes neuronales.\newline
 
@@ -388,7 +399,7 @@ De cara a estudiar esta solución, utilizaremos un lema auxiliar que nos ayudar�
     Sea $\mathcal{L}(w)$ una función $\beta$-suave no negativa. Si $\eta < \frac{2}{\beta}$, entonces, para cualquier $w_0$ y utilizando el método del descenso de gradiente dado por:
 
     \[
-        \mathbf{w}^{(\tau + 1)} = \mathbf{w}^{(\tau)} - \eta \nabla \mathcal{L}(\mathbf{w})
+        w^{(\tau + 1)} = w^{(\tau)} - \eta \nabla \mathcal{L}(w)
     \]
 
     se tiene que $\sum_{u=0}^{\infty} \| \nabla\mathcal{L}(w^{(u)}) \|^{2} < \infty$ y, por tanto:
@@ -574,11 +585,13 @@ Es importante notar que, cuanto mayor sea el grado de sobreparametrización del 
 
 En contraste, cuando $P < N$, el núcleo tangente es siempre degenerado ($\lambda_{\min}(K(w)) \equiv 0$), por lo que tales sistemas no pueden estar uniformemente condicionados y no pueden satisfacer la condición $\mu$-PL.\newline
 
-\subsection{Elección de la mejor hipótesis}\label{subsec:suavidad-funcional}
+\subsection{El impacto del sesgo inductivo en la selección de hipótesis}\label{subsec:suavidad-funcional}
 
-Si bien los resultados presentados anteriormente aseguran la existencia y convergencia, en la zona sobreparametrizada, hacia un minimizador global de la función de pérdida, sabemos que en dicho régimen existe una multitud de minimizadores globales, es decir, cualquier hipótesis $g \in S \subset \mathcal{H}$.\newline  
+Si bien los resultados presentados anteriormente aseguran la existencia y convergencia, en la zona sobreparametrizada, hacia un minimizador global de la función de pérdida, sabemos que en dicho régimen existe una multitud de minimizadores globales.\newline  
 
-A pesar de que todavía no existe una propuesta concluyente para seleccionar, de entre todas las hipótesis de $S$, aquella que mejor generaliza, se sabe que, aunque todas sean minimizadoras globales (es decir, satisfacen $\mathcal{L}(w) = 0$), no necesariamente todas garantizan una buena generalización. Un ejemplo claro de esto se puede observar para el caso de regresores polinómicos en la Figura~\ref{fig:suavidad1}, donde, una vez que tenemos suficientes parámetros para ajustar todos los datos de entrenamiento, empezamos a obtener distintos modelos que son minimizadores globales.\newline
+A pesar de que todavía no existe una propuesta concluyente para seleccionar, de entre todas las hipótesis de $S$, aquella que mejor generaliza, se sabe que, aunque todas sean minimizadoras globales (es decir, satisfacen $\mathcal{L}(w) = 0$), no necesariamente todas garantizan una buena generalización.\newline
+
+Un ejemplo claro de esto se puede observar para el caso de regresores polinómicos en la Figura~\ref{fig:suavidad1}, donde, una vez que tenemos suficientes parámetros para ajustar todos los datos de entrenamiento, empezamos a obtener distintos modelos que son minimizadores globales.\newline
 
 \begin{figure}[h]
     \centering
@@ -590,7 +603,7 @@ Extrayendo conclusiones de la Figura~\ref{fig:suavidad1} y apoyándonos en la in
 
 La idea de maximizar la suavidad de una función sujeta a la interpolación de los datos representa una forma de actuar según el principio de la navaja de Ockham~\cite{Blumer1987}. Este principio establece que se debe preferir la explicación más simple que sea consistente con las evidencias. En nuestro caso, podemos utilizar como analogía que los datos de entrenamiento representan las evidencias, mientras que la simplicidad se asocia con la ``suavidad'' de la hipótesis a elegir.\newline
 
-De esta manera, el principio de la máxima suavidad se puede formular como: ``Elegir la función más suave, de acuerdo con alguna noción de suavidad funcional, entre todas las que son minimizadores globales''~\cite{Belkin2021}.\newline
+De esta manera, el principio de la máxima suavidad se puede formular como: ``Elegir la función más suave, de acuerdo con alguna noción de suavidad funcional, entre todas las que son minimizadoras globales''~\cite{Belkin2021}.\newline
 
 Este comportamiento también se encuentra asociado, en cierta medida, al conjunto de hipótesis $\mathcal{H}$ del modelo. Si consideramos dos conjuntos de hipótesis $\mathcal{H}_1$ y $\mathcal{H}_2$, de manera que $\mathcal{H}_1 \subset \mathcal{H}_2$, y sus correspondientes subconjuntos que contienen las hipótesis que son minimizadoras globales, $S_1 \subset \mathcal{H}_1$ y $S_2 \subset \mathcal{H}_2$, entonces, estos conjuntos estan relacionados por la misma inclusión ($S_1 \subset S_2$).\newline
 
@@ -602,15 +615,375 @@ Por tanto, si $\| \cdot \|_{s}$ es cualquier norma funcional, o más generalment
 
 Suponiendo que $\| \cdot \|_{s}$ es el sesgo inductivo correcto, que mide esa suavidad (por ejemplo, una norma de Sobolev), entonces esperamos que la hipótesis elegida de $S_2$ sea más suave, debido a que este conjunto contiene un mayor número de hipótesis que el conjunto $S_1$ y, por tanto, este conjunto es más adecuado para resolver el problema, lo que lleva a una mejor generalización de la hipótesis elegida.\newline
 
-Como conlusión, podemos decir que el uso de sistemas sobreparametrizados resulta ventajoso para obtener cada vez más soluciones posibles (minimizadores globales) para nuestro problema. De esta forma, al aumentar la capacidad del modelo (en nuestro caso, su complejidad efectiva), resultará más sencillo para el algoritmo de optimización elegir una ``buena'' hipótesis (que generalice mejor que el resto) basada en algún sesgo inductivo que utilice. Este sesgo parece ir ligado hacia soluciones más simples, donde, en el caso de las hipótesis, se pueden entender como más ``suaves'', lo que conduce a la hipótesis elegida a una especie de ``autoregulación''.\newline
+El principio enunciado anteriormente también permite explicar la aparición del máximo en el error de generalización cerca del umbral de interpolación, ya que en ese punto el modelo se ve forzado a pasar exactamente por cada uno de los puntos de entrenamiento. Esto conduce a una solución única que depende exclusivamente de los datos de entrenamiento, lo que obliga al modelo a seleccionar dicha solución independientemente de su ``suavidad''.\newline
 
-\section{Resto de desarrollos a realizar}\label{}
+Ligado a esto, Somepalli et al.~\cite{Somepalli2022} analizaron la reproducibilidad de los resultados obtenidos por las mismas redes neuronales a partir del estudio de sus fronteras de decisión. Para nuestro interés, observaron que cerca del umbral de interpolación, y de forma más notable en presencia de ruido, las regiones de decisión tienden a fragmentarse en áreas más pequeñas, las cuales, por lo general, no son reproducibles entre diferentes ejecuciones. En contraste, fuera de este umbral, las regiones de decisión son menores y bien definidas, siendo en cierta medida más ``suaves'', como puede observarse en la Figura~\ref{fig:ground-truth-reproducibility}.\newline
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\linewidth]{img/ground-truth-reproducibility.png}
+    \caption[Fronteras de decisión para modelos con distinta capacidad~\cite{Somepalli2022}.]{Fronteras de decisión para modelos con distinta capacidad~\cite{Somepalli2022}. Cada columna representa una tripleta distinta de imágenes, en la que una imagen de automóvil (marcada con una $\times$) ha sido etiquetada incorrectamente. El modelo infraparametrizado ($k=10$) genera numerosas regiones de decisión pequeñas y fragmentadas, mientras que el modelo sobreparametrizado ($k=64$) produce un menor número de regiones, más amplias y claramente definidas.}\label{fig:ground-truth-reproducibility}
+\end{figure}
+
+Finalmente, a partir de una puntuación de reproducibilidad basada en dichas regiones de decisión, observaron que esta métrica toma valores más bajos cerca del umbral de interpolación. Esto sugiere que, en dicha región, el modelo seleccionado tiende a ser más particular y depende fuertemente de la inicialización de los parámetros de la red utilizada.\newline
+
+Generalmente, puede pensarse que los sesgos inductivos introducidos por los algoritmos de optimización son de naturaleza restrictiva, es decir, imponen restricciones al espacio de hipótesis que están alineadas con el problema de interés. En otras palabras, dado que existen múltiples configuraciones del modelo que se ajustan adecuadamente a los datos pero generan una mala generalización, se prefiere restringir el espacio de hipótesis a aquellas configuraciones que tienden a generalizar mejor para el problema en cuestión, independientemente de si estas son óptimas en un sentido más amplio. Este enfoque está estrechamente relacionado con los principios de regularización.\newline
+
+Además, al reducir el espacio de hipótesis, este se ve más rápidamente limitado por los datos, ya que existen menos opciones para que el modelo se ajuste a ellos. No obstante, estos sesgos restrictivos pueden considerarse, en ciertos contextos, como indeseables. En efecto, lo que se busca es respaldar cualquier solución capaz de describir adecuadamente los datos, lo que implica favorecer un espacio de hipótesis lo suficientemente flexible.\newline
+
+La idea general de preferir ciertas soluciones sobre otras, incluso cuando ambas se ajustan igualmente a los datos, se conoce como sesgo inductivo suave~\cite{Wilson2025}. La Figura~\ref{fig:types-of-bias} ilustra este concepto, distinguiéndolo de otros tipos de sesgo.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\linewidth]{img/types-of-bias.png}
+    \caption[Diferentes tipos de sesgo para el espacio de hipótesis~\cite{Wilson2025}.]{Diferentes tipos de sesgo para el espacio de hipótesis~\cite{Wilson2025}. A la izquierda observamos un conjunto de hipótesis grande sobre el cual no se tiene preferencia por las soluciones que ajustan igualmente bien los datos. En este caso, el entrenamiento puede derivar en soluciones de sobreajuste que generalizan mal. En el centro, se presenta un conjunto de hipótesis flexible en combinación con un sesgo inductivo suave, que guía el entrenamiento hacia soluciones que generalizan bien. A la derecha, restringir el espacio de hipótesis puede ayudar a evitar el sobreajuste al considerar solo algunas soluciones. Sin embargo, al limitar la expresividad del modelo, se impide captar todos los matices de la realidad, lo que dificulta la mejor generalización posible.}\label{fig:types-of-bias}
+\end{figure}
+
+El hecho de considerar estos sesgos inductivos suaves se relaciona directamente con la disminución de la varianza (y, por lo tanto, también del error) a medida que aumentamos la capacidad del modelo. Este tipo de sesgos se centra en una zona específica (y favorable) del espacio de hipótesis, reduciendo así la varianza asociada. Es comparable a utilizar un sesgo restrictivo, pero enfocado en un subconjunto adecuado de hipótesis, como puede observarse en la Figura~\ref{fig:types-of-bias}.\newline
+
+Por otro lado, a medida que aumenta la cantidad de parámetros, también crece el volumen de soluciones planas en el paisaje de la función de pérdida (como se ha observado en la subsección anterior), lo que facilita el acceso y la selección de una de ellas~\cite{Huang2020}. Así, los modelos más grandes (sobreparametrizados) presentan sesgos inductivos más pronunciados, como se puede observar en la Figura~\ref{fig:overparametrization}.\newline
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{img/overparametrization.png}
+    \caption[Aumentar la capacidad de un modelo mejora su generalización~\cite{Wilson2025}.]{Aumentar la capacidad de un modelo mejora su generalización~\cite{Wilson2025}. Al aumentar el número de parámetros de un modelo, las soluciones ``planas'' ocupan un mayor volumen dentro del espacio total de hipótesis, lo que implica un sesgo inductivo suave hacia estas soluciones simples. Aunque los modelos sobreparametrizados presentan muchas hipótesis que sobreajustan los datos, también pueden contener muchas otras que se ajustan bien a los datos y proporcionan una buena generalización. De este modo, la sobreparametrización puede aumentar simultáneamente el tamaño del espacio de hipótesis y del sesgo hacia soluciones más simples.}\label{fig:overparametrization}
+\end{figure}
+
+Ligado a la explicación del fenómeno de la generalización, también surge el siguiente resultado~\cite{Maddox2020}, ampliamente relacionado con lo presentado en la Subsección~\ref{subsec:analisis-intuitivo-minimos-cuadrados}.
+
+\begin{definicion}(Dimensionalidad efectiva)
+    Sea $A \in \mathcal{M}_{n \times n}(\mathbb{R})$ una matriz simétrica. Se define su dimensionalidad efectiva como
+
+    \[
+        N_{eff}(A) = \sum_{i=1}^{n}\frac{\lambda_i}{\lambda_i + \alpha},
+    \]
+
+    donde $\lambda_i$ son los valores propios de la matriz $A$ y $\alpha > 0$ es una constante de regularización.
+\end{definicion}
+
+Así, la dimensionalidad efectiva mide el número de valores propios relativamente grandes, lo que puede interpretarse como una medida de las direcciones significativas en el espacio de parámetros. En particular, la dimensionalidad efectiva de la matriz Hessiana de la función de pérdida, evaluada en el vector de parámetros $w$, cuantifica el número de direcciones agudas (direcciones con curvatura) en el paisaje de pérdidas, es decir, el número de parámetros que están determinados por los datos.\newline
+
+Maddox et al.~\cite{Maddox2020} descubrieron que, después del entrenamiento, los modelos grandes tienen menos parámetros efectivos que los modelos más pequeños, al observar su dimensionalidad efectiva. En trabajos más recientes, Goldblum et al.~(2024)~\cite{Goldblum2024} también demostraron que los LLM presentan un fuerte sesgo hacia soluciones más simples, y que este sesgo es una característica clave para un buen rendimiento.\newline
+
+Así, estos resultados refuerzan la conjetura de que las soluciones más simples tienden a obtener mejores resultados, ya que son más comprensibles y siguen la filosofía de Ockham. Asimismo, el sesgo inductivo hacia estas soluciones contrarresta, de alguna manera, el crecimiento del número de soluciones que no son minimizadoras globales~\cite{Mingard2023}.\newline
+
+Como conlusión, podemos decir que el uso de sistemas sobreparametrizados resulta ventajoso para obtener cada vez más soluciones posibles (minimizadores globales) para nuestro problema. De esta forma, al aumentar la capacidad del modelo (en nuestro caso, su complejidad efectiva), resultará más sencillo para el algoritmo de optimización elegir una ``buena'' hipótesis (que generalice mejor que el resto) basada en algún sesgo inductivo que utilice. Este sesgo parece ir ligado hacia soluciones más simples, donde, en el caso de las hipótesis, se pueden entender como más ``suaves'', lo que conduce a la hipótesis elegida a una especie de autoregulación.\newline
 
 \section{Aproximación no lineal}\label{sec:aproximacion-no-lineal}
 
-\subsection{Analogía con el deep double descent}
+En esta sección, introduciremos algunos elementos fundamentales de la teoría de la aproximación no lineal~\cite{DeVore1998}, la cual está relacionada con el problema del aprendizaje profundo. Además, desarrollaremos ciertos conceptos con el propósito de demostrar la existencia de analogías entre esta teoría y el fenómeno conocido como \textit{Deep Double Descent}, así como de proporcionar una posible explicación desde esta perspectiva.\newline
+
+Comenzamos recordando que el problema principal de la teoría de la aproximación es encontrar una representación para una función, generalmente compleja, denominada función objetivo $f$, utilizando funciones más simples llamadas \textbf{aproximantes}. De esta manera, al igual que en el caso del aprendizaje, ambos enfoques buscan aproximar una determinada función a partir de otras más sencillas.\newline
+
+La aproximación no lineal implica que los aproximantes no provienen de espacios lineales, sino de variedades no lineales. Dado que el incremento en la resolución de la función objetivo solo puede lograrse aumentando la complejidad de los aproximantes, resulta lógico considerar que la aproximación no lineal ofrece ventajas sobre los métodos clásicos. Para evaluar esto, estudiaremos la tasa de aproximación, definida como la disminución del error en función del número de parámetros en el aproximante, en relación con el doble descenso.\newline
+
+Por tanto, la idea de no restringir las aproximaciones a espacios lineales consiste en utilizar una malla más fina en las regiones donde la función objetivo no es muy suave (presenta singularidades) y una malla más gruesa donde sí lo es. No obstante, será necesario caracterizar formalmente esta noción de suavidad para obtener resultados concluyentes.\newline
+
+Finalmente, nos centraremos en la aproximación no lineal conocida como aproximación de $n$ términos, que consiste en mantener el control únicamente sobre el número de términos a utilizar para realizar la aproximación, dejando que la selección de los términos dependa de la función objetivo. Esto conduce a un problema de doble etapa, en el que la función objetivo se utiliza tanto para seleccionar una base adecuada de una biblioteca de bases como para elegir la mejor aproximación de $n$ términos en relación con dicha base.
+
+\subsection{Aproximación en un espacio de Hilbert}
+
+Dado que los problemas de la teoría de la aproximación son más sencillos de analizar en un espacio de Hilbert, comenzaremos con una breve discusión sobre este entorno, con el fin de introducir los conceptos clave.\newline
+
+Por ello, sea $\mathcal{H}$ un espacio de Hilbert con producto interno $\langle \cdot, \cdot \rangle$ y norma $\|\cdot\|_{\mathcal{H}}$, y sea $\{\eta_k\}_{k=1}^{n}$ una base ortonormal de $\mathcal{H}$. Para el caso de la aproximación lineal, consideramos el espacio lineal $\mathcal{H}_n = \text{span}\{\eta_k : 1 \leq k \leq n\}$ para aproximar un elemento $f \in \mathcal{H}$. El error de aproximación se mide mediante
+\[
+    E_n(f)_{\mathcal{H}} = \inf_{g \in \mathcal{H}_n} \| f - g \|_{\mathcal{H}}.
+\]
+
+Como contraparte en la aproximación no lineal, que es el caso de estudio de este análisis, contamos con la aproximación de $n$ términos, que reemplaza $\mathcal{H}_n$ por el espacio $\Sigma_n$, el cual consiste en todos los elementos $g \in \mathcal{H}$ que pueden expresarse como
+\[
+    g = \sum_{k \in \Lambda} c_k \eta_k,
+\]
+donde $\Lambda \subset \mathbb{N}$ es un conjunto de índices con $\# \Lambda \leq n$ (cardinalidad finita).\newline
+
+Se puede verificar que, a diferencia de $\mathcal{H}_n$, el espacio $\Sigma_n$ no es lineal. De manera análoga al error de aproximación lineal $E_n$, definimos el error de aproximación de $n$ términos como
+
+\[
+    \sigma_n(f)_{\mathcal{H}} = \inf_{g \in \Sigma_n} \| f - g \|_{\mathcal{H}}.
+\]
+
+\begin{definicion}
+    Dado un número real $\alpha > 0$, denotamos por $\mathcal{A}^{\alpha}(\Sigma_n)$ la clase de funciones $f \in \mathcal{H}$ que cumplen la siguiente desigualdad para algún $M > 0$:
+
+    \begin{equation}\label{eq:clases-error}
+        \sigma_n(f)_{\mathcal{H}} \leq M n^{-\alpha}, \quad n \in \mathbb{N}.
+    \end{equation}
+
+    Además, definimos la seminorma $|f|_{\mathcal{A}^{\alpha}(\Sigma_n)}$ como el ínfimo de todos los valores de $M$ para los cuales se cumple la ecuación anterior.
+\end{definicion}
+
+Denominaremos al conjunto $\mathcal{A}^{\alpha}$ como un \textbf{espacio de aproximación}, el cual agrupa las funciones $f \in \mathcal{H}$ con un comportamiento de aproximación similar, es decir, aquellas cuyo error de aproximación disminuye con una tasa de orden $n^{-\alpha}$.\newline
+
+Finalmente, podemos caracterizar el espacio $\mathcal{A}^{\alpha}(\Sigma_n)$ reorganizando los coeficientes de la función $f$ de manera decreciente. Denotamos por $\gamma_k(f)$ al $k$-ésimo valor más grande de los coeficientes absolutos de la función $f$. 
+
+\begin{teorema}
+    Una función $f \in \mathcal{A}^{\alpha}(\Sigma_n)$ si y solo si se cumple la siguiente desigualdad:
+
+    \begin{equation}\label{eq:coeficientes-reordenados1}
+        \gamma_n(f) \leq M n^{-\alpha - 1/2},
+    \end{equation}
+
+    donde el ínfimo de todos los $M$ que satisfacen la ecuación anterior es equivalente a la seminorma $|f|_{\mathcal{A}^{\alpha}(\Sigma_n)}$.
+\end{teorema}
+
+\begin{proof}
+    En primer lugar, notemos que
+
+    \[
+        \sigma_n(f)^2_{\mathcal{H}} = \sum_{k>n} \gamma_k(f)^2,
+    \]
+
+    dado que el error de aproximación al cuadrado es la suma de los cuadrados de los coeficientes que no están involucrados en la aproximación.\newline
+
+    Por tanto, si $f$ cumple la ecuación~\eqref{eq:coeficientes-reordenados1}, es inmediato que
+    \[
+        \sigma_n(f)_{\mathcal{H}} \leq C M n^{-\alpha},
+    \]
+
+    lo que demuestra que $f \in \mathcal{A}^{\alpha}(\Sigma_n)$. Por otro lado, si $f \in \mathcal{A}^{\alpha}(\Sigma_n)$, entonces se satisface la siguiente desigualdad:
+
+    \[
+        \gamma_{2n}(f)^2 \leq n^{-1} \sum_{m=n+1}^{2n} \gamma_m(f)^2 \leq n^{-1} \sigma_n(f)_{\mathcal{H}}^2 \leq |f|_{\mathcal{A}^{\alpha}(\Sigma_n)}^2 n^{-2\alpha - 1} \leq M^2 n^{-2\alpha - 1}.
+    \]
+
+    Dado que una desigualdad análoga se verfiica para $\gamma_{2n+1}(f)$, debido a la naturaleza decreciente de los coeficientes $\gamma_k(f)$, se obtiene la implicación restante.\newline
+\end{proof}
+
+A su vez, definimos el espacio de aproximación $\mathcal{A}_{\infty}^{\alpha}(\Sigma_n)$ como el conjunto de todas las funciones $f \in \mathcal{H}$ tales que
+
+\[
+    \sup_{n \geq 1} n^{\alpha} \sigma_n(f)_{\mathcal{H}} < \infty.
+\]
+
+Es decir, este conjunto está compuesto por todas las funciones $f \in \mathcal{H}$ que cumplen que
+
+\[
+    \sigma_n(f)_{\mathcal{H}} = O(n^{-\alpha}), \quad n \to \infty.
+\]
+
+Esto significa que, para las funciones $f$ en $\mathcal{A}_{\infty}^{\alpha}(\Sigma_n)$, la secuencia de los errores de aproximación $\sigma_n(f)_{\mathcal{H}}$ decrece de manera suficientemente rápida conforme $n$ crece.\newline
+
+Al mismo tiempo, denotamos por $\ell_{p,q}$ los espacios de sucesiones de Lorentz\footnote{Los espacios de Lorentz son generalizaciones de los espacios $L^{p}$, en el sentido de que $\ell_{p}^{p} = L^{p}$, y permiten una caracterización más precisa del comportamiento asintótico de las sucesiones. En particular, los espacios $\ell_{p,\infty}$ corresponden a la versión débil de los espacios $L^{p}$.}. Para nuestro desarrollo, nos centraremos únicamente en el espacio $\ell_{p,\infty}$ (el espacio débil $\ell_{p}$), que está formado por todas las sucesiones que satisfacen
+
+\[
+    x^{*}(n) \leq M n^{-1/p},
+\]
+
+donde $x^{*}(n)$ es el reordenamiento decreciente de la sucesión $|x(n)|$.\newline
+
+Finalmente, el siguiente resultado nos ayuda a relacionar el espacio de aproximación $\mathcal{A}_{\infty}^{\alpha}$ con el espacio débil $\ell_p$ ($\ell_{p,\infty}$).
+
+\begin{teorema}\label{teo:espaciosapprox-espacioslorentz}
+    Para una aproximación de $n$ términos en un espacio de Hilbert $\mathcal{H}$, una función $f \in \mathcal{A}_{\infty}^{\alpha}$ si y solo si sus coeficientes $\{ f_k : k \in \{1, \ldots, n\}\}$ están en el espacio débil $\ell_{\tau}$ (es decir, en $\ell_{\tau, \infty}$) con $\tau = (\alpha + 1/2)^{-1}$. Además, en este caso, se verifica
+
+    \[
+        C_1 |f|_{\mathcal{A}_{\infty}^{\alpha}(\mathcal{H})} \leq \| (f_k) \|_{\ell_{\tau, \infty}} \leq C_2 |f|_{\mathcal{A}_{\infty}^{\alpha}(\mathcal{H})},
+    \]
+
+    donde $C_1, C_2 > 0$ son constantes.\newline
+\end{teorema}
+
+\subsection{Aproximación altamente no lineal}
+
+Nos preguntamos ahora cómo depende la efectividad de la aproximación de $n$ términos de la base elegida y si se puede conseguir alguna ventaja eligiendo de manera progresiva una base que dependa de la función objetivo. Para ello, llamamos \textbf{biblioteca} a una clase $\mathcal{L}$ de bases. Por simplicidad, centraremos nuestra discusión en aproximaciones en un espacio de Hilbert $\mathcal{H}$ y en bibliotecas de bases ortonormales para $\mathcal{H}$.\newline
+
+Por consiguiente, nuestro problema de aproximación cosiste, dada una función objetivo $f \in \mathcal{H}$, en elegir una base $B \in \mathcal{L}$ y una aproximación de $n$ términos a $f$ usando esta base. Llamamos a este tipo de problema de aproximación altamente no lineal, ya que implica una capa adicional de no linealidad en la selección de bases.\newline
+
+No obstante, otra forma de aproximación estrechamente relacionada es la aproximación utilizando $n$ términos desde un \textbf{diccionario} $\mathbb{D} \subset \mathcal{H}$ de funciones, que será nuestro principal objeto de estudio. En nuestro caso, un diccionario se define como un subconjunto arbitrario de $\mathcal{H}$.\newline
+
+Por ejemplo, en el caso de redes neuronales, un diccionario de funciones podría tener la siguiente forma:
+
+\[
+    \{ \sigma(w \cdot x + b) : w \in \mathbb{R}^{P}, b \in \mathbb{R} \}
+\]
+
+donde $\sigma$ es una función de activación de una variable fija, $w$ es el vector de parámetros y $b$ es el término de sesgo. De esta manera, se aproximan funciones de $P$ variables mediante combinaciones lineales de funciones de dicho conjunto. Generalmente, se requiere que $\sigma$ cumpla con algunas propiedades adicionales (véase Subsección~\ref{subsubsec:capa-de-activacion}).\newline
+
+Otro ejemplo particular de diccionario es utilizar una base ortonormal $B$ para $\mathcal{H}$ y definir el diccionario asociado como sigue:
+
+\[
+    \mathbb{D} = \{\pm b : b \in B\},
+\]
+
+donde diremos que $\mathbb{D}$ es el diccionario generado por la base $B$.\newline
+
+La característica común de todos los diccionarios es que la familia de funciones utilizada para el proceso de aproximación es \textbf{redundante}. Es decir, hay muchas más funciones en el diccionario de las necesarias para aproximar cualquier función objetivo $f \in \mathcal{H}$. Por tanto, buscamos que esta redundancia incremente la eficiencia de la aproximación, aunque, por otro lado, también podría ralentizar el proceso de búsqueda de buenas aproximaciones.\newline
+
+\subsubsection{Selección óptima de bases}\label{subsubsec:seleccion-optima-bases}
+
+En esta subsección trataremos cómo la selección adecuada de una base influye directamente en el error de aproximación. Asimismo, observaremos que, al disponer de una biblioteca de bases, el error de aproximación se minimiza para cualquier aproximación realizada, ya que se consideran todas las bases disponibles.\newline
+
+Sea $B = \{ \eta_k \}$ una base ortonormal para $\mathcal{H}$ y sea $\Sigma_n(B)$ el conjunto de funciones en $\mathcal{H}$ que pueden escribirse como una combinación lineal de $n$ de las funciones $\eta_k$, con $k \in \mathbb{N}_0$. Además, definimos
+
+\[
+    \sigma_n(f, B) = \sigma_n(f,B)_{\mathcal{H}} = \inf_{S \in \Sigma_n(B)} \| f - S \|_{\mathcal{H}}
+\]
+
+como el error de aproximación correspondiente respecto a la base $B$.\newline
+
+Recordemos que la disminución de los errores de aproximación $\sigma_n(f, B)$ está completamente determinada por los coeficientes reorganizados de la función $f$. Como antes, sea $\gamma_k(f, B)$ el $k$-ésimo mayor valor absoluto de estos coeficientes.\newline
+
+Aplicando el Teorema~\ref{teo:espaciosapprox-espacioslorentz} a los coeficientes $\gamma_n(f, B)$, sabemos que $f \in \mathcal{H}$ está en $\mathcal{A}_\infty^\alpha (\mathcal{H}, B)$, si y solo si $(\gamma_n(f, B))$ está en $\ell_{\tau}$ con $\tau = (\alpha + 1/2)^{-1}$. Además, 
+
+\begin{equation}\label{eq:bases}
+    C_1 |f|_{\mathcal{A}_\infty^\alpha} \leq \| \gamma_n(f, B) \|_{\ell_{\tau, \infty}} \leq C_2 |f|_{\mathcal{A}_\infty^\alpha},
+\end{equation}
+
+con constantes de equivalencia independientes de la base $B$ elegida.\newline
+
+Supongamos ahora que $\mathcal{L} = \{ B_1, \ldots, B_n \}$ es una biblioteca de bases ortonormales. Definimos el error de aproximación con respecto a $\mathcal{L}$ como sigue
+
+\[
+    \sigma_n^{\mathcal{L}}(f)_{\mathcal{H}} = \inf_{B \in \mathcal{L}} \sigma_n(f, B)_{\mathcal{H}}.
+\]
+
+A la vista de la Ecuación~\eqref{eq:bases}, obtenemos la siguiente cota superior
+
+\begin{equation}\label{eq:bases2}
+    \sigma_n^{\mathcal{L}}(f)_{\mathcal{H}} \leq C n^{-\alpha} \inf_{B} \| \gamma_n(f, B) \|_{\ell_r, \infty}
+\end{equation}
+
+con $C$ una constante absoluta. Además, para cualquier $\alpha > 0$, se tiene
+
+\begin{equation}\label{eq:bases3}
+    \bigcap_{B} \mathcal{A}_\infty^\alpha (\mathcal{H}, B) \subset \mathcal{A}_\infty^\alpha (\mathcal{H}, \mathcal{L}).
+\end{equation}
+
+En consecuencia, para cada base ortonormal $B$, la condición $(\gamma_n(f)) \in \ell_{\tau, \infty}$, $\tau = (\alpha + 1/2)^{-1}$, puede verse como una condición de suavidad de la función $f$ relativa a la base $B$. Así, el ínfimo en el lado derecho de la Ecuación~\eqref{eq:bases2} puede interpretarse como el ínfimo de condiciones de suavidad relativas a las diferentes bases $B$.\newline
+
+De manera similar, podemos ver las clases $\mathcal{A}_\infty^\alpha (\mathcal{H}, B)$ como clases de suavidad con respecto a la base $B$. De esta forma, una ventaja de la selección óptima de bases es que siempre podemos elegir la base $B \in \mathcal{L}$ en la que $f$ sea más suave.\newline
+
+Por su parte, las Ecuaciones~\eqref{eq:bases2} y~\eqref{eq:bases3} muestran que la base más eficiente para aproximar $f$ depende del número de términos utilizados para la aproximación. De esta forma, se pueden construir dos bases, $B_1$ y $B_2$, y una función objetivo $f$ de tal manera que, para ciertos valores de $n$, la elección óptima de base varíe entre $B_1$ y $B_2$. Es decir, para algunos valores de $n$, $B_1$ ofrecerá un mejor error de aproximación, mientras que para otros, $B_2$ es más eficiente, lo que demuestra que no hay una base universalmente mejor para todos los valores de $n$.\newline
+
+\subsubsection{Aproximación usando $n$ términos de un diccionario}\label{subsubsec:approx-n-terms}
+
+Supongamos que $\mathbb{D}$ es un diccionario de funciones en $\mathcal{H}$. Para simplificar, asumimos (sin pérdida de generalidad en la aproximación de $n$ términos) que cada $g \in \mathbb{D}$ tiene norma uno, es decir, $\|g\|_{\mathcal{H}} = 1$, y que $-g \in \mathbb{D}$ siempre que $g \in \mathbb{D}$.\newline
+
+Para cada $n \in \mathbb{N}$, definimos $\Sigma_n := \Sigma_n(\mathbb{D})$ como la colección de todas las funciones en $\mathcal{H}$ que pueden expresarse como una combinación lineal de, como máximo, $n$ elementos de $\mathbb{D}$. Así, cada función $S \in \Sigma_n$ puede escribirse de la forma:
+
+\begin{equation}\label{eq:n-terms1}
+    S = \sum_{g \in \Lambda} c_g g, \quad \Lambda \subset \mathbb{D}, \quad \#\Lambda \leq n,
+\end{equation}
+
+donde $c_g \in \mathbb{R}$ son los coeficientes y $\#\Lambda$ denota el cardinal del conjunto $\Lambda$. Cabe destacar que un elemento de $\Sigma_n(\mathbb{D})$ puede expresarse de la forma~\eqref{eq:n-terms1} de más de una forma.\newline
+
+\begin{definicion}
+    Para una función $f \in \mathcal{H}$, definimos su error de aproximación a partir de un diccionario $\mathbb{D}$ como:
+
+    \[
+        \sigma_n(f) := \sigma_n(f, \mathbb{D})_{\mathcal{H}} := \inf_{S \in \Sigma_n} \| f - S \|_{\mathcal{H}}.
+    \]
+\end{definicion}
+
+Así, nuestro interés se centra en obtener estimaciones para $\sigma_n$ (tanto superiores como inferiores). Para este propósito, introducimos la siguiente forma de medir la suavidad con respecto a un diccionario $\mathbb{D}$.\newline
+
+\begin{definicion}
+    Para un diccionario $\mathbb{D}$ y cualquier $\tau > 0$, definimos la clase de funciones:
+
+    \[
+        \mathcal{K}_{\tau}^{o}(\mathbb{D}, M) := \left\{ f = \sum_{g \in \Lambda} c_g g : \Lambda \subset \mathbb{D}, \quad \#\Lambda < \infty \quad \text{y} \quad \sum_{g \in \Lambda} |c_g|^{\tau} \leq M^{\tau} \right\},
+    \]
+
+    y definimos $\mathcal{K}_{\tau}(\mathbb{D}, M)$ como la clausura en $\mathcal{H}$ de $\mathcal{K}_{\tau}^{o}(\mathbb{D}, M)$. Además, definimos $\mathcal{K}_{\tau}(\mathbb{D})$ como la unión de las clases $\mathcal{K}_{\tau}(\mathbb{D}, M)$ para todo $M > 0$. Para $f \in \mathcal{K}_{\tau}(\mathbb{D})$, definimos la seminorma:
+
+    \[
+        |f|_{\mathcal{K}_{\tau}(\mathbb{D})} = \inf\{ M : f \in \mathcal{K}_{\tau}(\mathbb{D}, M) \}.
+    \]
+\end{definicion}
+
+En otras palabras, $\mathcal{K}_{\tau}^{o}(\mathbb{D}, M)$ está formado por la clase de funciones que se pueden escribir como una combinación lineal de un número finito de elementos de $\mathbb{D}$, de tal manera que la suma de los coeficientes elevados a la potencia $\tau$ se encuentre acotada, controlando así la magnitud de las combinaciones lineales.\newline
+
+Por otro lado, $|f|_{\mathcal{K}_{\tau}(\mathbb{D})}$ nos indica la dificultad de aproximar una función $f$ utilizando una combinación de funciones del diccionario. Cuanto más pequeña sea la seminorma, más sencillo será aproximar la función $f$.\newline
+
+\begin{observacion}
+    Cuando $\tau = 1$, $\mathcal{K}_1$ es la clase de funciones que son una combinación convexa de las funciones en $\mathbb{D}$.\newline
+\end{observacion}
+
+Para el caso en el que $\mathbb{D}$ es generado por una base $B$ se sigue que la aproximación de $n$ términos desde $\mathbb{D}$ es la misma que la aproximación de $n$ términos desde $B$. En particular, si $\tau = (\alpha + 1/2)^{-1}$ y $B$ es ortonormal, se verifica que:
+
+\begin{equation}\label{eq:n-terms-error}
+    \sigma_n(f, \mathbb{D})_{\mathcal{H}} \leq Cn^{-\alpha} |f|_{\mathcal{K}_{\tau}(\mathbb{D})}.
+\end{equation}
+
+Sabemos que $Cn^{-\alpha}$ es un factor de decaimiento que describe cómo el error de aproximación disminuye a medida que incrementamos el número de términos $n$ en la aproximación. La constante $C$ es un valor positivo que depende tanto del diccionario como de la función, mientras que la potencia $\alpha$ depende de $\tau$ y de las propiedades de la función objetivo.\newline
+
+De esta forma, la Ecuación~\eqref{eq:n-terms-error} nos proporciona una cota superior para el error de aproximación de una función $f$ utilizando una aproximación de $n$ términos, a partir de un diccionario $\mathbb{D}$ generado por una base ortonormal $B$. En consecuencia, el error de aproximación $\sigma_n(f, \mathbb{D})_{\mathcal{H}}$ depende tanto de la suavidad de la función $f$ (medida por $|f|_{\mathcal{K}_{\tau}(\mathbb{D})}$) como del número de términos $n$ empleados en la aproximación.\newline
+
+Finalmente, estamos interesados en verificar si la Ecuación~\eqref{eq:n-terms-error} es válida para diccionarios más generales. El siguiente resultado nos proporciona una cota superior para el error de aproximación en estos casos, extendiendo los resultados obtenidos en el caso de diccionarios generados por bases ortonormales.
+
+\begin{teorema}
+    Sean $\mathbb{D}$ un diccionario de funciones, $\alpha \geq 1/2$ y $1/\tau = \alpha + 1/2$. Si $f \in K_{\tau}(\mathbb{D})$, entonces
+
+    \begin{equation}\label{eq:n-terms-teo}
+        \sigma_m(f, \mathbb{D})_{\mathcal{H}} \leq C |f|_{K_{\tau}(\mathbb{D})} m^{-\alpha} \quad \forall m \in \mathbb{N},
+    \end{equation}
+
+    donde $C$ depende de $\tau$.
+\end{teorema}
+
+\begin{proof}
+    Es suficiente probar la desigualdad~\eqref{eq:n-terms-teo} para funciones $f$ que puedan expresarse como una suma finita $f = \sum_j c_j g_j$, con $g_j \in \mathbb{D}$ y $\sum_j |c_j|^\tau \leq M^\tau$. Sin pérdida de generalidad, podemos suponer que los coeficientes $c_j$ son positivos y están ordenados de manera decreciente.\newline
+    
+    Definimos la suma parcial de los primeros $n$ términos como $s_1 = \sum_{j=1}^{n} c_j g_j$ y su residuo asociado como $R_1 = f - s_1 = \sum_{j>n} c_j g_j$. Ahora,
+
+    \[
+        c_n^\tau \leq \frac{1}{n} \sum_{j=1}^{n} |c_j|^\tau \leq \frac{M^\tau}{n}, \quad n \in \mathbb{N}.
+    \]
+
+    Por tanto, tomando la raíz $ \tau $-ésima de ambos lados, y dado que los coeficientes están ordenados de manera decreciente, tenemos que $ c_j \leq M \cdot n^{-1/\tau} $ para $ j > n $, lo que nos lleva a
+
+    \[
+        \sum_{j>n} c_j = \sum_{j>n} c_j^{1-\tau} c_j^\tau \leq M^{1-\tau} n^{1-1/\tau} \sum_{j>n} c_j^\tau \leq M n^{1-1/\tau}.
+    \]
+
+    Esto implica que $R_1$ pertenece a $K_1(\mathbb{D}, M n^{1 - 1/\tau})$. Haciendo uso del Teorema 3.2 de~\cite{DeVore1996}, existe una función $s_2$ que es una combinación lineal de a lo sumo $n$ de los elementos $g \in \mathbb{D}$ tal que
+
+    \[
+        \| f - (s_1 + s_2) \| = \| R_1 - s_2 \| \leq 2M n^{1-1/\tau} n^{-1/2} = 2M n^{-\alpha},
+    \]
+
+    de donde se obtiene la desigualdad~\eqref{eq:n-terms-teo}.\newline
+\end{proof}
+
+\subsection{Analogía con el \textit{Deep Double Descent}}\label{subsec:analogia-matematica-ddd}
+
+A modo de conclusión de este inciso sobre la teoría de la aproximación no lineal, presentaremos a lo largo de esta sección las similitudes que existen entre dicha teoría y el doble descenso, con el objetivo de establecer ciertas analogías que ofrezcan ideas matemáticas subyacentes asociadas a su ocurrencia.\newline
+
+En primer lugar, el objetivo tanto de la aproximación no lineal como del aprendizaje es esencialmente el mismo: aproximar una función objetivo mediante funciones más simples. En el contexto de la teoría de la aproximación, se suele asumir que se conocen los valores de ciertos funcionales lineales simples aplicados a la función objetivo. En cambio, en el aprendizaje, dicha función es completamente desconocida y solo se tiene acceso a un conjunto finito de observaciones.\newline
+
+Asimismo, en ambos contextos se recurre al uso de funciones no lineales para aproximar la función objetivo, lo que permite capturar comportamientos complejos que no podrían representarse adecuadamente mediante aproximaciones provenientes de espacios lineales.\newline
+
+La base a partir de la cual se construyen los aproximantes también desempeña un papel fundamental. Aunque en el caso de las redes neuronales lo que se utiliza propiamente es un diccionario, este diccionario será dependiente de la base elegida. De esta manera, cuando llevemos a cabo los experimentos relacionados con la aproximación polinómica mediante el uso de la pseudoinversa, veremos cómo la elección de la base influye de manera significativa en los resultados obtenidos.\newline
+
+En consecuencia, observaremos cómo el error de aproximación obtenido depende efectivamente de la base elegida, tal como se discutió en la Subsección~\ref{subsubsec:seleccion-optima-bases}, y corroboraremos que ciertas bases resultan más adecuadas para aproximar determinadas funciones.\newline
+
+De este modo, se puede intuir que los modelos de aprendizaje obtienen sus aproximantes a partir de la base elegida hasta alcanzar el umbral de interpolación. Precisamente en ese umbral, el aproximante queda determinado de forma única por el uso completo de la base, lo cual explica que su error de generalización no esté controlado y pueda alcanzar valores elevados.\newline
+
+Por otra parte, al superar el umbral de interpolación, la base pasa a funcionar como un diccionario: un conjunto redundante de funciones en el que, a medida que aumenta el número de parámetros del modelo, se incorporan nuevas posibilidades de aproximación.\newline
+
+Aunque estas funciones adicionales son redundantes, contribuyen a mejorar la capacidad de generalización del modelo, ya que al contar con un mayor número de posibles soluciones, el nuevo conjunto de hipótesis resulta más adecuado para resolver el problema. De hecho, como se observó en la Subsección~\ref{subsubsec:approx-n-terms}, la función objetivo tiende a verse más “suave” a medida que aumenta el diccionario.\newline
+
+Finalmente, la elección de una ``buena'' hipótesis de todas las disponibles en el diccionario vendría dada por algún sesgo inductivo del algoritmo de optimización utilizado, tal y como se comentó en la Subsección~\ref{subsec:suavidad-funcional}.
 
 \section{Conclusión}\label{sec:conclusion-matematica}
+
+En esta sección hemos expuesto de forma teórica y detallada el \textit{Deep Double Descent}, unificando el enfoque clásico con la práctica moderna a partir de la noción de complejidad efectiva como medida de complejidad del modelo. A partir de esta definición, se identifican las distintas regiones de comportamiento de un modelo durante el entrenamiento, siendo de especial interés la región sobreparametrizada, en la cual hemos centrado nuestro análisis.\newline
+
+Al mismo tiempo, a partir de la descomposición del error en la suma de sesgo y varianza, se introducen las distintas configuraciones que puede adoptar el error de un modelo. Entre ellas, destaca el fenómeno del doble descenso, el cual surge debido a que el sesgo y la varianza predominan en diferentes regiones del comportamiento del modelo, siendo la varianza la que presenta un comportamiento unimodal.\newline
+
+También destacamos que, en la región sobreparametrizada, el conjunto de hipótesis disponibles es mayor. De este modo, el verdadero desafío para comprender el fenómeno reside en entender por qué el algoritmo de aprendizaje selecciona ciertas soluciones dentro de ese conjunto sobre otras, y por qué las hipótesis elegidas tienden a generalizar bien.\newline
+
+A partir de un ejemplo de regresión, se introduce un análisis intuitivo del suceso, en el que se observa que su aparición está estrechamente vinculada al término de la varianza. En particular, se verifica que el pico del error se produce cerca del umbral de interpolación, debido a la configuración de los valores propios que surgen al resolver el problema de regresión.\newline
+
+Posteriormente, se analiza la convergencia del descenso de gradiente, demostrando que, bajo ciertas hipótesis, dicho algoritmo converge hacia soluciones que son minimizadoras globales en la región sobreparametrizada. Esta propiedad se observa tanto en problemas de regresión como en escenarios con datos separables.\newline
+
+A continuación, se presenta la región sobreparametrizada desde el punto de vista de la optimización. En esta sección, se evidencia la existencia de múltiples soluciones dentro de dicha región, así como la ausencia de convexidad local de la función de pérdida en cualquier vecindad de dichas soluciones. Igualmente, se destaca que, mientras en la zona infraparametrizada las soluciones aparecen de forma aislada, en la zona sobreparametrizada estas conforman variedades continuas. Finalmente, se introduce una propiedad más débil que la convexidad, la cual debe cumplir la función de pérdida para garantizar que el descenso de gradiente converja hacia un mínimo global en la región sobreparametrizada.\newline
+
+A pesar de conocer la existencia de múltiples soluciones en la región moderna, es necesario entender por qué el algoritmo de aprendizaje tiende a seleccionar aquellas que generalizan adecuadamente. Para ello, se introduce, de forma informal, un concepto de suavidad funcional que orienta al modelo hacia hipótesis más simples, en línea con la filosofía de Ockham. De este modo, el algoritmo de aprendizaje induce un sesgo inductivo suave que lo lleva a concentrarse en subconjuntos óptimos dentro del espacio de hipótesis, lo que contribuye a reducir la varianza en esta región.\newline
+
+Para finalizar esta sección, se introducen conceptos básicos de la teoría de la aproximación no lineal, vinculándolos con el dilema del aprendizaje. A su vez, se presentan ciertas analogías con el doble descenso, mostrando cómo el uso de diccionarios con funciones redundantes permite obtener mejores aproximaciones de la función objetivo. Además, se detallan nociones de suavidad en dichos espacios, reforzando la conexión entre la estructura del modelo y su capacidad de generalización.\newline
+
+Para cerrar este análisis, se presenta la Tabla~\ref{tabla:tabla-conclusion} como resumen de lo que ocurre en las distintas zonas de actuación de un modelo.
 
 \begin{table}[h]
     \centering
@@ -618,6 +991,9 @@ Como conlusión, podemos decir que el uso de sistemas sobreparametrizados result
     \renewcommand{\arraystretch}{0.9} 
     \begin{NiceTabular}{c|c|c|}[color-inside]
         \Block{3-1}{} & \Block[draw, fill={cyan!50}]{3-1}{\textbf{Régimen clásico} \\ \textbf{(infraparametrizado)}} & \Block[draw, fill={cyan!50}]{3-1}{\textbf{Régimen moderno} \\ \textbf{(sobreparametrizado)}} \\ \\ \\
+
+        \hline
+        \Block[draw]{3-1}{Conjunto de \\ hipótesis} & \Block[draw]{3-1}{Conjunto subóptimo \\ debido a un sesgo restrictivo} & \Block[draw]{3-1}{Conjunto óptimo \\ debido a un sesgo inductivo suave} \\ \\ \\
         
         \hline
         \Block[draw]{3-1}{Curva de \\ generalización} & \Block[draw]{3-1}{Forma clásica de ``U''} & \Block[draw]{3-1}{Descendiente} \\ \\ \\
@@ -629,11 +1005,16 @@ Como conlusión, podemos decir que el uso de sistemas sobreparametrizados result
         \Block[draw]{3-1}{Modelo óptimo} & \Block[draw]{3-1}{\text{Sweet spot} (mínimo de la curva ``U'') \\ (difícil de conseguir)} & \Block[draw]{3-1}{Cualquier minimizador global \\ (fácil de encontrar)} \\ \\ \\
 
         \hline
-        \Block[draw]{3-1}{Convergencia del GD} & \Block[draw]{3-1}{GD converge al mínimo local} & \Block[draw]{3-1}{GD converge a un mínimo global} \\ \\ \\
+        \Block[draw]{3-1}{Convergencia del GD} & \Block[draw]{3-1}{GD converge a un mínimo local} & \Block[draw]{3-1}{GD converge a un mínimo global} \\ \\ \\
         \hline
 
+        \hline
+        \Block[draw]{3-1}{Aproximación no lineal} & \Block[draw]{3-1}{Uso de bases (simplicidad/eficiencia) \\ para la aproximación} & \Block[draw]{3-1}{Uso de diccionarios (redundancia) \\ para la aproximación} \\ \\ \\
+        \hline
+
+
     \end{NiceTabular}
-    \caption{}\label{tabla:}
+    \caption[Resumen comparativo entre el paradigma clásico y el paradigma moderno.]{Resumen comparativo entre el paradigma clásico y el paradigma moderno.}\label{tabla:tabla-conclusion}
 \end{table}
 
 \endinput

@@ -8,7 +8,7 @@ En este apéndice se muestra la demostración del Lema~\ref{lema:raro-clasificac
 \textbf{Lema}~\ref{lema:raro-clasificación-gd}. Sea $\mathcal{L}(w)$ una función $\beta$-suave no negativa. Si $\eta < \frac{2}{\beta}$, entonces, para cualquier $w_0$ y utilizando el método del descenso de gradiente dado por:
 
 \[
-    \mathbf{w}^{(\tau + 1)} = \mathbf{w}^{(\tau)} - \eta \nabla \mathcal{L}(\mathbf{w})
+    w^{(\tau + 1)} = w^{(\tau)} - \eta \nabla \mathcal{L}(w)
 \]
 
 se tiene que $\sum_{u=0}^{\infty} \| \nabla\mathcal{L}(w^{(u)}) \|^{2} < \infty$ y, por tanto:
@@ -50,11 +50,7 @@ se tiene que $\sum_{u=0}^{\infty} \| \nabla\mathcal{L}(w^{(u)}) \|^{2} < \infty$
       \sum_{u=0}^{\infty} \|\nabla \mathcal{L} (w^{(u)})\|^2 < \infty,
   \]
 
-  y, finalmente, nos queda el resultado buscado:
-
-  \[
-      \|\nabla \mathcal{L} (w^{(\tau)})\|^2 \to 0.
-  \]
+  y, finalmente, nos queda el resultado buscado: $\|\nabla \mathcal{L} (w^{(\tau)})\|^2 \to 0$.
 \end{proof}
 
 \endinput

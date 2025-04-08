@@ -280,7 +280,7 @@
           {\normalsize\textrm{\miNombre}} 
           \bigskip
 
-          \textsf{\normalsize{Tutores:}}
+          \textsf{\normalsize{Tutorizado por:}}
           {\normalsize\textrm{\misTutores}} 
           \bigskip
 

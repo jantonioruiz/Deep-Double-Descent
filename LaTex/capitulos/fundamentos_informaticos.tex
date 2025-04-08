@@ -29,7 +29,7 @@ De manera similar al cerebro humano, una red neuronal artificial está formada p
     \subfloat{\includegraphics[width=0.45\textwidth]{img/biological-neuron.png}}
     \hfill
     \subfloat{\includegraphics[width=0.45\textwidth]{img/artificial-neuron.png}}
-    \caption[Ejemplos de neurona biológica~\cite{Neves2018} y neurona artificial (basada en~\cite{Li2024}).]{Ejemplos de una neurona biológica~\cite{Neves2018} (izquierda) y una neurona artificial (derecha), basada en~\cite{Li2024}.}\label{fig:neuronasbioyartificial}
+    \caption[Ejemplos de neurona biológica~\cite{Neves2018} y neurona artificial (basada en~\cite{Li2024}).]{Ejemplos de una neurona biológica~\cite{Neves2018} (izquierda) y una neurona artificial (derecha) basada en~\cite{Li2024}.}\label{fig:neuronasbioyartificial}
 \end{figure}
 
 A alto nivel, el funcionamiento de una red neuronal artificial se divide en, al menos, tres capas principales, constituidas por una capa de entrada, una capa oculta y una capa de salida. En la primera capa o capa de entrada, la información del mundo exterior entra en la red neuronal. Dicha información es procesada y propagada al resto de capas mediante un proceso conocido como propagación hacia delante o \emph{forward propagation}, permitiendo que la información fluya desde la capa de entrada hacia las capas sucesivas.\newline
@@ -99,7 +99,7 @@ Antes de entrar a una capa densa, la salida de las capas anteriores debe aplanar
 
 Estas capas combinan y procesan las características extraídas de las capas anteriores y tienen la posibilidad de capturar relaciones globales al conectar cada unidad de una capa con todas las unidades de la siguiente capa por medio de conexiones con pesos entrenables, lo que produce que la mayor parte de los pesos entrenables de una red suelan concentrarse en estas capas debido al elevado número de conexiones que presentan.\newline
 
-\subsubsection{Capa de activación}
+\subsubsection{Capa de activación}\label{subsubsec:capa-de-activacion}
 
 Las capas o funciones de activación son las responsables de introducir no linealidad en el modelo, transformando la combinación lineal de las entradas mediante una función matemática. Esta transformación es esencial para que la red pueda aprender y representar patrones complejos en los datos.\newline
 
@@ -184,6 +184,56 @@ Asimismo, existen variantes del descenso de gradiente, como el descenso de gradi
 
 En resumen, el descenso de gradiente permite que la red neuronal mejore sus predicciones a lo largo de múltiples iteraciones o épocas. Cada vez que el modelo procesa un conjunto de datos, calcula el error y ajusta sus parámetros para aprender de los errores cometidos, repitiéndose este proceso hasta que la función de pérdida alcanza un valor mínimo aceptable.\newline
 
+\subsubsection{Optimizador Adam}\label{subsubsec:optimizador-adam}
+De cara al interés de nuestro proyecto, trabajaremos con el optimizador \textbf{Adam} (\textit{Adaptive Moment Estimation},~\cite{Diederik2017}). Este optimizador se basa en las ideas de los algoritmos \textbf{Momentum} y \textbf{RMSProp}, combinando sus principales ventajas para lograr una convergencia más rápida y estable durante el entrenamiento de modelos de aprendizaje profundo.\newline
+
+El método de \textit{Momentum} mejora al SGD acumulando un promedio móvil de los gradientes pasados. La actualización de los parámetros se realiza de la siguiente forma:
+
+\[
+    \begin{aligned}
+        m_{\tau} &= \beta_1 \cdot m_{\tau-1} + (1 - \beta) \cdot \nabla E(w_{\tau - 1}), \\
+        w_{\tau} &= w_{\tau - 1} - \eta \cdot m_\tau
+    \end{aligned}
+\]
+
+donde el término $\beta$ actúa como un factor de decaimiento que regula la influencia de los gradientes anteriores en la actualización actual. Por su parte, $\eta$ representa la tasa de aprendizaje. Así, la variable $m_{\tau}$ corresponde al promedio móvil de los gradientes, es decir, una estimación de primer orden que suaviza la dirección de la actualización.\newline
+
+El algoritmo \textit{RMSProp} adapta la tasa de aprendizaje en función de la magnitud reciente de los gradientes. Para lograrlo, calcula un promedio móvil de los cuadrados de los gradientes, lo que permite ajustar dinámicamente la escala de la actualización para cada parámetro:
+
+\[
+    \begin{aligned}
+        v_{\tau} &= \beta \cdot v_{\tau-1} + (1- \beta)(\nabla E(w_{\tau-1})), \\
+        w_{\tau} &= w_{\tau-1} - \eta \cdot \frac{\nabla E(w_{\tau-1})}{\sqrt{v_{\tau}}+\epsilon},
+    \end{aligned}
+\]
+
+donde el factor $\beta$ actúa, al igual que en el caso de Momentum, como un factor de olvido que determina cuánto influyen los valores anteriores en la media móvil. Así, $v_{\tau}$ representa una estimación de segundo orden, correspondiente al promedio móvil de los cuadrados de los gradientes. Además, el término $\epsilon$ se introduce para mejorar la estabilidad numérica, evitando divisiones por cero durante la actualización de los parámetros.\newline
+
+Finalmente, \textit{Adam} combina los enfoques anteriores, manteniendo simultáneamente estimaciones de primer y segundo orden. Las actualizaciones se realizan de la siguiente manera:
+
+\begin{equation}
+    \begin{aligned}
+        m_{\tau} &= \beta_1 \cdot m_{\tau-1} + (1 - \beta_1) \cdot \nabla E(w_{\tau - 1}), \\
+        v_{\tau} &= \beta_2 \cdot v_{\tau-1} + (1 - \beta_2) \cdot \nabla E(w_{\tau - 1}).
+    \end{aligned}
+\end{equation}
+
+Dado que $m_\tau$ y $v_\tau$ están inicializados en cero, Adam introduce una corrección de sesgo:
+
+\begin{equation}
+    \begin{aligned}
+        \hat{m_\tau} = \frac{m_\tau}{1- \beta_1^{\tau}}, \\
+        \hat{v_\tau} = \frac{v_\tau}{1- \beta_2^{\tau}}.
+    \end{aligned}
+\end{equation}
+
+Como paso final, los parámetros se actualizan de la siguiente forma:
+
+\begin{equation}
+    w_{\tau} = w_{\tau - 1} - \frac{\eta}{\sqrt{\hat{v}_{\tau}} + \epsilon} \cdot \hat{m}_{\tau}.
+\end{equation}
+
+Este enfoque combina la dirección promedio de los gradientes con una tasa de aprendizaje adaptativa. Por un lado, acumular gradientes pasados permite suavizar la trayectoria y evitar oscilaciones y por otro, normalizar mediante una estimación de segundo orden ajusta la tasa de aprendizaje de manera dinámica para cada parámetro. Así, Adam consigue una optimización más eficiente, estable y con mejor convergencia en escenarios complejos o de alta dimensión.\newline
 
 \subsubsection{Aprendizaje en una red neuronal}\label{subsubsec:aprendizaje-red-neuronal}
 
@@ -394,7 +444,7 @@ Sin embargo, de cara a analizar el doble descenso a lo largo del proyecto, \text
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.9\linewidth]{img/learning-curve-classicalvsmodern.png}
-    \caption[Ejemplos de curvas de aprendizaje modificadas para este proyecto.] {Ejemplos de curvas de aprendizaje modificadas para este proyecto. A la izquierda se muestra la curva clásica de aprendizaje, donde el error de test aumenta llegado a un cierto punto. A la derecha, la curva moderna refleja que, al aumentar la complejidad del modelo, el error de test vuelve a disminuir. Imagen original del autor.}\label{fig:learning-curve-classicalvsmodern}
+    \caption[Ejemplos de curvas de aprendizaje modificadas para este proyecto.] {Ejemplos de curvas de aprendizaje modificadas para este proyecto. A la izquierda se muestra la curva clásica de aprendizaje, donde el error de test aumenta llegado a un cierto punto. A la derecha, la curva moderna refleja que, al aumentar la complejidad del modelo más allá de lo establecido en la sabiduría clásica, el error de test vuelve a disminuir. Imagen original del autor.}\label{fig:learning-curve-classicalvsmodern}
 \end{figure}
 
 \section{Underfitting y overfitting}\label{sec:subsec-underfitting-y-overfitting}
@@ -474,6 +524,6 @@ Como conclusión de estas situaciones, se pone de manifiesto la fuerte dependenc
     \caption[Relación bias/variance con underfitting y overfitting en el contexto clásico.] {Relación bias/variance con underfitting y overfitting en el contexto clásico. Al principio, el modelo muestra un alto sesgo, incapaz de capturar adecuadamente las relaciones entre los datos. A medida que aumenta su complejidad, tanto el rendimiento en entrenamiento como en test mejora, alcanzando un punto de equilibrio en el mínimo de la curva del error de generalización (\textit{sweet spot}). Al superar este punto óptimo, el modelo comienza a memorizar los datos, lo que provoca un aumento del error de generalización, ligado a una mayor varianza. Imagen original del autor.}\label{fig:biasvarianceunderoverfitting}
 \end{figure}
 
-En definitiva, para minimizar el error de generalización en la zona clásica, es fundamental encontrar un equilibrio entre sesgo y varianza, evitando tanto el \emph{underfitting} como el \emph{overfitting}. Este equilibrio se logra mediante una elección adecuada del conjunto de hipótesis $\mathcal{H}$, el cual debe ser lo suficientemente expresivo para capturar patrones relevantes en los datos sin llegar a ser demasiado complejo para que termine modelando el ruido presente en los mismos.\newline
+En definitiva, para minimizar el error de generalización en la zona clásica, es fundamental encontrar un equilibrio entre sesgo y varianza, evitando tanto el \emph{underfitting} como el \emph{overfitting}. Este equilibrio se logra mediante una elección adecuada del conjunto de hipótesis $\mathcal{H}$, el cual debe ser lo suficientemente expresivo para capturar patrones relevantes en los datos sin llegar a ser demasiado complejo para que termine modelando el ruido presente en los mismos.
 
-
+\endinput

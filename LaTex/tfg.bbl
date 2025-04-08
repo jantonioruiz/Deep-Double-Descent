@@ -93,6 +93,11 @@ Amir Dembo.
 \newblock {\em Probability Theory: STAT310/MATH230}.
 \newblock CreateSpace Independent Publishing Platform, 2014.
 
+\bibitem[DeV98]{DeVore1998}
+Ronald~A. DeVore.
+\newblock Nonlinear approximation.
+\newblock {\em Acta Numerica}, 7:51--150, January 1998.
+
 \bibitem[DLK23]{Davies2023}
 Xander Davies, Lauro Langosco, y David Krueger.
 \newblock Unifying grokking and double descent, 2023.
@@ -103,6 +108,11 @@ Stéphane d’Ascoli, Levent Sagun, y Giulio Biroli.
   they appear?*.
 \newblock {\em Journal of Statistical Mechanics: Theory and Experiment},
   2021(12):124002, December 2021.
+
+\bibitem[DT96]{DeVore1996}
+Ronald DeVore y V.~Temlyakov.
+\newblock Some remarks on greedy algorithm.
+\newblock {\em Advances in Computational Mathematics}, 5:173--187, 12 1996.
 
 \bibitem[Dui00]{Duin2000}
 R.P.W. Duin.
@@ -139,6 +149,11 @@ Stuart Geman, Elie Bienenstock, y René Doursat.
 \newblock Neural networks and the bias/variance dilemma.
 \newblock {\em Neural Computation}, 4(1):1--58, 1992.
 
+\bibitem[GFRW24]{Goldblum2024}
+Micah Goldblum, Marc Finzi, Keefer Rowan, y Andrew~Gordon Wilson.
+\newblock The no free lunch theorem, kolmogorov complexity, and the role of
+  inductive biases in machine learning, 2024.
+
 \bibitem[GLSS19]{Gunasekar2019}
 Suriya Gunasekar, Jason Lee, Daniel Soudry, y Nathan Srebro.
 \newblock Implicit bias of gradient descent on linear convolutional networks,
@@ -156,6 +171,11 @@ Yanping Huang, Youlong Cheng, Ankur Bapna, Orhan Firat, Mia~Xu Chen, Dehao
   Chen, HyoukJoong Lee, Jiquan Ngiam, Quoc~V. Le, Yonghui Wu, y Zhifeng Chen.
 \newblock Gpipe: Efficient training of giant neural networks using pipeline
   parallelism, 2019.
+
+\bibitem[HEG{\etalchar{+}}20]{Huang2020}
+W.~Ronny Huang, Zeyad Emam, Micah Goldblum, Liam Fowl, J.~K. Terry, Furong
+  Huang, y Tom Goldstein.
+\newblock Understanding generalization through visualizations, 2020.
 
 \bibitem[HT20]{He2020RecentAI}
 Fengxiang He y Dacheng Tao.
@@ -176,6 +196,10 @@ Reinhard Heckel y Fatih~Furkan Yilmaz.
 \bibitem[HZRS15]{He2015}
 Kaiming He, Xiangyu Zhang, Shaoqing Ren, y Jian Sun.
 \newblock Deep residual learning for image recognition, 2015.
+
+\bibitem[KB17]{Diederik2017}
+Diederik~P. Kingma y Jimmy Ba.
+\newblock Adam: A method for stochastic optimization, 2017.
 
 \bibitem[KH91]{Krogh1991}
 Anders Krogh y John~A. Hertz.
@@ -249,6 +273,10 @@ Marc Lafon y Alexandre Thomas.
   {Learning}, March 2024.
 \newblock arXiv:2403.10459.
 
+\bibitem[LXT{\etalchar{+}}18]{Li2018}
+Hao Li, Zheng Xu, Gavin Taylor, Christoph Studer, y Tom Goldstein.
+\newblock Visualizing the loss landscape of neural nets, 2018.
+
 \bibitem[LZB21]{Liu2021}
 Chaoyue Liu, Libin Zhu, y Mikhail Belkin.
 \newblock Loss landscapes and optimization in over-parameterized non-linear
@@ -259,6 +287,11 @@ Stéphane Mallat.
 \newblock Understanding deep convolutional networks.
 \newblock {\em Philosophical Transactions of the Royal Society A: Mathematical,
   Physical and Engineering Sciences}, 374(2065):20150203, April 2016.
+
+\bibitem[MBW20]{Maddox2020}
+Wesley~J. Maddox, Gregory Benton, y Andrew~Gordon Wilson.
+\newblock Rethinking parameter counting in deep models: Effective
+  dimensionality revisited, 2020.
 
 \bibitem[MCK20]{Ming2020}
 Yifei Min, Lin Chen, y Amin Karbasi.
@@ -274,6 +307,10 @@ Charles~H. Martin y Michael~W. Mahoney.
 V.~A. Marchenko y L.~A. Pastur.
 \newblock Distribution of eigenvalues for some sets of random matrices.
 \newblock {\em Mathematics of the USSR-Sbornik}, 1(4):457--483, 1967.
+
+\bibitem[MRVPL23]{Mingard2023}
+Chris Mingard, Henry Rees, Guillermo Valle-Pérez, y Ard~A. Louis.
+\newblock Do deep neural networks have an inbuilt occam's razor?, 2023.
 
 \bibitem[Mur22]{Murphy2022}
 Kevin~P. Murphy.
@@ -299,12 +336,6 @@ Preetum Nakkiran, Gal Kaplun, Yamini Bansal, Tristan Yang, Boaz Barak, y Ilya
 Brady Neal, Sarthak Mittal, Aristide Baratin, Vinayak Tantia, Matthew Scicluna,
   Simon Lacoste-Julien, y Ioannis Mitliagkas.
 \newblock A modern take on the bias-variance tradeoff in neural networks, 2019.
-
-\bibitem[NZ08]{Nilsback2008}
-M.~A. Nilsback y A.~Zisserman.
-\newblock A visual vocabulary for flower classification.
-\newblock Available at \url{http://www.robots.ox.ac.uk/~vgg/data/flowers/102/},
-  2008.
 
 \bibitem[Opp95]{Opper1995}
 Manfred Opper.
@@ -456,9 +487,18 @@ Bernard Widrow y Ted Hoff.
 \newblock En {\em 1960 IRE WESCON Convention Record, Part 4}, páginas 96--104.
   Institute of Radio Engineers, 1960.
 
+\bibitem[Wil25]{Wilson2025}
+Andrew~Gordon Wilson.
+\newblock Deep learning is not so mysterious or different, 2025.
+
 \bibitem[YS24]{Yang2024}
 Tian-Le Yang y Joe Suzuki.
 \newblock Dropout drops double descent, 2024.
+
+\bibitem[YYY{\etalchar{+}}20]{Yang2020}
+Zitong Yang, Yaodong Yu, Chong You, Jacob Steinhardt, y Yi~Ma.
+\newblock Rethinking bias-variance trade-off for generalization of neural
+  networks, 2020.
 
 \bibitem[ZBH{\etalchar{+}}21]{Zhang2021}
 Chiyuan Zhang, Samy Bengio, Moritz Hardt, Benjamin Recht, y Oriol Vinyals.

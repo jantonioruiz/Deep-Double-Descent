@@ -1,0 +1,66 @@
+% !TeX root = ../tfg.tex
+% !TeX encoding = utf8
+
+\chapter{Apéndice}\label{ap:apendiceD}
+
+En este apéndice analizamos en detalle los saltos bruscos que se producen tanto en el error de entrenamiento como en el de prueba al aumentar el número de épocas de un determinado modelo, e intentamos proporcionar una explicación para los mismos.\newline
+
+Nos centramos en la gráfica de la Figura~\ref{fig:model-epoch3CNNCIFAR10}, donde estos picos en el error son más sobresalientes. A partir de esta representación, se analiza el \textit{epoch-wise double descent} en dos modelos que la conforman: uno infraparametrizado, ubicado antes del umbral de interpolación, y otro sobreparametrizado, situado después de dicho umbral.\newline
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[b]{\textwidth}
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/experiments/epoch-wise3CNNunderparameterized.png}
+        \caption{A la izquierda, se muestra la pérdida en entrenamiento y prueba, y a la derecha, el error en entrenamiento y prueba para un modelo $3$CNN infraparametrizado sobre el subconjunto CIFAR$10$[$25000/5000$].}\label{fig:epoch-wise3CNNunderparameterized}
+    \end{subfigure}
+    
+    \vspace{1em} 
+
+    \begin{subfigure}[b]{\textwidth}
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/experiments/epoch-wise3CNNoverparameterized.png}
+        \caption{A la izquierda, se muestra la pérdida en entrenamiento y prueba, y a la derecha, el error en entrenamiento y prueba para un modelo $3$CNN sobreparametrizado sobre el subconjunto CIFAR$10$[$25000/5000$], donde se aprecian variaciones abruptas tanto en la gráfica de la pérdida como en la del error.}\label{fig:epoch-wise3CNNoverparameterized}
+    \end{subfigure}
+    
+    \caption[Comparativa \textit{epoch-wise double descent} entre un modelo infraparametrizado y uno sobreparametrizado en el que aparecen picos significativos en el error.]{Comparativa \textit{epoch-wise double descent} entre un modelo infraparametrizado, donde no se observa el doble descenso, y un modelo sobreparametrizado, en el que este efecto sí se manifiesta y aparecen picos significativos en el error.}\label{fig:epoch-wise-bruscos1}
+\end{figure}
+
+Para intentar dar una explicación coherente a la conducta, ciertamente peculiar, que se observa en estas gráficas, recordemos algunos de los resultados presentados en la Sección~\ref{sec:optimizacion-zona-sobreparametrizada}. En la zona infraparametrizada, sabemos que los mínimos locales suelen estar aislados, lo que provoca que el paisaje de la función de pérdida en sus alrededores sea localmente convexo (véase imagen izquierda de la Figura~\ref{fig:localglobalminima}).\newline
+
+Debido a esto, la inicialización del optimizador juega un papel crucial, ya que determinará hacia qué mínimo local convergerá. En particular, el optimizador tiende a dirigirse hacia el mínimo local más cercano a su punto de inicio. Dado que la región circundante es localmente convexa, el optimizador avanzará progresivamente hacia dicho mínimo sin posibilidad de escapar de él, siempre que la tasa de aprendizaje sea adecuada.\newline
+
+Este comportamiento explica por qué, en la zona infraparametrizada, la pérdida en entrenamiento sigue una tendencia descendente y converge de manera estable. Al no haber múltiples direcciones de escape significativas, el optimizador se mantiene atrapado en el mínimo local alcanzado, lo que se traduce en una reducción progresiva y sostenida de la pérdida a lo largo del proceso de optimización. Sin embargo, debido a la limitada capacidad del modelo en esta región, el error en el conjunto de prueba puede permanecer elevado, reflejando una falta de flexibilidad para ajustarse adecuadamente a los datos (véase Figura~\ref{fig:epoch-wise3CNNunderparameterized}).\newline
+
+En cambio, en la zona sobreparametrizada, los mínimos globales no están aislados, sino que en cualquier pequeña vecindad de ellos siempre es posible encontrar otro minimizador global. Esto implica que la función de pérdida presenta una alta no convexidad, incluso a nivel local. Como resultado, el paisaje de la función de pérdida en modelos sobreparametrizados es altamente multimodal, como se ilustra en la Figura~\ref{fig:landscapemultimodal}.\newline
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/experiments/landscapemultimodal.png}
+    \caption[Paisaje de la función de pérdida de un modelo sobreparametrizado~\cite{Li2018}.]{Paisaje de la función de pérdida de un modelo sobreparametrizado~\cite{Li2018}. Se observa un único mínimo global en un entorno altamente multimodal.}\label{fig:landscapemultimodal}
+\end{figure}
+
+Aunque la Figura~\ref{fig:landscapemultimodal} muestra únicamente un mínimo global en un espacio tridimensional, es importante recordar que existen múltiples de ellos en las dimensiones definidas por el espacio de parámetros. En otras palabras, paisajes similares a este (aunque más complejos debido a su alta dimensionalidad) se replicarían en distintas regiones del espacio de parámetros, dando lugar a un paisaje altamente multimodal con una multitud de mínimos globales.\newline  
+
+A partir de estos resultados, podemos inferir que el algoritmo de optimización, una vez ha alcanzado una solución prácticamente perfecta (es decir, al encontrar un mínimo, potencialmente global, de la función de pérdida), continúa explorando en busca de soluciones aún mejores. Este proceso, debido a la naturaleza del paisaje multimodal en el que opera, provoca que el modelo pueda salir de dicho mínimo, lo que da lugar a los picos observados, para luego converger hacia otro mínimo potencialmente global.\newline
+
+Además, otro hecho relevante es que la magnitud de estos saltos disminuye progresivamente, lo que sugiere que el modelo, al buscar nuevos mínimos globales, tiende a seleccionar un tipo de soluciones frente a otras. Esta respuesta del modelo puede asociarse al hecho de que, entre todas las soluciones posibles, busca aquella que sea más simple, lo cual, como se ha observado en experimentos previos, suele ser una solución que generaliza bien.\newline
+
+La pregunta ahora sería por qué hemos observado estos resultados, cuando no se muestran de manera prominente en la literatura científica. En primer lugar, en los estudios que presentan gráficas de error con el fenómeno del doble descenso, generalmente se utilizan arquitecturas que incluyen conexiones residuales. Este tipo de arquitecturas, según lo demuestran Li et al.~\cite{Li2018}, no presentan paisajes de la función de pérdida multimodales.\newline
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/experiments/landscapeunimodal.png}
+    \caption[Paisaje de la función de pérdida de un modelo sobreparametrizado con conexiones residuales~\cite{Li2018}.]{Paisaje de la función de pérdida de un modelo sobreparametrizado con conexiones residuales~\cite{Li2018}. Se observa un único mínimo global en un entorno unimodal.}\label{fig:landscapeunimodal}
+\end{figure}
+
+En cambio, exhiben zonas planas alrededor de los mínimos, impidiendo los saltos bruscos observados en nuestro caso (véase Figura~\ref{fig:landscapeunimodal}). Así, los mínimos globales se asemejan a los mínimos locales de las zonas infraparametrizadas, lo que impide que el algoritmo de optimización escape de ellos.\newline
+
+Por otra parte, siguiendo los distintos resultados presentados en la Sección~\ref{subsec:model-epoch-wise}, podemos observar que el aumento en el número de parámetros en comparación con el número de ejemplos de entrenamiento, junto con el uso de un conjunto de entrenamiento más difícil (en nuestro caso, conjuntos con imágenes en formato RGB), favorecen la aparición de estas colinas en las gráficas de error.\newline
+
+Finalmente, podemos concluir que, a medida que avanzan las épocas de entrenamiento, estos picos se vuelven cada vez menos notables, posiblemente porque el modelo encuentra cada vez soluciones más simples. Esto podría sugerir que, si se entrenara durante un mayor número de épocas, estos picos podrían llegar a desaparecer por completo.\newline
+
+\endinput
+%------------------------------------------------------------------------------------
+% FIN DEL APÉNDICE. 
+%------------------------------------------------------------------------------------
