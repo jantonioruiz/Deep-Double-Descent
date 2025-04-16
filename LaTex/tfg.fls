@@ -300,6 +300,16 @@ INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\l
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\l3keys2e\l3keys2e.sty
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex\latex\eurosym\eurosym.sty
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex\latex\eurosym\eurosym.sty
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\pifont.sty
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\pifont.sty
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\upzd.fd
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\upzd.fd
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\upzd.fd
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\zapfding\pzdr.tfm
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\upsy.fd
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\upsy.fd
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\upsy.fd
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\symbol\psyr.tfm
 INPUT .\tfg.aux
 INPUT .\tfg.aux
 INPUT tfg.aux
@@ -488,10 +498,10 @@ OUTPUT tfg.toc
 INPUT .\tfg.lof
 INPUT .\tfg.lof
 INPUT tfg.lof
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplr9t.vf
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\vf\public\mathpazo\zplmr7t.vf
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fplmr.tfm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplr9t.vf
 OUTPUT tfg.lof
 INPUT .\tfg.lot
 INPUT .\tfg.lot
@@ -540,6 +550,9 @@ INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatin
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplr8r.tfm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fplmr.tfm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplrc8r.tfm
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplr9t.vf
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\vf\public\mathpazo\zplmr7y.vf
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplb9d.vf
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplb8r.tfm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fplmb.tfm
@@ -717,6 +730,15 @@ INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplri8r.tfm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplb9d.tfm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplb9d.tfm
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplri9d.vf
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplrij8r.tfm
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplbi9d.tfm
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplbi9d.tfm
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplbi9d.tfm
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplbi9d.vf
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplbi8r.tfm
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fplmbi.tfm
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplbij8r.tfm
 INPUT .\img\bias-variance.png
 INPUT .\img\bias-variance.png
 INPUT .\img\bias-variance.png
@@ -808,7 +830,6 @@ INPUT .\capitulos\desarrollo_matematico.tex
 INPUT .\capitulos\desarrollo_matematico.tex
 INPUT .\capitulos\desarrollo_matematico.tex
 INPUT capitulos\desarrollo_matematico.tex
-INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplbi9d.tfm
 INPUT .\img\planteamiento-teorico-dd.png
 INPUT .\img\planteamiento-teorico-dd.png
 INPUT .\img\planteamiento-teorico-dd.png
@@ -816,10 +837,6 @@ INPUT .\img\planteamiento-teorico-dd.png
 INPUT .\img\planteamiento-teorico-dd.png
 INPUT .\img\planteamiento-teorico-dd.png
 INPUT .\img\planteamiento-teorico-dd.png
-INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplbi9d.vf
-INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplbi8r.tfm
-INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fplmbi.tfm
-INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplbij8r.tfm
 INPUT .\img\bias-variance-peak.png
 INPUT .\img\bias-variance-peak.png
 INPUT .\img\bias-variance-peak.png
@@ -896,7 +913,21 @@ INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ts1pp
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ts1pplj.fd
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ts1pplj.fd
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplb9c.tfm
+INPUT .\img\protocolo-experimental.png
+INPUT .\img\protocolo-experimental.png
+INPUT .\img\protocolo-experimental.png
+INPUT .\img\protocolo-experimental.png
+INPUT .\img\protocolo-experimental.png
+INPUT .\img\protocolo-experimental.png
+INPUT .\img\protocolo-experimental.png
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplb9c.vf
+INPUT .\img\arquitectura2nn.png
+INPUT .\img\arquitectura2nn.png
+INPUT .\img\arquitectura2nn.png
+INPUT .\img\arquitectura2nn.png
+INPUT .\img\arquitectura2nn.png
+INPUT .\img\arquitectura2nn.png
+INPUT .\img\arquitectura2nn.png
 INPUT .\img\experiments\resnet18modified.png
 INPUT .\img\experiments\resnet18modified.png
 INPUT .\img\experiments\resnet18modified.png
@@ -1059,6 +1090,7 @@ INPUT .\img\experiments\noise-wise-dd3.png
 INPUT .\img\experiments\noise-wise-dd3.png
 INPUT .\img\experiments\noise-wise-dd3.png
 INPUT .\img\experiments\noise-wise-dd3.png
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplri9d.tfm
 INPUT .\img\experiments\sample-wise-dd1.png
 INPUT .\img\experiments\sample-wise-dd1.png
 INPUT .\img\experiments\sample-wise-dd1.png
@@ -1073,6 +1105,8 @@ INPUT .\img\experiments\sample-wise-dd2.png
 INPUT .\img\experiments\sample-wise-dd2.png
 INPUT .\img\experiments\sample-wise-dd2.png
 INPUT .\img\experiments\sample-wise-dd2.png
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplri9d.vf
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplrij8r.tfm
 INPUT .\img\experiments\ratioparamsexamples.png
 INPUT .\img\experiments\ratioparamsexamples.png
 INPUT .\img\experiments\ratioparamsexamples.png
@@ -1122,6 +1156,20 @@ INPUT .\img\experiments\model-epoch3CNNCIFAR10025k.png
 INPUT .\img\experiments\model-epoch3CNNCIFAR10025k.png
 INPUT .\img\experiments\model-epoch3CNNCIFAR10025k.png
 INPUT .\img\experiments\model-epoch3CNNCIFAR10025k.png
+INPUT .\img\experiments\model-epochPreActResNet18CIFAR100.png
+INPUT .\img\experiments\model-epochPreActResNet18CIFAR100.png
+INPUT .\img\experiments\model-epochPreActResNet18CIFAR100.png
+INPUT .\img\experiments\model-epochPreActResNet18CIFAR100.png
+INPUT .\img\experiments\model-epochPreActResNet18CIFAR100.png
+INPUT .\img\experiments\model-epochPreActResNet18CIFAR100.png
+INPUT .\img\experiments\model-epochPreActResNet18CIFAR100.png
+INPUT .\img\experiments\epoch-wisePreActResNet18(45,64).png
+INPUT .\img\experiments\epoch-wisePreActResNet18(45,64).png
+INPUT .\img\experiments\epoch-wisePreActResNet18(45,64).png
+INPUT .\img\experiments\epoch-wisePreActResNet18(45,64).png
+INPUT .\img\experiments\epoch-wisePreActResNet18(45,64).png
+INPUT .\img\experiments\epoch-wisePreActResNet18(45,64).png
+INPUT .\img\experiments\epoch-wisePreActResNet18(45,64).png
 INPUT .\img\experiments\2nnvsdeepnn.png
 INPUT .\img\experiments\2nnvsdeepnn.png
 INPUT .\img\experiments\2nnvsdeepnn.png
@@ -1136,7 +1184,6 @@ INPUT .\img\experiments\3cnnvsdeepcnn.png
 INPUT .\img\experiments\3cnnvsdeepcnn.png
 INPUT .\img\experiments\3cnnvsdeepcnn.png
 INPUT .\img\experiments\3cnnvsdeepcnn.png
-INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplr9t.vf
 INPUT .\capitulos\conclusiones_trabajosfuturos.tex
 INPUT .\capitulos\conclusiones_trabajosfuturos.tex
 INPUT .\capitulos\conclusiones_trabajosfuturos.tex
@@ -1152,30 +1199,25 @@ INPUT .\apendices\apendice02.tex
 INPUT .\apendices\apendice02.tex
 INPUT .\apendices\apendice02.tex
 INPUT apendices\apendice02.tex
+INPUT .\img\experiments\batch_sizes_ddd.png
+INPUT .\img\experiments\batch_sizes_ddd.png
+INPUT .\img\experiments\batch_sizes_ddd.png
+INPUT .\img\experiments\batch_sizes_ddd.png
+INPUT .\img\experiments\batch_sizes_ddd.png
+INPUT .\img\experiments\batch_sizes_ddd.png
+INPUT .\img\experiments\batch_sizes_ddd.png
+INPUT .\img\experiments\learning_rates_ddd.png
+INPUT .\img\experiments\learning_rates_ddd.png
+INPUT .\img\experiments\learning_rates_ddd.png
+INPUT .\img\experiments\learning_rates_ddd.png
+INPUT .\img\experiments\learning_rates_ddd.png
+INPUT .\img\experiments\learning_rates_ddd.png
+INPUT .\img\experiments\learning_rates_ddd.png
 INPUT .\apendices\apendice03.tex
 INPUT .\apendices\apendice03.tex
 INPUT .\apendices\apendice03.tex
 INPUT .\apendices\apendice03.tex
 INPUT apendices\apendice03.tex
-INPUT .\img\experiments\batch_sizes_ddd.png
-INPUT .\img\experiments\batch_sizes_ddd.png
-INPUT .\img\experiments\batch_sizes_ddd.png
-INPUT .\img\experiments\batch_sizes_ddd.png
-INPUT .\img\experiments\batch_sizes_ddd.png
-INPUT .\img\experiments\batch_sizes_ddd.png
-INPUT .\img\experiments\batch_sizes_ddd.png
-INPUT .\img\experiments\learning_rates_ddd.png
-INPUT .\img\experiments\learning_rates_ddd.png
-INPUT .\img\experiments\learning_rates_ddd.png
-INPUT .\img\experiments\learning_rates_ddd.png
-INPUT .\img\experiments\learning_rates_ddd.png
-INPUT .\img\experiments\learning_rates_ddd.png
-INPUT .\img\experiments\learning_rates_ddd.png
-INPUT .\apendices\apendice04.tex
-INPUT .\apendices\apendice04.tex
-INPUT .\apendices\apendice04.tex
-INPUT .\apendices\apendice04.tex
-INPUT apendices\apendice04.tex
 INPUT .\img\experiments\epoch-wise3CNNunderparameterized.png
 INPUT .\img\experiments\epoch-wise3CNNunderparameterized.png
 INPUT .\img\experiments\epoch-wise3CNNunderparameterized.png
@@ -1258,3 +1300,5 @@ INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\type1\urw\palati
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\type1\urw\palatino\uplr8a.pfb
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\type1\urw\palatino\uplri8a.pfb
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\type1\urw\palatino\uplri8a.pfb
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\type1\urw\zapfding\uzdr.pfb
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\type1\urw\zapfding\uzdr.pfb

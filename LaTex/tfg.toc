@@ -7,7 +7,7 @@
 \contentsline {chapter}{\nonumberline \'{I}ndice de figuras}{\es@scroman {xi}}{chapter*.9}%
 \contentsline {chapter}{\nonumberline \'{I}ndice de tablas}{\es@scroman {xiii}}{chapter*.11}%
 \contentsline {chapter}{\nonumberline Introducción}{\es@scroman {xv}}{chapter*.12}%
-\contentsline {section}{\numberline {1}Definición del problema}{\es@scroman {xvi}}{section.0.1}%
+\contentsline {section}{\numberline {1}Definición del problema}{\es@scroman {xv}}{section.0.1}%
 \contentsline {section}{\numberline {2}Motivación}{\es@scroman {xvii}}{section.0.2}%
 \contentsline {section}{\numberline {3}Objetivos}{\es@scroman {xviii}}{section.0.3}%
 \contentsline {subsection}{\numberline {3.1}Objetivo matemático}{\es@scroman {xviii}}{subsection.0.3.1}%
@@ -40,59 +40,66 @@
 \contentsline {subsubsection}{\numberline {4.1.1.2}Aprendizaje en una red neuronal}{35}{subsubsection.4.1.1.2}%
 \contentsline {section}{\numberline {4.2}Bias-variance tradeoff}{36}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Formulación matemática del $E_{out}$}{37}{subsection.4.2.1}%
-\contentsline {section}{\numberline {4.3}Equilibrio clásico entre sesgo y varianza}{40}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Curva de aprendizaje}{41}{subsection.4.3.1}%
-\contentsline {section}{\numberline {4.4}Underfitting y overfitting}{42}{section.4.4}%
-\contentsline {part}{\numberline {II}Estado del Arte}{47}{part.2}%
-\contentsline {chapter}{\numberline {5}Trabajos relacionados}{49}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Origen y primeras manifestaciones}{50}{section.5.1}%
-\contentsline {section}{\numberline {5.2}El nacimiento del Deep Double Descent}{51}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Avances recientes}{52}{section.5.3}%
-\contentsline {part}{\numberline {III}Desarrollo Teórico y Empírico}{55}{part.3}%
-\contentsline {chapter}{\numberline {6}Análisis teórico del Deep Double Descent}{57}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Planteamiento teórico}{57}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Análisis intuitivo en un problema de mínimos cuadrados}{60}{subsection.6.1.1}%
-\contentsline {section}{\numberline {6.2}Convergencia del descenso de gradiente}{64}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Problema de regresión}{64}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}Problema de clasificación con datos separables}{69}{subsection.6.2.2}%
-\contentsline {section}{\numberline {6.3}Optimización en la zona sobreparametrizada}{71}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}El impacto del sesgo inductivo en la selección de hipótesis}{76}{subsection.6.3.1}%
-\contentsline {section}{\numberline {6.4}Aproximación no lineal}{80}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Aproximación en un espacio de Hilbert}{81}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}Aproximación altamente no lineal}{83}{subsection.6.4.2}%
-\contentsline {subsubsection}{\numberline {6.4.2.1}Selección óptima de bases}{84}{subsubsection.6.4.2.1}%
-\contentsline {subsubsection}{\numberline {6.4.2.2}Aproximación usando $n$ términos de un diccionario}{85}{subsubsection.6.4.2.2}%
-\contentsline {subsection}{\numberline {6.4.3}Analogía con el \textit {Deep Double Descent}}{87}{subsection.6.4.3}%
-\contentsline {section}{\numberline {6.5}Conclusión}{88}{section.6.5}%
-\contentsline {chapter}{\numberline {7}Análisis empírico del Deep Double Descent}{91}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Materiales y métodos}{91}{section.7.1}%
-\contentsline {subsection}{\numberline {7.1.1}Datasets}{91}{subsection.7.1.1}%
-\contentsline {subsubsection}{\numberline {7.1.1.1}MNIST}{91}{subsubsection.7.1.1.1}%
-\contentsline {subsubsection}{\numberline {7.1.1.2}CIFAR-10 y CIFAR-100}{91}{subsubsection.7.1.1.2}%
-\contentsline {subsection}{\numberline {7.1.2}Arquitecturas utilizadas}{92}{subsection.7.1.2}%
-\contentsline {subsubsection}{\numberline {7.1.2.1}2NN}{92}{subsubsection.7.1.2.1}%
-\contentsline {subsubsection}{\numberline {7.1.2.2}ResNet-18 modificada}{93}{subsubsection.7.1.2.2}%
-\contentsline {subsubsection}{\numberline {7.1.2.3}3CNN}{94}{subsubsection.7.1.2.3}%
-\contentsline {subsection}{\numberline {7.1.3}Hiperparámetros}{95}{subsection.7.1.3}%
-\contentsline {section}{\numberline {7.2}Experimentos}{96}{section.7.2}%
-\contentsline {subsection}{\numberline {7.2.1}Aproximación polinómica}{96}{subsection.7.2.1}%
-\contentsline {subsubsection}{\numberline {7.2.1.1}Función lineal}{97}{subsubsection.7.2.1.1}%
-\contentsline {subsubsection}{\numberline {7.2.1.2}Función hiperbólica}{99}{subsubsection.7.2.1.2}%
-\contentsline {subsection}{\numberline {7.2.2}Noise-wise double descent}{100}{subsection.7.2.2}%
-\contentsline {subsection}{\numberline {7.2.3}Sample-wise double descent}{102}{subsection.7.2.3}%
-\contentsline {subsubsection}{\numberline {7.2.3.1}Ratio parámetros/ejemplos}{104}{subsubsection.7.2.3.1}%
-\contentsline {subsection}{\numberline {7.2.4}Model \& Epoch-wise double descent}{105}{subsection.7.2.4}%
-\contentsline {subsubsection}{\numberline {7.2.4.1}2NN}{105}{subsubsection.7.2.4.1}%
-\contentsline {subsubsection}{\numberline {7.2.4.2}3CNN}{107}{subsubsection.7.2.4.2}%
-\contentsline {subsubsection}{\numberline {7.2.4.3}Anchura vs profundidad en redes neuronales}{108}{subsubsection.7.2.4.3}%
-\contentsline {section}{\numberline {7.3}Conclusión}{108}{section.7.3}%
-\contentsline {part}{\numberline {IV}Conclusiones y Trabajos Futuros}{110}{part.4}%
-\contentsline {chapter}{\numberline {8}Conclusiones}{112}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Trabajos futuros}{113}{chapter.9}%
-\contentsline {chapter}{\numberline {A}Apéndice}{114}{appendix.Alph1}%
-\contentsline {chapter}{\numberline {B}Apéndice}{115}{appendix.Alph2}%
-\contentsline {chapter}{\numberline {C}Apéndice}{117}{appendix.Alph3}%
-\contentsline {chapter}{\numberline {D}Apéndice}{119}{appendix.Alph4}%
-\contentsline {chapter}{Glosario}{122}{chapter*.83}%
-\contentsline {chapter}{\nonumberline Bibliograf\'{\i }a}{123}{chapter*.84}%
+\contentsline {section}{\numberline {4.3}Equilibrio clásico entre sesgo y varianza}{43}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Curva de aprendizaje}{44}{subsection.4.3.1}%
+\contentsline {section}{\numberline {4.4}Underfitting y overfitting}{46}{section.4.4}%
+\contentsline {part}{\numberline {II}Estado del Arte}{49}{part.2}%
+\contentsline {chapter}{\numberline {5}Trabajos relacionados}{51}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Origen y primeras manifestaciones}{52}{section.5.1}%
+\contentsline {section}{\numberline {5.2}El nacimiento del Deep Double Descent}{53}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Avances recientes}{54}{section.5.3}%
+\contentsline {part}{\numberline {III}Desarrollo Teórico y Empírico}{57}{part.3}%
+\contentsline {chapter}{\numberline {6}Análisis teórico del Deep Double Descent}{59}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Planteamiento teórico}{59}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Análisis intuitivo en un problema de mínimos cuadrados}{62}{subsection.6.1.1}%
+\contentsline {section}{\numberline {6.2}Convergencia del descenso de gradiente}{66}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Problema de regresión}{66}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Problema de clasificación con datos separables}{71}{subsection.6.2.2}%
+\contentsline {section}{\numberline {6.3}Optimización en la zona sobreparametrizada}{73}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}El impacto del sesgo inductivo en la selección de hipótesis}{77}{subsection.6.3.1}%
+\contentsline {section}{\numberline {6.4}Aproximación no lineal}{82}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Aproximación en un espacio de Hilbert}{83}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Aproximación altamente no lineal}{85}{subsection.6.4.2}%
+\contentsline {subsubsection}{\numberline {6.4.2.1}Selección óptima de bases}{86}{subsubsection.6.4.2.1}%
+\contentsline {subsubsection}{\numberline {6.4.2.2}Aproximación usando $n$ términos de un diccionario}{87}{subsubsection.6.4.2.2}%
+\contentsline {subsection}{\numberline {6.4.3}Analogía con el \textit {Deep Double Descent}}{89}{subsection.6.4.3}%
+\contentsline {section}{\numberline {6.5}Discusión final}{90}{section.6.5}%
+\contentsline {chapter}{\numberline {7}Análisis empírico del Deep Double Descent}{93}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Materiales y métodos}{93}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Datasets}{93}{subsection.7.1.1}%
+\contentsline {subsubsection}{\numberline {7.1.1.1}MNIST}{93}{subsubsection.7.1.1.1}%
+\contentsline {subsubsection}{\numberline {7.1.1.2}CIFAR-10 y CIFAR-100}{93}{subsubsection.7.1.1.2}%
+\contentsline {subsection}{\numberline {7.1.2}Protocolo de validación experimental}{94}{subsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.1.3}Arquitecturas utilizadas}{95}{subsection.7.1.3}%
+\contentsline {subsubsection}{\numberline {7.1.3.1}2NN}{95}{subsubsection.7.1.3.1}%
+\contentsline {subsubsection}{\numberline {7.1.3.2}ResNet18 modificada}{96}{subsubsection.7.1.3.2}%
+\contentsline {subsubsection}{\numberline {7.1.3.3}3CNN}{98}{subsubsection.7.1.3.3}%
+\contentsline {subsection}{\numberline {7.1.4}Hiperparámetros}{98}{subsection.7.1.4}%
+\contentsline {section}{\numberline {7.2}Experimentos}{99}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Entornos de desarrollo y ejecución}{100}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Aproximación polinómica}{101}{subsection.7.2.2}%
+\contentsline {subsubsection}{\numberline {7.2.2.1}Función lineal}{102}{subsubsection.7.2.2.1}%
+\contentsline {subsubsection}{\numberline {7.2.2.2}Función hiperbólica}{104}{subsubsection.7.2.2.2}%
+\contentsline {subsubsection}{\numberline {7.2.2.3}Discusión}{105}{subsubsection.7.2.2.3}%
+\contentsline {subsection}{\numberline {7.2.3}Noise-wise double descent}{105}{subsection.7.2.3}%
+\contentsline {subsubsection}{\numberline {7.2.3.1}Discusión}{107}{subsubsection.7.2.3.1}%
+\contentsline {subsection}{\numberline {7.2.4}Sample-wise double descent}{108}{subsection.7.2.4}%
+\contentsline {subsubsection}{\numberline {7.2.4.1}Ratio parámetros/ejemplos}{109}{subsubsection.7.2.4.1}%
+\contentsline {subsubsection}{\numberline {7.2.4.2}Discusión}{110}{subsubsection.7.2.4.2}%
+\contentsline {subsection}{\numberline {7.2.5}Model \& Epoch-wise double descent}{110}{subsection.7.2.5}%
+\contentsline {subsubsection}{\numberline {7.2.5.1}2NN}{111}{subsubsection.7.2.5.1}%
+\contentsline {subsubsection}{\numberline {7.2.5.2}3CNN}{112}{subsubsection.7.2.5.2}%
+\contentsline {subsubsection}{\numberline {7.2.5.3}ResNet18 modificada}{113}{subsubsection.7.2.5.3}%
+\contentsline {subsubsection}{\numberline {7.2.5.4}Discusión}{114}{subsubsection.7.2.5.4}%
+\contentsline {subsection}{\numberline {7.2.6}Width vs Depth double descent}{115}{subsection.7.2.6}%
+\contentsline {subsubsection}{\numberline {7.2.6.1}Discusión}{116}{subsubsection.7.2.6.1}%
+\contentsline {section}{\numberline {7.3}Discusión comparativa global}{117}{section.7.3}%
+\contentsline {part}{\numberline {IV}Conclusiones y Trabajos Futuros}{119}{part.4}%
+\contentsline {chapter}{\numberline {8}Conclusiones}{121}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Trabajos futuros}{122}{chapter.9}%
+\contentsline {chapter}{\numberline {A}Detalles Matemáticos Adicionales}{123}{appendix.Alph1}%
+\contentsline {chapter}{\numberline {B}Experimentos Adicionales: Hiperparámetros}{126}{appendix.Alph2}%
+\contentsline {chapter}{\numberline {C}Irregularidades en la Dinámica del Error}{128}{appendix.Alph3}%
+\contentsline {chapter}{Glosario}{131}{chapter*.89}%
+\contentsline {chapter}{\nonumberline Bibliograf\'{\i }a}{133}{chapter*.90}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

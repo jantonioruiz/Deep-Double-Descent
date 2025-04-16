@@ -5,52 +5,46 @@ Reallocating 'name_of_file' (item size: 1) to 9 items.
 The style file: alpha-es.bst
 Reallocating 'name_of_file' (item size: 1) to 12 items.
 Database file #1: library.bib
-Warning--empty publisher in Bishop2023
-Warning--empty journal in Blumer1987
-Warning--empty publisher in Kamath2019
-Warning--empty journal in Krizhevsky2009
-Warning--empty year in Krizhevsky2009
-Warning--empty booktitle in LeCun2005TheMD
-Warning--empty booktitle in Neves2018
-You've used 92 entries,
+Warning--I didn't find a database entry for "Vapnik1991"
+You've used 95 entries,
             2543 wiz_defined-function locations,
-            1103 strings with 19585 characters,
-and the built_in function-call counts, 37109 in all, are:
-= -- 3432
-> -- 2246
-< -- 45
-+ -- 817
-- -- 797
-* -- 2670
-:= -- 6173
-add.period$ -- 258
-call.type$ -- 92
-change.case$ -- 650
-chr.to.int$ -- 92
-cite$ -- 99
-duplicate$ -- 1329
-empty$ -- 2587
-format.name$ -- 898
-if$ -- 7489
+            1114 strings with 20013 characters,
+and the built_in function-call counts, 36881 in all, are:
+= -- 3524
+> -- 2182
+< -- 32
++ -- 790
+- -- 771
+* -- 2611
+:= -- 6231
+add.period$ -- 289
+call.type$ -- 95
+change.case$ -- 666
+chr.to.int$ -- 95
+cite$ -- 95
+duplicate$ -- 1254
+empty$ -- 2524
+format.name$ -- 877
+if$ -- 7345
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 76
-newline$ -- 436
-num.names$ -- 280
-pop$ -- 860
+newline$ -- 483
+num.names$ -- 285
+pop$ -- 799
 preamble$ -- 1
-purify$ -- 759
+purify$ -- 761
 quote$ -- 0
-skip$ -- 1210
+skip$ -- 1135
 stack$ -- 0
-substring$ -- 1378
-swap$ -- 206
-text.length$ -- 45
-text.prefix$ -- 26
+substring$ -- 1466
+swap$ -- 133
+text.length$ -- 32
+text.prefix$ -- 27
 top$ -- 0
-type$ -- 652
-warning$ -- 7
-while$ -- 299
-width$ -- 98
-write$ -- 1101
-(There were 7 warnings)
+type$ -- 676
+warning$ -- 0
+while$ -- 318
+width$ -- 102
+write$ -- 1205
+(There was 1 warning)

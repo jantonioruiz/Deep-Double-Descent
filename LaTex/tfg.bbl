@@ -1,148 +1,158 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{EEAMT22}
+\begin{thebibliography}{DMPHO23}
 
 \bibitem[AMMIL12]{Mostafa2012}
 Yaser~S. Abu-Mostafa, Malik Magdon-Ismail, y Hsuan-Tien Lin.
-\newblock {\em Learning From Data}.
-\newblock AMLBook, 2012.
+\newblock {\em Learning from Data: A Short Course}.
+\newblock AMLBook, 1st edici\'on, 2012.
 
 \bibitem[AS17]{Advani2017}
 Madhu~S. Advani y Andrew~M. Saxe.
 \newblock High-dimensional dynamics of generalization error in neural networks,
   2017.
+\newblock Preprint. arXiv: 1710.03667.
 
-\bibitem[BB23]{Bishop2023}
-Christopher~Michael Bishop y Hugh Bishop.
-\newblock {\em Deep Learning - Foundations and Concepts}.
-\newblock 1 edici\'on, 2023.
+\bibitem[BB18]{Balestriero2018}
+Randall Balestriero y Richard Baraniuk.
+\newblock A spline theory of deep learning.
+\newblock {\em Proceedings of the International Conference on Machine Learnin
+  (PMLR)}, 80:374--383, 2018.
+
+\bibitem[BB24]{Bishop2023}
+Christopher~M. Bishop y Hugh Bishop.
+\newblock {\em Deep Learning: Foundations and Concepts}.
+\newblock Springer, 1st edici\'on, 2024.
 
 \bibitem[BD09]{Ben-David2009}
 Shai Ben-David.
 \newblock {\em Theory-Practice Interplay in Machine Learning - Emerging
-  Theoretical Challenges}, volumen 5781 de {\em Lecture Notes in Computer
-  Science}.
-\newblock Springer, 2009.
+  Theoretical Challenges}.
+\newblock Springer, 1st edici\'on, 2009.
 
 \bibitem[BEHW87]{Blumer1987}
-Anselm BLUMER, Andrzej EHRENFEUCHT, David HAUSSLER, y Manfred~K. WARMUTH.
+Anselm Blumer, Andrzej Ehrenfeucht, David Haussler, y Manfred~K. Warmuth.
 \newblock Occam's razor.
-\newblock 1987.
+\newblock {\em Information Processing Letters}, 24(6):377--378, 1987.
 
 \bibitem[Bel21]{Belkin2021}
 Mikhail Belkin.
 \newblock Fit without fear: remarkable mathematical phenomena of deep learning
   through the prism of interpolation, 2021.
-
-\bibitem[BGKP22]{Berner2022}
-Julius Berner, Philipp Grohs, Gitta Kutyniok, y Philipp Petersen.
-\newblock {\em The Modern Mathematics of Deep Learning}, páginas 1--111.
-\newblock Cambridge University Press, December 2022.
+\newblock Preprint. arXiv: 2105.14368.
 
 \bibitem[BHMM19]{Belkin2019}
 Mikhail Belkin, Daniel Hsu, Siyuan Ma, y Soumik Mandal.
 \newblock Reconciling modern machine-learning practice and the classical
-  bias–variance trade-off.
-\newblock {\em Proceedings of the National Academy of Sciences},
-  116(32):15849–15854, July 2019.
+  bias-variance trade-off.
+\newblock {\em Proceedings of the National Academy of Sciences (PNAS)},
+  116(32):15849--15854, 2019.
 
 \bibitem[Bis95]{Bishop1995}
 Christopher~M. Bishop.
 \newblock {\em Neural Networks for Pattern Recognition}.
-\newblock Oxford University Press, 1995.
+\newblock Oxford University Press, 1st edici\'on, 1995.
 
 \bibitem[Bis06]{Bishop2006}
 Christopher~M Bishop.
-\newblock {\em {Pattern Recognition and Machine Learning}}, volumen~4 de {\em
-  Information science and statistics}.
-\newblock Springer, 2006.
+\newblock {\em Pattern Recognition and Machine Learning}.
+\newblock Springer, 1st edici\'on, 2006.
 
 \bibitem[Blu21]{Blum2021}
 Avrim Blum.
-\newblock Mathematical toolkit spring 2021, lecture 5, April 13 2021.
-\newblock Notes based on notes from Madhur Tulsiani.
-
-\bibitem[Brb18]{Balestriero2018}
-Randall Balestriero y richard baraniuk.
-\newblock A spline theory of deep learning.
-\newblock En Jennifer Dy y Andreas Krause, editores, {\em Proceedings of the
-  35th International Conference on Machine Learning}, volumen~80 de {\em
-  Proceedings of Machine Learning Research}, páginas 374--383. PMLR, 10--15
-  Jul 2018.
+\newblock Mathematical toolkit.
+\newblock TTI-Chicago, Course Website, 2021.
+\newblock Lecture 5, Available at:
+  \url{https://home.ttic.edu/~avrim/Toolkit21/l5%20-%20real%20spectral%20theorem.pdf}.
 
 \bibitem[Bry95]{Bryc1995TheND}
 Włodzimierz Bryc.
 \newblock {\em The Normal Distribution: Characterizations with Applications}.
-\newblock Springer New York, NY, 1995.
+\newblock Springer, 1st edici\'on, 1995.
 
 \bibitem[CJvdS23]{Curth2023}
 Alicia Curth, Alan Jeffares, y Mihaela van~der Schaar.
 \newblock A u-turn on double descent: Rethinking parameter counting in
   statistical learning, 2023.
+\newblock Preprint. arXiv: 2310.18988.
 
 \bibitem[CMBK21]{Chen2021}
 Lin Chen, Yifei Min, Mikhail Belkin, y Amin Karbasi.
 \newblock Multiple descent: Design your own generalization curve, 2021.
+\newblock Preprint. arXiv: 2008.01036.
 
 \bibitem[CRF{\etalchar{+}}25]{Cottier2025}
 Ben Cottier, Robi Rahman, Loredana Fattorini, Nestor Maslej, Tamay Besiroglu, y
   David Owen.
 \newblock The rising costs of training frontier ai models, 2025.
+\newblock Preprint. arXiv: 2405.21015.
 
 \bibitem[Dem14]{Dembo2014}
 Amir Dembo.
 \newblock {\em Probability Theory: STAT310/MATH230}.
-\newblock CreateSpace Independent Publishing Platform, 2014.
+\newblock CreateSpace Independent Publishing Platform, 1st edici\'on, 2014.
 
 \bibitem[DeV98]{DeVore1998}
 Ronald~A. DeVore.
 \newblock Nonlinear approximation.
-\newblock {\em Acta Numerica}, 7:51--150, January 1998.
+\newblock {\em Acta Numerica}, 7:51--150, 1998.
 
 \bibitem[DLK23]{Davies2023}
 Xander Davies, Lauro Langosco, y David Krueger.
 \newblock Unifying grokking and double descent, 2023.
+\newblock Preprint. arXiv: 2303.06173.
+
+\bibitem[DMPHO23]{Desislavov2023}
+Radosvet Desislavov, Fernando Martínez-Plumed, y José Hernández-Orallo.
+\newblock Trends in ai inference energy consumption: Beyond the
+  performance-vs-parameter laws of deep learning.
+\newblock {\em Sustainable Computing: Informatics and Systems}, 38:100857,
+  2023.
+
+\bibitem[Dom00]{Domingos2000}
+Pedro Domingos.
+\newblock A unifeid bias-variance decomposition and its applications.
+\newblock {\em Proceedings of the International Conference on Machine Learning
+  (ICML)}, páginas 231--238, 2000.
 
 \bibitem[dSB21]{d_Ascoli2021}
-Stéphane d’Ascoli, Levent Sagun, y Giulio Biroli.
+Stéphane d'Ascoli, Levent Sagun, y Giulio Biroli.
 \newblock Triple descent and the two kinds of overfitting: where and why do
-  they appear?*.
+  they appear?
 \newblock {\em Journal of Statistical Mechanics: Theory and Experiment},
-  2021(12):124002, December 2021.
+  2021(12):124002, 2021.
 
 \bibitem[DT96]{DeVore1996}
 Ronald DeVore y V.~Temlyakov.
 \newblock Some remarks on greedy algorithm.
-\newblock {\em Advances in Computational Mathematics}, 5:173--187, 12 1996.
+\newblock {\em Advances in Computational Mathematics}, 5:173--187, 1996.
 
 \bibitem[Dui00]{Duin2000}
 R.P.W. Duin.
 \newblock Classifiers in almost empty spaces.
-\newblock En {\em Proceedings 15th International Conference on Pattern
-  Recognition. ICPR-2000}, volumen~2, páginas 1--7 vol.2, 2000.
+\newblock {\em Proceedings of the International Conference on Pattern
+  Recognition (ICPR)}, 2:1--7, 2000.
 
 \bibitem[EEAMT22]{Elasri2022}
 Mohamed Elasri, Omar Elharrouss, Somaya~Ali Al-Maadeed, y Hamid Tairi.
 \newblock Image generation: A review.
-\newblock {\em Neural Processing Letters}, 54:4609--4646, 2022.
+\newblock {\em Neural Processing Letters (NPL)}, 54:4609--4646, 2022.
 
 \bibitem[FIS14]{Friedberg2014linear}
 S.H. Friedberg, A.J. Insel, y L.E. Spence.
 \newblock {\em Linear Algebra}.
-\newblock Pearson Education, 2014.
+\newblock Pearson Education, 1st edici\'on, 2014.
 
 \bibitem[GB10]{Bengio2010}
 Xavier Glorot y Yoshua Bengio.
 \newblock Understanding the difficulty of training deep feedforward neural
   networks.
-\newblock En {\em Proceedings of the Thirteenth International Conference on
-  Artificial Intelligence and Statistics}, volumen~9 de {\em Proceedings of
-  Machine Learning Research}, páginas 249--256. PMLR, 13--15 May 2010.
+\newblock {\em Proceedings of the International Conference on Artificial
+  Intelligence and Statistics (AISTATS)}, 9:249--256, 2010.
 
 \bibitem[GBC16]{Goodfellow2016}
 Ian Goodfellow, Yoshua Bengio, y Aaron Courville.
 \newblock {\em Deep Learning}.
-\newblock MIT Press, 2016.
-\newblock Book in preparation for MIT Press.
+\newblock MIT Press, 1st edici\'on, 2016.
 
 \bibitem[GBD92]{Geman1992}
 Stuart Geman, Elie Bienenstock, y René Doursat.
@@ -153,91 +163,94 @@ Stuart Geman, Elie Bienenstock, y René Doursat.
 Micah Goldblum, Marc Finzi, Keefer Rowan, y Andrew~Gordon Wilson.
 \newblock The no free lunch theorem, kolmogorov complexity, and the role of
   inductive biases in machine learning, 2024.
+\newblock Preprint. arXiv: 2304.05366.
+
+\bibitem[GK22]{Grohs2022}
+Philipp Grohs y Gitta Kutyniok.
+\newblock {\em Mathematical Aspects of Deep Learning}.
+\newblock Cambridge University Press, 1st edici\'on, 2022.
 
 \bibitem[GLSS19]{Gunasekar2019}
 Suriya Gunasekar, Jason Lee, Daniel Soudry, y Nathan Srebro.
 \newblock Implicit bias of gradient descent on linear convolutional networks,
   2019.
-
-\bibitem[GSd{\etalchar{+}}19]{Geiger2019}
-Mario Geiger, Stefano Spigler, St\'ephane d'Ascoli, Levent Sagun, Marco
-  Baity-Jesi, Giulio Biroli, y Matthieu Wyart.
-\newblock Jamming transition as a paradigm to understand the loss landscape of
-  deep neural networks.
-\newblock {\em Phys. Rev. E}, 100:012115, Jul 2019.
+\newblock Preprint. arXiv: 1806.00468.
 
 \bibitem[HCB{\etalchar{+}}19]{Huang2019}
 Yanping Huang, Youlong Cheng, Ankur Bapna, Orhan Firat, Mia~Xu Chen, Dehao
   Chen, HyoukJoong Lee, Jiquan Ngiam, Quoc~V. Le, Yonghui Wu, y Zhifeng Chen.
 \newblock Gpipe: Efficient training of giant neural networks using pipeline
   parallelism, 2019.
+\newblock Preprint. arXiv: 1811.06965.
 
 \bibitem[HEG{\etalchar{+}}20]{Huang2020}
 W.~Ronny Huang, Zeyad Emam, Micah Goldblum, Liam Fowl, J.~K. Terry, Furong
   Huang, y Tom Goldstein.
 \newblock Understanding generalization through visualizations, 2020.
+\newblock Preprint. arXiv: 1906.03291.
 
 \bibitem[HT20]{He2020RecentAI}
 Fengxiang He y Dacheng Tao.
-\newblock Recent advances in deep learning theory.
-\newblock {\em ArXiv}, abs/2012.10931, 2020.
+\newblock Recent advances in deep learning theory, 2020.
+\newblock Preprint. arXiv: 2012.10931.
 
 \bibitem[HTF01]{Hastie2001}
 Trevor Hastie, Robert Tibshirani, y Jerome Friedman.
 \newblock {\em The Elements of Statistical Learning}.
-\newblock Springer Series in Statistics. Springer New York Inc., New York, NY,
-  USA, 2001.
+\newblock Springer, 1st edici\'on, 2001.
 
 \bibitem[HY20]{Heckel2020}
 Reinhard Heckel y Fatih~Furkan Yilmaz.
 \newblock Early stopping in deep networks: Double descent and how to eliminate
   it, 2020.
+\newblock Preprint. arXiv: 2007.10099.
 
 \bibitem[HZRS15]{He2015}
 Kaiming He, Xiangyu Zhang, Shaoqing Ren, y Jian Sun.
 \newblock Deep residual learning for image recognition, 2015.
+\newblock Preprint. arXiv: 1512.03385.
 
 \bibitem[KB17]{Diederik2017}
 Diederik~P. Kingma y Jimmy Ba.
 \newblock Adam: A method for stochastic optimization, 2017.
+\newblock Preprint. arXiv: 1412.6980.
 
 \bibitem[KH91]{Krogh1991}
 Anders Krogh y John~A. Hertz.
 \newblock A simple weight decay can improve generalization.
-\newblock En {\em Proceedings of the 5th International Conference on Neural
-  Information Processing Systems}, NIPS'91, páginas 950--957, San Francisco,
-  CA, USA, 1991. Morgan Kaufmann Publishers Inc.
+\newblock {\em Proceedings of the International Conference on Neural
+  Information Processing Systems (NeurIPS)}, páginas 950--957, 1991.
 
 \bibitem[KLW19]{Kamath2019}
 Uday Kamath, John Liu, y James Whitaker.
 \newblock {\em Deep Learning for NLP and Speech Recognition}.
-\newblock 01 2019.
+\newblock Springer, 1st edici\'on, 2019.
 
-\bibitem[KNH]{Krizhevsky2009}
+\bibitem[KNH09]{Krizhevsky2009}
 Alex Krizhevsky, Vinod Nair, y Geoffrey Hinton.
-\newblock Cifar-10 and cifar-100 (canadian institute for advanced research).
+\newblock Learning multiple layers of features from tiny images.
+\newblock {\em University of Toronto}, 2009.
 
 \bibitem[Kni09]{Knill2009}
 Oliver Knill.
 \newblock {\em Probability Theory and Stochastic Processes with Applications}.
-\newblock Overseas Press, 2009.
+\newblock Overseas Press, 1st edici\'on, 2009.
 
 \bibitem[Kol56]{Kolmogorov1956}
 A.N. Kolmogorov.
 \newblock {\em Foundations Of The Theory Of Probability}.
-\newblock Chelsea Publising Company, 1956.
+\newblock Chelsea Publising Company, 1st edici\'on, 1956.
 
 \bibitem[KSH12]{Krizhevsky2012}
-Alex Krizhevsky, Ilya Sutskever, y Geoffrey~E Hinton.
+Alex Krizhevsky, Ilya Sutskever, y Geoffrey~E. Hinton.
 \newblock Imagenet classification with deep convolutional neural networks.
-\newblock En F.~Pereira, C.J. Burges, L.~Bottou, y K.Q. Weinberger, editores,
-  {\em Advances in Neural Information Processing Systems}, volumen~25. Curran
-  Associates, Inc., 2012.
+\newblock {\em Proceedings of the International Conference on Neural
+  Information Processing Systems (NeurIPS)}, 1(9):1097--1105, 2012.
 
 \bibitem[LBBH98]{LeCun1998}
-Yann LeCun, L{'e}on Bottou, Yoshua Bengio, y Patrick Haffner.
+Yann LeCun, Léon Bottou, Yoshua Bengio, y Patrick Haffner.
 \newblock Gradient-based learning applied to document recognition.
-\newblock {\em Proceedings of the IEEE}, 86(11):2278–2324, 1998.
+\newblock {\em Proceedings of the IEEE}, 86(11):2278--2324, 1998.
 
 \bibitem[LBD{\etalchar{+}}89]{LeCun1989}
 Y.~LeCun, B.~Boser, J.~S. Denker, D.~Henderson, R.~E. Howard, W.~Hubbard, y
@@ -248,60 +261,60 @@ Y.~LeCun, B.~Boser, J.~S. Denker, D.~Henderson, R.~E. Howard, W.~Hubbard, y
 \bibitem[LBH15]{LeCun2015}
 Yann LeCun, Yoshua Bengio, y Geoffrey Hinton.
 \newblock Deep learning.
-\newblock {\em nature}, 521(7553):436, 2015.
-
-\bibitem[LC05]{LeCun2005TheMD}
-Yann LeCun y Corinna Cortes.
-\newblock The mnist database of handwritten digits.
-\newblock 2005.
+\newblock {\em Nature}, 521(7553):436, 2015.
 
 \bibitem[LJY24]{Li2024}
 Fei-Fei Li, Justin Johnson, y Serena Yeung.
 \newblock Cs231n: Deep learning for computer vision.
 \newblock Stanford University, Course Website, 2024.
-\newblock Lecture 4, Slide 45, \url{http://cs231n.stanford.edu/}.
+\newblock Lecture 4, Slide 45, Available at: \url{http://cs231n.stanford.edu/}.
 
 \bibitem[LLA22]{Lauriola2022}
 Ivano Lauriola, Alberto Lavelli, y Fabio Aiolli.
 \newblock An introduction to deep learning in natural language processing:
   Models, techniques, and tools.
-\newblock {\em Neurocomput.}, 470(C):443--456, January 2022.
+\newblock {\em Neurocomputing}, 470(C):443--456, 2022.
 
 \bibitem[LT24]{Lafon2024}
 Marc Lafon y Alexandre Thomas.
 \newblock Understanding the {Double} {Descent} {Phenomenon} in {Deep}
-  {Learning}, March 2024.
-\newblock arXiv:2403.10459.
+  {Learning}, 2024.
+\newblock Preprint. arXiv: 2403.10459.
 
 \bibitem[LXT{\etalchar{+}}18]{Li2018}
 Hao Li, Zheng Xu, Gavin Taylor, Christoph Studer, y Tom Goldstein.
 \newblock Visualizing the loss landscape of neural nets, 2018.
+\newblock Preprint. arXiv: 1712.09913.
 
 \bibitem[LZB21]{Liu2021}
 Chaoyue Liu, Libin Zhu, y Mikhail Belkin.
 \newblock Loss landscapes and optimization in over-parameterized non-linear
   systems and neural networks, 2021.
+\newblock Preprint. arXiv: 2003.00307.
 
 \bibitem[Mal16]{Mallat2016}
 Stéphane Mallat.
 \newblock Understanding deep convolutional networks.
 \newblock {\em Philosophical Transactions of the Royal Society A: Mathematical,
-  Physical and Engineering Sciences}, 374(2065):20150203, April 2016.
+  Physical and Engineering Sciences}, 374(2065):20150203, 2016.
 
 \bibitem[MBW20]{Maddox2020}
 Wesley~J. Maddox, Gregory Benton, y Andrew~Gordon Wilson.
 \newblock Rethinking parameter counting in deep models: Effective
   dimensionality revisited, 2020.
+\newblock Preprint. arXiv: 2003.02139.
 
 \bibitem[MCK20]{Ming2020}
 Yifei Min, Lin Chen, y Amin Karbasi.
 \newblock The curious case of adversarially robust models: More data can help,
   double descend, or hurt generalization, 2020.
+\newblock Preprint. arXiv: 2002.11080.
 
 \bibitem[MM18]{Charles2018}
 Charles~H. Martin y Michael~W. Mahoney.
 \newblock Implicit self-regularization in deep neural networks: Evidence from
   random matrix theory and implications for learning, 2018.
+\newblock Preprint. arXiv: 1810.01075.
 
 \bibitem[MP67]{Marchenko1967}
 V.~A. Marchenko y L.~A. Pastur.
@@ -311,83 +324,93 @@ V.~A. Marchenko y L.~A. Pastur.
 \bibitem[MRVPL23]{Mingard2023}
 Chris Mingard, Henry Rees, Guillermo Valle-Pérez, y Ard~A. Louis.
 \newblock Do deep neural networks have an inbuilt occam's razor?, 2023.
+\newblock Preprint. arXiv: 2304.06670.
 
 \bibitem[Mur22]{Murphy2022}
 Kevin~P. Murphy.
 \newblock {\em Probabilistic Machine Learning: An introduction}.
-\newblock MIT Press, 2022.
+\newblock MIT Press, 1st edici\'on, 2022.
 
 \bibitem[Mur23]{Murphy2023}
 Kevin~P. Murphy.
 \newblock {\em Probabilistic Machine Learning: Advanced Topics}.
-\newblock MIT Press, 2023.
+\newblock MIT Press, 1st edici\'on, 2023.
 
 \bibitem[NGLK18]{Neves2018}
 Cláudia Neves, Ignacio Gonzalez, John Leander, y Raid Karoumi.
 \newblock A new approach to damage detection in bridges using machine learning.
-\newblock páginas 73--84, 01 2018.
+\newblock {\em Lecture Notes in Civil Engineering (LNCE)}, 5:73--84, 2018.
 
 \bibitem[NKB{\etalchar{+}}19]{Nakkiran2019}
 Preetum Nakkiran, Gal Kaplun, Yamini Bansal, Tristan Yang, Boaz Barak, y Ilya
   Sutskever.
 \newblock Deep double descent: Where bigger models and more data hurt, 2019.
+\newblock Preprint. arXiv: 1912.02292.
 
 \bibitem[NMB{\etalchar{+}}19]{Neal2019}
 Brady Neal, Sarthak Mittal, Aristide Baratin, Vinayak Tantia, Matthew Scicluna,
   Simon Lacoste-Julien, y Ioannis Mitliagkas.
 \newblock A modern take on the bias-variance tradeoff in neural networks, 2019.
+\newblock Preprint. arXiv: 1810.08591.
+
+\bibitem[NRK21]{Nguyen2021}
+Thao Nguyen, Maithra Raghu, y Simon Kornblith.
+\newblock Do wide and deep networks learn the same things? {U}ncovering how
+  neural network representations vary with width and depth, 2021.
+\newblock Preprint. arXiv: 2010.15327.
 
 \bibitem[Opp95]{Opper1995}
 Manfred Opper.
 \newblock Statistical mechanics of learning: Generalization.
-\newblock En {\em The Handbook of Brain Theory and Neural Networks}, páginas
-  922--925. Springer-Verlag, 1995.
+\newblock {\em Springer}, páginas 922--925, 1995.
 
 \bibitem[Opp01]{Opper2001}
 Manfred Opper.
 \newblock Learning to generalize.
-\newblock En {\em Frontiers of Life}, volumen 3, Part 2, páginas 763--775.
-  Academic Press, 2001.
+\newblock {\em Academic Press}, 3, Part 2:763--775, 2001.
 
-\bibitem[PGM{\etalchar{+}}19]{NEURIPS2019_9015}
-Adam Paszke, Sam Gross, Francisco Massa, Adam Lerer, James Bradbury, Gregory
-  Chanan, Trevor Killeen, Zeming Lin, Natalia Gimelshein, Luca Antiga, Alban
-  Desmaison, Andreas Kopf, Edward Yang, Zachary DeVito, Martin Raison, Alykhan
-  Tejani, Sasank Chilamkurthy, Benoit Steiner, Lu~Fang, Junjie Bai, y Soumith
-  Chintala.
+\bibitem[PBE{\etalchar{+}}22]{Power2022}
+Alethea Power, Yuri Burda, Harri Edwards, Igor Babuschkin, y Vedant Misra.
+\newblock Grokking: Generalization beyond overfitting on small algorithmic
+  datasets, 2022.
+\newblock Preprint. arXiv: 2201.02177.
+
+\bibitem[PGMa19]{NEURIPS2019_9015}
+Adam Paszke, Sam Gross, Francisco Massa, y et~al.
 \newblock Pytorch: An imperative style, high-performance deep learning library.
-\newblock En {\em Advances in Neural Information Processing Systems 32},
-  páginas 8024--8035. Curran Associates, Inc., 2019.
+\newblock {\em Advances in Neural Information Processing Systems (NeurIPS)},
+  páginas 8024--8035, 2019.
 
 \bibitem[Poo11]{Poole2011}
 David Poole.
 \newblock {\em Álgebra lineal. Una introducción moderna}.
-\newblock Cengage Learning, 3 edici\'on, 2011.
+\newblock Cengage Learning, 3rd edici\'on, 2011.
 
 \bibitem[Pre94]{Pressman1994}
 Roger~S. Pressman.
 \newblock {\em Software Engineering: A Practitioner's Approach}.
-\newblock McGraw-Hill, european edici\'on, 1994.
-\newblock Adapted by Darrel Ince.
+\newblock McGraw-Hill, 1st edici\'on, 1994.
 
 \bibitem[Pri23]{Prince2023}
 Simon~J.D. Prince.
 \newblock {\em Understanding Deep Learning}.
-\newblock MIT Press, 2023.
+\newblock MIT Press, 1st edici\'on, 2023.
 
 \bibitem[RH21]{Ruthotto2021}
 Lars Ruthotto y Eldad Haber.
 \newblock An introduction to deep generative modeling, 2021.
+\newblock Preprint. arXiv: 2103.05180.
 
 \bibitem[Rip96]{Ripley1996}
 Brian~D. Ripley.
-\newblock {\em Pattern Recognition and Neural Networks}.
-\newblock Cambridge University Press, 1996.
+\newblock {\em Pattern recognition and neural networks}.
+\newblock Cambridge University Press, 1st edici\'on, 1996.
 
 \bibitem[RSSW24]{Ravi2024}
 Hrithik Ravi, Clayton Scott, Daniel Soudry, y Yutong Wang.
 \newblock The implicit bias of gradient descent on separable multiclass data,
   2024.
+\newblock Preprint. arXiv: 2411.01350.
 
 \bibitem[Sah18]{Saha2018}
 Sumit Saha.
@@ -398,23 +421,24 @@ Sumit Saha.
   2018.
 \newblock [Recurso online, accedido el 19 de febrero de 2025].
 
-\bibitem[SBD{\etalchar{+}}18]{Michael2018}
+\bibitem[SBD{\etalchar{+}}19]{Michael2018}
 Andrew~Michael Saxe, Yamini Bansal, Joel Dapello, Madhu Advani, Artemy
   Kolchinsky, Brendan~Daniel Tracey, y David~Daniel Cox.
 \newblock On the information bottleneck theory of deep learning.
-\newblock En {\em International Conference on Learning Representations}, 2018.
+\newblock {\em Journal of Statistical Mechanics: Theory and Experiment
+  (JSTAT)}, 2019, 2019.
 
 \bibitem[Sch15]{Schmidhuber2015}
 Jürgen Schmidhuber.
 \newblock Deep learning in neural networks: An overview.
-\newblock {\em Neural Networks}, 61:85--117, January 2015.
+\newblock {\em Neural Networks}, 61(2065):85--117, 2015.
 
 \bibitem[Sej20]{Sejnowski2020TheUE}
 Terrence~J. Sejnowski.
 \newblock The unreasonable effectiveness of deep learning in artificial
   intelligence.
-\newblock {\em Proceedings of the National Academy of Sciences}, 117:30033 --
-  30038, 2020.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  117:30033--30038, 2020.
 
 \bibitem[SFB{\etalchar{+}}22]{Somepalli2022}
 Gowthami Somepalli, Liam Fowl, Arpit Bansal, Ping Yeh-Chiang, Yehuda Dar,
@@ -422,39 +446,50 @@ Gowthami Somepalli, Liam Fowl, Arpit Bansal, Ping Yeh-Chiang, Yehuda Dar,
 \newblock Can neural nets learn the same model twice? investigating
   reproducibility and double descent from the decision boundary perspective,
   2022.
+\newblock Preprint. arXiv: 2203.08124.
 
 \bibitem[SGd{\etalchar{+}}19]{Spigler2019}
 S~Spigler, M~Geiger, S~d'Ascoli, L~Sagun, G~Biroli, y M~Wyart.
 \newblock A jamming transition from under- to over-parametrization affects
   generalization in deep learning.
-\newblock {\em Journal of Physics A: Mathematical and Theoretical},
-  52(47):474001, October 2019.
+\newblock {\em Journal of Physics A: Mathematical and Theoretical}, 52(47),
+  2019.
+
+\bibitem[SGM20]{Strubell2020}
+Emma Strubell, Ananya Ganesh, y Andrew McCallum.
+\newblock Energy and policy considerations for modern deep learning research.
+\newblock {\em Proceedings of the AAAI Conference on Artificial Intelligence},
+  34(9):13693--13696, 2020.
 
 \bibitem[SHN{\etalchar{+}}24]{Soudry2024}
 Daniel Soudry, Elad Hoffer, Mor~Shpigel Nacson, Suriya Gunasekar, y Nathan
   Srebro.
 \newblock The implicit bias of gradient descent on separable data, 2024.
+\newblock Preprint. arXiv: 1710.10345.
 
 \bibitem[SKR{\etalchar{+}}23]{Schaeffer2023}
 Rylan Schaeffer, Mikail Khona, Zachary Robertson, Akhilan Boopathy, Kateryna
   Pistunova, Jason~W. Rocks, Ila~Rani Fiete, y Oluwasanmi Koyejo.
 \newblock Double descent demystified: Identifying, interpreting \& ablating the
   sources of a deep learning puzzle, 2023.
+\newblock Preprint. arXiv: 2303.14151.
 
 \bibitem[SLHS22]{Singh2022}
 Sidak~Pal Singh, Aurelien Lucchi, Thomas Hofmann, y Bernhard Schölkopf.
 \newblock Phenomenology of double descent in finite-width neural networks,
   2022.
+\newblock Preprint. arXiv: 2203.07337.
 
 \bibitem[SLJ{\etalchar{+}}14]{Szegedy2014}
 Christian Szegedy, Wei Liu, Yangqing Jia, Pierre Sermanet, Scott Reed, Dragomir
   Anguelov, Dumitru Erhan, Vincent Vanhoucke, y Andrew Rabinovich.
 \newblock Going deeper with convolutions, 2014.
+\newblock Preprint. arXiv: 1409.4842.
 
 \bibitem[Str23]{Strang2023}
 Gilbert Strang.
 \newblock {\em Introduction to Linear Algebra}.
-\newblock CUP, 6 edici\'on, 2023.
+\newblock CUP, 6th edici\'on, 2023.
 
 \bibitem[Swa20]{CNNSwapna}
 Swapna.
@@ -467,43 +502,45 @@ Swapna.
 \bibitem[TGLM22]{Thompson2022}
 Neil~C. Thompson, Kristjan Greenewald, Keeheon Lee, y Gabriel~F. Manso.
 \newblock The computational limits of deep learning, 2022.
+\newblock Preprint. arXiv: 2007.05558.
 
-\bibitem[Vap91]{Vapnik1991}
+\bibitem[Vap91]{Geiger2019}
 V.~Vapnik.
 \newblock Principles of risk minimization for learning theory.
-\newblock En {\em Proceedings of the 5th International Conference on Neural
-  Information Processing Systems}, NIPS'91, página 831–838, San Francisco,
-  CA, USA, 1991. Morgan Kaufmann Publishers Inc.
+\newblock {\em Proceedings of the International Conference on Neural
+  Information Processing Systems (NeurIPS)}, 4:831--838, 1991.
 
 \bibitem[VCR89]{Vallet1989}
 F.~Vallet, J.-G. Cailton, y Ph~Refregier.
 \newblock Linear and nonlinear extension of the pseudo-inverse solution for
   learning boolean functions.
-\newblock {\em Europhysics Letters}, 9(4):315, jun 1989.
+\newblock {\em Europhysics Letters}, 9(4):315, 1989.
 
-\bibitem[WH60]{WidrowHoff1960}
-Bernard Widrow y Ted Hoff.
+\bibitem[WH88]{WidrowHoff1988}
+Bernard Widrow y Marcian~E. Hoff.
 \newblock Adaptive switching circuits.
-\newblock En {\em 1960 IRE WESCON Convention Record, Part 4}, páginas 96--104.
-  Institute of Radio Engineers, 1960.
+\newblock {\em Neurocomputing}, 1:96--104, 1988.
 
 \bibitem[Wil25]{Wilson2025}
 Andrew~Gordon Wilson.
 \newblock Deep learning is not so mysterious or different, 2025.
+\newblock Preprint. arXiv: 2503.02113.
 
 \bibitem[YS24]{Yang2024}
 Tian-Le Yang y Joe Suzuki.
 \newblock Dropout drops double descent, 2024.
+\newblock Preprint. arXiv: 2305.16179.
 
 \bibitem[YYY{\etalchar{+}}20]{Yang2020}
 Zitong Yang, Yaodong Yu, Chong You, Jacob Steinhardt, y Yi~Ma.
 \newblock Rethinking bias-variance trade-off for generalization of neural
   networks, 2020.
+\newblock Preprint. arXiv: 2002.11328.
 
 \bibitem[ZBH{\etalchar{+}}21]{Zhang2021}
 Chiyuan Zhang, Samy Bengio, Moritz Hardt, Benjamin Recht, y Oriol Vinyals.
 \newblock Understanding deep learning (still) requires rethinking
   generalization.
-\newblock {\em Commun. ACM}, 64(3):107–115, February 2021.
+\newblock {\em Communications of the ACM}, 64(3):107--115, 2021.
 
 \end{thebibliography}

@@ -1,65 +1,62 @@
 % !TeX root = ../tfg.tex
 % !TeX encoding = utf8
 
-\chapter{Apéndice}\label{ap:apendiceC}
+\chapter{Irregularidades en la Dinámica del Error}\label{ap:apendiceC}
 
-En este apéndice se presentan dos experimentos relacionados con el uso de diferentes tamaños de lote y tasas de aprendizaje para un modelo que exhibe el doble descenso. Para ello, se empleará la arquitectura $2$NN sobre el subconjunto MNIST[$4000/1000$], al cual se le añadirá un porcentaje variable de ruido, y donde se utilizarán distintas tasas de aprendizaje con el optimizador Adam.\newline
- 
-\subsection*{Double descent con distinto tamaño de batch}
+En este apéndice analizamos en detalle los saltos bruscos que se producen tanto en el error de entrenamiento como en el de prueba al aumentar el número de épocas de un determinado modelo, e intentamos proporcionar una explicación para los mismos.\newline
+
+Nos centramos en la gráfica de la Figura~\ref{fig:model-epoch3CNNCIFAR10}, donde estos picos en el error son más sobresalientes. A partir de esta representación, se analiza el \textit{epoch-wise double descent} en dos modelos que la conforman: uno infraparametrizado, ubicado antes del umbral de interpolación, y otro sobreparametrizado, situado después de dicho umbral.\newline
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[b]{\textwidth}
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/experiments/epoch-wise3CNNunderparameterized.png}
+        \caption{A la izquierda, se muestra la pérdida en entrenamiento y prueba, y a la derecha, el error en entrenamiento y prueba para un modelo $3$CNN infraparametrizado sobre el subconjunto CIFAR$10$[$25000/5000$].}\label{fig:epoch-wise3CNNunderparameterized}
+    \end{subfigure}
+    
+    \vspace{1em} 
+
+    \begin{subfigure}[b]{\textwidth}
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/experiments/epoch-wise3CNNoverparameterized.png}
+        \caption{A la izquierda, se muestra la pérdida en entrenamiento y prueba, y a la derecha, el error en entrenamiento y prueba para un modelo $3$CNN sobreparametrizado sobre el subconjunto CIFAR$10$[$25000/5000$], donde se aprecian variaciones abruptas tanto en la gráfica de la pérdida como en la del error.}\label{fig:epoch-wise3CNNoverparameterized}
+    \end{subfigure}
+    
+    \caption[Comparativa \textit{epoch-wise double descent} entre un modelo infraparametrizado y uno sobreparametrizado en el que aparecen picos significativos en el error.]{Comparativa \textit{epoch-wise double descent} entre un modelo infraparametrizado, donde no se observa el doble descenso, y un modelo sobreparametrizado, en el que este efecto sí se manifiesta y aparecen picos significativos en el error.}\label{fig:epoch-wise-bruscos1}
+\end{figure}
+
+Para intentar dar una explicación coherente a la conducta, ciertamente peculiar, que se observa en estas gráficas, recordemos algunos de los resultados presentados en la Sección~\ref{sec:optimizacion-zona-sobreparametrizada}. En la zona infraparametrizada, sabemos que los mínimos locales suelen estar aislados, lo que provoca que el paisaje de la función de pérdida en sus alrededores sea localmente convexo (véase imagen izquierda de la Figura~\ref{fig:localglobalminima}).\newline
+
+Debido a esto, la inicialización del optimizador juega un papel crucial, ya que determinará hacia qué mínimo local convergerá. En particular, el optimizador tiende a dirigirse hacia el mínimo local más cercano a su punto de inicio. Dado que la región circundante es localmente convexa, el optimizador avanzará progresivamente hacia dicho mínimo sin posibilidad de escapar de él, siempre que la tasa de aprendizaje sea adecuada.\newline
+
+Este comportamiento explica por qué, en la zona infraparametrizada, la pérdida en entrenamiento sigue una tendencia descendente y converge de manera estable. Al no haber múltiples direcciones de escape significativas, el optimizador se mantiene atrapado en el mínimo local alcanzado, lo que se traduce en una reducción progresiva y sostenida de la pérdida a lo largo del proceso de optimización. Sin embargo, debido a la limitada capacidad del modelo en esta región, el error en el conjunto de prueba puede permanecer elevado, reflejando una falta de flexibilidad para ajustarse adecuadamente a los datos (véase Figura~\ref{fig:epoch-wise3CNNunderparameterized}).\newline
+
+En cambio, en la zona sobreparametrizada, los mínimos globales no están aislados, sino que en cualquier pequeña vecindad de ellos siempre es posible encontrar otro minimizador global. Esto implica que la función de pérdida presenta una alta no convexidad, incluso a nivel local. Como resultado, el paisaje de la función de pérdida en modelos sobreparametrizados es altamente multimodal, como se ilustra en la imagen izquierda de la Figura~\ref{fig:landscapes}. Aunque dicha imagen muestre únicamente un mínimo global en un espacio tridimensional, es importante recordar que existen múltiples de ellos en las dimensiones definidas por el espacio de parámetros. En otras palabras, paisajes similares a este (aunque más complejos debido a su alta dimensionalidad) se replicarían en distintas regiones del espacio de parámetros, dando lugar a un paisaje altamente multimodal con una multitud de mínimos globales.\newline 
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.5\textwidth]{img/experiments/batch_sizes_ddd.png}
-    \caption[Doble descenso para distintos tamaños de lote.]{Error en test respecto a distintas configuraciones de tamaño de lote obtenido por la red $2$NN sobre el subconjunto MNIST[$4000/1000$] con $10$\% de ruido agregado.}\label{fig:dddbatchsizes}
-\end{figure}
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/experiments/landscapemultimodal.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/experiments/landscapeunimodal.png}
+    \end{minipage}
+    \caption[Paisajes de la función de pérdida para distintos modelos sobreparametrizados~\cite{Li2018}.]{Paisajes de la función de pérdida para un modelo sobreparametrizado sin conexiones residuales (izquierda) y con conexiones residuales (derecha)~\cite{Li2018}. A la izquierda, se observa un único mínimo global en un entorno altamente multimodal. A la derecha, se observa un único mínimo global en un entorno unimodal, fruto de las conexiones residuales.}\label{fig:landscapes}
+\end{figure} 
 
-En la Figura~\ref{fig:dddbatchsizes} se observa que, para distintas configuraciones de tamaño de batch, se manifiesta el doble descenso, siendo más notable al utilizar tamaños de batch mayores. Por otro lado, la Tabla~\ref{tab:dddbatchsizes} muestra que, al incrementar el tamaño de batch, el tiempo de entrenamiento disminuye, lo cual es lógico, ya que se procesan un mayor número de ejemplos en cada iteración.\newline
+A partir de estos resultados, podemos inferir que el algoritmo de optimización, una vez ha alcanzado una solución prácticamente perfecta (es decir, al encontrar un mínimo, potencialmente global, de la función de pérdida), continúa explorando en busca de soluciones aún mejores. Este proceso, debido a la naturaleza del paisaje multimodal en el que opera, provoca que el modelo pueda salir de dicho mínimo, lo que da lugar a los picos observados, para luego converger hacia otro mínimo potencialmente global.\newline
 
-Por tanto, considerando ambos resultados, se concluye que utilizar un tamaño de batch elevado ($128$ o $256$) es la opción más adecuada para los distintos experimentos a realizar, ya que permite observar el fenómeno de forma más clara y con menor coste computacional.\newline
+Además, otro hecho relevante es que la magnitud de estos saltos disminuye progresivamente, lo que sugiere que el modelo, al buscar nuevos mínimos globales, tiende a seleccionar un tipo de soluciones frente a otras. Esta respuesta del modelo puede asociarse al hecho de que, entre todas las soluciones posibles, busca aquella que sea más simple, lo cual, como se ha observado en experimentos previos, suele ser una solución que generaliza bien.\newline
 
-\begin{table}[h!]
-    \centering
-    \begin{tabular}{|c|c|c|c|}
-    \hline
-    \textbf{Modelo}       & \textbf{Dataset} & \textbf{Batch size} & \textbf{Entrenamiento} \\ 
-    \hline
-    $2$NN ($1-50$)     & MNIST[$4000/1000 - 10$\% noise]      & $32$      & $15$h $2$min         \\ 
-    $2$NN ($1-50$)     & MNIST[$4000/1000 - 10$\% noise]      & $64$      & $11$h $56$min         \\ 
-    $2$NN ($1-50$)     & MNIST[$4000/1000 - 10$\% noise]      & $128$      & $11$h $14$min         \\ 
-    $2$NN ($1-50$)     & MNIST[$4000/1000 - 10$\% noise]      & $256$      & $10$h $23$min         \\
-    \hline
-    \end{tabular}
-    \caption[Resumen de los experimentos realizados para el doble descenso con distinto tamaño de lote.]{Resumen de los experimentos realizados para el doble descenso con distinto tamaño de lote.}\label{tab:dddbatchsizes}
-\end{table}
+La pregunta ahora sería por qué hemos observado estos resultados, cuando no se muestran de manera prominente en la literatura científica. En primer lugar, en los estudios que presentan gráficas de error con el fenómeno del doble descenso, generalmente se utilizan arquitecturas que incluyen conexiones residuales. Este tipo de arquitecturas, según lo demuestran Li et al.~\cite{Li2018}, no presentan paisajes de la función de pérdida multimodales. En cambio, exhiben zonas planas alrededor de los mínimos, impidiendo los saltos bruscos observados en nuestro caso (véase imagen derecha de la Figura~\ref{fig:landscapes}). Así, los mínimos globales se asemejan a los mínimos locales de las zonas infraparametrizadas, lo que impide que el algoritmo de optimización escape de ellos.\newline
 
-\subsection*{Double descent con distinto learning rate}
+Por otra parte, siguiendo los distintos resultados presentados en la Sección~\ref{subsec:model-epoch-wise}, podemos observar que el aumento en el número de parámetros en comparación con el número de ejemplos de entrenamiento, junto con el uso de un conjunto de entrenamiento más difícil (en nuestro caso, conjuntos con imágenes en formato RGB), favorecen la aparición de estas colinas en las gráficas de error.\newline
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.5\textwidth]{img/experiments/learning_rates_ddd.png}
-    \caption[Doble descenso para distintas tasas de aprendizaje.]{Error en test respecto a distintas configuraciones de tasa de aprendizaje obtenido por la red $2$NN sobre el subconjunto MNIST[$4000/1000$] con $10$\% de ruido agregado.}
-    \label{fig:difflr}
-\end{figure}
-
-En la Figura~\ref{fig:difflr} podemos observar cómo se manifiesta el doble descenso para distintas configuraciones de la tasa de aprendizaje. En particular, el ``pico'' del error de test se hace más pronunciado a medida que la tasa de aprendizaje aumenta, dado que para una tasa igual a $5 \times 10^{-4}$, el máximo error en test es mayor que para el valor por defecto de la tasa de aprendizaje ($10^{-4}$), y este, a su vez, es mayor que para la mínima tasa de aprendizaje utilizada ($5 \times 10^{-5}$).\newline
-
-En conclusión, esto nos indica que, si un modelo presenta el doble descenso, no es necesario preocuparse en exceso por ajustar de manera fina la tasa de aprendizaje, puesto que, dentro de ciertos rangos de valores para dicha tasa de aprendizaje, el modelo sigue manifestando el suceso, lo que indica que el uso por defecto de la tasa de aprendizaje resulta ser suficiente.\newline
-
-Finalmente, para concluir esta subsección se muestra en la Tabla~\ref{tab:difflr} un resumen de los experimentos realizados junto con sus respectivos tiempos de entrenamiento.\newline
-
-\begin{table}[h!]
-    \centering
-    \begin{tabular}{|c|c|c|c|}
-    \hline
-    \textbf{Modelo}       & \textbf{Dataset} & \textbf{Tasa aprendizaje} & \textbf{Entrenamiento} \\ 
-    \hline
-    $2$NN ($1-100$)     & MNIST[$4000/1000 - 10$\% noise]      & $0.005$      & $23$h $53$min         \\ 
-    $2$NN ($1-100$)     & MNIST[$4000/1000 - 10$\% noise]      & $0.001$ (default)      & $26$h $50$min     \\ 
-    $2$NN ($1-100$)     & MNIST[$4000/1000 - 10$\% noise]      & $0.0005$      & $27$h $32$min         \\ 
-    \hline
-    \end{tabular}
-    \caption[Resumen de los experimentos realizados para el doble descenso con distintas tasas de aprendizaje.]{Resumen de los experimentos realizados para el doble descenso con distintas tasas de aprendizaje.}\label{tab:difflr}
-\end{table}
+Finalmente, podemos concluir que, a medida que avanzan las épocas de entrenamiento, estos picos se vuelven cada vez menos notables, posiblemente porque el modelo encuentra cada vez soluciones más simples. Esto podría sugerir que, si se entrenara durante un mayor número de épocas, estos picos podrían llegar a desaparecer por completo.\newline
 
 \endinput
 %------------------------------------------------------------------------------------

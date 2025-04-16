@@ -1,92 +1,65 @@
 % !TeX root = ../tfg.tex
 % !TeX encoding = utf8
 
-\chapter{Apéndice}\label{ap:apendiceB}
+\chapter{Experimentos Adicionales: Hiperparámetros}\label{ap:apendiceB}
 
-\textbf{Proposición}~\ref{prop:non-conexity}. Sea $w^{*}$ una solución, es decir, $\mathcal{L}(w^{*}) = 0$, y supongamos que $\frac{d}{dw}\frac{\partial \mathcal{L}}{\partial \mathcal{F}}(w^{*}) \neq 0$ y $rang(H_{\mathcal{F}_{i}}(w^{*})) > 2n$ para algún $i \in \{1, \ldots, n \}$. Entonces $\mathcal{L}(w)$ no es convexa en ninguna vecindad de $w^{*}$.
+En este apéndice se presentan dos experimentos relacionados con el uso de diferentes tamaños de lote y tasas de aprendizaje para un modelo que exhibe el doble descenso. Para ello, se empleará la arquitectura $2$NN sobre el subconjunto MNIST[$4000/1000$], al cual se le añadirá un porcentaje variable de ruido, y donde se utilizarán distintas tasas de aprendizaje con el optimizador Adam.\newline
+ 
+\subsection*{Double descent con distinto tamaño de batch}
 
-\begin{proof}
-    La matriz Hessiana de una función de pérdida $\mathcal{L}(\mathcal{F}(w))$ viene dada por:
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/experiments/batch_sizes_ddd.png}
+    \caption[Doble descenso para distintos tamaños de lote.]{Error en test respecto a distintas configuraciones de tamaño de lote obtenido por la red $2$NN sobre el subconjunto MNIST[$4000/1000$] con $10$\% de ruido agregado.}\label{fig:dddbatchsizes}
+\end{figure}
 
-    \[
-        H_{\mathcal{L}}(w) = D\mathcal{F}(w)^T \frac{\partial^2 \mathcal{L}}{\partial \mathcal{F}^2}(w) D\mathcal{F}(w) + \sum_{i=1}^{n} \frac{\partial \mathcal{L}}{\partial \mathcal{F}_i}(w) H_{\mathcal{F}_i}(w).
-    \]
+En la Figura~\ref{fig:dddbatchsizes} se observa que, para distintas configuraciones de tamaño de batch, se manifiesta el doble descenso, siendo más notable al utilizar tamaños de batch mayores. Por otro lado, la Tabla~\ref{tab:dddbatchsizes} muestra que, al incrementar el tamaño de batch, el tiempo de entrenamiento disminuye, lo cual es lógico, ya que se procesan un mayor número de ejemplos en cada iteración.\newline
 
-    Consideramos ahora las matrices Hessianas de dos puntos $w^* + \delta $ y $w^* - \delta $ $(\delta \in \mathbb{R}^{P})$ que están en una vecindad suficientemente pequeña de $w^*$. La Hessiana de la función de pérdida en estos dos puntos es:
+Por tanto, considerando ambos resultados, se concluye que utilizar un tamaño de batch elevado ($128$ o $256$) es la opción más adecuada para los distintos experimentos a realizar, ya que permite observar el fenómeno de forma más clara y con menor coste computacional.\newline
 
-    \begin{equation}\label{eq:non-convexity1}
-        \begin{aligned}
-            H_{\mathcal{L}}( w^* + \delta) &=  
-            \underbrace{D\mathcal{F}( w^* + \delta)^T \frac{\partial^2 \mathcal{L}}{\partial \mathcal{F}^2}( w^* + \delta) D\mathcal{F}( w^* + \delta)}_{A( w^* + \delta)} \\
-            &\quad + \sum_{i=1}^{n} \left( \frac{d}{d w} \left( \frac{\partial \mathcal{L}}{\partial \mathcal{F}}( w^*) \right) \delta \right)_i H_{\mathcal{F}_i}( w^* + \delta) + o(\|\delta\|),
-        \end{aligned}
-    \end{equation}
-        
-    \begin{align}
-        H_{\mathcal{L}}( w^* - \delta) &=  
-        \underbrace{D\mathcal{F}( w^* - \delta)^T \frac{\partial^2 \mathcal{L}}{\partial \mathcal{F}^2}( w^* - \delta) D\mathcal{F}( w^* - \delta)}_{A( w^* - \delta)} \nonumber \\
-        &\quad - \sum_{i=1}^{n} \left( \frac{d}{d w} \left( \frac{\partial \mathcal{L}}{\partial \mathcal{F}}( w^*) \right) \delta \right)_i H_{\mathcal{F}_i}( w^* + \delta) + o(\|\delta\|).
-    \end{align}
-        
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    \textbf{Modelo}       & \textbf{Dataset} & \textbf{Batch size} & \textbf{Entrenamiento} \\ 
+    \hline
+    $2$NN ($1-50$)     & MNIST[$4000/1000 - 10$\% noise]      & $32$      & $15$h $2$min         \\ 
+    $2$NN ($1-50$)     & MNIST[$4000/1000 - 10$\% noise]      & $64$      & $11$h $56$min         \\ 
+    $2$NN ($1-50$)     & MNIST[$4000/1000 - 10$\% noise]      & $128$      & $11$h $14$min         \\ 
+    $2$NN ($1-50$)     & MNIST[$4000/1000 - 10$\% noise]      & $256$      & $10$h $23$min         \\
+    \hline
+    \end{tabular}
+    \caption[Resumen de los experimentos realizados para el doble descenso con distinto tamaño de lote.]{Resumen de los experimentos realizados para el doble descenso con distinto tamaño de lote.}\label{tab:dddbatchsizes}
+\end{table}
 
-    donde los términos $ A( w^* + \delta) $ y $ A( w^* - \delta) $ son matrices de rango a lo sumo $ n $, ya que $ D\mathcal{F} $ es de tamaño $ n \times m $ ($o(\|\delta\|)$ representa un término asintóticamente menor que $\| \delta \|$).\newline
+\subsection*{Double descent con distinto learning rate}
 
-    Sabemos que al menos un componente $ H_{\mathcal{F}_k} $ de la matriz Hessiana de $ \mathcal{F} $ satisface que el rango de $ H_{\mathcal{F}_k}( w^*) $ es mayor que $ 2n $. Por continuidad de la Hessiana, si el orden de $ \delta $ es suficientemente pequeño, entonces los rangos de $ H_{\mathcal{F}_k}( w^* + \delta) $ y $ H_{\mathcal{F}_k}( w^* - \delta) $ también son mayores que $ 2n $. Esto nos lleva a que siempre podemos encontrar un vector unitario $v \in \mathbb{R}^P $ que cumpla:
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/experiments/learning_rates_ddd.png}
+    \caption[Doble descenso para distintas tasas de aprendizaje.]{Error en test respecto a distintas configuraciones de tasa de aprendizaje obtenido por la red $2$NN sobre el subconjunto MNIST[$4000/1000$] con $10$\% de ruido agregado.}
+    \label{fig:difflr}
+\end{figure}
 
-    \[
-        v^T A( w^* + \delta)  v =  v^T A( w^* - \delta)  v = 0.
-    \]
+En la Figura~\ref{fig:difflr} podemos observar cómo se manifiesta el doble descenso para distintas configuraciones de la tasa de aprendizaje. En particular, el ``pico'' del error de test se hace más pronunciado a medida que la tasa de aprendizaje aumenta, dado que para una tasa igual a $5 \times 10^{-4}$, el máximo error en test es mayor que para el valor por defecto de la tasa de aprendizaje ($10^{-4}$), y este, a su vez, es mayor que para la mínima tasa de aprendizaje utilizada ($5 \times 10^{-5}$).\newline
 
-    Sin embargo, dicho vector también verifica:
+En conclusión, esto nos indica que, si un modelo presenta el doble descenso, no es necesario preocuparse en exceso por ajustar de manera fina la tasa de aprendizaje, puesto que, dentro de ciertos rangos de valores para dicha tasa de aprendizaje, el modelo sigue manifestando el suceso, lo que indica que el uso por defecto de la tasa de aprendizaje resulta ser suficiente.\newline
 
-    \[
-        v^T H_{\mathcal{F}_k}( w^* + \delta)  v \neq 0, \quad  v^T H_{\mathcal{F}_k}( w^* - \delta)  v \neq 0.
-    \]\newline
+Finalmente, para concluir esta subsección se muestra en la Tabla~\ref{tab:difflr} un resumen de los experimentos realizados junto con sus respectivos tiempos de entrenamiento.\newline
 
-    De esta manera, el vector $ \langle v^T H_{\mathcal{F}_1}( w^*+\delta)  v, \dots,  v^T H_{\mathcal{F}_n}( w^*+\delta)  v \rangle \neq 0$. El mismo resultado se verifica para el punto $w^* - \delta$. Así, utilizando este vector $v$ en la Hessiana de la función de pérdida en los dos puntos tenemos:
-
-    \begin{align}
-        v^T H_{\mathcal{L}}( w^* + \delta)v &=  
-        \sum_{i=1}^{n} \left( \frac{d}{d w} \left( \frac{\partial \mathcal{L}}{\partial \mathcal{F}}( w^*) \right) \delta \right)_i v^T H_{\mathcal{F}_i}( w^* + \delta) v + o(\|\delta\|),
-    \end{align}
-
-    \begin{align}
-        v^T H_{\mathcal{L}}( w^* - \delta)v &=  
-        - \sum_{i=1}^{n} \left( \frac{d}{d w} \left( \frac{\partial \mathcal{L}}{\partial \mathcal{F}}( w^*) \right) \delta \right)_i v^T H_{\mathcal{F}_i}( w^* - \delta) v + o(\|\delta\|).
-    \end{align}
-
-    Para finalizar tenemos que mostrar que, para un $\delta$ suficientemente pequeño, $v^T H_{\mathcal{L}}(w^* + \delta) v$ y $v^T H_{\mathcal{L}}(w^* - \delta) v$ no pueden ser simultáneamente no negativos, lo que implica inmediatamente que $H_{\mathcal{L}}$ no es semidefinida positiva en una vecindad cercana de $w^*$, y por tanto, $\mathcal{L}$ no es localmente convexa en $w^*$. Usando la condición 
-    \[
-    \frac{d}{dw} (\frac{\partial \mathcal{L}}{\partial \mathcal{F}}(w^*)) = 0,
-    \]
-    para las ecuaciones anteriores, se presentan los siguientes casos:\newline
-
-    \textbf{Caso 1:} Si 
-    \[
-    \sum_{i=1}^{n} \left( \frac{d}{dw} (\frac{\partial \mathcal{L}}{\partial \mathcal{F}}(w^*))\delta \right)_i v^T H_{\mathcal{F}_i}(w^* + \delta) v < 0,
-    \]
-    entonces, directamente, $v^T H_{\mathcal{L}}(w^* + \delta) v < 0$ si $\delta$ es lo suficientemente pequeño.\newline
-
-    \textbf{Caso 2:} De lo contrario, si 
-    \[
-    \sum_{i=1}^{n} \left( \frac{d}{dw} (\frac{\partial \mathcal{L}}{\partial \mathcal{F}}(w^*))\delta \right)_i v^T H_{\mathcal{F}_i}(w^* + \delta) v > 0,
-    \]
-    por la continuidad de cada $H_{\mathcal{F}_i}(\cdot)$, tenemos que
-    \[
-        -\sum_{i=1}^{n} \left( \frac{d}{dw} (\frac{\partial \mathcal{L}}{\partial \mathcal{F}}(w^*))\delta \right)_i v^T H_{\mathcal{F}_i}(w^* - \delta) v
-    \]
-
-    \[
-        \\ = -\sum_{i=1}^{n} \left( \frac{d}{dw} (\frac{\partial \mathcal{L}}{\partial \mathcal{F}}(w^*))\delta \right)_i v^T H_{\mathcal{F}_i}(w^* + \delta) v + \sum_{i=1}^{n} \left( \frac{d}{dw} (\frac{\partial \mathcal{L}}{\partial \mathcal{F}}(w^*))\delta \right)_i v^T (H_{\mathcal{F}_i}(w^* + \delta) v - \mathcal{H}_{\mathcal{F}_i}(w^* - \delta)) v
-    \]
-
-    \[
-        \\ = -\sum_{i=1}^{n} \left( \frac{d}{dw} (\frac{\partial \mathcal{L}}{\partial \mathcal{F}}(w^*))\delta \right)_i v^T H_{\mathcal{F}_i}(w^* + \delta) v + O(\epsilon) < 0,
-    \]
-    
-    cuando $\delta$ es lo suficientemente pequeño. A modo de conclusion, dado un $\delta$ arbitrariamente pequeño, se tiene que $v^T H_{\mathcal{L}}(w^* + \delta) v$ o $v^T H_{\mathcal{L}}(w^* - \delta) v$ es negativo, lo que significa que $\mathcal{L}(w)$ no tiene ninguna vecindad convexa alrededor de $w^*$.
-
-\end{proof}
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    \textbf{Modelo}       & \textbf{Dataset} & \textbf{Tasa aprendizaje} & \textbf{Entrenamiento} \\ 
+    \hline
+    $2$NN ($1-100$)     & MNIST[$4000/1000 - 10$\% noise]      & $0.005$      & $23$h $53$min         \\ 
+    $2$NN ($1-100$)     & MNIST[$4000/1000 - 10$\% noise]      & $0.001$ (default)      & $26$h $50$min     \\ 
+    $2$NN ($1-100$)     & MNIST[$4000/1000 - 10$\% noise]      & $0.0005$      & $27$h $32$min         \\ 
+    \hline
+    \end{tabular}
+    \caption[Resumen de los experimentos realizados para el doble descenso con distintas tasas de aprendizaje.]{Resumen de los experimentos realizados para el doble descenso con distintas tasas de aprendizaje.}\label{tab:difflr}
+\end{table}
 
 \endinput
 %------------------------------------------------------------------------------------

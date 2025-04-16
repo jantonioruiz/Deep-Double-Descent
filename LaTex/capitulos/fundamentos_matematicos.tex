@@ -3,7 +3,7 @@
 
 \chapter{Probabilidad}\label{ch:capitulo-teoria-de-la-probabilidad}
 
-En este capítulo se presentarán algunas definiciones y resultados de la teoría de la probabilidad y la estadística, con el propósito de introducir conceptos clave que faciliten la comprensión del \textit{Deep Double Descent} y que utilizaremos a lo largo del desarrollo de gran parte del trabajo. Las fuentes principales utilizadas a lo largo de este capítulo son extractos de~\cite{Dembo2014} y~\cite{Knill2009}.\newline
+En este capítulo se presentarán algunas definiciones y resultados de la teoría de la probabilidad y la estadística, con el propósito de introducir conceptos clave que faciliten la comprensión del \textit{Deep Double Descent} y que utilizaremos a lo largo del desarrollo de gran parte del trabajo. Las fuentes principales utilizadas a lo largo de este capítulo son extractos de~\cite{Dembo2014, Knill2009}.
 
 \section{Espacios de probabilidad y $\sigma$-álgebras}
 
@@ -429,12 +429,12 @@ A partir de la definición de esperanza de una variable aleatoria se puede const
         &= \mathbb{E}[X^2]  - \mathbb{E}{[X]}^2.
     \end{align*}
 
-    donde se han aplicado algunas de las propiedades de la esperanza comentadas anteriormente.\newline
+    donde se han aplicado algunas de las propiedades de la esperanza comentadas anteriormente.
 \end{observacion}
 
 \section{Distribuciones de probabilidad}
 
-Las distribuciones de probabilidad son funciones que describen el comportamiento de una variable aleatoria, indicando la probabilidad de que esta tome ciertos valores. Estas distribuciones pueden ser, como se ha comentado en la sección anterior, discretas o continuas, dependiendo de la naturaleza de la variable aleatoria. En esta sección trataremos algunas de las distribuciones más usuales al trabajar con datos del mundo real y que, además, serán utilizadas durante el transcurso del trabajo.\newline
+Las distribuciones de probabilidad son funciones que describen el comportamiento de una variable aleatoria, indicando la probabilidad de que esta tome ciertos valores. Estas distribuciones pueden ser, como se ha comentado en la sección anterior, discretas o continuas, dependiendo de la naturaleza de la variable aleatoria. De cara al interés específico de este proyecto, nos centraremos únicamente en una de ellas, por ser la que se empleará a lo largo del desarrollo del trabajo.\newline
 
 \subsection{Distribución Normal}
 La distribución normal o distribución de Gauss es la distribución de probabilidad más estudiada y utilizada en el ámbito de la inferencia estadística~\cite{Bryc1995TheND}, dadas sus propiedades matemáticas, como su simetría, la concentración de probabilidades alrededor de la media y su relación con otras distribuciones.\newline
@@ -466,12 +466,12 @@ Como consecuencia de la proposición anterior, se pueden relacionar todas las va
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{img/distribuciones-normales.png}
-    \caption[Ejemplos de distribuciones normales.] {Ejemplos de distribuciones normales. A la izquierda observamos distintas distribuciones normales, donde podemos notar como el parámetro $\mu$ determina el centro de la distribución y el parámetro $\sigma$ controla la dispersión de los datos. A la derecha observamos una distribución normal estándar, donde se puede apreciar con claridad que la distribución es simétrica con respecto a $\mu$. Imagen original del autor.}\label{fig:distribuciones-normales}
+    \caption[Ejemplos de distribuciones normales.] {Ejemplos de distribuciones normales. A la izquierda observamos distintas distribuciones normales, donde podemos notar como el parámetro $\mu$ determina el centro de la distribución y el parámetro $\sigma$ controla la dispersión de los datos. A la derecha observamos una distribución normal estándar, donde se puede apreciar con claridad que la distribución es simétrica con respecto a $\mu$.}\label{fig:distribuciones-normales}
 \end{figure}
 
 \chapter{Descomposición en valores singulares y pseudoinversa de una matriz}\label{ch:descomposicion-valores-singulares-pseudoinversa}
 
-En este capítulo presentaremos dos conceptos fundamentales de cara al desarrollo del trabajo: la descomposición en valores singulares (SVD) y la pseudoinversa de una matriz. En cuanto a las referencias utilizadas a lo largo de este capítulo, debemos destacar~\cite{Friedberg2014linear}, \cite{Strang2023} y~\cite{Poole2011}. Estos libros nos ayudaron a presentar los conceptos básicos más importantes, así como las demostraciones de los resultados más relevantes del capítulo.\newline
+En este capítulo presentaremos dos conceptos fundamentales de cara al desarrollo del trabajo: la descomposición en valores singulares (SVD) y la pseudoinversa de una matriz. En cuanto a las referencias utilizadas a lo largo de este capítulo, debemos destacar~\cite{Friedberg2014linear, Strang2023, Poole2011}. Estos libros nos ayudaron a presentar los conceptos básicos más importantes, así como las demostraciones de los resultados más relevantes del capítulo.
 
 \section{Vectores y matrices}\label{sec:vectores-matrices}
 
@@ -583,7 +583,7 @@ Finalmente, recordamos algunas de las propiedades de las matrices invertibles.
     Sea $A$ una matriz cuadrada de tamaño $n$. Un vector no nulo $v \in \mathbb{R}^{n}$ se dice que es un \textbf{vector propio} (o autovector) de la matriz $A$ si $Av=\lambda v$ para algún escalar $\lambda \in \mathbb{R}$. Además, el escalar $\lambda$ se llama \textbf{valor propio} (o autovalor) de la matriz $A$ correspondiente al vector propio $v$. Recordemos que $\lambda$ es un valor propio de $A$ si, y solo si, $det(A-\lambda I_n)=0$.\newline
 \end{definicion}
 
-Para cualquier matriz $A \in \mathcal{M}_{m \times n}(\mathbb{R})$, la matriz $A^{T}A$ es simétrica y, en consecuencia, es diagonalizable ortogonalmente (teorema espectral real~\cite{Blum2021}). Se comprueba de manera sencilla que todos los valores propios de la matriz $A^{T}A$ son no negativos.\newline
+Para cualquier matriz $A \in \mathcal{M}_{m \times n}(\mathbb{R})$, la matriz $A^{T}A$ es simétrica y, en consecuencia, es diagonalizable ortogonalmente (teorema espectral real~\cite{Blum2021}). Se comprueba de manera sencilla que todos los valores propios de la matriz $A^{T}A$ son no negativos.
 
 \section{SVD y pseudoinversa}\label{sec:svd-pseudoinversa}
 

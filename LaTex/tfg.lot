@@ -6,31 +6,33 @@
 \babel@toc {spanish}{}\relax 
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {1}{\ignorespaces Planificación temporal inicial del proyecto.}}{\es@scroman {xx}}{table.caption.14}%
-\contentsline {table}{\numberline {2}{\ignorespaces Estimación del coste del proyecto.}}{\es@scroman {xxi}}{table.caption.16}%
+\contentsline {table}{\numberline {2}{\ignorespaces Planificación temporal final del proyecto.}}{\es@scroman {xx}}{table.caption.15}%
+\contentsline {table}{\numberline {3}{\ignorespaces Estimación del coste del proyecto.}}{\es@scroman {xxi}}{table.caption.17}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Resumen de los principales artículos junto con sus contribuciones.}}{54}{table.caption.35}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Resumen de los principales artículos junto con sus contribuciones.}}{56}{table.caption.36}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Resumen comparativo entre el paradigma clásico y el paradigma moderno.}}{90}{table.caption.45}%
+\contentsline {table}{\numberline {6.1}{\ignorespaces Resumen comparativo entre el paradigma clásico y el paradigma moderno.}}{92}{table.caption.46}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {7.1}{\ignorespaces Resumen de los datasets utilizados.}}{92}{table.caption.46}%
-\contentsline {table}{\numberline {7.2}{\ignorespaces Resumen de las arquitecturas $2$NN.}}{93}{table.caption.47}%
-\contentsline {table}{\numberline {7.3}{\ignorespaces Número de parámetros de las arquitecturas ResNet$18$ modificadas.}}{94}{table.caption.49}%
-\contentsline {table}{\numberline {7.4}{\ignorespaces Número de parámetros de las arquitecturas $3$CNN.}}{95}{table.caption.51}%
-\contentsline {table}{\numberline {7.5}{\ignorespaces Aproximaciones polinómicas de grado $n$ utilizadas para regresión polinomial.}}{96}{table.caption.52}%
-\contentsline {table}{\numberline {7.6}{\ignorespaces Resumen de los experimentos para el doble descenso por nivel de ruido.}}{102}{table.caption.62}%
-\contentsline {table}{\numberline {7.7}{\ignorespaces Resumen de los experimentos para el doble descenso por número de ejemplos de entrenamiento.}}{104}{table.caption.64}%
-\contentsline {table}{\numberline {7.8}{\ignorespaces Resumen del ratio parámetros/ejemplos.}}{105}{table.caption.66}%
+\contentsline {table}{\numberline {7.1}{\ignorespaces Resumen de los datasets utilizados.}}{94}{table.caption.47}%
+\contentsline {table}{\numberline {7.2}{\ignorespaces Resumen de las arquitecturas $2$NN.}}{96}{table.caption.50}%
+\contentsline {table}{\numberline {7.3}{\ignorespaces Número de parámetros de las arquitecturas ResNet$18$ modificadas.}}{97}{table.caption.52}%
+\contentsline {table}{\numberline {7.4}{\ignorespaces Número de parámetros de las arquitecturas $3$CNN.}}{98}{table.caption.54}%
+\contentsline {table}{\numberline {7.5}{\ignorespaces Resumen de las ideas principales de los experimentos realizados.}}{99}{table.caption.55}%
+\contentsline {table}{\numberline {7.6}{\ignorespaces Aproximaciones polinómicas de grado $n$ utilizadas para regresión polinomial.}}{101}{table.caption.56}%
+\contentsline {table}{\numberline {7.7}{\ignorespaces Resumen de los experimentos para el doble descenso por nivel de ruido.}}{107}{table.caption.66}%
+\contentsline {table}{\numberline {7.8}{\ignorespaces Resumen de los experimentos para el doble descenso por número de ejemplos de entrenamiento.}}{109}{table.caption.68}%
+\contentsline {table}{\numberline {7.9}{\ignorespaces Resumen del ratio parámetros/ejemplos.}}{110}{table.caption.70}%
+\contentsline {table}{\numberline {7.10}{\ignorespaces Resumen de los experimentos realizados sobre el doble descenso.}}{118}{table.caption.80}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {table}{\numberline {C.1}{\ignorespaces Resumen de los experimentos realizados para el doble descenso con distinto tamaño de lote.}}{117}{table.caption.76}%
-\contentsline {table}{\numberline {C.2}{\ignorespaces Resumen de los experimentos realizados para el doble descenso con distintas tasas de aprendizaje.}}{118}{table.caption.79}%
+\contentsline {table}{\numberline {B.1}{\ignorespaces Resumen de los experimentos realizados para el doble descenso con distinto tamaño de lote.}}{126}{table.caption.83}%
+\contentsline {table}{\numberline {B.2}{\ignorespaces Resumen de los experimentos realizados para el doble descenso con distintas tasas de aprendizaje.}}{127}{table.caption.86}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
