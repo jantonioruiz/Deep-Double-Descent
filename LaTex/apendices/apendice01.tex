@@ -18,7 +18,7 @@ se tiene que $\sum_{u=0}^{\infty} \| \nabla\mathcal{L}(w^{(u)}) \|^{2} < \infty$
 \]
 
 \begin{proof}
-  Usando una propiedad conocida de las funciones $\beta$-suaves:
+  Usaremos una propiedad conocida de las funciones $\beta$-suaves:
 
   \[
       | f(x) - f(y) - \nabla f(y)^{T} (x-y) | \leq \| x - y \|^2.
@@ -53,7 +53,7 @@ se tiene que $\sum_{u=0}^{\infty} \| \nabla\mathcal{L}(w^{(u)}) \|^{2} < \infty$
   y, finalmente, nos queda el resultado buscado: $\|\nabla \mathcal{L} (w^{(\tau)})\|^2 \to 0$.
 \end{proof}
 
-\textbf{Proposición}~\ref{prop:non-conexity}. Sea $w^{*}$ una solución, es decir, $\mathcal{L}(w^{*}) = 0$, y supongamos que $\frac{d}{dw}\frac{\partial \mathcal{L}}{\partial \mathcal{F}}(w^{*}) \neq 0$ y $rang(H_{\mathcal{F}_{i}}(w^{*})) > 2n$ para algún $i \in \{1, \ldots, n \}$. Entonces $\mathcal{L}(w)$ no es convexa en ninguna vecindad de $w^{*}$.
+\textbf{Proposición}~\ref{prop:non-conexity}. Sea $w^{*}$ una solución, es decir, $\mathcal{L}(w^{*}) = 0$, y supongamos que $\frac{d}{dw}\frac{\partial \mathcal{L}}{\partial \mathcal{F}}(w^{*}) \neq 0$ y $rang(H_{\mathcal{F}_{i}}(w^{*})) > 2n$ para algún $i \in \{1, \ldots, n \}$. Entonces $\mathcal{L}(w)$ no es convexa en ningún entorno de $w^{*}$.
 
 \begin{proof}
     La matriz Hessiana de una función de pérdida $\mathcal{L}(\mathcal{F}(w))$ viene dada por:
@@ -62,7 +62,7 @@ se tiene que $\sum_{u=0}^{\infty} \| \nabla\mathcal{L}(w^{(u)}) \|^{2} < \infty$
         H_{\mathcal{L}}(w) = D\mathcal{F}(w)^T \frac{\partial^2 \mathcal{L}}{\partial \mathcal{F}^2}(w) D\mathcal{F}(w) + \sum_{i=1}^{n} \frac{\partial \mathcal{L}}{\partial \mathcal{F}_i}(w) H_{\mathcal{F}_i}(w).
     \]
 
-    Consideramos ahora las matrices Hessianas de dos puntos $w^* + \delta $ y $w^* - \delta $ $(\delta \in \mathbb{R}^{P})$ que están en una vecindad suficientemente pequeña de $w^*$. La Hessiana de la función de pérdida en estos dos puntos es:
+    Consideramos ahora las matrices Hessianas de dos puntos $w^* + \delta $ y $w^* - \delta $ $(\delta \in \mathbb{R}^{P})$ que están en un entorno suficientemente pequeño de $w^*$. La Hessiana de la función de pérdida en estos dos puntos es:
 
     \begin{equation}\label{eq:non-convexity1}
         \begin{aligned}
@@ -105,7 +105,7 @@ se tiene que $\sum_{u=0}^{\infty} \| \nabla\mathcal{L}(w^{(u)}) \|^{2} < \infty$
         - \sum_{i=1}^{n} \left( \frac{d}{d w} \left( \frac{\partial \mathcal{L}}{\partial \mathcal{F}}( w^*) \right) \delta \right)_i v^T H_{\mathcal{F}_i}( w^* - \delta) v + o(\|\delta\|).
     \end{align}
 
-    Para finalizar tenemos que mostrar que, para un $\delta$ suficientemente pequeño, $v^T H_{\mathcal{L}}(w^* + \delta) v$ y $v^T H_{\mathcal{L}}(w^* - \delta) v$ no pueden ser simultáneamente no negativos, lo que implica inmediatamente que $H_{\mathcal{L}}$ no es semidefinida positiva en una vecindad cercana de $w^*$, y por tanto, $\mathcal{L}$ no es localmente convexa en $w^*$. Usando la condición 
+    Para finalizar tenemos que mostrar que, para un $\delta$ suficientemente pequeño, $v^T H_{\mathcal{L}}(w^* + \delta) v$ y $v^T H_{\mathcal{L}}(w^* - \delta) v$ no pueden ser simultáneamente no negativos, lo que implica inmediatamente que $H_{\mathcal{L}}$ no es semidefinida positiva en un entorno cercano de $w^*$, y por tanto, $\mathcal{L}$ no es localmente convexa en $w^*$. Usando la condición 
     \[
     \frac{d}{dw} (\frac{\partial \mathcal{L}}{\partial \mathcal{F}}(w^*)) = 0,
     \]
@@ -134,7 +134,7 @@ se tiene que $\sum_{u=0}^{\infty} \| \nabla\mathcal{L}(w^{(u)}) \|^{2} < \infty$
         \\ = -\sum_{i=1}^{n} \left( \frac{d}{dw} (\frac{\partial \mathcal{L}}{\partial \mathcal{F}}(w^*))\delta \right)_i v^T H_{\mathcal{F}_i}(w^* + \delta) v + O(\epsilon) < 0,
     \]
     
-    cuando $\delta$ es lo suficientemente pequeño. A modo de conclusion, dado un $\delta$ arbitrariamente pequeño, se tiene que $v^T H_{\mathcal{L}}(w^* + \delta) v$ o $v^T H_{\mathcal{L}}(w^* - \delta) v$ es negativo, lo que significa que $\mathcal{L}(w)$ no tiene ninguna vecindad convexa alrededor de $w^*$.
+    cuando $\delta$ es lo suficientemente pequeño. A modo de conclusión, dado un $\delta$ arbitrariamente pequeño, se tiene que $v^T H_{\mathcal{L}}(w^* + \delta) v$ o $v^T H_{\mathcal{L}}(w^* - \delta) v$ es negativo, lo que significa que $\mathcal{L}(w)$ no es convexa en ningún entorno de $w^*$.
 
 \end{proof}
 

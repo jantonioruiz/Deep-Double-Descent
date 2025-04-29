@@ -1,7 +1,7 @@
 % !TeX root = ../tfg.tex
 % !TeX encoding = utf8
 
-\chapter{Análisis empírico del Deep Double Descent}\label{ch:analisis-empirico-ddd}
+\chapter{Análisis Empírico del Deep Double Descent}\label{ch:analisis-empirico-ddd}
 
 \section{Materiales y métodos}\label{sec:materiales-y-metodos}
 
@@ -15,11 +15,11 @@ Cabe destacar que, aunque en este proyecto también se utilizan datasets sintét
 
 El dataset MNIST (Modified National Institute of Standards and Technology)~\cite{LeCun1998} es un conjunto de datos de imágenes ampliamente utilizado para tareas de clasificación. Consta de $70000$ imágenes en escala de grises de dígitos escritos a mano, las cuales se dividen en $60000$ imágenes para entrenamiento y $10000$ para test. Además, cada imagen tiene un tamaño de $28 \times 28$ píxeles.\newline
 
-\subsubsection{CIFAR-10 y CIFAR-100}\label{subsubsec:CIFAR10-y-CIFAR100}
+\subsubsection{CIFAR10 y CIFAR100}\label{subsubsec:CIFAR10-y-CIFAR100}
 
-CIFAR-$10$~\cite{Krizhevsky2009} es un conjunto de datos utilizado para tareas de clasificación. Consta de $60000$ imágenes en color, distribuidas en $10$ clases diferentes, cada una con $6000$ imágenes. A su vez, estas imágenes se dividen en $50000$ imágenes para entrenamiento y $10000$ para test. Cada imagen tiene un tamaño de $32 \times 32$ píxeles y está en formato RGB, es decir, cada imagen cuenta con $3$ capas, cada una asociada con un color del formato RGB.\newline
+CIFAR$10$~\cite{Krizhevsky2009} es un conjunto de datos utilizado para tareas de clasificación. Consta de $60000$ imágenes en color, distribuidas en $10$ clases diferentes, cada una con $6000$ imágenes. A su vez, estas imágenes se dividen en $50000$ imágenes para entrenamiento y $10000$ para test. Cada imagen tiene un tamaño de $32 \times 32$ píxeles y está en formato RGB, es decir, cada imagen cuenta con $3$ capas, cada una asociada con un color del formato RGB.\newline
 
-Por otro lado, CIFAR-$100$~\cite{Krizhevsky2009} es un conjunto de datos similar a CIFAR-$10$, pero con $100$ clases. Consta de $60000$ imágenes en color, divididas en $100$ clases de $600$ imágenes cada una, con $500$ para entrenamiento y $100$ para test. Las imágenes tienen un tamaño de $32 \times 32$ píxeles en formato RGB.\newline
+Por otro lado, CIFAR$100$~\cite{Krizhevsky2009} es un conjunto de datos similar a CIFAR-$10$, pero con $100$ clases. Consta de $60000$ imágenes en color, divididas en $100$ clases de $600$ imágenes cada una, con $500$ para entrenamiento y $100$ para test. Las imágenes tienen un tamaño de $32 \times 32$ píxeles en formato RGB.\newline
 
 Para terminar esta sección, se presenta una tabla a modo de resumen de los datasets que se utilizarán en este proyecto. La Tabla~\ref{tab:datasets} muestra la información relevante sobre cada uno de los datasets, incluyendo el número total de imágenes, el tamaño de las imágenes y el número de características (píxeles totales), lo que proporciona una visión general de sus características principales y facilita la comparación entre ellos.\newline
 
@@ -30,8 +30,8 @@ Para terminar esta sección, se presenta una tabla a modo de resumen de los data
     \textbf{Dataset} & \textbf{Nº imágenes} & \textbf{Tamaño imagen} & \textbf{Clases} & \textbf{Entrada} \\
     \hline
     MNIST & $70000$ & $28 \times 28$ píxeles (escala de grises) & $10$ & $784$ \\
-    CIFAR-$10$ & $60000$ & $32 \times 32$ píxeles (RGB) & $10$ & $3072$ \\
-    CIFAR-$100$ & $60000$ & $32 \times 32$ píxeles (RGB) & $100$ & $3072$ \\
+    CIFAR$10$ & $60000$ & $32 \times 32$ píxeles (RGB) & $10$ & $3072$ \\
+    CIFAR$100$ & $60000$ & $32 \times 32$ píxeles (RGB) & $100$ & $3072$ \\
     \hline
     \end{tabular}
     \caption[Resumen de los datasets utilizados.]{Resumen de los datasets utilizados. En la tabla aparecen las principales características de cada dataset, donde la última columna hace referencia al número total de píxeles de cada imagen.}\label{tab:datasets}
@@ -90,7 +90,7 @@ Finalmente, se expone una tabla con el número de parámetros que conforman esta
 
 \subsubsection{ResNet18 modificada}\label{subsubsec:resnet18-modificada}
 
-ResNet$18$ es una de las variantes de la famosa arquitectura de redes neuronales convolucionales ResNet (\textit{Residual Networks}), propuesta por Kaiming He y su equipo en 2015~\cite{He2015}. Esta arquitectura fue diseñada con el objetivo de resolver el problema de la degradación del rendimiento a medida que aumentaba la profundidad de las redes neuronales. ResNet introduce el concepto de las conexiones residuales, que permiten que el flujo de información pase a través de capas sin ser afectado por los gradientes de las capas anteriores (véase Apéndice~\ref{ap:apendiceC}).\newline
+ResNet$18$ es una de las variantes de la famosa arquitectura de redes neuronales convolucionales ResNet (\textit{Residual Networks}), propuesta por Kaiming He y su equipo en $2015$~\cite{He2015}. Esta arquitectura fue diseñada con el objetivo de resolver el problema de la degradación del rendimiento a medida que aumentaba la profundidad de las redes neuronales. ResNet introduce el concepto de las conexiones residuales, que permiten que el flujo de información pase a través de capas sin ser afectado por los gradientes de las capas anteriores (véase Apéndice~\ref{ap:apendiceD}).\newline
 
 ResNet$18$, como su nombre indica, tiene $18$ capas de profundidad. Su arquitectura presenta varios bloques de convolución seguidos de conexiones residuales, que permiten que la entrada de cada bloque se sume a la salida de dicho bloque. La primera capa convolucional utiliza un filtro de tamaño $7 \times 7$ y, acto seguido, aparecen los bloques convolucionales formados por $4$ capas convolucionales idénticas, donde cada bloque está formado por dos capas convolucionales con conexiones residuales conectadas con la salida de la segunda capa convolucional. Finalmente, aparece una capa densa que será la salida de la red (véase Figura~\ref{fig:resnet18} para más detalle).\newline
 
@@ -100,7 +100,7 @@ ResNet$18$, como su nombre indica, tiene $18$ capas de profundidad. Su arquitect
     \caption[Arquitectura ResNet$18$ modificada.]{Arquitectura ResNet$18$ modificada. Podemos observar los 4 bloques convolucionales (distinguidos por color), cada uno de ellos con su correspondiente número de filtros ([$k$, $2k$, $3k$, $4k$] con $k \in \mathbb{N}$), junto con las conexiones residuales.}\label{fig:resnet18}
 \end{figure}
 
-La arquitectura que usaremos durante el transcurso de los experimentos es una modificación de la arquitectura ResNet$18$ original, dado que, en la arquitectura original el número de filtros usados en cada bloque convolucional es [$64$, $128$, $256$, $512$], mientras que en nuestro caso será un número variable $k \in \mathbb{N}$, con el propósito de poder modificar el número de parámetros de la red y crear ``distintas'' arquitecturas. Para ello, usaremos como número de filtros para cada bloque convolucional la secuencia: [$k$, $2k$, $3k$, $4k$]~\cite{Nakkiran2019}, con el objetivo de comparar los resultados obtenidos con los de la literatura existente. Destacamos que, para el valor $k=64$, nuestra arquitectura es la propia arquitectura ResNet$18$ original.\newline
+La arquitectura que usaremos durante el transcurso de los experimentos (PreActResNet$18$) es una modificación de la arquitectura ResNet$18$ original, dado que en la arquitectura original el número de filtros usados en cada bloque convolucional es [$64$, $128$, $256$, $512$], mientras que en nuestro caso será un número variable $k \in \mathbb{N}$, con el propósito de crear ``distintas'' arquitecturas. Para ello, usaremos como número de filtros para cada bloque convolucional la secuencia: [$k$, $2k$, $3k$, $4k$]~\cite{Nakkiran2019}, con el objetivo de comparar los resultados obtenidos con los de la literatura existente. Destacamos que, para el valor $k=64$, nuestra arquitectura es la propia arquitectura ResNet$18$ original.\newline
 
 Finalmente y dado que el número de parámetros asociados a esta arquitectura es tedioso de indicar (debido a la gran cantidad de capas que la conforman), se expone una tabla con los principales valores del parámetro $k$ (número de filtros) utilizados en el desarrollo del proyecto (véase Tabla~\ref{tab:numero-parametrosresnet}).\newline
 
@@ -148,7 +148,7 @@ Finalmente, la Tabla~\ref{tab:numero-parametros3cnn} muestra el número de pará
 
 Los hiperparámetros que serán utilizados a lo largo de la experimentación, por lo general, son los valores por defecto que vienen con las implementaciones estándar de Pytorch~\cite{NEURIPS2019_9015} de los distintos métodos utilizados. Las únicas modificaciones que se han realizado son aquellas necesarias para replicar experimentos descritos en la literatura existente y, en dichos casos, se indicarán específicamente en el propio experimento.\newline
 
-En cuanto al tamaño del lote (\textit{batch size}), variará entre $128$ y $256$, de manera similar a la literatura existente, lo que representa un valor relativamente alto, con el objetivo de acelerar el proceso de entrenamiento. Respecto a la tasa de aprendizaje del optimizador utilizado (Adam en nuestro caso), se empleará la tasa por defecto. El uso de distintos valores para \textit{batch size} y \textit{learning rate} en un problema donde se manifiesta el doble descenso se pueden observar en el Apéndice~\ref{ap:apendiceB}, donde se muestra que, si el fenómeno ocurre, el tamaño del lote utilizado y la tasa de aprendizaje no afectan significativamente al comportamiento del mismo.\newline
+En cuanto al tamaño de lote (\textit{batch size}), variará entre $128$ y $256$, siendo este último el valor por defecto, de manera similar a la literatura existente, lo que representa un valor relativamente alto, con el objetivo de acelerar el entrenamiento. Respecto a la tasa de aprendizaje del optimizador utilizado (Adam en nuestro caso), se empleará la tasa por defecto. El uso de distintos valores para \textit{batch size} y \textit{learning rate} en un problema donde se manifiesta el doble descenso se pueden observar en el Apéndice~\ref{ap:apendiceB}, donde se muestra que, si el fenómeno ocurre, el tamaño del lote utilizado y la tasa de aprendizaje no afectan significativamente al comportamiento del mismo. Finalmente, el número de épocas por defecto son $1000$.\newline
 
 Por otra parte, cabe destacar que, salvo que se indique lo contrario, no se introduce ninguna técnica de regularización en los experimentos realizados, debido a que el \textit{Deep Double Descent} se observará sin la influencia de las mismas. De este modo, se pretende estudiar cómo se manifiesta este suceso bajo condiciones más puras, sin modificaciones que podrían alterar sus efectos. Cualquier variación en este aspecto será especificada de manera explícita en el propio experimento. Adicionalmente, como función de pérdida a minimizar se utilizará la entropía cruzada, dado que estamos trabajando con problemas de clasificación multiclase.\newline
 
@@ -185,7 +185,7 @@ Como preámbulo a los distintos experimentos que se detallan a continuación, se
 
 Por otro lado, se proporcionan \textit{notebooks} de \textit{Google Colab} para los experimentos que no requieren el uso de redes neuronales y que no demandan grandes recursos. Además, se incluye en otro cuaderno el código necesario para visualizar las gráficas correspondientes a los resultados obtenidos por los modelos neuronales.\newline
 
-El proceso de ejecución de los experimentos que utilizan redes neuronales se lleva a cabo en los nodos de cómputo (GPUs) de los servidores de la Universidad de Granada, a los cuales se accede de forma remota mediante SSH. Para el envío de los experimentos, se emplea un \textit{script} de Shell en el que se especifican tanto los parámetros del experimento como el nodo a utilizar. El servidor hace uso de SLURM como gestor de colas, siendo este el encargado de reservar los recursos necesarios en la partición ``dios'' del servidor. Finalmente, se utiliza la herramienta Conda para gestionar tanto los entornos como los paquetes, asegurando que se disponga de todas las bibliotecas necesarias.\newline
+El proceso de ejecución de los experimentos que utilizan redes neuronales se lleva a cabo en los nodos de cómputo (GPUs) de los servidores de la Universidad de Granada (UGR), a los cuales se accede de forma remota mediante SSH. Para el envío de los experimentos, se emplea un \textit{script} de Shell en el que se especifican tanto los parámetros del experimento como el nodo a utilizar. El servidor hace uso de SLURM como gestor de colas, siendo este el encargado de reservar los recursos necesarios en la partición ``dios'' del servidor. Finalmente, se utiliza la herramienta Conda para gestionar tanto los entornos como los paquetes, asegurando que se disponga de todas las bibliotecas necesarias.\newline
 
 Dado que nuestra experimentación es excesivamente costosa, hacemos uso de tres nodos de cómputo, de manera indistinta, dentro de la partición ``dios'' de los servidores. Las especificaciones de estos nodos se detallan a continuación:
 
@@ -197,15 +197,15 @@ Dado que nuestra experimentación es excesivamente costosa, hacemos uso de tres 
 
 Aunque estos nodos cuentan con especificaciones diferentes, ofrecen resultados similares en cuanto a tiempo de ejecución. Este hecho permite que puedan ser utilizados de manera paralela para acelerar los cálculos, ofreciendo tiempos de ejecución significativos para la comparación de resultados.\newline
 
-Finalmente, cabe destacar que, a principios del mes de abril, se comunicó que el uso de las GPUs de la Universidad de Granada quedaba limitado a un máximo de $12$ horas de ejecución continuada. Esta limitación a nivel de hardware complica la realización de algunos experimentos, dado que, en este proyecto, es necesario llevar el entrenamiento de los modelos mucho más allá de este tiempo. De este modo, los experimentos realizados tras esta comunicación presentan parámetros distintos en comparación con el resto. Es importante resaltar que la batería experimental llevada a cabo en este proyecto es de gran calibre, lo que conlleva una mayor demanda de recursos y tiempo de ejecución para obtener resultados más precisos y concluyentes.\newline
+Finalmente, cabe destacar que, a principios del mes de abril, se comunicó que el uso de las GPUs de la Universidad de Granada quedaba limitado a un máximo de $12$ horas de ejecución continuada. Esta limitación a nivel de hardware complica la realización de algunos experimentos, dado que, en este proyecto, es necesario llevar el entrenamiento de los modelos mucho más allá de este tiempo. De este modo, los experimentos realizados tras esta comunicación presentan configuraciones de parámetros distintas en comparación con el resto. Es importante resaltar que la batería experimental llevada a cabo en este proyecto es de gran calibre, lo que conlleva una mayor demanda de recursos y tiempo de ejecución para obtener resultados más precisos y concluyentes.\newline
 
 \subsection{Aproximación polinómica}\label{subsec:approx-polinomica}
 
 Este experimento sirve como preámbulo al resto de experimentos y tiene como objetivo proporcionar una comprensión clara y sencilla de por qué puede manifestarse el \textit{Deep Double Descent} al aumentar la complejidad de un modelo. A través de este análisis preliminar, se busca sentar las bases para explorar más a fondo cómo la complejidad afecta al comportamiento y rendimiento de los modelos.\newline
 
-Para ello, intentaremos aproximar una función objetivo mediante dos enfoques distintos: uno basado en la base de Legendre y otro en la base polinómica clásica, donde usaremos un número finito de puntos muestreados de dicha función objetivo para realizar esa aproximación. Este experimento no empleará redes neuronales, sino que se basará en una simple regresión polinómica, cuya solución obtendremos mediante la pseudoinversa y el descenso de gradiente.\newline
+Para ello, intentaremos aproximar una función objetivo mediante tres enfoques distintos: el primero basado en la base de Legendre, el segundo empleando la base polinómica clásica, y el tercero utilizando una base polinómica redundante, donde en todos los casos usaremos un número finito de puntos muestreados de dicha función objetivo para realizar esa aproximación. Este experimento no empleará redes neuronales, sino que se basará en una simple regresión polinómica, cuya solución obtendremos mediante la pseudoinversa.\newline
 
-Por tanto, el objetivo de este experimento es encontrar la función $f$ que modele el valor esperado de una variable aleatoria dependiente $y$ (salida) en términos del valor esperado de una variable aleatoria independiente $x$ (entrada), es decir, $f(x)=y$. Dado que la función objetivo es desconocida, buscamos aproximarla, en este caso, mediante el uso de funciones polinómicas. De esta manera, buscamos aproximar la variable $y$ haciendo uso de dos aproximaciones distintas:
+Por tanto, el objetivo de este experimento es encontrar la función $f$ que modele el valor esperado de una variable aleatoria dependiente $y$ (salida) en términos del valor esperado de una variable aleatoria independiente $x$ (entrada), es decir, $f(x)=y$. Dado que la función objetivo es desconocida, buscamos aproximarla, en este caso, mediante el uso de funciones polinómicas. De esta manera, buscamos aproximar la variable $y$ haciendo uso de las siguientes tres aproximaciones:
 
 \begin{table}[h]
     \centering
@@ -216,6 +216,8 @@ Por tanto, el objetivo de este experimento es encontrar la función $f$ que mode
 
         \Block{2-1}{Clásica} & \Block{2-1}{$w_0 \cdot 1 + w_1 \cdot x + w_2 \cdot x^2 + \cdots + w_n \cdot x^n = y$}  \\ \\
 
+        \Block{2-1}{Redundante} & \Block{2-1}{$w_0 \cdot 1 + w_1 \cdot (1 + x) + w_2 \cdot (1 + x + x^2) + \cdots + w_n \cdot (1 + x + \cdots + x^n) = y$}  \\ \\
+
     \end{NiceTabular}
     \caption{Aproximaciones polinómicas de grado $n$ utilizadas para regresión polinomial.}\label{tabla:aproximaciones-polinomicas}
 \end{table}
@@ -223,41 +225,66 @@ Por tanto, el objetivo de este experimento es encontrar la función $f$ que mode
 donde $w = [w_0, w_1, \ldots, w_n]$ representa el vector de parámetros que el modelo aprende durante la fase de entrenamiento y $P_i(x)$ hace referencia al $i$-ésimo polinomio de Legendre\footnote{Los polinomios de Legendre forman un sistema de polinomios completos y ortogonales en el intervalo $[-1, 1]$.}.\newline
 
 
-Sabemos que la solución de norma mínima para el problema de mínimos cuadrados asociado $Xw=y$ viene dada por la pseudoinversa, donde, dependiendo de la base elegida, la matriz $X$ viene dada por:
+Sabemos que la solución de norma mínima para el problema de mínimos cuadrados asociado $Xw=y$ viene dada por la pseudoinversa (véase Sección~\ref{sec:svd-pseudoinversa}), donde, dependiendo de la base elegida, la matriz $X$ viene dada por:
 
 \[
-    X_{Legendre} = \begin{bmatrix}
+\begin{aligned}
+    X_{Legendre} &= 
+    \begin{bmatrix}
         P_0(x_0) & P_1(x_0) & \cdots & P_n(x_0) \\
         P_0(x_1) & P_1(x_1) & \cdots & P_n(x_1) \\
         P_0(x_2) & P_1(x_2) & \cdots & P_n(x_2) \\
-        \vdots & \vdots &    \ddots & \vdots \\
+        \vdots & \vdots & \ddots & \vdots \\
         P_0(x_m) & P_1(x_m) & \cdots & P_n(x_m)
-        \end{bmatrix}
-\quad
-    X_{Vandermonde} = \begin{bmatrix}
-    1 & x_0 & x_0^2 &\cdots & x_0^{n} \\
-    1 & x_1 & x_1^2 &\cdots & x_1^{n} \\
-    1 & x_2 & x_2^2 &\cdots & x_2^{n} \\
-    \vdots & \vdots &    \ddots & \vdots \\
-    1 & x_m & x_m^2 &\cdots & x_m^{n}
-    \end{bmatrix}
+    \end{bmatrix},
+    \quad
+    X_{Vandermonde} = 
+    \begin{bmatrix}
+        1 & x_0 & x_0^2 & \cdots & x_0^n \\
+        1 & x_1 & x_1^2 & \cdots & x_1^n \\
+        1 & x_2 & x_2^2 & \cdots & x_2^n \\
+        \vdots & \vdots & \vdots & \ddots & \vdots \\
+        1 & x_m & x_m^2 & \cdots & x_m^n
+    \end{bmatrix},
+\end{aligned}
+\]
+\vspace{0.5cm}
+\[
+X_{Redundant} = 
+\begin{bmatrix}
+    1 & x_0 & 1+x_0^2 & \cdots & 1+x_0+\cdots+x_0^n \\
+    1 & x_1 & 1+x_1^2 & \cdots & 1+x_1+\cdots+x_1^n \\
+    1 & x_2 & 1+x_2^2 & \cdots & 1+x_2+\cdots+x_2^n \\
+    \vdots & \vdots  & \vdots & \ddots & \vdots \\
+    1 & x_m & 1+x_m^2 & \cdots & 1+x_m+\cdots+x_m^n
+\end{bmatrix},
 \]
 
-Así, el vector de parámetros viene dado por $w = X^{\dagger} y$, donde $X^{\dagger}$ es la pseudoinversa de la matriz $X$ asociada a cada aproximación. Por otro lado, para el caso del uso del descenso de gradiente, ajustaremos iterativamente los parámetros del vector $w$ minimizando el error cuadrático medio.\newline
+donde $X_{Legendre}$, $X_{Vandermonde}$ y $X_{Redundant}$ son las matrices $X$ relativas, respectivamente, a la base de polinomios de Legendre, a la base polinómica clásica y a la base polinómica redundante. Así, el vector de parámetros viene dado por $w = X^{\dagger} y$, donde $X^{\dagger}$ es la pseudoinversa de la matriz $X$ asociada a cada aproximación.\newline
 
 \subsubsection{Función lineal}\label{subsubsec:funcion-lineal}
 
-En primera instancia, buscamos aproximar la función objetivo dada por $2x + \cos(25x)$ utilizando $10$ puntos muestreados de esa función y usando la pseudoinversa, con el objetivo de replicar y dar más contexto al experimento presentado en~\cite{Schaeffer2023}. La tendencia de la función objetivo la marca la función lineal $2x$ y la función trigonométrica $\cos(25x)$ nos ayudará a introducir cierto ruido a esa función de tendencia, asimilando el posible ruido que encontramos en el mundo real.\newline
+En primera instancia, buscamos aproximar la función objetivo dada por $f(x) = 2x + \cos(25x)$ utilizando $10$ puntos muestreados de esa función y usando la pseudoinversa, con el objetivo de replicar y dar más contexto al experimento presentado en~\cite{Schaeffer2023}. La tendencia de la función objetivo la marca la función lineal $2x$ y la función trigonométrica $\cos(25x)$ nos ayudará a introducir cierto ruido a esa función de tendencia, asimilando el posible ruido que encontramos en el mundo real.\newline
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.5\textwidth]{img/experiments/legendre1DDD.png}
-    \caption[Doble descenso al utilizar aproximación polinómica de Legendre.]{Doble descenso al utilizar aproximación polinómica de Legendre, donde el umbral de interpolación corresponde al número de datos de entrenamiento.}\label{fig:legendre1DDD}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/experiments/legendre1DDD.png}
+        \caption{Doble descenso para la aproximación polinómica de Legendre.}\label{fig:legendre1.1DDD}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/experiments/legendre1.4.png}
+        \caption{Norma euclídea del vector de parámetros asociado a cada aproximación.}\label{fig:legendre1.2DDD}
+    \end{subfigure}
+    \caption[Doble descenso al utilizar aproximación polinómica de Legendre y norma del vector de parámetros.]{Doble descenso al utilizar aproximación polinómica de Legendre, donde el umbral de interpolación corresponde al número de datos de entrenamiento (línea negra punteada), junto con la norma del vector de parámetros asociado, la cual decrece tras dicho umbral.}\label{fig:legendre1DDD}
 \end{figure}
 
-Para el caso de la aproximación de Legendre, podemos observar en la Figura~\ref{fig:legendre1DDD} cómo se manifiesta el doble descenso. De esta manera, al superar el umbral de interpolación, encontrado justo al usar el mismo número de parámetros que datos de entrenamiento, el error en el conjunto de prueba vuelve a disminuir, produciéndose el segundo descenso.\newline
+Para el caso de la aproximación de Legendre, podemos observar en la Figura~\ref{fig:legendre1.1DDD} cómo se manifiesta el doble descenso. De esta manera, al superar el umbral de interpolación, encontrado justo al usar el mismo número de parámetros que datos de entrenamiento, el error en el conjunto de prueba vuelve a disminuir, produciéndose el segundo descenso.\newline
 
-Por otro lado, podemos observar en la Figura~\ref{fig:legendre1DD} las distintas aproximaciones que obtiene el modelo al utilizar distinto número de parámetros. Antes de llegar al umbral de interpolación, el modelo no tiene la suficiente capacidad como para ajustarse a cada uno de los datos. Al alcanzar el umbral de interpolación, el modelo se ve obligado a ajustarse exactamente a cada uno de los puntos de entrenamiento, lo que lo convierte en una aproximación única. En este caso, esta ``rigidez'' del modelo no asegura una buena generalización debido a presentar numerosos picos. Al superar dicho umbral, el aumento en el número de parámetros permite la existencia de múltiples modelos de interpolación para cada grado utilizado, facilitando la selección de una opción que generalice bien. De este modo, el modelo adquiere mayor flexibilidad para aproximar los datos, lo que da lugar a una función cada vez más ``suave''.\newline
+Por otro lado, podemos observar en la Figura~\ref{fig:legendre1DD} las distintas aproximaciones que obtiene el modelo al utilizar distinto número de parámetros. Antes de llegar al umbral de interpolación, el modelo no tiene la suficiente capacidad como para ajustarse a cada uno de los datos. Al alcanzar el umbral de interpolación, el modelo se ve obligado a ajustarse exactamente a cada uno de los puntos de entrenamiento, lo que lo convierte en una aproximación única. En este caso, esta ``rigidez'' del modelo no asegura una buena generalización debido a presentar numerosas oscilaciones. Al superar dicho umbral, el aumento en el número de parámetros permite la existencia de múltiples modelos de interpolación para cada grado, facilitando la selección de una opción que generalice bien. De este modo, el modelo adquiere mayor flexibilidad para aproximar los datos, lo que da lugar a una función cada vez más ``suave''.\newline
 
 \begin{figure}[h]
     \centering
@@ -276,32 +303,46 @@ Por otro lado, podemos observar en la Figura~\ref{fig:legendre1DD} las distintas
         \textbf{Región sobreparametrizada} \\[0.5ex] 
         \includegraphics[width=\linewidth]{img/experiments/legendre1.3.png}
     \end{minipage}
-    \caption[Intuición del \textit{Deep Double Descent} usando regresión polinómica.]{Intuición del \textit{Deep Double Descent} usando regresión polinómica. Cuando nos encontramos en la región infraparametrizada, el modelo no es capaz de capturar todos los datos de entrenamiento, haciendo que el bias del modelo sea grande, aunque la varianza sea pequeña. En el umbral de interpolación, el modelo captura perfectamente todos los datos, haciendo que el bias sea pequeño pero la varianza sea grande, pues la función aprendida dependerá de la posición de los datos de entrenamiento. Finalmente, en la región sobreparametrizada, el modelo está regularizado hacia una solución de norma pequeña.}\label{fig:legendre1DD}
+    \caption[Intuición del \textit{Deep Double Descent} usando regresión polinómica.]{Intuición del \textit{Deep Double Descent} usando regresión polinómica. Cuando nos encontramos en la región infraparametrizada, el modelo no es capaz de capturar todos los datos de entrenamiento, haciendo que el bias del modelo sea grande, aunque la varianza sea pequeña. En el umbral de interpolación, el modelo captura perfectamente todos los datos, haciendo que el bias sea pequeño pero la varianza sea grande, pues la función aprendida dependerá de la posición de los datos de entrenamiento. Finalmente, en la región sobreparametrizada, el modelo está regularizado hacia una solución de norma pequeña similar a la inicial.}\label{fig:legendre1DD}
 \end{figure}
 
-En la imagen izquierda de la Figura~\ref{fig:legendreandclassicDD} se observa cómo el modelo, a medida que aumenta el número de parámetros, opta por aquella solución cuya norma euclídea del vector de parámetros asociado es cada vez menor. Esto nos indica que el modelo se va ``autoregularizando'' hacia soluciones cada vez más simples y que se parecen más a la solución inicial (véanse la primera y última imágenes de la Figura~\ref{fig:legendre1DD}).\newline
+En la Figura~\ref{fig:legendre1.2DDD} se observa cómo el modelo, a medida que aumenta su capacidad, sigue reduciendo la norma del vector de parámetros aprendido. Esto nos indica que se va ``autoregularizando'' hacia soluciones cada vez más simples y que se asemejan más a la solución inicial (véanse la primera y última imágenes de la Figura~\ref{fig:legendre1DD}).\newline
 
-\begin{figure}[htbp]
-    \centering
-    \begin{minipage}{0.4\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{img/experiments/legendre1.4.png}
-    \end{minipage}
-    \hfill
-    \begin{minipage}{0.4\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{img/experiments/OLS1.4.png}
-    \end{minipage}
-    \caption[Normas del vector de parámetros para las aproximaciones polinómicas.]{Normas del vector de parámetros para la aproximación polinómica de Legendre (izquierda) y para la aproximación clásica (derecha). A medida que aumenta el número de parámetros, la norma del vector seleccionado es cada vez menor.}\label{fig:legendreandclassicDD}
-\end{figure}
-
-Por otro lado, en la aproximación polinómica clásica, es posible percibir en la Figura~\ref{fig:OLS1DDD} que dicho fenómeno no se presenta, al menos con el mismo número de parámetros, incluso habiendo obtenido un error de entrenamiento nulo. Es por esto que las aproximaciones obtenidas por el modelo a partir del umbral de interpolación son peores que las obtenidas antes de este punto (véase Figura~\ref{fig:polynomial1DD}). No obstante, una vez superado el umbral de interpolación, esta aproximación clásica, al igual que la aproximación de Legendre, tiende a ofrecer soluciones que minimizan la norma del vector de parámetros, como puede notarse en la imagen de la derecha de la Figura~\ref{fig:legendreandclassicDD}.\newline
+Por otro lado, en las aproximaciones polinómicas clásicas, es posible percibir en la Figura~\ref{fig:aproximaciones-polinomicas} que dicho fenómeno no se presenta, al menos con el mismo número de parámetros, incluso habiendo obtenido un error de entrenamiento nulo. Es por esto que las aproximaciones obtenidas por el modelo a partir del umbral de interpolación son peores (véase Figura~\ref{fig:polynomial1DD}). No obstante, una vez superado el umbral de interpolación, estas aproximaciones clásicas, al igual que la aproximación de Legendre, ofrecen soluciones con menor norma del vector de parámetros, como puede notarse en la Figura~\ref{fig:normas-clasicas}.\newline
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.5\textwidth]{img/experiments/OLS1DDD.png}
-    \caption[Error en entrenamiento y prueba para la aproximación polinómica.]{Error en entrenamiento y prueba para la aproximación polinómica. El error en el conjunto de prueba se incrementa progresivamente hasta estabilizarse.}\label{fig:OLS1DDD}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/experiments/OLS1DDD.png}
+        \caption{Error en entrenamiento y test para la aproximación polinómica clásica.}\label{fig:OLS1DDD}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/experiments/Redundant1DDD.png}
+        \caption{Error en entrenamiento y test para la aproximación polinómica clásica redundante.}\label{fig:Redundant1DDD}
+    \end{subfigure}
+    \caption[Error en entrenamiento y test para las distintas aproximaciones polinómicas.]{Error en entrenamiento y test para la aproximación polinómica clásica y la redundante. El error en el conjunto de test se incrementa progresivamente.}\label{fig:aproximaciones-polinomicas}
 \end{figure}
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/experiments/OLS1.4.png}
+        \caption{Norma del vector de parámetros para la aproximación polinómica clásica.}\label{fig:OLS1.4DDD}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/experiments/Redundant1.4.png}
+        \caption{Norma del vector de parámetros para la aproximación polinómica clásica redundante.}\label{fig:Redundant1.4DDD}
+    \end{subfigure}
+    \caption[Normas del vector de parámetros para las aproximaciones polinómicas clásicas.]{Normas del vector de parámetros para las aproximaciones polinómicas clásicas. A medida que aumenta el número de parámetros, la norma del vector seleccionado es cada vez menor.}\label{fig:normas-clasicas}
+\end{figure}
+
+Finalmente, y de manera complementaria, se exponen en el Apéndice~\ref{ap:apendiceC} los resultados obtenidos al resolver este problema utilizando el descenso de gradiente como método de optimización, donde se observa la misma tendencia previamente descrita.\newline
 
 \begin{figure}[h]
     \centering
@@ -323,27 +364,11 @@ Por otro lado, en la aproximación polinómica clásica, es posible percibir en 
     \caption[Aproximaciones polinómicas clásicas de la función objetivo.]{Aproximaciones polinómicas clásicas de la función objetivo. Se observa que, una vez superado el umbral de interpolación, añadir un mayor número de parámetros no contribuye a obtener una mejor aproximación.}\label{fig:polynomial1DD}
 \end{figure}
 
-La conclusión que podemos obtener de los resultados anteriores es que la base sobre la que estamos trabajando juega un papel fundamental en las aproximaciones obtenidas. De hecho, podemos considerar la base de Legendre, en cierta medida, como ``redundante'', dado que los polinomios que la conforman incorporan términos de polinomios anteriores. Esto sugiere que dicha base es más potente para realizar aproximaciones progresivamente más precisas.\newline
+La conclusión que podemos obtener de los resultados anteriores es que la base sobre la que estamos trabajando juega un papel fundamental en las aproximaciones obtenidas. De hecho, podemos considerar la base de Legendre, en cierta medida, como ``redundante'', dado que los polinomios que la conforman incluyen términos de polinomios anteriores. Por otro lado, la base polinomial clásica redundante se incorporó con la expectativa de que se reprodujera el fenómeno, debido también a su redundancia, sin embargo, no se reproduce. Esto sugiere que la base de Legendre, además de ser redundante, es más potente en características que no poseen las otras dos aproximaciones, lo que permite realizar aproximaciones progresivamente más precisas.\newline
 
 \subsubsection{Función hiperbólica}\label{subsubsec:funcion-hiperbolica}
 
-Nos centramos ahora en trabajar con la aproximación de Legendre para una función objetivo cuya tendencia está dada por una función de tipo hiperbólica ($\tanh(x)$), y el ruido será determinado por la misma función que en la subsección anterior ($\cos(25x)$). Este experimento tiene como propósito verificar cómo el ruido contribuye a visualizar de manera más clara el doble descenso, trabajando tanto con ruido como sin él.\newline
-
-\begin{figure}[h]
-    \centering
-    \begin{minipage}{0.4\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{img/experiments/hiperbolica_noiselessDDD.png}
-    \end{minipage}
-    \hfill
-    \begin{minipage}{0.4\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{img/experiments/hiperbolica_noiseDDD.png}
-    \end{minipage}
-    \caption[Ejemplos de doble descenso en regresión polinómica de Legendre para una función objetivo, tanto con ruido como sin ruido.]{Ejemplos de doble descenso en regresión polinómica de Legendre para una función objetivo, tanto sin ruido (izquierda) como con ruido (derecha).}\label{fig:legendrehyperbolicDD}
-\end{figure}
-
-Para ello, usamos $10$ puntos muestreados de la función objetivo para el entrenamiento. En la Figura~\ref{fig:approx-hiperbolicas} podemos apreciar las distintas aproximaciones obtenidas por el modelo para el caso sin ruido y el ruidoso, donde se puede observar cómo el aumento de parámetros ayuda a obtener mejores predicciones.\newline
+Nos centramos ahora en trabajar con la aproximación de Legendre para una función objetivo cuya tendencia está dada por una función de tipo hiperbólica ($\tanh(x)$), y el ruido será determinado por la misma función que en la subsección anterior ($\cos(25x)$). Este experimento tiene como propósito verificar cómo el ruido contribuye a visualizar de manera más precisa el doble descenso.\newline
 
 \begin{figure}[h]
     \centering
@@ -377,7 +402,25 @@ Para ello, usamos $10$ puntos muestreados de la función objetivo para el entren
     \caption[Aproximaciones polinómicas de Legendre de la función objetivo, tanto sin ruido como con ruido.]{Aproximaciones polinómicas de Legendre de la función objetivo, tanto sin ruido (fila superior) como con ruido (fila inferior). A medida que aumentan los parámetros, la predicción se ajusta y suaviza a la función objetivo.}\label{fig:approx-hiperbolicas}
 \end{figure}
 
-En la Figura~\ref{fig:legendrehyperbolicDD} podemos observar las curvas del error de prueba y entrenamiento para las distintas aproximaciones obtenidas en ambos casos. Destacamos el hecho de que, para el caso ruidoso, el doble descenso se presenta de forma más clara, donde al aumentar el número de parámetros se obtienen menores errores en el conjunto de prueba que los obtenidos durante el primer descenso. Este comportamiento va en consonancia con lo descrito en la literatura científica, donde al introducir ruido se observa el suceso con mayor claridad. Sumado a esto, las gráficas de la función objetivo ruidosa de la Figura~\ref{fig:approx-hiperbolicas} muestran cómo, al autoregulizarse el modelo y obtener una solución más simple, esta intenta suavizarse en torno al centro del conjunto de datos de entrenamiento, de modo que cualquier dato ruidoso no afecte excesivamente a la aproximación.\newline
+Para ello, usamos $10$ puntos muestreados de la función objetivo para el entrenamiento. En la Figura~\ref{fig:approx-hiperbolicas} podemos apreciar las distintas aproximaciones obtenidas por el modelo para el caso sin ruido y el caso con ruido, donde se puede observar cómo el aumento de parámetros ayuda a obtener mejores predicciones.\newline
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/experiments/hiperbolica_noiselessDDD.png}
+        \caption{Doble descenso para regresión polinómica de Legendre sin ruido.}\label{fig:hiperbolica_noiselessDDD}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/experiments/hiperbolica_noiseDDD.png}
+        \caption{Doble descenso para regresión polinómica de Legendre con ruido.}\label{fig:hiperbolica_noiseDDD}
+    \end{subfigure}
+    \caption[Ejemplos de doble descenso en regresión polinómica de Legendre para una función objetivo, tanto con ruido como sin ruido.]{Ejemplos de doble descenso en regresión polinómica de Legendre para una función objetivo, tanto sin ruido como con ruido.}\label{fig:legendrehyperbolicDD}
+\end{figure}
+
+En la Figura~\ref{fig:legendrehyperbolicDD} podemos observar las curvas del error de test y entrenamiento para las distintas aproximaciones obtenidas en ambos casos. Destacamos el hecho de que, para el caso ruidoso, el doble descenso se presenta de forma más clara, donde al aumentar el número de parámetros se obtienen menores errores en el conjunto de test que los obtenidos durante el primer descenso. Este comportamiento va en consonancia con lo descrito en la literatura científica, donde al introducir ruido se observa el suceso con mayor claridad. Sumado a esto, las gráficas de la función objetivo ruidosa de la Figura~\ref{fig:approx-hiperbolicas} muestran cómo, al autoregulizarse el modelo y obtener una solución más simple, esta intenta suavizarse en torno al centro del conjunto de datos de entrenamiento, de modo que cualquier dato ruidoso no afecte excesivamente a la aproximación.\newline
 
 \subsubsection{Discusión}\label{subsubsec:discusion-polinomico}
 
@@ -405,14 +448,14 @@ Para ello, se llevará a cabo un experimento con la arquitectura $2$NN sobre el 
         \centering
         \includegraphics[width=\linewidth]{img/experiments/noise-wise-dd2.png}
     \end{minipage}
-    \caption[Doble descenso para distintos niveles de ruido.]{Error en test de la arquitectura 2NN sobre el subconjunto MNIST[$4000/1000$] para diferente nivel de ruido. A la izquierda, en ausencia de ruido añadido, el doble descenso no se manifiesta. En cambio, a la derecha, al aumentar el nivel de ruido, el pico de la curva se vuelve cada vez más pronunciado.}\label{fig:noise-wise-dd}
+    \caption[Doble descenso para distintos niveles de ruido.]{Error en test de la arquitectura $2$NN sobre el subconjunto MNIST[$4000/1000$] para diferente nivel de ruido. A la izquierda, en ausencia de ruido añadido, el doble descenso no se manifiesta. En cambio, a la derecha, al aumentar el nivel de ruido, el pico de la curva se vuelve cada vez más pronunciado.}\label{fig:noise-wise-dd}
 \end{figure}
 
-En la Figura~\ref{fig:noise-wise-dd} se observa que un modelo que no presenta doble descenso sobre el conjunto de datos original sí lo experimenta al agregarle ruido. Además, en modelos donde si aparece el doble descenso, el pico del error de test aumenta al incrementar el porcentaje de ruido, ya que el modelo, eventualmente, memorizará dicho ruido, lo cual concuerda con lo planteado en la literatura científica.\newline
+En la Figura~\ref{fig:noise-wise-dd} se observa como un modelo que no presenta doble descenso sobre el conjunto de datos original sí lo experimenta al agregarle ruido. Además, en modelos donde si aparece el doble descenso, el pico del error de test aumenta al incrementar el porcentaje de ruido, ya que el modelo, eventualmente, memorizará dicho ruido, lo que concuerda con lo conjeturado en la literatura científica.\newline
 
 También se aprecia que, a medida que aumenta el ruido, se requieren más parámetros para alcanzar errores de test más bajos que el mínimo obtenido durante el primer descenso. Este fenómeno, junto con el aumento del tiempo de entrenamiento al incrementar el ruido (véase Tabla~\ref{tab:noisewisedd}) y considerando que, en escenarios reales, el porcentaje de ruido no suele ser excesivamente alto, nos lleva a optar por configuraciones con un nivel de ruido en torno al $10-20\%$ para los experimentos restantes.\newline
 
-Finalmente, en la Figura~\ref{fig:noise-wise-dd3} podemos verificar cómo, al aumentar el porcentaje de ruido en las etiquetas, el umbral de interpolación se desplaza hacia la derecha, lo que sugiere que los patrones que necesita aprender el modelo son más complejos a medida que aumentamos el ruido, siguiendo una lógica coherente. Además, este hecho pone de manifiesto que, en datos multidimensionales como las imágenes, se requieren más pesos que el número de ejemplos utilizados. Esto es lógico, ya que una imagen no puede ser tratada como un objeto unidimensional, donde el umbral de interpolación permanece inalterado independientemente de la presencia de ruido. Esto se debe a que, en un caso unidimensional, siempre es posible memorizar un dato con un único parámetro.\newline
+Finalmente, en la Figura~\ref{fig:noise-wise-dd3} podemos verificar cómo, al aumentar el porcentaje de ruido en las etiquetas, el umbral de interpolación se desplaza hacia la derecha, lo que sugiere que los patrones que necesita aprender el modelo son más complejos a medida que aumentamos el ruido, siguiendo una lógica coherente. Además, este hecho pone de manifiesto que, en datos multidimensionales como las imágenes, se requieren más parámetros que el número de ejemplos utilizados. Esto es lógico, ya que una imagen no puede ser tratada como un objeto unidimensional, donde el umbral de interpolación permanece inalterado independientemente de la presencia de ruido, debido a que, para casos unidimensionales, siempre es posible memorizar un dato con un único parámetro (véase Figura~\ref{fig:legendre1DDD}).\newline
 
 \begin{figure}[h]
     \centering
@@ -426,11 +469,11 @@ Finalmente, en la Figura~\ref{fig:noise-wise-dd3} podemos verificar cómo, al au
     \hline
     \textbf{Modelo}       & \textbf{Dataset} & \textbf{Ruido en etiquetas} & \textbf{Entrenamiento} \\ 
     \hline
-    $2$-NN ($1-100$)          & MNIST[$4000/1000$]        & $0\%$       & $26$h $10$min       \\ 
-    $2$-NN ($1-100$)          & MNIST[$4000/1000$]        & $10\%$         & $26$h $50$min       \\ 
-    $2$-NN ($1-100$)          & MNIST[$4000/1000$]        & $20\%$         & $27$h $23$min       \\ 
-    $2$-NN ($1-100$)          & MNIST[$4000/1000$]        & $30\%$          & $28$h $8$min       \\ 
-    $2$-NN ($1-100$)          & MNIST[$4000/1000$]       & $40\%$          & $30$h $14$min       \\  
+    $2$NN ($1-100$)          & MNIST[$4000/1000$]        & $0\%$       & $26$h $10$min       \\ 
+    $2$NN ($1-100$)          & MNIST[$4000/1000$]        & $10\%$         & $26$h $50$min       \\ 
+    $2$NN ($1-100$)          & MNIST[$4000/1000$]        & $20\%$         & $27$h $23$min       \\ 
+    $2$NN ($1-100$)          & MNIST[$4000/1000$]        & $30\%$          & $28$h $8$min       \\ 
+    $2$NN ($1-100$)          & MNIST[$4000/1000$]       & $40\%$          & $30$h $14$min       \\  
     \hline
     \end{tabular}
     \caption[Resumen de los experimentos para el doble descenso por nivel de ruido.]{Resumen de los experimentos para el doble descenso por nivel de ruido.}
@@ -449,13 +492,11 @@ En conclusión, a partir de los resultados obtenidos en este experimento, se pre
 
 \subsection{Sample-wise double descent}\label{subsec:sample-wise-dd}
 
-En esta subsección se presentan los experimentos realizados para analizar el impacto del tamaño del conjunto de datos sobre el doble descenso, conocido como \textit{sample-wise double descent}. Este efecto se manifiesta al modificar la cantidad de datos empleados durante el entrenamiento de un modelo específico. Al comparar las curvas del error de prueba, se observa que entrenar con un mayor número de ejemplos puede, de manera casi paradójica\footnote{En el sentido que, generalmente, en el aprendizaje automático siempre se busca tener la mayor cantidad de datos posible de cara a entrenar.}, empeorar el rendimiento del modelo.\newline
+En esta subsección se presentan los experimentos realizados para analizar el impacto del tamaño del conjunto de datos sobre el doble descenso, conocido como \textit{sample-wise double descent}. Este efecto se manifiesta al modificar la cantidad de datos empleados para entrenar un modelo específico. Al comparar las curvas del error de generalización, se observa que entrenar con un mayor número de ejemplos puede, de manera casi paradójica\footnote{En el sentido que, generalmente, en el aprendizaje automático siempre se busca tener la mayor cantidad de datos posible de cara a entrenar.}, empeorar el rendimiento del modelo.\newline
 
-Dado que la experimentación presentada en la literatura existente resulta excesivamente costosa de replicar\footnote{Nakkiran et al.~\cite{Nakkiran2019} presentan este tipo de doble descenso utilizando Transformers (Figura 3) como modelo de procesamiento de lenguaje natural, incrementando su capacidad a través de su dimensión de incrustación (\textit{embedding}) y empleando un conjunto de datos de traducción automática.}, se han diseñado experimentos más accesibles que permiten analizarlo manteniendo un enfoque lo suficientemente representativo.\newline
+Dado que la experimentación presentada en la literatura existente resulta excesivamente costosa de replicar\footnote{Nakkiran et al.~\cite{Nakkiran2019} presentan este tipo de doble descenso utilizando Transformers (Figura 3) como modelo de procesamiento de lenguaje natural, incrementando su capacidad a través de su dimensión de incrustación (\textit{embedding}) y empleando un conjunto de datos de traducción automática.}, se han diseñado experimentos más accesibles que permiten analizarlo manteniendo un enfoque representativo. La idea para crear estos experimentos sencillos surge del hecho de que si un determinado modelo presenta \textit{model-wise doble descent} para un determinado número de ejemplos de entrenamiento, si aumentamos dicho número de ejemplos, el pico del error de test se desplazará hacia la derecha. Este desplazamiento da lugar a una región específica, a la que denominamos zona de interés. Dentro de esta zona se verifica que entrenar con más ejemplos puede empeorar el rendimiento del modelo (véase la zona sombreada en color rojo de la Figura~\ref{fig:swdd}). Sin embargo, es importante resaltar que, fuera de esta zona, el incremento en la cantidad de ejemplos de entrenamiento suele tener un efecto positivo en el rendimiento del modelo, como nos dice la sabiduría clásica.\newline
 
-La idea para crear estos experimentos sencillos surge del hecho de que si un determinado modelo presenta \textit{model-wise doble descent} para un determinado número de ejemplos de entrenamiento, si aumentamos el número de ejemplos de entrenamiento, el pico del error de prueba se desplazará hacia la derecha. Este desplazamiento da lugar a una región específica, a la que denominamos zona de interés. Dentro de esta zona se verifica que entrenar con más ejemplos puede empeorar el rendimiento del modelo (véase la zona sombreada en color rojo de la Figura~\ref{fig:swdd}). Sin embargo, es importante resaltar que, fuera de esta zona específica, el entrenamiento con un mayor número de ejemplos suele ser beneficioso para el rendimiento general del modelo, es decir, el modelo debería obtener menor error de prueba.\newline
-
-Por tanto, para la realización de este experimento se utilizará la red $2$NN, donde el número de unidades de salida de la primera capa densa variará desde $1$ hasta $200$ y entrenaremos cada modelo durante $1000$ épocas. Además, se utilizará el dataset MNIST, sobre el que se extraeran $4000$ y $8000$ ejemplos para los distintos experimentos a realizar y a los que se les agregará un ruido del $10$\% en sus etiquetas.\newline
+Por tanto, para la realización de este experimento se utilizará la red $2$NN, donde el número de unidades de salida de la primera capa densa variará desde $1$ hasta $200$ y cada modelo es entrenado durante $1000$ épocas. Además, se utilizará el dataset MNIST, sobre el que se extraeran $4000$ y $8000$ ejemplos para los distintos experimentos a realizar y a los que se les agregará un ruido del $10$\% en sus etiquetas.\newline
 
 \begin{figure}[h!]
     \centering
@@ -468,10 +509,10 @@ Por tanto, para la realización de este experimento se utilizará la red $2$NN, 
         \centering
         \includegraphics[width=\linewidth]{img/experiments/sample-wise-dd2.png}
     \end{minipage}
-    \caption[Ejemplo de \textit{sample-wise double descent}.]{Ejemplo de \textit{sample-wise double descent} para la red $2$NN sobre dos subconjuntos de MNIST, utilizando $4000$ y $8000$ ejemplos de entrenamiento. A la izquierda aparece el resultado de una única realización del experimento. A la derecha aparece el resultado obtenido al realizar la media de $3$ experimentos. Se puede observar cómo, con el doble de datos (línea verde), no solo el punto de interpolación se desplaza a la derecha (apareciendo más tarde), sino también el error de test es, en la mayor parte de casos, menor cuando se emplean menos ejemplos de entrenamiento.}\label{fig:swdd}
+    \caption[Ejemplo de \textit{sample-wise double descent}.]{Ejemplo de \textit{sample-wise double descent} para la red $2$NN sobre dos subconjuntos de MNIST con $10\%$ de ruido añadido, utilizando $4000$ y $8000$ ejemplos de entrenamiento. A la izquierda aparece el resultado de una única realización del experimento. A la derecha aparece el resultado obtenido al realizar la media de $3$ experimentos. Se puede observar cómo, con el doble de datos (línea verde), no solo el punto de interpolación se desplaza a la derecha (apareciendo más tarde), sino también el error de test es, en la mayor parte de casos, menor cuando se emplean menos ejemplos de entrenamiento.}\label{fig:swdd}
 \end{figure}
 
-Al igual que ocurría al aumentar el nivel de ruido, si aumentamos el número de ejemplos de entrenamiento, el umbral de interpolación también se desplaza hacia la derecha (véase la imagen izquierda de la Figura~\ref{fig:swdd}). Es decir, el modelo requiere de un mayor número de parámetros para memorizar un mayor número de ejemplos de entrenamiento, lo que, en principio, resulta coherente con la complejidad efectiva del modelo y con la propia lógica.\newline
+Al igual que ocurría al aumentar el nivel de ruido, si aumentamos el número de ejemplos de entrenamiento, el umbral de interpolación también se desplaza hacia la derecha (véase Figura~\ref{fig:swdd}). Es decir, el modelo requiere de un mayor número de parámetros para memorizar un mayor número de ejemplos de entrenamiento, lo que, en principio, resulta coherente con la complejidad efectiva del modelo y con la propia lógica.\newline
 
 Finalmente, se muestra en la Tabla~\ref{tab:model_training_time} el tiempo de ejecución necesario para la realización de este experimento. Cabe destacar que, en el experimento donde se calcula la media de $3$ ejecuciones, se utiliza el modelo $2$NN hasta $50$ unidades (de $1$ en $1$) y, a partir de este valor, se suman las unidades de $10$ en $10$ hasta llegar a $200$ unidades, con el propósito de acelerar el entrenamiento fuera de la zona de interés que proporcionaba el primer experimento.\newline
 
@@ -481,10 +522,10 @@ Finalmente, se muestra en la Tabla~\ref{tab:model_training_time} el tiempo de ej
 \hline
 \textbf{Modelo}       & \textbf{Dataset} & \textbf{Entrenamiento} \\ 
 \hline
-$2$-NN ($1-100$)      & MNIST[$4000/1000$] ($10$\% label noise)        & $26$h $50$min       \\ 
-$2$-NN ($1-100$)      & MNIST[$8000/1000$]  ($10$\% label noise)       & $59$h       \\ 
-$2$-NN ($1-200$) $\times$ $3$     & MNIST[$4000/1000$]  ($10$\% label noise)       & $53$h $10$min       \\ 
-$2$-NN ($1-200$) $\times$ $3$      & MNIST[$8000/1000$]  ($10$\% label noise)       & $104$h $30$min       \\ 
+$2$NN ($1-100$)      & MNIST[$4000/1000$] ($10$\% label noise)        & $26$h $50$min       \\ 
+$2$NN ($1-100$)      & MNIST[$8000/1000$]  ($10$\% label noise)       & $59$h       \\ 
+$2$NN ($1-200$) $\times$ $3$     & MNIST[$4000/1000$]  ($10$\% label noise)       & $53$h $10$min       \\ 
+$2$NN ($1-200$) $\times$ $3$      & MNIST[$8000/1000$]  ($10$\% label noise)       & $104$h $30$min       \\ 
 $2$NN ($1-100$)          & MNIST[$12000/1000$] ($10$\% label noise)   & $65$h $50$min   \\ 
 $2$NN ($1-100$)          & MNIST[$16000/1000$] ($10$\% label noise)   & $102$h $49$min   \\ 
 \hline
@@ -499,12 +540,12 @@ En esta subsección, se analiza la relación entre el número de parámetros y e
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.5\textwidth]{img/experiments/ratioparamsexamples.png}
-    \caption[Ratio parámetros frente a número de ejemplos en el doble descenso.]{Error en entrenamiento (línea discontinua) y prueba (línea continua) de la arquitectura $2$NN sobre el dataset MNIST[$4000-16000$] y un $10$\% de ruido añadido a las etiquetas. Además, se muestra el umbral de interpolación (línea punteada) para cada número de ejemplos.}\label{fig:ratioparamsexamples}
+    \caption[Ratio parámetros frente a número de ejemplos en el doble descenso.]{Error en entrenamiento (línea discontinua) y prueba (línea continua) de la arquitectura $2$NN sobre el dataset MNIST[$4000-16000$] y $10$\% de ruido añadido a las etiquetas. Además, se muestra el umbral de interpolación (línea punteada) para cada número de ejemplos.}\label{fig:ratioparamsexamples}
 \end{figure}
 
 La Figura~\ref{fig:ratioparamsexamples} confirma nuevamente, como se mencionó previamente, que al aumentar el número de ejemplos de entrenamiento, el umbral de interpolación se desplaza hacia la derecha. Asimismo, este experimento valida que dicho pico se produce cuando el modelo alcanza un error de entrenamiento cercano a cero.\newline
 
-No obstante, a partir de este experimento también es posible extraer conclusiones sobre el ratio entre parámetros y ejemplos en el que aparece dicho umbral de interpolación, lo que permite estudiar su comportamiento a medida que ambos aumentan. En la Tabla~\ref{tab:ratioparamsexamples} se presentan los resultados obtenidos.\newline
+No obstante, a partir de este experimento también es posible extraer conclusiones sobre el ratio entre parámetros y ejemplos en el que aparece dicho umbral de interpolación, lo que permite estudiar su comportamiento a medida que ambos aumentan. A partir de los datos presentados en la Tabla~\ref{tab:ratioparamsexamples}, se observa que el cociente entre el número de parámetros y el número de ejemplos en el que se alcanza el umbral de interpolación tiende a decrecer a medida que aumenta la cantidad de datos de entrenamiento. Este comportamiento sugiere que, en el límite de un número suficientemente grande de ejemplos, dicho ratio se aproxima progresivamente a uno, indicando una relación más equilibrada entre la capacidad del modelo y la cantidad de datos necesarios para alcanzar el régimen de interpolación. Los tiempos de entrenamiento para este experimento se pueden observar en la Tabla~\ref{tab:model_training_time}.\newline
 
 \begin{table}[h]
     \centering
@@ -520,8 +561,6 @@ No obstante, a partir de este experimento también es posible extraer conclusion
     \end{tabular}
     \caption[Resumen del ratio parámetros/ejemplos.]{Ratio de parámetros/ejemplos relativo al umbral de interpolación para diferentes cantidades de ejemplos de entrenamiento.}\label{tab:ratioparamsexamples}
 \end{table}
-
-A partir de los datos presentados en la Tabla~\ref{tab:ratioparamsexamples}, se observa que el cociente entre el número de parámetros y el número de ejemplos en el que se alcanza el umbral de interpolación tiende a decrecer a medida que aumenta la cantidad de datos de entrenamiento. Este comportamiento sugiere que, en el límite de un número suficientemente grande de ejemplos, dicho ratio se aproxima progresivamente a uno, indicando una relación más equilibrada entre la capacidad del modelo y la cantidad de datos necesarios para alcanzar el régimen de interpolación. Los tiempos de entrenamiento para este experimento se pueden observar en la Tabla~\ref{tab:model_training_time}.\newline
 
 \subsubsection{Discusión}\label{subsubsec:discusion-numero-ejemplos}
 
@@ -542,70 +581,138 @@ En primer lugar, trabajaremos con la arquitectura $2$NN debido a su baja capacid
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.9\textwidth]{img/experiments/model-epoch2NNMNIST.png}
-    \caption[Doble descenso en función del tamaño del modelo y del número de épocas para la red $2$NN y un subconjunto de MNIST.]{A la izquierda se muestra el error de test en función del tamaño del modelo y del número de épocas de entrenamiento. A la derecha, se representa el error de entrenamiento de los modelos correspondientes. Todas las arquitecturas consideradas son redes $2$NN entrenadas en el subconjunto MNIST[$4000/1000$], con un $10\%$ de ruido añadido y durante $5000$ épocas. Se puede observar que, en términos globales, a mayor número de unidades (eje $X$) y mayor número de épocas (eje $Y$), mejores resultados a nivel de \textit{accuracy} en test (colores más oscuros). Más concretamente, hay una franja entre $5$ y $10^2$ épocas en donde parece que se acumulan los mejores resultados del primer descenso.}\label{fig:model-epoch2NNMNIST}
+    \includegraphics[width=0.95\textwidth]{img/experiments/model-epoch2NNMNIST.png}
+    \caption[Doble descenso en función del tamaño del modelo y del número de épocas para la red $2$NN y un subconjunto de MNIST.]{A la izquierda se muestra el error de test en función del tamaño del modelo y del número de épocas de entrenamiento. A la derecha, se representa el error de entrenamiento de los modelos correspondientes. Todas las arquitecturas consideradas son redes $2$NN entrenadas en el subconjunto MNIST[$4000/1000$], con $10\%$ de ruido añadido y durante $5000$ épocas. Se puede observar que, en términos globales, a mayor número de unidades (eje $X$) y mayor número de épocas (eje $Y$), mejores resultados a nivel de \textit{accuracy} en test (colores más oscuros). Más concretamente, hay una franja entre $5$ y $10^2$ épocas en donde parece que se acumulan los mejores resultados del primer descenso.}\label{fig:model-epoch2NNMNIST}
 \end{figure}
 
-La Figura~\ref{fig:model-epoch2NNMNIST} muestra de manera clara ambos tipos de doble descenso. Por otra parte, en la imagen de la derecha se muestra el umbral de interpolación (punto en el que el modelo obtiene un error de entrenamiento cercano a $0$), donde podemos observar que el cociente épocas/parámetros sigue una tendencia decreciente hasta estabilizarse, algo similar a lo que ocurre con el ratio parámetros/ejemplos (véase Subsección~\ref{subsubsec:ratio-parametros-ejemplos}). Este resultado sugiere que, a medida que el tamaño del modelo aumenta, el número de épocas necesarias para alcanzar el umbral de interpolación se reduce de forma progresiva, hasta alcanzar un régimen en el que este cociente se mantiene prácticamente constante. Dicho comportamiento refuerza la idea de que la interpolación se vuelve más eficiente en términos de entrenamiento cuando la capacidad del modelo es suficientemente grande.\newline
+La Figura~\ref{fig:model-epoch2NNMNIST} muestra de manera clara ambos tipos de doble descenso. Por otra parte, en la imagen de la derecha se muestra el umbral de interpolación (punto en el que el modelo obtiene un error de entrenamiento cercano a $0$), donde podemos observar como el cociente épocas/parámetros sigue una tendencia decreciente hasta estabilizarse, algo similar a lo que ocurre con el ratio parámetros/ejemplos (véase Subsección~\ref{subsubsec:ratio-parametros-ejemplos}). Este resultado sugiere que, a medida que el tamaño del modelo aumenta, el número de épocas necesarias para alcanzar el umbral de interpolación se reduce de forma progresiva, hasta alcanzar un régimen en el que este cociente se mantiene prácticamente constante. Dicho comportamiento refuerza la idea de que la interpolación se vuelve más eficiente en términos de entrenamiento cuando la capacidad del modelo es suficientemente grande.\newline
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.9\textwidth]{img/experiments/model-epoch2NNCIFAR10.png}
-    \caption[Doble descenso en función del tamaño del modelo y del número de épocas para la red $2$NN y un subconjunto de CIFAR-$10$.]{A la izquierda se muestra el error en prueba en función del tamaño del modelo y del número de épocas de entrenamiento. A la derecha, se representa el error de entrenamiento de los modelos correspondientes. Todas las arquitecturas consideradas son redes $2$NN entrenadas en el subconjunto CIFAR$10$[$4000/1000$], con un $20\%$ de ruido añadido y durante $5000$ épocas. Los resultados obtenidos en este experimento son inferiores en comparación con los del conjunto de datos anterior, lo cual puede atribuirse a que la arquitectura presenta una complejidad insuficiente.
-    }\label{fig:model-epoch2NNCIFAR10}
+    \includegraphics[width=0.95\textwidth]{img/experiments/model-epoch2NNCIFAR10.png}
+    \caption[Error en entrenamiento y test en función del tamaño del modelo y del número de épocas para la red $2$NN y un subconjunto de CIFAR$10$.]{A la izquierda se muestra el error en test en función del tamaño del modelo y del número de épocas de entrenamiento. A la derecha, se representa el error de entrenamiento de los modelos correspondientes. Todas las arquitecturas consideradas son redes $2$NN entrenadas en el subconjunto CIFAR$10$[$4000/1000$], con $20\%$ de ruido añadido, durante $5000$ épocas y con un \textit{batch size} de $128$. Los resultados obtenidos en este experimento son peores a los del conjunto de datos anterior, lo cual puede atribuirse a que la arquitectura presenta una complejidad insuficiente, lo que limita su capacidad de generalización.}\label{fig:model-epoch2NNCIFAR10}
 \end{figure}
 
-Por otro lado, la Figura~\ref{fig:model-epoch2NNCIFAR10} no muestra, al menos de forma tan evidente, el doble descenso en el conjunto de datos CIFAR$10$. Esto sugiere que, aunque se ha utilizado la misma cantidad de datos, la mayor complejidad de este conjunto (al tratarse de imágenes en formato RGB) implica que la arquitectura $2$NN no posee la capacidad suficiente para manifestar dicho comportamiento. Debido a este resultado, se decide no realizar el experimento con el conjunto de datos CIFAR$100$, ya que se anticipa un resultado igualmente desfavorable al intentar verificar el fenómeno, dado que ambos conjuntos comparten el mismo formato de imágenes (véase Tabla~\ref{tab:datasets}).\newline
+Por otro lado, la Figura~\ref{fig:model-epoch2NNCIFAR10} no muestra, al menos de forma tan evidente, el doble descenso en el conjunto de datos CIFAR$10$. Esto sugiere que, aunque se ha utilizado la misma cantidad de datos, la mayor complejidad de este conjunto (al tratarse de imágenes en formato RGB) implica que la arquitectura $2$NN no posee la capacidad suficiente para manifestar dicho comportamiento. Debido a este resultado, se decide no realizar el experimento con el conjunto de datos CIFAR$100$, ya que se anticipa un resultado igualmente desfavorable, dado que ambos conjuntos comparten el mismo formato de imágenes (véase Tabla~\ref{tab:datasets}).\newline
+
+Finalmente, en la Tabla~\ref{tab:2nn_model-epochwise} se recogen los tiempos de entrenamiento requeridos para la realización de este experimento.
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Modelo}       & \textbf{Dataset} & \textbf{Entrenamiento} \\ 
+    \hline
+    $2$NN ($1-100$)      & MNIST[$4000/1000$] ($10$\% label noise)        & $179$h $5$min \\ 
+    $2$NN ($1-100$)      & CIFAR$10$[$4000/1000$]  ($20$\% label noise)   & $213$h $32$min \\
+    \hline
+    \end{tabular}
+    \caption[Resumen de los experimentos para el doble descenso por complejidad del modelo y épocas para la red $2$NN.]{Resumen de los experimentos para el doble descenso por complejidad del modelo y épocas para la red $2$NN.}\label{tab:2nn_model-epochwise}
+\end{table}
 
 \subsubsection{3CNN}\label{subsubsec:model-epoch-wise-3CNN}
 
-Continuamos con los experimentos realizados para la arquitectura $3$CNN, la cual, como vimos en secciones anteriores, es más potente que la arquitectura $2$NN debido a su mayor número de parámetros y a la inclusión de bloques convolucionales, que facilitan la extracción de características de las imágenes.\newline
+Continuamos con los experimentos realizados para la arquitectura $3$CNN, la cual es más potente que la arquitectura $2$NN debido a su mayor número de parámetros y a la inclusión de bloques convolucionales, que facilitan la extracción de características de las imágenes. Es por esto que, para la realización de estos experimentos, se considerarán subconjuntos de datos con un mayor número de ejemplos que en el apartado anterior.\newline
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.9\textwidth]{img/experiments/model-epoch3CNNMNIST4k.png}
-    \caption[Doble descenso en función del tamaño del modelo y del número de épocas para la red $3$CNN y un subconjunto de MNIST.]{A la izquierda se muestra el error en prueba en función del tamaño del modelo y del número de épocas de entrenamiento. A la derecha, se representa el error de entrenamiento de los modelos correspondientes. Todas las arquitecturas consideradas son redes $3$CNN entrenadas en el subconjunto MNIST[$4000/1000$], con un $10\%$ de ruido añadido y durante $5000$ épocas.}\label{fig:model-epoch3CNNMNIST4k}
+    \includegraphics[width=0.95\textwidth]{img/experiments/model-epoch3CNNMNIST30k.png}
+    \caption[Doble descenso en función del tamaño del modelo y del número de épocas para la red $3$CNN y un subconjunto de MNIST.]{A la izquierda se muestra el error en prueba en función del tamaño del modelo y del número de épocas de entrenamiento. A la derecha, se representa el error de entrenamiento de los modelos correspondientes. Todas las arquitecturas consideradas son redes $3$CNN entrenadas en el subconjunto MNIST[$30000/5000$], con $10\%$ de ruido añadido, durante $1000$ épocas y con un \textit{batch size} de $128$.}\label{fig:model-epoch3CNNMNIST30k}
+\end{figure}
+
+La Figura~\ref{fig:model-epoch3CNNMNIST30k} muestra con claridad ambos tipos de doble descenso sobre un subconjunto del conjunto de datos MNIST. Asimismo, se observa que el error obtenido para esta arquitectura es menor que el de la arquitectura anterior, lo que es coherente con su mayor capacidad.\newline
+
+Por otra parte, las Figuras~\ref{fig:model-epoch3CNNCIFAR10} y~\ref{fig:model-epoch3CNNCIFAR10025k} también muestran ambos tipos de doble descenso, aunque de forma menos evidente y con variaciones abruptas tanto en el error de entrenamiento como en el de test sobre dos subconjutos de datos de CIFAR$10$ y CIFAR$100$. Estos saltos se analizan con más detalle en el Apéndice~\ref{ap:apendiceD}. Asimismo, el error obtenido es mayor, dado que trabajamos con imágenes en formato RGB y de mayor dimensionalidad.\newline
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.95\textwidth]{img/experiments/model-epoch3CNNCIFAR1025k.png}
+    \caption[Doble descenso en función del tamaño del modelo y del número de épocas para la red $3$CNN y un subconjunto de CIFAR$10$.]{A la izquierda se muestra el error en prueba en función del tamaño del modelo y del número de épocas de entrenamiento. A la derecha, se representa el error de entrenamiento de los modelos correspondientes. Todas las arquitecturas consideradas son redes $3$CNN entrenadas en el subconjunto CIFAR$10$[$25000/5000$], con $20\%$ de ruido añadido, durante $1000$ épocas y con un \textit{batch size} de $128$.}\label{fig:model-epoch3CNNCIFAR10}
 \end{figure}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.9\textwidth]{img/experiments/model-epoch3CNNMNIST30k.png}
-    \caption[Doble descenso en función del tamaño del modelo y del número de épocas para la red $3$CNN y un subconjunto de MNIST.]{A la izquierda se muestra el error en prueba en función del tamaño del modelo y del número de épocas de entrenamiento. A la derecha, se representa el error de entrenamiento de los modelos correspondientes. Todas las arquitecturas consideradas son redes $3$CNN entrenadas en el subconjunto MNIST[$30000/5000$], con un $10\%$ de ruido añadido y durante $1000$ épocas.}\label{fig:model-epoch3CNNMNIST30k}
+    \includegraphics[width=0.95\textwidth]{img/experiments/model-epoch3CNNCIFAR10025k.png}
+    \caption[Doble descenso en función del tamaño del modelo y del número de épocas para la red $3$CNN y un subconjunto de CIFAR$100$.]{A la izquierda se muestra el error en prueba en función del tamaño del modelo y del número de épocas de entrenamiento. A la derecha, se representa el error de entrenamiento de los modelos correspondientes. Todas las arquitecturas consideradas son redes $3$CNN entrenadas en el subconjunto CIFAR$100$[$25000/5000$], con $20\%$ de ruido añadido, durante $1000$ épocas y con un \textit{batch size} de $128$.}\label{fig:model-epoch3CNNCIFAR10025k}
 \end{figure}
 
-Las Figuras~\ref{fig:model-epoch3CNNMNIST4k} y~\ref{fig:model-epoch3CNNMNIST30k} muestran con claridad ambos tipos de doble descenso sobre dos subconjuntos del conjunto de datos MNIST. Asimismo, se observa que el error obtenido para esta arquitectura es menor que el de la arquitectura anterior, lo que es coherente con su mayor capacidad.\newline
+Finalmente, en la Tabla~\ref{tab:3cnn_model-epochwise} se recogen los tiempos de entrenamiento requeridos para la realización de este experimento.
 
-Por otra parte, las Figuras~\ref{fig:model-epoch3CNNCIFAR10} y~\ref{fig:model-epoch3CNNCIFAR10025k} también muestran ambos tipos de doble descenso, aunque de forma menos clara y con variaciones abruptas tanto en el error de entrenamiento como en el de prueba sobre los conjuntos de datos de CIFAR$10$ y CIFAR$100$. Estos saltos se analizan con más detalle en el Apéndice~\ref{ap:apendiceC}. Asimismo, el error obtenido es mayor, dado que trabajamos con imágenes en formato RGB y de mayor dimensionalidad.\newline
-
-\begin{figure}[h]
+\begin{table}[h!]
     \centering
-    \includegraphics[width=0.9\textwidth]{img/experiments/model-epoch3CNNCIFAR10.png}
-    \caption[Doble descenso en función del tamaño del modelo y del número de épocas para la red $3$CNN y un subconjunto de CIFAR$10$.]{A la izquierda se muestra el error en prueba en función del tamaño del modelo y del número de épocas de entrenamiento. A la derecha, se representa el error de entrenamiento de los modelos correspondientes. Todas las arquitecturas consideradas son redes $3$CNN entrenadas en el subconjunto CIFAR$10$[$25000/5000$], con un $20\%$ de ruido añadido y durante $1000$ épocas.}\label{fig:model-epoch3CNNCIFAR10}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.8\textwidth]{img/experiments/model-epoch3CNNCIFAR10025k.png}
-    \caption[Doble descenso en función del tamaño del modelo y del número de épocas para la red $3$CNN y un subconjunto de CIFAR$100$.]{A la izquierda se muestra el error en prueba en función del tamaño del modelo y del número de épocas de entrenamiento. A la derecha, se representa el error de entrenamiento de los modelos correspondientes. Todas las arquitecturas consideradas son redes $3$CNN entrenadas en el subconjunto CIFAR$100$[$25000/5000$], con un $20\%$ de ruido añadido y durante $100$ épocas.}\label{fig:model-epoch3CNNCIFAR10025k}
-\end{figure}
+    \begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Modelo}       & \textbf{Dataset} & \textbf{Entrenamiento} \\ 
+    \hline
+    $3$CNN ($1-64$)      & MNIST[$30000/5000$] ($10$\% label noise)        & $179$h $5$min \\ 
+    $3$CNN ($1-64$)      & CIFAR$10$[$25000/5000$]  ($20$\% label noise)   & $213$h $32$min \\
+    $3$CNN ($1-64$)      & CIFAR$100$[$25000/5000$]  ($20$\% label noise)   & $213$h $32$min \\
+    \hline
+    \end{tabular}
+    \caption[Resumen de los experimentos para el doble descenso por complejidad del modelo y épocas para la red $3$CNN.]{Resumen de los experimentos para el doble descenso por complejidad del modelo y épocas para la red $3$CNN.}\label{tab:3cnn_model-epochwise}
+\end{table}
 
 \subsubsection{ResNet18 modificada}\label{subsubsec:model-epoch-wise-ResNet18 modificada}
 
-Finalmente, se presentan los experimentos realizados con la arquitectura ResNet$18$ modificada, la cual posee el mayor número de parámetros entre las consideradas. Estos experimentos se vieron condicionados por la limitación impuesta por la Universidad de Granada en cuanto al tiempo máximo de uso de los nodos de cómputo. Como consecuencia, el número de épocas de entrenamiento se redujo de forma significativa, lo que ha afectado de manera significativa a la precisión de los resultados obtenidos.\newline
+Finalmente, se presentan los experimentos realizados con la arquitectura ResNet$18$ modificada, la cual posee el mayor número de parámetros entre las arquitecturas consideradas en este estudio. Dada su mayor capacidad de representación, se utilizan los conjuntos de datos en su totalidad para aprovechar al máximo su potencial.\newline
+
+Sin embargo, estos experimentos se vieron condicionados por la limitación impuesta por la Universidad de Granada en cuanto al tiempo máximo de uso de los nodos de cómputo. Como consecuencia, el número de épocas de entrenamiento se redujo de forma significativa, lo que ha afectado de manera significativa a la precisión de los resultados obtenidos.\newline
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.8\textwidth]{img/experiments/model-epochPreActResNet18CIFAR100.png}
-    \caption[Doble descenso en función del tamaño del modelo y del número de épocas para la red ResNet$18$ y el conjunto CIFAR$100$.]{A la izquierda se muestra el error en prueba en función del tamaño del modelo y del número de épocas de entrenamiento. A la derecha, se representa el error de entrenamiento de los modelos correspondientes. Todas las arquitecturas consideradas son redes ResNet$18$ entrenadas en el conjunto CIFAR$100$, con un $20\%$ de ruido añadido y durante $100$ épocas.}\label{fig:model-epochPreActResNet18CIFAR100}
+    \includegraphics[width=0.95\textwidth]{img/experiments/model-epochPreActResNet18MNIST.png}
+    \caption[Doble descenso en función del tamaño del modelo y del número de épocas para la red ResNet$18$ y el conjunto MNIST.]{A la izquierda se muestra el error en prueba en función del tamaño del modelo y del número de épocas de entrenamiento. A la derecha, se representa el error de entrenamiento de los modelos correspondientes. Todas las arquitecturas consideradas son redes ResNet$18$ entrenadas en el conjunto MNIST, con $10\%$ de ruido añadido y durante $200$ épocas.}\label{fig:model-epochPreActResNet18MNIST}
 \end{figure}
-
-Cabe destacar que, para esta arquitectura, no se observan los saltos bruscos al incrementar el número de épocas, como se muestra en la Figura~\ref{fig:epoch-wisePreActResNet18over}. En dicha figura se presentan dos variantes modificadas de la arquitectura ResNet$18$ operando en el régimen sobreparametrizado, donde se evidencia de forma clara el fenómeno de \textit{epoch-wise double descent}. Este comportamiento se analiza con mayor detalle en el Apéndice~\ref{ap:apendiceC}. No obstante, de forma resumida, puede atribuirse a la presencia de conexiones residuales en la arquitectura, las cuales suavizan el paisaje de la función de pérdida, evitando que sea demasiado caótico.\newline
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.7\textwidth]{img/experiments/epoch-wisePreActResNet18(45,64).png}
-    \caption[Doble descenso en función del número de épocas para dos arquitecturas ResNet$18$ sobreparametrizadas y el conjunto CIFAR$10$.]{Doble descenso en función del número de épocas para dos arquitecturas ResNet$18$ sobreparametrizadas y el conjunto CIFAR$10$ con aumento de datos. Ambas arquitecturas han sido entrenadas durante $2000$ épocas.}\label{fig:epoch-wisePreActResNet18over}
+    \includegraphics[width=0.95\textwidth]{img/experiments/model-epochPreActResNet18CIFAR10augmented.png}
+    \caption[Doble descenso en función del tamaño del modelo y del número de épocas para la red ResNet$18$ y el conjunto CIFAR$10$.]{A la izquierda se muestra el error en prueba en función del tamaño del modelo y del número de épocas de entrenamiento. A la derecha, se representa el error de entrenamiento de los modelos correspondientes. Todas las arquitecturas consideradas son redes ResNet$18$ entrenadas en el conjunto CIFAR$10$ con aumento de datos, $20\%$ de ruido añadido y durante $200$ épocas.}\label{fig:model-epochPreActResNet18CIFAR10}
 \end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.95\textwidth]{img/experiments/model-epochPreActResNet18CIFAR100augmented.png}
+    \caption[Doble descenso en función del tamaño del modelo y del número de épocas para la red ResNet$18$ y el conjunto CIFAR$100$.]{A la izquierda se muestra el error en prueba en función del tamaño del modelo y del número de épocas de entrenamiento. A la derecha, se representa el error de entrenamiento de los modelos correspondientes. Todas las arquitecturas consideradas son redes ResNet$18$ entrenadas en el conjunto CIFAR$100$ con aumento de datos, $20\%$ de ruido añadido y durante $200$ épocas.}\label{fig:model-epochPreActResNet18CIFAR100}
+\end{figure}
+
+Las Figuras~\ref{fig:model-epochPreActResNet18MNIST},~\ref{fig:model-epochPreActResNet18CIFAR10} y~\ref{fig:model-epochPreActResNet18CIFAR100} muestran ambos tipos de doble descenso. No obstante, cabe destacar que el \textit{epoch-wise double descent} no es tan notorio debido a la baja cantidad de épocas utilizadas, como consecuencia de la restricción impuesta por la propia UGR.\newline
+
+Cabe destacar que, para esta arquitectura, no se observan los saltos bruscos al incrementar el número de épocas en ninguno de los conjuntos de datos utilizados. Esto puede observarse con más detalle en la Figura~\ref{fig:epoch-wisePreActResNet18over}, donde se presentan dos variantes modificadas de la arquitectura ResNet$18$ operando en el régimen sobreparametrizado, donde se evidencia de forma clara el \textit{epoch-wise double descent}. Este comportamiento se analiza con mayor detalle en el Apéndice~\ref{ap:apendiceD}. No obstante, de forma resumida, se atribuye a la presencia de conexiones residuales en la arquitectura, las cuales suavizan el paisaje de la función de pérdida, evitando que sea demasiado caótico y y facilitando la convergencia suave del modelo.\newline
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/experiments/PreActResNet18(45).png}
+        \caption{Doble descenso en función del número de épocas para la arquitectura ResNet$18$ con $k = 45$.}\label{fig:PreActResNet18(45)}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/experiments/PreActResNet18(64).png}
+        \caption{Doble descenso en función del número de épocas para la arquitectura ResNet$18$ con $k = 64$.}\label{fig:PreActResNet18(64)}
+    \end{subfigure}
+    \caption[Doble descenso en función del número de épocas para dos arquitecturas ResNet$18$ sobreparametrizadas y el conjunto CIFAR$10$.]{Doble descenso en función del número de épocas para dos arquitecturas ResNet$18$ sobreparametrizadas y el conjunto CIFAR$10$ con aumento de datos y $20\%$ de ruido añadido, entrenadas durante $2000$ épocas.}\label{fig:epoch-wisePreActResNet18over}
+\end{figure}
+
+Finalmente, en la Tabla~\ref{tab:preactresnet_model-epochwise} se recogen los tiempos de entrenamiento requeridos para la realización de este experimento.
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Modelo}       & \textbf{Dataset} & \textbf{Entrenamiento} \\ 
+    \hline
+    PreActResNet$18$ ($1-64$) & MNIST ($10$\% label noise)        & $68$h $33$min \\ 
+    PreActResNet$18$ ($1-64$) & CIFAR$10$  ($20$\% label noise)   & $86$h $17$min \\
+    PreActResNet$18$ ($1-64$) & CIFAR$100$  ($20$\% label noise)   & $88$h $51$min \\
+    PreActResNet$18$ ($45$) & CIFAR$10$  ($20$\% label noise)   & $21$h $26$min \\
+    PreActResNet$18$ ($64$) & CIFAR$10$  ($20$\% label noise)   & $23$h \\
+    \hline
+    \end{tabular}
+    \caption[Resumen de los experimentos para el doble descenso por complejidad del modelo y épocas para la red ResNet$18$ modificada.]{Resumen de los experimentos para el doble descenso por complejidad del modelo y épocas para la red ResNet$18$ modificada.}\label{tab:preactresnet_model-epochwise}
+\end{table}
 
 \subsubsection{Discusión}\label{subsubsec:discusion-model-epoch}
 
@@ -627,16 +734,16 @@ Para la realización de este experimento, se utilizan las arquitecturas $2$NN y 
 
 \begin{figure}[htbp]
     \centering
-    \begin{subfigure}[b]{0.42\textwidth}
+    \begin{subfigure}[b]{0.45\textwidth}
         \centering
         \includegraphics[width=\textwidth]{img/experiments/2nnvsdeepnn.png}
-        \caption{Error de entrenamiento (línea discontinua) y prueba (línea continua) para dos arquitecturas (DeepNN y $2$NN) con similar número de parámetros pero distinta configuración.}\label{fig:2nnvsdeepnn}
+        \caption{Error de entrenamiento (línea discontinua) y prueba (línea continua) para dos arquitecturas (DeepNN y $2$NN) con similar número de parámetros pero distinta configuración sobre el subconjunto MNIST[$4000/1000$] con $10\%$ de ruido añadido.}\label{fig:2nnvsdeepnn}
     \end{subfigure}
     \hfill 
-    \begin{subfigure}[b]{0.42\textwidth} 
+    \begin{subfigure}[b]{0.45\textwidth} 
         \centering
         \includegraphics[width=\textwidth]{img/experiments/3cnnvsdeepcnn.png}
-        \caption{Error de entrenamiento (línea discontinua) y prueba (línea continua) para dos arquitecturas (DeepCNN y $3$CNN) con similar número de parámetros pero distinta configuración.}\label{fig:3cnnvsdeepcnn}
+        \caption{Error de entrenamiento (línea discontinua) y prueba (línea continua) para dos arquitecturas (DeepCNN y $3$CNN) con similar número de parámetros pero distinta configuración sobre el subconjunto CIFAR$10$[$25000/5000$] con $20\%$ de ruido añadido y un \textit{batch size} de $128$.}\label{fig:3cnnvsdeepcnn}
     \end{subfigure}
     
     \caption[Comparativa del doble descenso entre arquitecturas anchas y profundas.]{Comparativa del doble descenso entre arquitecturas anchas y profundas.}\label{fig:width-depth}
@@ -680,24 +787,30 @@ Para concluir, se presenta la Tabla~\ref{tabla:resumen-experimentos} como resume
     \multirow{2}{*}{Sintético} & Legendre base & $0$ & \cmark & -- & -- &~\ref{fig:legendre1DDD},~\ref{fig:legendrehyperbolicDD} \\
     & Polynomial base & $0$ & \xmark & -- & -- &~\ref{fig:OLS1DDD} \\
     \midrule
-    \multirow{6}{*}{MNIST} & \multirow{3}{*}{$2$NN} & $0$ & \xmark & \xmark & -- &~\ref{fig:noise-wise-dd} \\
+    \multirow{8}{*}{MNIST} & \multirow{3}{*}{$2$NN} & $0$ & \xmark & \xmark & -- &~\ref{fig:noise-wise-dd} \\
     &  & $10$ & \cmark & \cmark & \cmark &~\ref{fig:swdd},~\ref{fig:ratioparamsexamples} \\
     &  & [$20-40$] & \cmark & \cmark & -- &~\ref{fig:noise-wise-dd} \\
     \cmidrule(lr){2-7}
     & DeepNN & $10$ & \cmark & -- & -- &~\ref{fig:width-depth} \\
     \cmidrule(lr){2-7}
-    & $3$CNN & $10$ & \cmark & \cmark & -- &~\ref{fig:model-epoch3CNNMNIST4k},~\ref{fig:model-epoch3CNNMNIST30k} \\
+    & $3$CNN & $10$ & \cmark & \cmark & -- &~\ref{fig:model-epoch3CNNMNIST30k} \\
+    \cmidrule(lr){2-7}
+    & PreActResNet$18$ & $10$ & \cmark & \cmark & -- &~\ref{fig:model-epochPreActResNet18MNIST} \\
     \midrule
-    \multirow{4}{*}{CIFAR$10$} & $2$NN & $15$ & \xmark & \xmark & -- &~\ref{fig:model-epoch2NNCIFAR10} \\
+    \multirow{6}{*}{CIFAR$10$} & $2$NN & $20$ & \xmark & \xmark & -- &~\ref{fig:model-epoch2NNCIFAR10} \\
     \cmidrule(lr){2-7}
     & $3$CNN & $20$ & \cmark & \cmark & -- & ~\ref{fig:model-epoch3CNNCIFAR10} \\
     \cmidrule(lr){2-7}
     & DeepCNN & $20$ & \cmark & -- & -- & ~\ref{fig:width-depth} \\
+    \cmidrule(lr){2-7}
+    & PreActResNet$18$ & $20$ & \cmark & \cmark & -- & ~\ref{fig:model-epochPreActResNet18CIFAR10} \\
     \midrule
-    \multirow{1}{*}{CIFAR$100$} & $3$CNN & $20$ & \cmark & \xmark & -- & ~\ref{fig:model-epoch3CNNCIFAR10025k} \\
+    \multirow{3}{*}{CIFAR$100$} & $3$CNN & $20$ & \cmark & \xmark & -- & ~\ref{fig:model-epoch3CNNCIFAR10025k} \\
+    \cmidrule(lr){2-7}
+    & PreActResNet$18$ & $20$ & \cmark & \xmark & -- & ~\ref{fig:model-epochPreActResNet18CIFAR100} \\
     \bottomrule
     \end{tabular}
-    \caption[Resumen de los experimentos realizados sobre el doble descenso.]{Resumen de los experimentos realizados sobre el doble descenso en función del conjunto de datos, la arquitectura y el porcentaje de ruido.}\label{tabla:resumen-experimentos}
+    \caption[Resumen de los experimentos realizados sobre el doble descenso.]{Resumen de los experimentos realizados para los distintos tipso de doble descenso en función del conjunto de datos, la arquitectura y el porcentaje de ruido.}\label{tabla:resumen-experimentos}
 \end{table}
 
 \endinput

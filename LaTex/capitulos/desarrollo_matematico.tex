@@ -1,7 +1,7 @@
 % !TeX root = ../tfg.tex
 % !TeX encoding = utf8
 
-\chapter{Análisis teórico del Deep Double Descent}\label{ch:analisis-teorico-ddd}
+\chapter{Análisis Teórico del Deep Double Descent}\label{ch:analisis-teorico-ddd}
 
 En este capítulo, nos vamos a encargar de abordar, de manera teórica, el doble descenso profundo. En primer lugar, lo definiremos con la mayor precisión posible, ofreciendo una intuición clara a partir de un problema de regresión. A continuación, se presentarán los principales desarrollos presentes en la literatura científica, así como algunos avances recientes en el tema. Para concluir el capítulo, se abordará la teoría de la aproximación no lineal, ya que, a priori, presenta ciertas analogías con este fenómeno.\newline
 
@@ -39,7 +39,7 @@ Esta hipótesis es informal en varios sentidos. En primer lugar, no disponemos d
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.65\linewidth]{img/planteamiento-teorico-dd.png}
+    \includegraphics[width=0.6\linewidth]{img/planteamiento-teorico-dd.png}
     \caption[Ejemplo de doble descenso con las distintas zonas de parametrización.]{Ejemplo de doble descenso con las distintas zonas de parametrización. Se puede observar la tradicional forma de ``U'' en la zona clásica, seguida de la zona crítica, donde el error de generalización es incierto, ya que puede aumentar o disminuir, y, finalmente, la zona moderna, donde el error de generalización es incluso menor que el obtenido en la zona clásica.}\label{fig:planteamiento-teorico-dd.png}
 \end{figure}
 
@@ -51,7 +51,7 @@ Aun habiendo unificado ambos puntos de vista, la descomposición del error en t�
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.8\linewidth]{img/bias-variance-peak.png}
+    \includegraphics[width=0.9\linewidth]{img/bias-variance-peak.png}
     \caption[Curvas típicas del error en función del sesgo y la varianza~\cite{Yang2020}.]{Curvas típicas del error (línea negra) en función del sesgo (línea azul) y la varianza (línea roja)~\cite{Yang2020}. A la izquierda, el término de sesgo domina completamente, lo que da lugar a un error decreciente. En la región central, el sesgo y la varianza predominan en zonas distintas, produciéndose así el doble descenso. Finalmente, a la derecha, el término de varianza se vuelve dominante, generando una curva con forma de campana en la que el error inicialmente aumenta.}\label{fig:bias-variance-peak}
 \end{figure}
 
@@ -69,7 +69,7 @@ En consecuencia, el verdadero problema radica en comprender por qué el algoritm
 
 De cara a ofrecer una primera intuición sencilla sobre la ocurrencia del doble descenso, consideramos un problema de regresión lineal (basado en~\cite{Schaeffer2023}) que resolveremos utilizando el método de mínimos cuadradados ordinarios (OLS), cuya solución de norma mínima viene dada por la pseudoinversa, como vimos en la Sección~\ref{sec:svd-pseudoinversa}. Además, para comprender dónde y cómo se produce este suceso, estudiaremos las dos zonas de parametrización del modelo de regresión lineal, analizando los diferentes errores que se producen en cada una de ellas.\newline
 
-Supongamos que nos enfrentamos ante un problema de regresión lineal en el que disponemos de $N$ ejemplos, donde cada ejemplo está formado por los respectivos datos de entrada y su correspondiente etiqueta. Sea $D$ la dimensión de los puntos de entrenamiento y $P$ el número de parámetros a ajustar para realizar la regresión lineal. De esta manera, nuestro conjunto de entrenamiento $\mathcal{D}$ está formado por $N$ pares de la forma $(x,y)$, donde $x \in \mathbb{R}^{D}$ representa un punto en el plano $D$-dimensional e $y \in \mathbb{R}$ la variable objetivo.\newline
+Supongamos que nos enfrentamos a un problema de regresión lineal en el que disponemos de $N$ ejemplos, donde cada ejemplo está formado por los respectivos datos de entrada y su correspondiente etiqueta. Sea $D$ la dimensión de los puntos de entrenamiento y $P$ el número de parámetros a ajustar para realizar la regresión lineal. De esta manera, nuestro conjunto de entrenamiento $\mathcal{D}$ está formado por $N$ pares de la forma $(x,y)$, donde $x \in \mathbb{R}^{D}$ representa un punto en el plano $D$-dimensional e $y \in \mathbb{R}$ es la variable objetivo.\newline
 
 Para resolver el problema de regresión lineal, debemos abordar el clásico problema de minimización de mínimos cuadrados, formulado como sigue
 
@@ -85,10 +85,10 @@ En la zona infraparametrizada, es decir, cuando el número de ejemplos de entren
     w_{under} = {(X^{T}X)}^{-1}X^{T}Y.
 \end{equation}\newline
 
-Por otra parte, en la zona sobreparametrizada, es decir, cuando el número de parámetros es mayor que el número de ejemplos de entrenamiento $(N < P)$, no se puede resolver el problema de minimización~\eqref{eq:minimos-cuadrados1} de manera convencional, dado que estaría mal planteado, debido al hecho de que existirían múltiples soluciones, ya que habría menos restricciones que parámetros. Por tanto, debemos de seleccionar un problema de optimización distinto, que también se encuentre sujeto a las restricciones impuestas por los ejemplos de entrenamiento. En este contexto, elegimos el problema más simple que se podría imaginar, dado por:
+Por otra parte, en la zona sobreparametrizada, es decir, cuando el número de parámetros es mayor que el número de ejemplos de entrenamiento $(N < P)$, no se puede resolver el problema de minimización~\eqref{eq:minimos-cuadrados1} de manera convencional, dado que estaría mal planteado, debido al hecho de que existirían múltiples soluciones, ya que habría menos restricciones que parámetros. Por tanto, debemos seleccionar un problema de optimización distinto, que también se encuentre sujeto a las restricciones impuestas por los ejemplos de entrenamiento. En este contexto, elegimos el problema más simple que se podría imaginar, dado por:
 
 \begin{equation}\label{eq:minimos-cuadrados2}
-    \arg\min_{w}\| w \|^{2}, \quad \text{sujeto a} \; \forall n \in \{1, \ldots, N\} \quad x_n \cdot w = y_n.
+    \arg\min_{w}\| w \|^{2}, \quad \text{sujeto a} \; x_n \cdot w = y_n \quad \forall n \in \{1, \ldots, N\}.
 \end{equation}\newline
 
 El problema de optimización~\eqref{eq:minimos-cuadrados2} busca el vector de parámetros con menor norma que satisface $x_n \cdot w = y_n$ para todos los ejemplos de entrenamiento. La solución a este problema de optimización también se obtiene mediante la pseudoinversa, pero en este caso, la pseudoinversa se calcula conociendo que la matriz $X$ tiene rango completo en esta región y cuenta con filas linealmente independientes. Así, la pseudoinversa viene dada por $X^{T}{(XX^{T})}^{-1}$ (véase~\ref{sec:svd-pseudoinversa}). De esta forma, el vector de pesos $w$ puede ser expresado como:
@@ -173,7 +173,7 @@ LLegados a este punto, podemos analizar con mayor claridad las diferencias entre
 
 Esto provoca la pérdida de información sobre la relación lineal óptima del vector de pesos $w^{*}$, lo que a su vez aumenta el error de predicción. Este término es el asociado al sesgo (véase Sección~\ref{sec:capitulo-bias-variance-tradeoff}), pues, al encontrarnos en la zona sobreparametrizada, disponemos de gran cantidad de hipótesis ligadas a la falta de suficientes restricciones en comparación con el número de parámetros. Esto favorece que la hipótesis ideal se encuentre dentro de ese conjunto de posibles soluciones, lo cual, a su vez, facilita que este término sea cercano a cero.\newline
 
-El otro término, $\sum_{r=1}^{R}\frac{1}{\sigma_r}(x_{test} \cdot v_r)(u_r \cdot E)$, representa la influencia de cada componente singular y es el causante del doble descenso en una regresión lineal resuelta mediante el método OLS. Este término se conoce como varianza y refleja el impacto de modelar las fluctuaciones de los datos en las direcciones singulares y si dicho balanceo está correlacionado con los objetivos de regresión.\newline
+El otro término, $\sum_{r=1}^{R}\frac{1}{\sigma_r}(x_{test} \cdot v_r)(u_r \cdot E)$, representa la influencia de cada componente singular y es el causante del doble descenso en una regresión lineal resuelta mediante el método OLS. Este término se conoce como varianza y refleja el impacto de modelar las fluctuaciones de los datos en las direcciones singulares y si dicho equilibrio está correlacionado con los objetivos de regresión.\newline
 
 \begin{figure}[h]
     \centering
@@ -216,7 +216,7 @@ De manera similar a la sección anterior, consideramos el siguiente problema de 
     \min_{w \in \mathbb{R}^{D}} \mathcal{L}(w) = \min_{w \in \mathbb{R}^{D}} \frac{1}{2}\| Xw - y \|^{2}
 \end{equation}
 
-donde en la Ecuación~\eqref{eq:regresion-lineal-gd} se agrega el término $\frac{1}{2}$ para simplificar los cáculos de las derivadas en pasos posteriores. De esta forma, podemos enfocarnos en analizar las propiedades de la solución que encuentra el descenso de gradiente.\newline
+donde en la ecuación~\eqref{eq:regresion-lineal-gd} se agrega el término $\frac{1}{2}$ para simplificar los cáculos de las derivadas en pasos posteriores. De esta forma, podemos enfocarnos en analizar las propiedades de la solución que encuentra el descenso de gradiente.\newline
 
 \begin{teorema}
     El conjunto de soluciones de un problema de mínimos cuadrados, denotado por $\mathcal{S}_{LS}$, es exactamente el siguiente:
@@ -227,7 +227,7 @@ donde en la Ecuación~\eqref{eq:regresion-lineal-gd} se agrega el término $\fra
 \end{teorema}
 
 \begin{proof}
-    Podemos expresar el error de la Ecuación~\eqref{eq:regresion-lineal-gd} de la siguiente forma: $Xw - y = Xw - XX^{\dagger}y +XX^{\dagger}y - y = Xw - XX^{\dagger}y - (I_D - XX^{\dagger})y$.\newline
+    Podemos expresar el error de la ecuación~\eqref{eq:regresion-lineal-gd} de la siguiente forma: $Xw - y = Xw - XX^{\dagger}y +XX^{\dagger}y - y = Xw - XX^{\dagger}y - (I_D - XX^{\dagger})y$.\newline
 
     A partir de la última ecuación, sabemos que $XX^{\dagger}y$ representa la proyección de $y$ sobre el espacio columna de $X$ y $(I_D - XX^{\dagger})y$ corresponde a su componente ortogonal. Esto se debe a que $XX^{\dagger}y$ es la proyección sobre $Im(X)$ y $(I_D - XX^{\dagger})y$ es la proyección en el complemento ortogonal de $Im(X)$, es decir, el $\ker(X^{T})$. Para verificar estas afirmaciones, basta utilizar ambas propiedades de manera conjunta en el Lema~\ref{lema:propiedades-pseudoinversa}.\newline
 
@@ -268,7 +268,7 @@ Una vez que conocemos el conjunto de soluciones para nuestro problema de optimiz
     En particular, en los dos últimos casos, dado que $\ker(X)$ es trivial, la solución del problema es única.\newline
 \end{observacion}
 
-Por tanto, nos interesa centrarnos en analizar qué tan buena es la solución que proporciona el descenso de gradiente en la región sobreparametrizada, es decir, cuando $N < D$, dado que es en este caso cuando se generan múltiples soluciones, mientras que en los otros casos la solución es única.
+Por tanto, nos interesa centrarnos en analizar cómo de tan buena es la solución que proporciona el descenso de gradiente en la región sobreparametrizada, es decir, cuando $N < D$, dado que es en este caso cuando se generan múltiples soluciones, mientras que en los otros casos la solución es única.
 
 \begin{teorema}
     Si el problema de mínimos cuadrados lineales~\eqref{eq:regresion-lineal-gd} se encuentra en la región sobreparametrizada, es decir, $(N < D)$ y $rang(X) = N$, entonces, usando el descenso de gradiente con una tasa de aprendizaje constante $0 < \eta < \frac{1}{\lambda_{\max}(X)}$, donde $\lambda_{\max}(X)$ es el mayor valor propio de $X$ y partiendo desde un punto inicial $w_0 \in Im(X^{T})$, se garantiza la convergencia hacia la solución de norma mínima.
@@ -356,7 +356,7 @@ Por tanto, nos interesa centrarnos en analizar qué tan buena es la solución qu
 
     Finalmente, dado que $w_0$ está en la imagen de $X^T$, podemos escribir $w_0 = X^T z$ para algún $z \in \mathbb{R}^N $, lo que implica (usando la descomposición en valores singulares de la matriz $X^{T}$):
     \[
-        V_2 V_2^T w_0 = V \begin{bmatrix} 0 & 0 \\ 0 & I \end{bmatrix}V^{T}X^{T}z = V \begin{bmatrix} 0 & 0 \\ 0 & I \end{bmatrix}V^{T}V\Sigma^{T}U^{T}z = V \begin{bmatrix} 0 & 0 \\ 0 & I \end{bmatrix}\begin{bmatrix} \Sigma_1 \\ 0 \end{bmatrix}U^{T} = 0.
+        V_2 V_2^T w_0 = V \begin{bmatrix} 0 & 0 \\ 0 & I \end{bmatrix}V^{T}X^{T}z = V \begin{bmatrix} 0 & 0 \\ 0 & I \end{bmatrix}V^{T}V\Sigma^{T}U^{T}z = V \begin{bmatrix} 0 & 0 \\ 0 & I \end{bmatrix}\begin{bmatrix} \Sigma_1 \\ 0 \end{bmatrix}U^{T}z = 0.
     \]\newline
 
     En consecuencia, el término $V_2 V_2^T w_0$ desaparece, y nos queda que $w_\infty = w^{*}$, por lo que el gradiente descendente converge a la solución de norma mínima.\newline
@@ -438,9 +438,6 @@ Una vez conocemos el resultado anterior, podemos enunciar el principal teorema d
 El Teorema~\ref{teorema:clasificación-gd} nos asegura que el descenso de gradiente, eligiendo una tasa de aprendizaje adecuada, converge hacia un mínimo global, dado que $\mathcal{L}(w^{(t)}) \to 0$. Además, no se requiere que la función de pérdida $\mathcal{L}(w)$ sea convexa, lo que amplia la aplicabilidad del resultado a una clase más general de funciones.\newline
 
 \section{Optimización en la zona sobreparametrizada}\label{sec:optimizacion-zona-sobreparametrizada}
-
-Como hemos observado en secciones anteriores, la sobreparametrización resulta beneficiosa dentro del marco del aprendizaje estadístico. Este comportamiento, aunque contraintuitivo como se indica en~\cite{Hastie2001}, que afirma: ``Un modelo con error de entrenamiento cero sobreajusta los datos de entrenamiento y, por lo general, generalizará mal'', refleja cómo las soluciones de los sistemas sobreparametrizados pueden mejorar la generalización.\newline
-
 Como hemos observado en secciones anteriores, la sobreparametrización resulta beneficiosa dentro del marco del aprendizaje estadístico. Este comportamiento, aunque contraintuitivo~\cite{Hastie2001} ``Un modelo con cero error de entrenamiento está por encima de los datos de entrenamiento y, por lo general, generalizará mal'', refleja cómo las soluciones de los sistemas sobreparametrizados pueden mejorar la generalización. Sin embargo, desde el punto de vista de la optimización, que se concentra en los algoritmos y técnicas utilizadas para encontrar el mejor modelo posible, la sobreparametrización también ofrece ventajas, ya que facilita la convergencia de los métodos de optimización hacia un mínimo global, especialmente en aquellos que emplean el descenso de gradiente o alguna extensión del mismo.\newline
 
 En el caso de que nuestra función de pérdida $\ell: \mathcal{Y} \to \mathbb{R}$ sea convexa y nuestro modelo $g: \mathcal{X} \to \mathcal{Y}$, elegido del conjunto de hipótesis, sea lineal, es fácil observar que $l \circ f$ es convexa (basta con aplicar las propiedades de la linealidad de $g$ junto con las propiedades de convexidad de $\ell$). Como resultado, se garantiza la convergencia hacia la mejor solución, es decir, el mínimo global de la función de pérdida, sin riesgo de quedar atrapados en mínimos locales.\newline
@@ -465,25 +462,25 @@ Matemáticamente, esto es equivalente a resolver un sistema con $N$ ecuaciones\f
     \mathcal{F}(w) = y, \; \text{donde} \; w \in \mathbb{R}^{P}, y \in \mathbb{R}^{N}, \mathcal{F}(\cdot):\mathbb{R}^{P} \to \mathbb{R}^{N}.
 \end{equation}
 
-De esta manera, $(\mathcal{F}(w)) = f(w; x_i)$. Una solución exacta de la Ecuación~\eqref{eq:optimizacion-uno} corresponde a la interpolación.\newline
+De esta manera, $(\mathcal{F}(w)) = f(w; x_i)$. Una solución exacta de la ecuación~\eqref{eq:optimizacion-uno} corresponde a la interpolación.\newline
 
-Usamos $\mathcal{DF}$ para representar la derivada de la función $\mathcal{F}$, donde $\mathcal{DF} \in \mathcal{M}_{N \times P}(\mathbb{R})$, con $(\mathcal{DF})_{ij} = \frac{\partial \mathcal{F}_{i}}{\partial w_j}$. Denotamos la matriz hessiana de la función $\mathcal{F}$ como $H_{\mathcal{F}}$, que es un tensor de tamaño $N \times P \times P$ con $(H_{\mathcal{F}})_{ijk} = \frac{\partial^2 \mathcal{F}_{i}}{\partial w_j \partial w_k}$, y definimos la norma del tensor hessiano como $\| H_{\mathcal{F}} \| = \max_{i \in \{1, \ldots,N \}} \| H_{\mathcal{F}_{i} \|}$, donde $H_{\mathcal{F}_{i}} = \frac{\partial^2 \mathcal{F}_{i}}{\partial w^2}$. De manera análoga, denotamos la matriz hessiana de la función de pérdida como $H_{\mathcal{L}} = \frac{\partial^2 \mathcal{L}}{\partial w^2}$.\newline
+Usamos $\mathcal{DF}$ para representar la derivada de la función $\mathcal{F}$, donde $\mathcal{DF} \in \mathcal{M}_{N \times P}(\mathbb{R})$, con $(\mathcal{DF})_{ij} = \frac{\partial \mathcal{F}_{i}}{\partial w_j}$. Denotamos la matriz hessiana de la función $\mathcal{F}$ como $H_{\mathcal{F}}$, que es un tensor de tamaño $N \times P \times P$ con $(H_{\mathcal{F}})_{ijk} = \frac{\partial^2 \mathcal{F}_{i}}{\partial w_j \partial w_k}$, y definimos la norma del tensor hessiano como $\| H_{\mathcal{F}} \| = \max_{i \in \{1, \ldots,N \}} \| H_{\mathcal{F}_{i}} \|$, donde $H_{\mathcal{F}_{i}} = \frac{\partial^2 \mathcal{F}_{i}}{\partial w^2}$. De manera análoga, denotamos la matriz hessiana de la función de pérdida como $H_{\mathcal{L}} = \frac{\partial^2 \mathcal{L}}{\partial w^2}$.\newline
 
 Para detallar de manera analítica la no convexidad en la zona sobreparametrizada, se presenta el siguiente resultado.
 
 \begin{proposicion}\label{prop:non-conexity}
-    Sea $w^{*}$ una solución, es decir, $\mathcal{L}(w^{*}) = 0$, y supongamos que $\frac{d}{dw}\frac{\partial \mathcal{L}}{\partial \mathcal{F}}(w^{*}) \neq 0$ y $rang(H_{\mathcal{F}_{i}}(w^{*})) > 2N$ para algún $i \in \{1, \ldots, N \}$. Entonces $\mathcal{L}(w)$ no es convexa en ninguna vecindad de $w^{*}$.
+    Sea $w^{*}$ una solución al problema planteado, es decir, $\mathcal{L}(w^{*}) = 0$, y supongamos que $\frac{d}{dw}\frac{\partial \mathcal{L}}{\partial \mathcal{F}}(w^{*}) \neq 0$ y $rang(H_{\mathcal{F}_{i}}(w^{*})) > 2N$ para algún $i \in \{1, \ldots, N \}$. Entonces $\mathcal{L}(w)$ no es convexa en ningún entorno de $w^{*}$.
 \end{proposicion}
 
 \begin{proof}
-    Se presenta una idea intuitiva de cómo realizar la demostración del resultado anterior. Para ello, tomaremos dos puntos distintos del vecindario de la solución $w^*$ y evaluaremos las matrices hessianas de la función de pérdida en dichos puntos. Una vez evaluadas, podemos verificar que alguna de las matrices anteriores es no negativa, lo que implica que la función de pérdida $\mathcal{L}(w)$ no es localmente convexa alrededor de $w^*$, ya que la hessiana no es semidefinida positiva en esa vecindad, lo cual es una condición necesaria para que la función sea localmente convexa.\newline
+    Se presenta una idea intuitiva de cómo realizar la demostración del resultado anterior. Para ello, tomaremos dos puntos distintos del entorno de la solución $w^*$ y evaluaremos las matrices hessianas de la función de pérdida en dichos puntos. Una vez evaluadas, podemos verificar que ambas matrices no pueden ser negativas de manera simultánea, lo que implica que la función de pérdida $\mathcal{L}(w)$ no es localmente convexa alrededor de $w^*$, ya que la hessiana no es semidefinida positiva en ese entorno, lo cual es una condición necesaria para que la función sea localmente convexa.\newline
 
     Por último, se referencia al lector más curioso al Apéndice~\ref{ap:apendiceA} para la demostración detallada de la proposición.\newline
 \end{proof}
 
-Para el caso de sistemas infraparametrizados, los mínimos locales se encuentran generalmente aislados. Dado que $H_{\mathcal{L}}(w^{*})$ es definida positiva cuando $w^{*}$ es un mínimo aislado, por la continuidad de $H_{\mathcal{L}}(\cdot)$, la definición de positivad se preserva en la vecindad de $w^{*}$. Por consiguiente, $\mathcal{L}(w)$ es localmente convexa alrededor de $w^{*}$.\newline
+Para el caso de sistemas infraparametrizados, los mínimos locales se encuentran generalmente aislados. Dado que $H_{\mathcal{L}}(w^{*})$ es definida positiva cuando $w^{*}$ es un mínimo aislado, por la continuidad de $H_{\mathcal{L}}(\cdot)$, la definición de positividad se preserva en el entorno de $w^{*}$. Por consiguiente, $\mathcal{L}(w)$ es localmente convexa alrededor de $w^{*}$.\newline
 
-A su vez, en los sistemas sobreparametrizados contamos con más parámetros que constantes. En este caso, el sistema de ecuaciones general tiene múltiples soluciones exactas, las cuales forman una variedad continua de dimensión $P - N > 0$, de modo que ninguna de estas soluciones está aislada. Este hecho puede observarse en la Figura~\ref{fig:localglobalminima} y se encuentra demostrado en el Apéndice A de~\cite{Liu2021}. En cuanto a nuestro interés, podemos concluir que, para redes suficientemente parametrizadas, los mínimos globales siempre están rodeados por otro mínimo global en un vecindario relativamente pequeño.\newline
+A su vez, en los sistemas sobreparametrizados contamos con más parámetros que constantes. En este caso, el sistema de ecuaciones general tiene múltiples soluciones exactas, las cuales forman una variedad continua de dimensión $P - N > 0$, de modo que ninguna de estas soluciones está aislada. Este hecho puede observarse en la Figura~\ref{fig:localglobalminima} y se encuentra demostrado en el Apéndice A de~\cite{Liu2021}. En cuanto a nuestro interés, podemos concluir que, para redes suficientemente parametrizadas, los mínimos globales siempre están rodeados por otro mínimo global en un entorno relativamente pequeño.\newline
 
 Estos resultados nos conducen a la conclusión de que, para el análisis de los sistemas sobreparametrizados, no podemos utilizar la convexidad, ni siquiera localmente, como base. En consecuencia, es necesario buscar una condición, a priori, más simple, que verifiquen las funciones de pérdida con el fin de analizar el comportamiento de dichos sistemas. Para ello, se recurre a una modificación de la condición de Polyak y Lojasiewicz.\newline
 
@@ -500,37 +497,75 @@ Estos resultados nos conducen a la conclusión de que, para el análisis de los 
 
     \begin{enumerate}
         \item (\textbf{Existencia de una solución}). Existe una solución (minimizador global de $\mathcal{L}$) $w^{*} \in B(w_0, R)$, de manera que $\mathcal{F}(w^{*}) = y$.
-        \item (\textbf{Convergencia del GD}). El gradiente descendente con un learning rate $\eta \leq \frac{1}{\sup_{w \in B(w_0, R)} \| \mathcal{H}_{\mathcal{L}}(w) \|}$ converge a una solución global en $B(w_0, R)$.
+        \item (\textbf{Convergencia del GD}). El gradiente descendente con un learning rate $\eta \leq \frac{1}{\sup_{w \in B(w_0, R)} \| \mathcal{H}_{\mathcal{L}}(w) \|}$ converge a una solución global en $B(w_0, R)$:
+        \[
+            \mathcal{L}(w_{t}) \leq (1 - \eta \mu)^{t} \mathcal{L}(w_0).
+        \]
     \end{enumerate}
 \end{teorema}
 
 \begin{proof}
-    Probaremos este teorema por inducción, sabiendo que nuestra hipótesis de inducción nos dice que, para todo $t \geq 0$, $w_t$ está dentro de la bola $B(w_0, R)$ con $R = \frac{2\sqrt{2\beta \mathcal{L}(w_0)}}{\mu}$.\newline
+    Probaremos este teorema por inducción, sabiendo que nuestra hipótesis de inducción nos dice que, para todo $t \geq 0$, $w_t$ está dentro de la bola $B(w_0, R)$ con $R = \frac{2\sqrt{2\beta \mathcal{L}(w_0)}}{\mu}$, y $\mathcal{L}(w_t) \leq (1 - \eta \mu)^{t} \mathcal{L}(w_0)$.\newline
 
-    En el caso inicial, cuando $t = 0$, es trivial que $w_0 \in B(w_0, R)$. Supongamos que, por inducción, para un $t \geq 0$, $w_t$ está en la bola $B(w_0, R)$. Para probar que $w_{t+1} \in B(w_0, R)$, usando que la función de pérdida $\mathcal{L}$ es $\beta$-suave, tenemos que:
+    En el caso inicial, cuando $t = 0$, es trivial que $w_0 \in B(w_0, R)$ y que $\mathcal{L}(w_t) \leq (1 - \eta \mu)^{0} \mathcal{L}(w_0)$. Supongamos que, por inducción, para un $t \geq 0$, $w_t$ está en la bola $B(w_0, R)$. Para probar que $w_{t+1} \in B(w_0, R)$, usamos que la función de pérdida $\mathcal{L}$ es $\beta$-suave y, por tanto, verifica:
+
+    \begin{equation}\label{eq:solucioinduccion1}
+        \mathcal{L}(w_{t+1}) - \mathcal{L}(w_{t}) - \nabla \mathcal{L}(w_{t}) (w_{t+1} - w_{t}) \leq \frac{\beta}{2} \| w_{t+1} - w_{t} \|^2.
+    \end{equation}
+
+    Tomando $w_{t+1} - w_{t} = -\eta \nabla \mathcal{L}(w_{t})$ en la ecuación~\eqref{eq:solucioinduccion1}, nos queda:  
+
+    \begin{equation}\label{eq:solucioinduccion2}
+        \mathcal{L}(w_{t+1}) - \mathcal{L}(w_{t}) + \eta \| \nabla \mathcal{L}(w_{t}) \|^2 \leq \frac{\beta}{2} \eta^2 \| \nabla \mathcal{L}(w_{t}) \|^2,
+    \end{equation}
+
+    lo que implica que
+
+    \begin{equation}\label{eq:solucioinduccion3}
+        \mathcal{L}(w_{t+1}) - \mathcal{L}(w_{t}) \leq - \left( \eta - \frac{\beta}{2}\eta^2 \right) \| \nabla \mathcal{L}(w_{t}) \|^2.
+    \end{equation}
+
+    Además, usando el Lema~\ref{lema:raro-clasificación-gd} para $\eta \leq \frac{1}{\beta}$, se verifica
+
+    \begin{equation}\label{eq:solucioinduccion4}
+        \mathcal{L}(w_{t+1}) - \mathcal{L}(w_{t}) \leq - \frac{\eta}{2} \| \nabla \mathcal{L}(w_{t}) \|^2 \implies \frac{2(\mathcal{L}(w_{t}) - \mathcal{L}(w_{t+1}))}{\mu} \geq \| \nabla \mathcal{L}(w_{t}) \|^2.
+    \end{equation}
+
+    Aplicando la condición $\mu$-PL a la primera parte de la ecuación anterior, se satisface
+
+    \begin{equation}\label{eq:solucioinduccion5}
+        - \frac{\eta}{2} \| \nabla \mathcal{L}(w_{t}) \|^2 \leq -\eta \mu \mathcal{L}(w_{t}).
+    \end{equation}
+
+    Finalmente, por la hipótesis de inducción, se cumple
+
+    \begin{equation}\label{eq:solucioinduccion6}
+        \mathcal{L}(w_{t+1}) \leq (1 - \eta \mu)\mathcal{L}(w_{t}) \leq (1 - \eta \mu)^{t+1}\mathcal{L}(w_0).
+    \end{equation}
+
+    Ahora, podemos analizar la distancia de $w_{t+1}$ a $w_0$:
+
     \begin{align}
-        \| w_{t+1} - w_0 \| &= \eta \bigg\| \sum_{i=0}^{t} \nabla \mathcal{L}(w_i) \bigg\| \\
-        &\leq \eta \sum_{i=0}^{t} \| \nabla \mathcal{L}(w_i) \| \\
-        &\leq \eta \sum_{i=0}^{t} \sqrt{2 \beta (\mathcal{L}(w_i) - \mathcal{L}(w_{i+1}))} \\
+        \| w_{t+1} - w_0 \| &= \eta \bigg\| \sum_{i=0}^{t} \nabla \mathcal{L}(w_i) \bigg\| \leq \eta \sum_{i=0}^{t} \| \nabla \mathcal{L}(w_i) \| \\
+        &\leq \eta \sum_{i=0}^{t} \sqrt{2 \beta (\mathcal{L}(w_i) - \mathcal{L}(w_{i+1}))} \quad \text{(usando $\eta = \frac{1}{\beta}$ en la ecuación~\eqref{eq:solucioinduccion4})} \\
         &\leq \eta \sum_{i=0}^{t} \sqrt{2 \beta \mathcal{L}(w_i)} \\
-        &\leq \eta \sqrt{2\beta} \left( \sum_{i=0}^{t} (1 - \eta \mu)^{i/2} \right) \sqrt{\mathcal{L}(w_0)} \\
-        &\leq \eta \sqrt{2\beta} \sqrt{\mathcal{L}(w_0)} \frac{1}{1 - \sqrt{1 - \eta \mu}} \\
-        &\leq \frac{2 \sqrt{2\beta} \sqrt{\mathcal{L}(w_0)}}{\mu} = R.
+        &\leq \eta \sqrt{2\beta} \left( \sum_{i=0}^{t} (1 - \eta \mu)^{i/2} \right) \sqrt{\mathcal{L}(w_0)} \quad \text{(usando la ecuación~\eqref{eq:solucioinduccion5})} \\
+        &\leq \eta \sqrt{2\beta} \sqrt{\mathcal{L}(w_0)} \frac{1}{1 - \sqrt{1 - \eta \mu}} \leq \frac{2 \sqrt{2\beta} \sqrt{\mathcal{L}(w_0)}}{\mu} = R.
     \end{align}
 
     Por tanto, $w_{t+1}$ se encuentra en la bola $B(w_0, R)$.\newline
 \end{proof}
 
-Finalmente, se presenta una idea intuitiva, utilizando la función de pérdida cuadrática, de por que los paisajes de pérdida de los sistemas sobreparametrizados satisfacen la condición $\mu$-PL en la mayor parte de su espacio de parámetros.\newline
+Finalmente, se presenta una idea intuitiva, utilizando la función de pérdida cuadrática, de por qué los paisajes de pérdida de los sistemas sobreparametrizados satisfacen la condición $\mu$-PL en la mayor parte de su espacio de parámetros.\newline
 
 \begin{definicion}
     El núcleo tangente de la función $\mathcal{F}$ en el vector $w$ se define como
 
     \[
-        K(w) = \mathcal{DF}(w)\mathcal{DF}^{T}(w)
+        K(w) = \mathcal{DF}(w)\mathcal{DF}^{T}(w),
     \]
 
-    donde $K(w) \in \mathcal{M}_{N \times P}(\mathbb{R})$ es una matriz semidefinida positiva.\newline
+    y entonces $K(w) \in \mathcal{M}_{N \times P}(\mathbb{R})$ es una matriz semidefinida positiva.\newline
 \end{definicion}
 
 \begin{definicion}[Condicionamiento uniforme]
@@ -657,6 +692,51 @@ Maddox et al.~\cite{Maddox2020} descubrieron que, después del entrenamiento, lo
 
 Como conlusión, podemos decir que el uso de sistemas sobreparametrizados resulta ventajoso para obtener cada vez más soluciones posibles (minimizadores globales) para nuestro problema. De esta forma, al aumentar la capacidad del modelo (en nuestro caso, su complejidad efectiva), resultará más sencillo para el algoritmo de optimización elegir una ``buena'' hipótesis (que generalice mejor que el resto) basada en algún sesgo inductivo que utilice. Este sesgo parece ir ligado hacia soluciones más simples, donde, en el caso de las hipótesis, se pueden entender como más ``suaves'', lo que conduce a la hipótesis elegida a una especie de autoregulación.\newline
 
+\subsection{PAC-Bayes y límite de hipótesis numerables}\label{subsec:pac-bayes}
+
+Los marcos de generalización clásicos, como la complejidad de Rademacher o la dimensión VC (véase Sección~\ref{sec:marcos-generalizacion-clasicos}), desafían, por tanto, las nuevas nociones y límites de generalización, ya que penalizan el tamaño total del conjunto de hipótesis. Esto sugiere una recomendación hacia sesgos restrictivos, en lugar de promover sesgos inductivos suaves, como se mencionó anteriormente. Por esta razón, en esta subsección buscamos introducir nuevos marcos que se alineen con las ideas más recientes, presentados en~\cite{Wilson2025}.\newline
+
+Estos nuevos marcos de generalización, aunque no son novedosos y han existido durante décadas, incluyen enfoques como PAC-Bayes~\cite{McAllester1999} y los límites de hipótesis numerables~\cite{Valiant1984}. Estos ofrecen un enfoque convincente para modelos sobreparametrizados, ya que se centran en identificar qué hipótesis son probables, en lugar de penalizar el tamaño del espacio de hipótesis. De este modo, siguen la tendencia de los sesgos inductivos suaves.\newline
+
+\begin{teorema}[Límite de hipótesis numerables]
+    Sea el riesgo acotado $\mathcal{L}(g) \in [a, a + \Delta]$ y un espacio de hipótesis numerable $\mathcal{H}$ para el cual se dispone de una distribución a priori $P(g)$ de la hipótesis $g$. Sea $\mathcal{L}_{emp}(g)$ el riesgo empírico y $\mathcal{L}(g) = \mathbb{E}[\mathcal{L}_{emp}(g)]$ el riesgo real. Entonces, con probabilidad al menos $1 - \delta$,
+
+    \begin{equation}\label{eq:pac-bayes1}
+        \mathcal{L}(g) \leq \mathcal{L}_{emp}(g) + \Delta \sqrt{ \frac{ \log \left( \frac{1}{P(h)} \right) + \log \left( \frac{1}{\delta} \right)}{2n}}.
+    \end{equation}
+    
+\end{teorema}
+    
+Esta cota está relacionada con la cota para espacios finitos de hipótesis, pero incluye una distribución a priori $P(h)$ que pondera las distintas hipótesis, y un espacio de hipótesis numerable en lugar de finito. Además, podemos usar cualquier distribución a priori para evaluar la cota, sin necesidad de que contenga la hipótesis objetivo.\newline
+
+A partir de la ecuación~\eqref{eq:pac-bayes1}, podemos derivar cotas más informativas utilizando una distribución a priori de Solomonoff $P(g) \leq 2^{-K(g|A)}$~\cite{Solomonoff1964}, donde $K$ es la \textit{complejidad de Kolmogorov libre de prefijo} de $g$ (longitud del programa más corto que produce $g$ utilizando un lenguaje de programación fijo) al tomar como entrada la arquitectura del modelo $A$. Sustituyendo esta cota en la ecuación~\eqref{eq:pac-bayes1}, obtenemos:
+
+\begin{equation}\label{eq:pac-bayes2}
+    \mathcal{L}(g) \leq \mathcal{L}_{emp}(g) + \Delta \sqrt{ \frac{ K(g|A)\log (2) + \log \left( \frac{1}{\delta} \right) }{2n} }.
+\end{equation}
+
+Aunque en general no podemos calcular el programa más corto, sí podemos acotar la arquitectura y cualquier constante no determinada por los datos dentro de la distribución a priori, utilizando la probabilidad condicionada $K(g|A)$. Esta complejidad puede ser convertida desde la versión libre de prefijo a la complejidad de Kolmogorov estándar, obteniendo la siguiente cota superior:
+
+\begin{equation}
+    \log \left( \frac{1}{P(g)} \right) \leq K(g|A)\log (2) \leq C(g)\log (2) + 2\log (C(g)),
+\end{equation}
+    
+donde $C(g)$ es el número de bits requeridos para representar la hipótesis $g$ usando algún código específico predefinido. Por tanto, incluso modelos con mucha capacidad pueden tener garantías sólidas de generalización a través de la ecuación~\eqref{eq:pac-bayes2}.\newline
+
+Las cotas PAC-Bayes permiten reducir la cantidad de bits desde $\log_2 \left( \frac{1}{P(g)} \right)$ hasta la divergencia de Kullback-Leibler $\text{KL}(Q \| P)$, al considerar una distribución de soluciones deseables $Q$. Estos marcos de generalización han sido adaptados para ofrecer garantías de generalización no triviales en modelos con millones de parámetros, incluyendo redes neuronales y grandes modelos de lenguaje (LLMs)~\cite{Lotfi2024}.\newline
+
+En resumen, estos marcos sugieren que las cotas de generalización pueden interpretarse de la siguiente forma:
+
+\[
+    \text{Riesgo real} \leq \text{Riesgo empírico} + \text{Compresibilidad del modelo},
+\]
+
+donde la compresibilidad proporciona una cierta formalización de complejidad.\newline
+
+Este enfoque se relaciona con la inducción de Solomonoff, que propone un procedimiento de aprendizaje ideal y sobreparametrizado al máximo sin límite en la complejidad de la hipótesis~\cite{Solomonoff1964}. Al asignar pesos exponencialmente mayores a programas más simples, la inducción de Solomonoff garantiza que, aunque el espacio de hipótesis sea enorme, la hipótesis elegida será simple si se ajusta bien a los datos.\newline
+
+En conclusión, estas ``nuevas'' cotas de generalización tienden a volverse más estrictas, y no más laxas como ocurre con las cotas clásicas, al utilizar modelos más grandes. Esto se debe a que dichos modelos tienden a seleccionar soluciones más simples, en línea con la noción de sesgos inductivos suaves, como se discutió en secciones anteriores. Además, estos límites pueden ser sorprendentemente precisos~\cite{Lotfi2022}.
+
 \section{Aproximación no lineal}\label{sec:aproximacion-no-lineal}
 
 En esta sección, introduciremos algunos elementos fundamentales de la teoría de la aproximación no lineal~\cite{DeVore1998}, la cual está relacionada con el problema del aprendizaje profundo. Además, desarrollaremos ciertos conceptos con el propósito de demostrar la existencia de analogías entre esta teoría y el fenómeno conocido como \textit{Deep Double Descent}, así como de proporcionar una posible explicación desde esta perspectiva.\newline
@@ -673,7 +753,7 @@ Finalmente, nos centraremos en la aproximación no lineal conocida como aproxima
 
 Dado que los problemas de la teoría de la aproximación son más sencillos de analizar en un espacio de Hilbert, comenzaremos con una breve discusión sobre este entorno, con el fin de introducir los conceptos clave.\newline
 
-Por ello, sea $\mathcal{H}$ un espacio de Hilbert con producto interno $\langle \cdot, \cdot \rangle$ y norma $\|\cdot\|_{\mathcal{H}}$, y sea $\{\eta_k\}_{k=1}^{n}$ una base ortonormal de $\mathcal{H}$. Para el caso de la aproximación lineal, consideramos el espacio lineal $\mathcal{H}_n = \text{span}\{\eta_k : 1 \leq k \leq n\}$ para aproximar un elemento $f \in \mathcal{H}$. El error de aproximación se mide mediante
+Por ello, sea $\mathcal{H}$ un espacio de Hilbert con producto interno $\langle \cdot, \cdot \rangle$ y norma $\|\cdot\|_{\mathcal{H}}$, y sea $\{\eta_k\}_{k=1}^{n}$ una base ortonormal de $\mathcal{H}$. De esta manera, en el caso en el que el espacio $\mathcal{H}$ tenga dimensión infinita, la base ortonormal también será infinita. Para el caso de la aproximación lineal, consideramos el espacio lineal $\mathcal{H}_n = \text{span}\{\eta_k : 1 \leq k \leq n\}$ para aproximar un elemento $f \in \mathcal{H}$. El error de aproximación se mide mediante
 \[
     E_n(f)_{\mathcal{H}} = \inf_{g \in \mathcal{H}_n} \| f - g \|_{\mathcal{H}}.
 \]
@@ -684,7 +764,7 @@ Como contraparte en la aproximación no lineal, que es el caso de estudio de est
 \]
 donde $\Lambda \subset \mathbb{N}$ es un conjunto de índices con $\# \Lambda \leq n$ (cardinalidad finita).\newline
 
-Se puede verificar que, a diferencia de $\mathcal{H}_n$, el espacio $\Sigma_n$ no es lineal. De manera análoga al error de aproximación lineal $E_n$, definimos el error de aproximación de $n$ términos como
+Es claro que, a diferencia de $\mathcal{H}_n$, el espacio $\Sigma_n$ no es lineal. De manera análoga al error de aproximación lineal $E_n$, definimos el error de aproximación de $n$ términos como
 
 \[
     \sigma_n(f)_{\mathcal{H}} = \inf_{g \in \Sigma_n} \| f - g \|_{\mathcal{H}}.
@@ -702,7 +782,7 @@ Se puede verificar que, a diferencia de $\mathcal{H}_n$, el espacio $\Sigma_n$ n
 
 Denominaremos al conjunto $\mathcal{A}^{\alpha}$ como un \textbf{espacio de aproximación}, el cual agrupa las funciones $f \in \mathcal{H}$ con un comportamiento de aproximación similar, es decir, aquellas cuyo error de aproximación disminuye con una tasa de orden $n^{-\alpha}$.\newline
 
-Finalmente, podemos caracterizar el espacio $\mathcal{A}^{\alpha}(\Sigma_n)$ reorganizando los coeficientes de la función $f$ de manera decreciente. Denotamos por $\gamma_k(f)$ al $k$-ésimo valor más grande de los coeficientes absolutos de la función $f$. 
+Finalmente, podemos caracterizar el espacio $\mathcal{A}^{\alpha}(\Sigma_n)$ como una serie en términos de la base ortonormal de $\mathcal{H}$, reorganizando dicha base para que los coeficientes de la función $f$ sean decrecientes. Por tanto, denotamos $f = \sum_{k=1}^{\infty} \gamma_k(f) \eta_k$ una vez reordenada la base de modo decreciente en los coeficientes $\gamma_k(f)$. De esta manera, representamos por $\gamma_k(f)$ al valor absoluto del $k$-ésimo coeficiente de la función $f$. 
 
 \begin{teorema}
     Una función $f \in \mathcal{A}^{\alpha}(\Sigma_n)$ si y solo si se cumple la siguiente desigualdad:
@@ -721,20 +801,31 @@ Finalmente, podemos caracterizar el espacio $\mathcal{A}^{\alpha}(\Sigma_n)$ reo
         \sigma_n(f)^2_{\mathcal{H}} = \sum_{k>n} \gamma_k(f)^2,
     \]
 
-    dado que el error de aproximación al cuadrado es la suma de los cuadrados de los coeficientes que no están involucrados en la aproximación.\newline
+    dado que el error de aproximación al cuadrado es la suma de los cuadrados de los coeficientes que no están involucrados en la aproximación. Por tanto, si $f$ cumple la hipótesis~\eqref{eq:coeficientes-reordenados1}, entonces
 
-    Por tanto, si $f$ cumple la ecuación~\eqref{eq:coeficientes-reordenados1}, es inmediato que
+    \begin{equation}\label{eq:Aalpha1}
+        \sum_{k>n} \gamma_k(f)^2 \leq M^2 \sum_{k>n} k^{-2\alpha - 1} = M^2 \sum_{k>n} \frac{1}{k^{2\alpha + 1}}.
+    \end{equation}
+
+    Es decir, $\sum_{k>n} \frac{1}{k^{2\alpha + 1}}$ es una serie armónica convergente, ya que $\alpha > 0$. De esta manera, se puede acotar la ecuación~\eqref{eq:Aalpha1} por
+
     \[
-        \sigma_n(f)_{\mathcal{H}} \leq C M n^{-\alpha},
+        M^2 \sum_{k>n} \frac{1}{k^{2\alpha + 1}} \leq M^2 \int_{n}^{\infty} \frac{1}{x^{2\alpha + 1}}dx = \frac{M^2}{2\alpha}n^{-2\alpha}.
     \]
 
-    lo que demuestra que $f \in \mathcal{A}^{\alpha}(\Sigma_n)$. Por otro lado, si $f \in \mathcal{A}^{\alpha}(\Sigma_n)$, entonces se satisface la siguiente desigualdad:
+    En consecuencia,
+
+    \[
+        \sigma_n(f)^2_{\mathcal{H}} \leq \frac{M^2}{2\alpha}n^{-2\alpha} \implies \sigma_n(f)_{\mathcal{H}} \leq \frac{M}{\sqrt{2\alpha}}n^{\alpha} = C M n^{-\alpha},
+    \]
+
+    con $C = \frac{1}{\sqrt{2\alpha}}$, lo que demuestra que $f \in \mathcal{A}^{\alpha}(\Sigma_n)$. Por otro lado, si $f \in \mathcal{A}^{\alpha}(\Sigma_n)$, entonces se satisface la siguiente desigualdad:
 
     \[
         \gamma_{2n}(f)^2 \leq n^{-1} \sum_{m=n+1}^{2n} \gamma_m(f)^2 \leq n^{-1} \sigma_n(f)_{\mathcal{H}}^2 \leq |f|_{\mathcal{A}^{\alpha}(\Sigma_n)}^2 n^{-2\alpha - 1} \leq M^2 n^{-2\alpha - 1}.
     \]
 
-    Dado que una desigualdad análoga se verfiica para $\gamma_{2n+1}(f)$, debido a la naturaleza decreciente de los coeficientes $\gamma_k(f)$, se obtiene la implicación restante.\newline
+    Una desigualdad análoga se verifica para los coeficientes impares $\gamma_{2n+1}(f)$, debido a la naturaleza decreciente de los mismos. De esta forma, la suma de los cuadrados de los coeficientes (ya sean pares o impares) está acotada de manera similar. Finalmente, aplicando raíces a los resultados obtenidos se obtiene la implicación restante.\newline
 \end{proof}
 
 A su vez, definimos el espacio de aproximación $\mathcal{A}_{\infty}^{\alpha}(\Sigma_n)$ como el conjunto de todas las funciones $f \in \mathcal{H}$ tales que
@@ -749,9 +840,9 @@ Es decir, este conjunto está compuesto por todas las funciones $f \in \mathcal{
     \sigma_n(f)_{\mathcal{H}} = O(n^{-\alpha}), \quad n \to \infty.
 \]
 
-Esto significa que, para las funciones $f$ en $\mathcal{A}_{\infty}^{\alpha}(\Sigma_n)$, la secuencia de los errores de aproximación $\sigma_n(f)_{\mathcal{H}}$ decrece de manera suficientemente rápida conforme $n$ crece.\newline
+Esto significa que, para las funciones $f$ en $\mathcal{A}_{\infty}^{\alpha}(\Sigma_n)$, la sucesión de los errores de aproximación $\sigma_n(f)_{\mathcal{H}}$ decrece de manera suficientemente rápida conforme $n$ crece.\newline
 
-Al mismo tiempo, denotamos por $\ell_{p,q}$ los espacios de sucesiones de Lorentz\footnote{Los espacios de Lorentz son generalizaciones de los espacios $L^{p}$, en el sentido de que $\ell_{p}^{p} = L^{p}$, y permiten una caracterización más precisa del comportamiento asintótico de las sucesiones. En particular, los espacios $\ell_{p,\infty}$ corresponden a la versión débil de los espacios $L^{p}$.}. Para nuestro desarrollo, nos centraremos únicamente en el espacio $\ell_{p,\infty}$ (el espacio débil $\ell_{p}$), que está formado por todas las sucesiones que satisfacen
+Al mismo tiempo, denotamos por $\ell_{p,q}$ los espacios de sucesiones de Lorentz\footnote{Los espacios de Lorentz son generalizaciones de los espacios $L^{p}$, en el sentido de que $\ell_{p, p} = L^{p}$, y permiten una caracterización más precisa del comportamiento asintótico de las sucesiones. En particular, los espacios $\ell_{p,\infty}$ corresponden a la versión débil de los espacios $L^{p}$.}. Para nuestro desarrollo, nos centraremos únicamente en el espacio $\ell_{p,\infty}$ (el espacio débil $\ell_{p}$), que está formado por todas las sucesiones que satisfacen
 
 \[
     x^{*}(n) \leq M n^{-1/p},
@@ -762,7 +853,7 @@ donde $x^{*}(n)$ es el reordenamiento decreciente de la sucesión $|x(n)|$.\newl
 Finalmente, el siguiente resultado nos ayuda a relacionar el espacio de aproximación $\mathcal{A}_{\infty}^{\alpha}$ con el espacio débil $\ell_p$ ($\ell_{p,\infty}$).
 
 \begin{teorema}\label{teo:espaciosapprox-espacioslorentz}
-    Para una aproximación de $n$ términos en un espacio de Hilbert $\mathcal{H}$, una función $f \in \mathcal{A}_{\infty}^{\alpha}$ si y solo si sus coeficientes $\{ f_k : k \in \{1, \ldots, n\}\}$ están en el espacio débil $\ell_{\tau}$ (es decir, en $\ell_{\tau, \infty}$) con $\tau = (\alpha + 1/2)^{-1}$. Además, en este caso, se verifica
+    Para una aproximación de $n$ términos en un espacio de Hilbert $\mathcal{H}$, una función $f \in \mathcal{A}_{\infty}^{\alpha}$ si y solo si sus coeficientes $\{ f_k : k \in \mathbb{N}\}$ están en el espacio débil $\ell_{\tau}$ (es decir, en $\ell_{\tau, \infty}$) con $\tau = (\alpha + 1/2)^{-1}$. Además, en este caso, se verifica
 
     \[
         C_1 |f|_{\mathcal{A}_{\infty}^{\alpha}(\mathcal{H})} \leq \| (f_k) \|_{\ell_{\tau, \infty}} \leq C_2 |f|_{\mathcal{A}_{\infty}^{\alpha}(\mathcal{H})},
@@ -775,7 +866,7 @@ Finalmente, el siguiente resultado nos ayuda a relacionar el espacio de aproxima
 
 Nos preguntamos ahora cómo depende la efectividad de la aproximación de $n$ términos de la base elegida y si se puede conseguir alguna ventaja eligiendo de manera progresiva una base que dependa de la función objetivo. Para ello, llamamos \textbf{biblioteca} a una clase $\mathcal{L}$ de bases. Por simplicidad, centraremos nuestra discusión en aproximaciones en un espacio de Hilbert $\mathcal{H}$ y en bibliotecas de bases ortonormales para $\mathcal{H}$.\newline
 
-Por consiguiente, nuestro problema de aproximación cosiste, dada una función objetivo $f \in \mathcal{H}$, en elegir una base $B \in \mathcal{L}$ y una aproximación de $n$ términos a $f$ usando esta base. Llamamos a este tipo de problema de aproximación altamente no lineal, ya que implica una capa adicional de no linealidad en la selección de bases.\newline
+Por consiguiente, nuestro problema de aproximación consiste, dada una función objetivo $f \in \mathcal{H}$, en elegir una base $B \in \mathcal{L}$ y una aproximación de $n$ términos a $f$ usando esta base. Llamamos a este tipo de problema de aproximación altamente no lineal, ya que implica una capa adicional de no linealidad en la selección de bases.\newline
 
 No obstante, otra forma de aproximación estrechamente relacionada es la aproximación utilizando $n$ términos desde un \textbf{diccionario} $\mathbb{D} \subset \mathcal{H}$ de funciones, que será nuestro principal objeto de estudio. En nuestro caso, un diccionario se define como un subconjunto arbitrario de $\mathcal{H}$.\newline
 
@@ -801,7 +892,7 @@ La característica común de todos los diccionarios es que la familia de funcion
 
 En esta subsección trataremos cómo la selección adecuada de una base influye directamente en el error de aproximación. Asimismo, observaremos que, al disponer de una biblioteca de bases, el error de aproximación se minimiza para cualquier aproximación realizada, ya que se consideran todas las bases disponibles.\newline
 
-Sea $B = \{ \eta_k \}$ una base ortonormal para $\mathcal{H}$ y sea $\Sigma_n(B)$ el conjunto de funciones en $\mathcal{H}$ que pueden escribirse como una combinación lineal de $n$ de las funciones $\eta_k$, con $k \in \mathbb{N}_0$. Además, definimos
+Sea $B = \{ \eta_k \}$ una base ortonormal para $\mathcal{H}$ y sea $\Sigma_n(B)$ el conjunto de funciones en $\mathcal{H}$ que pueden escribirse como una combinación lineal de $n$ de las funciones $\eta_k$, con $k \in \mathbb{N}$. Además, definimos
 
 \[
     \sigma_n(f, B) = \sigma_n(f,B)_{\mathcal{H}} = \inf_{S \in \Sigma_n(B)} \| f - S \|_{\mathcal{H}}
@@ -823,7 +914,7 @@ Supongamos ahora que $\mathcal{L} = \{ B_1, \ldots, B_n \}$ es una biblioteca de
     \sigma_n^{\mathcal{L}}(f)_{\mathcal{H}} = \inf_{B \in \mathcal{L}} \sigma_n(f, B)_{\mathcal{H}}.
 \]
 
-A la vista de la Ecuación~\eqref{eq:bases}, obtenemos la siguiente cota superior
+A la vista de la ecuación~\eqref{eq:bases}, obtenemos la siguiente cota superior
 
 \begin{equation}\label{eq:bases2}
     \sigma_n^{\mathcal{L}}(f)_{\mathcal{H}} \leq C n^{-\alpha} \inf_{B} \| \gamma_n(f, B) \|_{\ell_r, \infty}
@@ -835,11 +926,11 @@ con $C$ una constante absoluta. Además, para cualquier $\alpha > 0$, se tiene
     \bigcap_{B} \mathcal{A}_\infty^\alpha (\mathcal{H}, B) \subset \mathcal{A}_\infty^\alpha (\mathcal{H}, \mathcal{L}).
 \end{equation}
 
-En consecuencia, para cada base ortonormal $B$, la condición $(\gamma_n(f)) \in \ell_{\tau, \infty}$, $\tau = (\alpha + 1/2)^{-1}$, puede verse como una condición de suavidad de la función $f$ relativa a la base $B$. Así, el ínfimo en el lado derecho de la Ecuación~\eqref{eq:bases2} puede interpretarse como el ínfimo de condiciones de suavidad relativas a las diferentes bases $B$.\newline
+En consecuencia, para cada base ortonormal $B$, la condición $(\gamma_n(f)) \in \ell_{\tau, \infty}$, $\tau = (\alpha + 1/2)^{-1}$, puede verse como una condición de suavidad de la función $f$ relativa a la base $B$. Así, el ínfimo en el lado derecho de la ecuación~\eqref{eq:bases2} puede interpretarse como el ínfimo de condiciones de suavidad relativas a las diferentes bases $B$.\newline
 
 De manera similar, podemos ver las clases $\mathcal{A}_\infty^\alpha (\mathcal{H}, B)$ como clases de suavidad con respecto a la base $B$. De esta forma, una ventaja de la selección óptima de bases es que siempre podemos elegir la base $B \in \mathcal{L}$ en la que $f$ sea más suave.\newline
 
-Por su parte, las Ecuaciones~\eqref{eq:bases2} y~\eqref{eq:bases3} muestran que la base más eficiente para aproximar $f$ depende del número de términos utilizados para la aproximación. De esta forma, se pueden construir dos bases, $B_1$ y $B_2$, y una función objetivo $f$ de tal manera que, para ciertos valores de $n$, la elección óptima de base varíe entre $B_1$ y $B_2$. Es decir, para algunos valores de $n$, $B_1$ ofrecerá un mejor error de aproximación, mientras que para otros, $B_2$ es más eficiente, lo que demuestra que no hay una base universalmente mejor para todos los valores de $n$.\newline
+Por su parte, las ecuaciones~\eqref{eq:bases2} y~\eqref{eq:bases3} muestran que la base más eficiente para aproximar $f$ depende del número de términos utilizados para la aproximación. De esta forma, se pueden construir dos bases, $B_1$ y $B_2$, y una función objetivo $f$ de tal manera que, para ciertos valores de $n$, la elección óptima de base varíe entre $B_1$ y $B_2$. Es decir, para algunos valores de $n$, $B_1$ ofrecerá un mejor error de aproximación, mientras que para otros, $B_2$ es más eficiente, lo que demuestra que no hay una base universalmente mejor para todos los valores de $n$.\newline
 
 \subsubsection{Aproximación usando $n$ términos de un diccionario}\label{subsubsec:approx-n-terms}
 
@@ -851,7 +942,7 @@ Para cada $n \in \mathbb{N}$, definimos $\Sigma_n := \Sigma_n(\mathbb{D})$ como 
     S = \sum_{g \in \Lambda} c_g g, \quad \Lambda \subset \mathbb{D}, \quad \#\Lambda \leq n,
 \end{equation}
 
-donde $c_g \in \mathbb{R}$ son los coeficientes y $\#\Lambda$ denota el cardinal del conjunto $\Lambda$. Cabe destacar que un elemento de $\Sigma_n(\mathbb{D})$ puede expresarse de la forma~\eqref{eq:n-terms1} de más de una forma.\newline
+donde $c_g \in \mathbb{R}$ son los coeficientes. Cabe destacar que un elemento de $\Sigma_n(\mathbb{D})$ puede expresarse de la forma~\eqref{eq:n-terms1} de más de una forma.\newline
 
 \begin{definicion}
     Para una función $f \in \mathcal{H}$, definimos su error de aproximación a partir de un diccionario $\mathbb{D}$ como:
@@ -893,9 +984,9 @@ Para el caso en el que $\mathbb{D}$ es generado por una base $B$ se sigue que la
 
 Sabemos que $Cn^{-\alpha}$ es un factor de decaimiento que describe cómo el error de aproximación disminuye a medida que incrementamos el número de términos $n$ en la aproximación. La constante $C$ es un valor positivo que depende tanto del diccionario como de la función, mientras que la potencia $\alpha$ depende de $\tau$ y de las propiedades de la función objetivo.\newline
 
-De esta forma, la Ecuación~\eqref{eq:n-terms-error} nos proporciona una cota superior para el error de aproximación de una función $f$ utilizando una aproximación de $n$ términos, a partir de un diccionario $\mathbb{D}$ generado por una base ortonormal $B$. En consecuencia, el error de aproximación $\sigma_n(f, \mathbb{D})_{\mathcal{H}}$ depende tanto de la suavidad de la función $f$ (medida por $|f|_{\mathcal{K}_{\tau}(\mathbb{D})}$) como del número de términos $n$ empleados en la aproximación.\newline
+De esta forma, la ecuación~\eqref{eq:n-terms-error} nos proporciona una cota superior para el error de aproximación de una función $f$ utilizando una aproximación de $n$ términos, a partir de un diccionario $\mathbb{D}$ generado por una base ortonormal $B$. En consecuencia, el error de aproximación $\sigma_n(f, \mathbb{D})_{\mathcal{H}}$ depende tanto de la suavidad de la función $f$ (medida por $|f|_{\mathcal{K}_{\tau}(\mathbb{D})}$) como del número de términos $n$ empleados en la aproximación.\newline
 
-Finalmente, estamos interesados en verificar si la Ecuación~\eqref{eq:n-terms-error} es válida para diccionarios más generales. El siguiente resultado nos proporciona una cota superior para el error de aproximación en estos casos, extendiendo los resultados obtenidos en el caso de diccionarios generados por bases ortonormales.
+Finalmente, estamos interesados en verificar si la ecuación~\eqref{eq:n-terms-error} es válida para diccionarios más generales. El siguiente resultado nos proporciona una cota superior para el error de aproximación en estos casos, extendiendo los resultados obtenidos en el caso de diccionarios generados por bases ortonormales.
 
 \begin{teorema}
     Sean $\mathbb{D}$ un diccionario de funciones, $\alpha \geq 1/2$ y $1/\tau = \alpha + 1/2$. Si $f \in K_{\tau}(\mathbb{D})$, entonces
@@ -922,10 +1013,28 @@ Finalmente, estamos interesados en verificar si la Ecuación~\eqref{eq:n-terms-e
         \sum_{j>n} c_j = \sum_{j>n} c_j^{1-\tau} c_j^\tau \leq M^{1-\tau} n^{1-1/\tau} \sum_{j>n} c_j^\tau \leq M n^{1-1/\tau}.
     \]
 
-    Esto implica que $R_1$ pertenece a $K_1(\mathbb{D}, M n^{1 - 1/\tau})$. Haciendo uso del Teorema 3.2 de~\cite{DeVore1996}, existe una función $s_2$ que es una combinación lineal de a lo sumo $n$ de los elementos $g \in \mathbb{D}$ tal que
+    Esto implica que $R_1 \in \mathcal{K}_1(\mathbb{D}, M n^{1 - 1/\tau})$. A continuación, se enuncia el Teorema $3.2$ de~\cite{DeVore1996}, el cual utilizaremos en el desarrollo que sigue.
+
+    \begin{teorema}
+        Sea $f \in \mathcal{K}_1(\mathbb{D}, 1)$. Entonces, para el algoritmo Greedy Relajado, se cumple la siguiente estimación:
+
+        \[
+            \left\| f - G_{m}^{r}(f) \right\| \leq \frac{2}{\sqrt{m}}, \quad \forall m \geq 1,
+        \]
+
+        donde $G_{m}^{r}(f)$ denota la aproximación de $f$ obtenida tras $m$ iteraciones del algoritmo Greedy Relajado.
+    \end{teorema}
+
+    Si bien la demostración de este resultado se encuentra fuera de los objetivos de este proyecto, su validez nos permite afirmar que
 
     \[
-        \| f - (s_1 + s_2) \| = \| R_1 - s_2 \| \leq 2M n^{1-1/\tau} n^{-1/2} = 2M n^{-\alpha},
+        \left\| f - G_{m}^{0}(f) \right\|_{\mathcal{H}} \leq |f|_{\mathcal{K}_1} \cdot m^{-1/2}.
+    \]
+
+    A partir de la desigualdad anterior, existe una función $s_2$, que es una combinación lineal de a lo sumo $n$ elementos $g \in \mathbb{D}$, tal que
+
+    \[
+        \| f - (s_1 + s_2) \| = \| R_1 - s_2 \| \leq 2M n^{1 - 1/\tau} \cdot n^{-1/2} = 2M n^{-\alpha},
     \]
 
     de donde se obtiene la desigualdad~\eqref{eq:n-terms-teo}.\newline
@@ -935,7 +1044,7 @@ Finalmente, estamos interesados en verificar si la Ecuación~\eqref{eq:n-terms-e
 
 A modo de conclusión de este inciso sobre la teoría de la aproximación no lineal, presentaremos a lo largo de esta sección las similitudes que existen entre dicha teoría y el doble descenso, con el objetivo de establecer ciertas analogías que ofrezcan ideas matemáticas subyacentes asociadas a su ocurrencia.\newline
 
-En primer lugar, el objetivo tanto de la aproximación no lineal como del aprendizaje es esencialmente el mismo: aproximar una función objetivo mediante funciones más simples. En el contexto de la teoría de la aproximación, se suele asumir que se conocen los valores de ciertos funcionales lineales simples aplicados a la función objetivo. En cambio, en el aprendizaje, dicha función es completamente desconocida y solo se tiene acceso a un conjunto finito de observaciones. Asimismo, en ambos contextos se recurre al uso de funciones no lineales para aproximar la función objetivo, lo que permite capturar comportamientos complejos que no podrían representarse adecuadamente mediante aproximaciones provenientes de espacios lineales.\newline
+En primer lugar, el objetivo tanto de la aproximación no lineal como del aprendizaje es esencialmente el mismo: aproximar una función objetivo mediante funciones más simples. En el contexto de la teoría de la aproximación, se suele asumir que se conocen los valores de ciertos funcionales lineales simples aplicados a la función objetivo. En cambio, en el aprendizaje, dicha función es completamente desconocida y solo se tiene acceso a un conjunto finito de observaciones, es decir, se puede interpretar como que se conoce el valor de la aplicación de un número finito de funcionales de evaluación. Asimismo, en ambos contextos se recurre al uso de ``procesos no lineales'' para aproximar la función objetivo, lo que permite capturar comportamientos complejos que no podrían representarse adecuadamente mediante aproximaciones provenientes de espacios lineales.\newline
 
 La base a partir de la cual se construyen los aproximantes también desempeña un papel fundamental. Aunque en el caso de las redes neuronales lo que se utiliza propiamente es un diccionario, este diccionario será dependiente de la base elegida. De esta manera, cuando llevemos a cabo los experimentos relacionados con la aproximación polinómica mediante el uso de la pseudoinversa, veremos cómo la elección de la base influye de manera significativa en los resultados obtenidos. En consecuencia, observaremos cómo el error de aproximación obtenido depende efectivamente de la base elegida, tal como se discutió en la Subsección~\ref{subsubsec:seleccion-optima-bases}, y corroboraremos que ciertas bases resultan más adecuadas para aproximar determinadas funciones. De este modo, se puede intuir que los modelos de aprendizaje obtienen sus aproximantes a partir de la base elegida hasta alcanzar el umbral de interpolación. Precisamente en ese umbral, el aproximante queda determinado de forma única por el uso completo de la base, lo cual explica que su error de generalización no esté controlado y pueda alcanzar valores elevados.\newline
 
@@ -947,9 +1056,7 @@ En esta sección hemos expuesto de forma teórica y detallada el \textit{Deep Do
 
 Al mismo tiempo, a partir de la descomposición del error en la suma de sesgo y varianza, se introducen las distintas configuraciones que puede adoptar el error de un modelo. Entre ellas, destaca el fenómeno del doble descenso, el cual surge debido a que el sesgo y la varianza predominan en diferentes regiones del comportamiento del modelo, siendo la varianza la que presenta un comportamiento unimodal. También destacamos que, en la región sobreparametrizada, el conjunto de hipótesis disponibles es mayor. De este modo, el verdadero desafío para comprender el fenómeno reside en entender por qué el algoritmo de aprendizaje selecciona ciertas soluciones dentro de ese conjunto sobre otras, y por qué las hipótesis elegidas tienden a generalizar bien.\newline
 
-A partir de un ejemplo de regresión, se introduce un análisis intuitivo del suceso, en el que se observa que su aparición está estrechamente vinculada al término de la varianza. En particular, se verifica que el máximo del error se produce cerca del umbral de interpolación, debido a la configuración de los valores propios que surgen al resolver el problema de regresión.\newline
-
-Posteriormente, se analiza la convergencia del descenso de gradiente, demostrando que, bajo ciertas hipótesis, dicho algoritmo converge hacia soluciones que son minimizadoras globales en la región sobreparametrizada. Esta propiedad se observa tanto en problemas de regresión como en escenarios con datos separables.\newline
+A partir de un ejemplo de regresión, se introduce un análisis intuitivo del suceso, en el que se observa que su aparición está estrechamente vinculada al término de la varianza. En particular, se verifica que el máximo del error se produce cerca del umbral de interpolación, debido a la configuración de los valores propios que surgen al resolver el problema de regresión. Ligado a esto, se analiza la convergencia del descenso de gradiente, demostrando que, bajo ciertas hipótesis, dicho algoritmo converge hacia soluciones que son minimizadoras globales en la región sobreparametrizada. Esta propiedad se observa tanto en problemas de regresión como en escenarios con datos separables.\newline
 
 A continuación, se presenta la región sobreparametrizada desde el punto de vista de la optimización. En esta sección, se evidencia la existencia de múltiples soluciones dentro de dicha región, así como la ausencia de convexidad local de la función de pérdida en cualquier vecindad de dichas soluciones. Igualmente, se destaca que, mientras en la zona infraparametrizada las soluciones aparecen de forma aislada, en la zona sobreparametrizada estas conforman variedades continuas. Finalmente, se introduce una propiedad más débil que la convexidad, la cual debe cumplir la función de pérdida para garantizar que el descenso de gradiente converja hacia un mínimo global en la región sobreparametrizada. A pesar de conocer la existencia de múltiples soluciones en la región moderna, es necesario entender por qué el algoritmo de aprendizaje tiende a seleccionar aquellas que generalizan adecuadamente. Para ello, se introduce, de forma informal, un concepto de suavidad funcional que orienta al modelo hacia hipótesis más simples, en línea con la filosofía de Ockham. De este modo, el algoritmo de aprendizaje induce un sesgo inductivo suave que lo lleva a concentrarse en subconjuntos óptimos dentro del espacio de hipótesis, lo que contribuye a reducir la varianza en esta región.\newline
 

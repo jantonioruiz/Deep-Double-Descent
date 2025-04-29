@@ -5,46 +5,44 @@ Reallocating 'name_of_file' (item size: 1) to 9 items.
 The style file: alpha-es.bst
 Reallocating 'name_of_file' (item size: 1) to 12 items.
 Database file #1: library.bib
-Warning--I didn't find a database entry for "Vapnik1991"
-You've used 95 entries,
+You've used 102 entries,
             2543 wiz_defined-function locations,
-            1114 strings with 20013 characters,
-and the built_in function-call counts, 36881 in all, are:
-= -- 3524
-> -- 2182
-< -- 32
-+ -- 790
-- -- 771
-* -- 2611
-:= -- 6231
-add.period$ -- 289
-call.type$ -- 95
-change.case$ -- 666
-chr.to.int$ -- 95
-cite$ -- 95
-duplicate$ -- 1254
-empty$ -- 2524
-format.name$ -- 877
-if$ -- 7345
-int.to.chr$ -- 1
+            1154 strings with 21252 characters,
+and the built_in function-call counts, 39781 in all, are:
+= -- 3799
+> -- 2362
+< -- 36
++ -- 858
+- -- 836
+* -- 2827
+:= -- 6719
+add.period$ -- 310
+call.type$ -- 102
+change.case$ -- 720
+chr.to.int$ -- 101
+cite$ -- 102
+duplicate$ -- 1350
+empty$ -- 2708
+format.name$ -- 949
+if$ -- 7919
+int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 76
-newline$ -- 483
-num.names$ -- 285
-pop$ -- 799
+missing$ -- 80
+newline$ -- 518
+num.names$ -- 306
+pop$ -- 858
 preamble$ -- 1
-purify$ -- 761
+purify$ -- 822
 quote$ -- 0
-skip$ -- 1135
+skip$ -- 1226
 stack$ -- 0
-substring$ -- 1466
-swap$ -- 133
-text.length$ -- 32
-text.prefix$ -- 27
+substring$ -- 1580
+swap$ -- 149
+text.length$ -- 36
+text.prefix$ -- 30
 top$ -- 0
-type$ -- 676
+type$ -- 732
 warning$ -- 0
-while$ -- 318
-width$ -- 102
-write$ -- 1205
-(There was 1 warning)
+while$ -- 341
+width$ -- 109
+write$ -- 1293

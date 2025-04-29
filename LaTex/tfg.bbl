@@ -176,6 +176,13 @@ Suriya Gunasekar, Jason Lee, Daniel Soudry, y Nathan Srebro.
   2019.
 \newblock Preprint. arXiv: 1806.00468.
 
+\bibitem[GSd{\etalchar{+}}19]{Geiger2019}
+Mario Geiger, Stefano Spigler, Stéphane d'Ascoli, Levent Sagun, Marco
+  Baity-Jesi, Giulio Biroli, y Matthieu Wyart.
+\newblock Jamming transition as a paradigm to understand the loss landscape of
+  deep neural networks.
+\newblock {\em Physical Review E (PRE)}, 100(1), 2019.
+
 \bibitem[HCB{\etalchar{+}}19]{Huang2019}
 Yanping Huang, Youlong Cheng, Ankur Bapna, Orhan Firat, Mia~Xu Chen, Dehao
   Chen, HyoukJoong Lee, Jiquan Ngiam, Quoc~V. Le, Yonghui Wu, y Zhifeng Chen.
@@ -263,6 +270,19 @@ Yann LeCun, Yoshua Bengio, y Geoffrey Hinton.
 \newblock Deep learning.
 \newblock {\em Nature}, 521(7553):436, 2015.
 
+\bibitem[LFK{\etalchar{+}}24a]{Lotfi2022}
+Sanae Lotfi, Marc Finzi, Sanyam Kapoor, Andres Potapczynski, Micah Goldblum, y
+  Andrew~Gordon Wilson.
+\newblock Pac-bayes compression bounds so tight that they can explain
+  generalization, 2024.
+\newblock Preprint. arXiv: 2211.13609.
+
+\bibitem[LFK{\etalchar{+}}24b]{Lotfi2024}
+Sanae Lotfi, Marc Finzi, Yilun Kuang, Tim G.~J. Rudner, Micah Goldblum, y
+  Andrew~Gordon Wilson.
+\newblock Non-vacuous generalization bounds for large language models, 2024.
+\newblock Preprint. arXiv: 2312.17173.
+
 \bibitem[LJY24]{Li2024}
 Fei-Fei Li, Justin Johnson, y Serena Yeung.
 \newblock Cs231n: Deep learning for computer vision.
@@ -274,6 +294,11 @@ Ivano Lauriola, Alberto Lavelli, y Fabio Aiolli.
 \newblock An introduction to deep learning in natural language processing:
   Models, techniques, and tools.
 \newblock {\em Neurocomputing}, 470(C):443--456, 2022.
+
+\bibitem[LSJR16]{Lee2016}
+Jason~D. Lee, Max Simchowitz, Michael~I. Jordan, y Benjamin Recht.
+\newblock Gradient descent converges to minimizers, 2016.
+\newblock Preprint. arXiv: 1602.04915.
 
 \bibitem[LT24]{Lafon2024}
 Marc Lafon y Alexandre Thomas.
@@ -303,6 +328,12 @@ Wesley~J. Maddox, Gregory Benton, y Andrew~Gordon Wilson.
 \newblock Rethinking parameter counting in deep models: Effective
   dimensionality revisited, 2020.
 \newblock Preprint. arXiv: 2003.02139.
+
+\bibitem[McA99]{McAllester1999}
+David~A. McAllester.
+\newblock Pac-bayesian model averaging.
+\newblock {\em Proceedings of the Annual Conference on Computational Learning
+  Theory (COLT)}, páginas 164--170, 1999.
 
 \bibitem[MCK20]{Ming2020}
 Yifei Min, Lin Chen, y Amin Karbasi.
@@ -486,6 +517,11 @@ Christian Szegedy, Wei Liu, Yangqing Jia, Pierre Sermanet, Scott Reed, Dragomir
 \newblock Going deeper with convolutions, 2014.
 \newblock Preprint. arXiv: 1409.4842.
 
+\bibitem[Sol64]{Solomonoff1964}
+R.J. Solomonoff.
+\newblock A formal theory of inductive inference. part i.
+\newblock {\em Information and Control}, 7(1), 1964.
+
 \bibitem[Str23]{Strang2023}
 Gilbert Strang.
 \newblock {\em Introduction to Linear Algebra}.
@@ -504,7 +540,12 @@ Neil~C. Thompson, Kristjan Greenewald, Keeheon Lee, y Gabriel~F. Manso.
 \newblock The computational limits of deep learning, 2022.
 \newblock Preprint. arXiv: 2007.05558.
 
-\bibitem[Vap91]{Geiger2019}
+\bibitem[Val84]{Valiant1984}
+L.~G. Valiant.
+\newblock A theory of the learnable.
+\newblock {\em Association for Computing Machinery}, 27(11):1134--1142, 1984.
+
+\bibitem[Vap91]{Vapnik1991}
 V.~Vapnik.
 \newblock Principles of risk minimization for learning theory.
 \newblock {\em Proceedings of the International Conference on Neural

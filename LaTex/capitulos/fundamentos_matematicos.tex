@@ -469,7 +469,35 @@ Como consecuencia de la proposición anterior, se pueden relacionar todas las va
     \caption[Ejemplos de distribuciones normales.] {Ejemplos de distribuciones normales. A la izquierda observamos distintas distribuciones normales, donde podemos notar como el parámetro $\mu$ determina el centro de la distribución y el parámetro $\sigma$ controla la dispersión de los datos. A la derecha observamos una distribución normal estándar, donde se puede apreciar con claridad que la distribución es simétrica con respecto a $\mu$.}\label{fig:distribuciones-normales}
 \end{figure}
 
-\chapter{Descomposición en valores singulares y pseudoinversa de una matriz}\label{ch:descomposicion-valores-singulares-pseudoinversa}
+\subsection{Distribución de Rademacher}\label{subsec:distribucion-rademacher}
+La distribución de Rademacher es una distribución de probabilidad discreta que se utiliza ampliamente en la teoría del aprendizaje estadístico, particularmente en el análisis de la capacidad de generalización de los modelos.\newline
+
+\begin{definicion}[Distribución de Rademacher]
+    Sea $X$ una variable aleatoria discreta. Decimos que $X$ sigue una \emph{distribución de Rademacher} si toma los valores $+1$ y $-1$ con igual probabilidad, es decir,
+
+    \[
+        P[X = 1] = P[X = -1] = \frac{1}{2}.
+    \]
+
+    En tal caso, denotamos esta variable como $X \sim \text{Rad}$.
+\end{definicion}
+
+\begin{proposicion}
+    Si $X \sim \text{Rad}$, entonces $X$ es una variable aleatoria simétrica respecto al origen, con esperanza $\mathbb{E}[X] = 0$ y varianza $\text{Var}(X) = 1$.\newline
+\end{proposicion}
+
+\begin{proposicion}
+    Sean $X_1, \dots, X_n$ variables independientes con $X_i \sim \text{Rad}$. Entonces, para cualquier conjunto de constantes $a_1, \dots, a_n \in \mathbb{R}$, la variable
+
+    \[
+        S = \sum_{i=1}^n a_i X_i
+    \]
+
+    es una combinación lineal de variables de Rademacher con esperanza cero y varianza $\sum_{i=1}^n a_i^2$.
+\end{proposicion}
+
+
+\chapter{Descomposición en Valores Singulares y Pseudoinversa de una Matriz}\label{ch:descomposicion-valores-singulares-pseudoinversa}
 
 En este capítulo presentaremos dos conceptos fundamentales de cara al desarrollo del trabajo: la descomposición en valores singulares (SVD) y la pseudoinversa de una matriz. En cuanto a las referencias utilizadas a lo largo de este capítulo, debemos destacar~\cite{Friedberg2014linear, Strang2023, Poole2011}. Estos libros nos ayudaron a presentar los conceptos básicos más importantes, así como las demostraciones de los resultados más relevantes del capítulo.
 
