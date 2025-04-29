@@ -130,7 +130,7 @@ if __name__ == "__main__":
         description="Train different neural network models on various datasets with customizable hyperparameters.")
 
     # Required arguments
-    parser.add_argument("--dataset", type=str, required=True, choices=["MNIST", "CIFAR10", "CIFAR100", "Flowers102"],
+    parser.add_argument("--dataset", type=str, required=True, choices=["MNIST", "CIFAR10", "CIFAR100"],
                         help="Dataset to be used for training (Options: MNIST, CIFAR10, CIFAR100, Flowers102)")
     
     parser.add_argument("--model", type=str, required=True, choices=["TwoLayerNN", "DeepNN", "ThreeLayerCNN", "DeepCNN", "PreActResNet", "ResNet18"],

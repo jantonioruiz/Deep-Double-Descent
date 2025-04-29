@@ -15,15 +15,8 @@ def loadDataset(dataset_name, data_augmentation=False):
     elif dataset_name == 'CIFAR100':
         transform_list = [transforms.ToTensor(), transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))]
 
-    elif dataset_name == 'Flowers102':
-        transform_list = [
-            transforms.Resize((32, 32)),
-            transforms.ToTensor(),
-            transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
-        ]
-
     else:
-        raise ValueError(f"Dataset '{dataset_name}' not supported. Use 'MNIST', 'CIFAR10', 'CIFAR100', or 'Flowers102'.")
+        raise ValueError(f"Dataset '{dataset_name}' not supported. Use 'MNIST', 'CIFAR10' or 'CIFAR100'.")
 
     if data_augmentation:
         augmentations = [
@@ -46,10 +39,6 @@ def loadDataset(dataset_name, data_augmentation=False):
         train_dataset = datasets.CIFAR100(root='./data', train=True, download=True, transform=transform)
         test_dataset = datasets.CIFAR100(root='./data', train=False, download=True, transform=transform)
 
-    elif dataset_name == 'Flowers102':
-        train_dataset = datasets.Flowers102(root='./data', split='train', download=True, transform=transform)
-        test_dataset = datasets.Flowers102(root='./data', split='test', download=True, transform=transform)
-
     return train_dataset, test_dataset
 
 def addNoise(dataset_name, dataset, noise_level):
@@ -68,19 +57,8 @@ def addNoise(dataset_name, dataset, noise_level):
                 noisy_label = np.random.randint(0, len(dataset.dataset.classes))
 
             dataset.dataset.targets[original_index] = noisy_label
-
-    elif dataset_name == 'Flowers102':
-        for idx in indices:
-            original_index = dataset.indices[idx]
-            original_label = dataset.dataset._labels[original_index] 
-
-            noisy_label = original_label
-            while noisy_label == original_label:
-                noisy_label = np.random.randint(0, len(dataset.dataset._labels ))
-
-            dataset.dataset._labels[original_index] = noisy_label
     else:
-        raise ValueError(f"Dataset '{dataset_name}' not supported. Use 'MNIST', 'CIFAR10', 'CIFAR100', or 'Flowers102'.")
+        raise ValueError(f"Dataset '{dataset_name}' not supported. Use 'MNIST', 'CIFAR10' or 'CIFAR100'.")
 
 def splitData(dataset_name, training_ds, test_ds, num_train_samples=4000, num_test_samples=1000, batch_size=128, noise_level=0.1):
     train_indices = np.random.choice(len(training_ds), num_train_samples, replace=False)
@@ -96,15 +74,11 @@ def splitData(dataset_name, training_ds, test_ds, num_train_samples=4000, num_te
             addNoise('CIFAR10', train_subset, noise_level)
         elif dataset_name == 'CIFAR100':
             addNoise('CIFAR100', train_subset, noise_level)
-        elif dataset_name == 'Flowers102':
-            addNoise('Flowers102', train_subset, noise_level)
         else:
-            raise ValueError(f"Dataset '{dataset_name}' not supported. Use 'MNIST', 'CIFAR10', 'CIFAR100', or 'Flowers102'.")
+            raise ValueError(f"Dataset '{dataset_name}' not supported. Use 'MNIST', 'CIFAR10' or 'CIFAR100'.")
 
     if dataset_name == 'MNIST' or dataset_name == 'CIFAR10' or dataset_name == 'CIFAR100':
         classes = training_ds.classes
-    elif dataset_name == 'Flowers102':
-        classes = list(set(training_ds._labels))
     else:
         raise ValueError("Error while obtaining the number of classes from the dataset.")
 
