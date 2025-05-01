@@ -1,5 +1,5 @@
 "┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│  Model: ThreeLayerCNN  |  dataset: CIFAR100(50000/10000) | data_augmentation: False | noise: 0.2 | batch_size: 256 | learning_rate: 0.001 | epochs: 100  │
+│  Model: ThreeLayerCNN  |  dataset: CIFAR100(50000/10000) | data_augmentation: False | noise: 0.2 | batch_size: 128 | learning_rate: 0.001 | epochs: 100  │
 └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘"
 
 units,epochs,test_loss,test_accuracy,test_error

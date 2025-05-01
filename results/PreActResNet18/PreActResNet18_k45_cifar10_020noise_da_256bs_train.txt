@@ -1,5 +1,5 @@
 "┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│  Modelo: ResNet18 (PreActResNet, k=45)  |  dataset: CIFAR10 | data_augmentation: yes | noise: 0.2 | batch_size: 128 | learning_rate: default | epochs: 2000  │
+│  Modelo: ResNet18 (PreActResNet, k=45)  |  dataset: CIFAR10 | data_augmentation: yes | noise: 0.2 | batch_size: 256 | learning_rate: default | epochs: 2000  │
 └────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘"
 
 units,epochs,train_loss,train_accuracy,train_error
