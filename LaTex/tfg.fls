@@ -545,6 +545,7 @@ INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathp
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\zplmr7t.tfm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\zplmr7t.tfm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplb9d.tfm
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\eurosym\feymr10.tfm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplr9d.vf
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplr8r.tfm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fplmr.tfm
@@ -556,7 +557,6 @@ INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatin
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplb8r.tfm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fplmb.tfm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplbj8r.tfm
-INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\eurosym\feymr10.tfm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\vf\public\mathpazo\zplmr7t.vf
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\impallari\cabin\Cabin-Bold-tlf-t1.tfm
@@ -612,31 +612,45 @@ INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palati
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplr9t.vf
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\vf\public\mathpazo\zplmr7y.vf
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT .\img\experiments\unimodal.png
+INPUT .\img\experiments\unimodal.png
+INPUT .\img\experiments\unimodal.png
+INPUT .\img\experiments\unimodal.png
+INPUT .\img\experiments\unimodal.png
+INPUT .\img\experiments\unimodal.png
+INPUT .\img\experiments\unimodal.png
+INPUT .\img\experiments\multimodal.png
+INPUT .\img\experiments\multimodal.png
+INPUT .\img\experiments\multimodal.png
+INPUT .\img\experiments\multimodal.png
+INPUT .\img\experiments\multimodal.png
+INPUT .\img\experiments\multimodal.png
+INPUT .\img\experiments\multimodal.png
+INPUT .\img\distribuciones-normales.png
+INPUT .\img\distribuciones-normales.png
+INPUT .\img\distribuciones-normales.png
+INPUT .\img\distribuciones-normales.png
+INPUT .\img\distribuciones-normales.png
+INPUT .\img\distribuciones-normales.png
+INPUT .\img\distribuciones-normales.png
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplr9d.tfm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplr9d.tfm
-INPUT .\img\distribuciones-normales.png
-INPUT .\img\distribuciones-normales.png
-INPUT .\img\distribuciones-normales.png
-INPUT .\img\distribuciones-normales.png
-INPUT .\img\distribuciones-normales.png
-INPUT .\img\distribuciones-normales.png
-INPUT .\img\distribuciones-normales.png
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplri9d.tfm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplri9d.tfm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\zplmb7t.tfm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\zplmb7t.tfm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\zplmb7t.tfm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\vf\public\mathpazo\zplmb7t.vf
-INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
-INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\vf\public\mathpazo\zplmb7t.vf
-INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fplmb.tfm
-INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplb8r.tfm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
 INPUT .\capitulos\fundamentos_informaticos.tex
 INPUT .\capitulos\fundamentos_informaticos.tex
 INPUT .\capitulos\fundamentos_informaticos.tex
 INPUT .\capitulos\fundamentos_informaticos.tex
 INPUT capitulos\fundamentos_informaticos.tex
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\vf\public\mathpazo\zplmb7t.vf
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fplmb.tfm
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplb8r.tfm
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
 INPUT .\img\clasi-regresion.png
 INPUT .\img\clasi-regresion.png
 INPUT .\img\clasi-regresion.png
@@ -672,6 +686,7 @@ INPUT .\img\convolucion.png
 INPUT .\img\convolucion.png
 INPUT .\img\convolucion.png
 INPUT .\img\convolucion.png
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\impallari\cabin\Cabin-BoldItalic-tlf-t1.tfm
 INPUT .\img\pooling.png
 INPUT .\img\pooling.png
 INPUT .\img\pooling.png
@@ -679,6 +694,8 @@ INPUT .\img\pooling.png
 INPUT .\img\pooling.png
 INPUT .\img\pooling.png
 INPUT .\img\pooling.png
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\vf\impallari\cabin\Cabin-BoldItalic-tlf-t1.vf
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\impallari\cabin\Cabin-BoldItalic-tlf-t1--base.tfm
 INPUT .\img\funcionesactivacion.png
 INPUT .\img\funcionesactivacion.png
 INPUT .\img\funcionesactivacion.png
@@ -719,6 +736,7 @@ INPUT .\img\aprendizajegd.png
 INPUT .\img\aprendizajegd.png
 INPUT .\img\aprendizajegd.png
 INPUT .\img\aprendizajegd.png
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\impallari\cabin\Cabin-BoldItalic-tlf-t1.tfm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplr9t.tfm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\zplmr7m.tfm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\zplmr7y.tfm
@@ -732,6 +750,8 @@ INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathp
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fplmbb.tfm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fplmbb.tfm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fplmbb.tfm
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\vf\impallari\cabin\Cabin-BoldItalic-tlf-t1.vf
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\impallari\cabin\Cabin-BoldItalic-tlf-t1--base.tfm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\vf\public\mathpazo\zplmr7m.vf
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fplmri.tfm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
@@ -858,6 +878,16 @@ INPUT .\img\marchenku-pastor.png
 INPUT .\img\marchenku-pastor.png
 INPUT .\img\marchenku-pastor.png
 INPUT .\img\marchenku-pastor.png
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplb9t.tfm
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplb9t.tfm
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplb9t.tfm
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\zplmb7m.tfm
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\zplmb7m.tfm
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\zplmb7m.tfm
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\zplmb7y.tfm
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\zplmb7y.tfm
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\zplmb7y.tfm
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplb9t.vf
 INPUT .\img\localglobalminima.png
 INPUT .\img\localglobalminima.png
 INPUT .\img\localglobalminima.png
@@ -896,13 +926,20 @@ INPUT .\img\cosarara2.png
 INPUT .\img\cosarara2.png
 INPUT .\img\cosarara2.png
 INPUT .\img\cosarara2.png
-INPUT .\img\suavidad1.png
-INPUT .\img\suavidad1.png
-INPUT .\img\suavidad1.png
-INPUT .\img\suavidad1.png
-INPUT .\img\suavidad1.png
-INPUT .\img\suavidad1.png
-INPUT .\img\suavidad1.png
+INPUT .\img\experiments\legendre1.2.png
+INPUT .\img\experiments\legendre1.2.png
+INPUT .\img\experiments\legendre1.2.png
+INPUT .\img\experiments\legendre1.2.png
+INPUT .\img\experiments\legendre1.2.png
+INPUT .\img\experiments\legendre1.2.png
+INPUT .\img\experiments\legendre1.2.png
+INPUT .\img\experiments\legendre1.3.png
+INPUT .\img\experiments\legendre1.3.png
+INPUT .\img\experiments\legendre1.3.png
+INPUT .\img\experiments\legendre1.3.png
+INPUT .\img\experiments\legendre1.3.png
+INPUT .\img\experiments\legendre1.3.png
+INPUT .\img\experiments\legendre1.3.png
 INPUT .\img\ground-truth-reproducibility.png
 INPUT .\img\ground-truth-reproducibility.png
 INPUT .\img\ground-truth-reproducibility.png
@@ -993,12 +1030,6 @@ INPUT .\img\experiments\legendre1.2.png
 INPUT .\img\experiments\legendre1.2.png
 INPUT .\img\experiments\legendre1.2.png
 INPUT .\img\experiments\legendre1.2.png
-INPUT .\img\experiments\legendre1.2.png
-INPUT .\img\experiments\legendre1.2.png
-INPUT .\img\experiments\legendre1.2.png
-INPUT .\img\experiments\legendre1.3.png
-INPUT .\img\experiments\legendre1.3.png
-INPUT .\img\experiments\legendre1.3.png
 INPUT .\img\experiments\legendre1.3.png
 INPUT .\img\experiments\legendre1.3.png
 INPUT .\img\experiments\legendre1.3.png
@@ -1130,22 +1161,22 @@ INPUT .\img\experiments\noise-wise-dd3.png
 INPUT .\img\experiments\noise-wise-dd3.png
 INPUT .\img\experiments\noise-wise-dd3.png
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplri9d.tfm
-INPUT .\img\experiments\sample-wise-dd1.png
-INPUT .\img\experiments\sample-wise-dd1.png
-INPUT .\img\experiments\sample-wise-dd1.png
-INPUT .\img\experiments\sample-wise-dd1.png
-INPUT .\img\experiments\sample-wise-dd1.png
-INPUT .\img\experiments\sample-wise-dd1.png
-INPUT .\img\experiments\sample-wise-dd1.png
-INPUT .\img\experiments\sample-wise-dd2.png
-INPUT .\img\experiments\sample-wise-dd2.png
-INPUT .\img\experiments\sample-wise-dd2.png
-INPUT .\img\experiments\sample-wise-dd2.png
-INPUT .\img\experiments\sample-wise-dd2.png
-INPUT .\img\experiments\sample-wise-dd2.png
-INPUT .\img\experiments\sample-wise-dd2.png
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplri9d.vf
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplrij8r.tfm
+INPUT .\img\experiments\sample-wise-dd1.png
+INPUT .\img\experiments\sample-wise-dd1.png
+INPUT .\img\experiments\sample-wise-dd1.png
+INPUT .\img\experiments\sample-wise-dd1.png
+INPUT .\img\experiments\sample-wise-dd1.png
+INPUT .\img\experiments\sample-wise-dd1.png
+INPUT .\img\experiments\sample-wise-dd1.png
+INPUT .\img\experiments\sample-wise-dd2.png
+INPUT .\img\experiments\sample-wise-dd2.png
+INPUT .\img\experiments\sample-wise-dd2.png
+INPUT .\img\experiments\sample-wise-dd2.png
+INPUT .\img\experiments\sample-wise-dd2.png
+INPUT .\img\experiments\sample-wise-dd2.png
+INPUT .\img\experiments\sample-wise-dd2.png
 INPUT .\img\experiments\ratioparamsexamples.png
 INPUT .\img\experiments\ratioparamsexamples.png
 INPUT .\img\experiments\ratioparamsexamples.png
@@ -1223,22 +1254,22 @@ INPUT .\img\experiments\PreActResNet18(64).png
 INPUT .\img\experiments\PreActResNet18(64).png
 INPUT .\img\experiments\PreActResNet18(64).png
 INPUT .\img\experiments\PreActResNet18(64).png
+INPUT .\img\experiments\2nnvsdeepnn.png
+INPUT .\img\experiments\2nnvsdeepnn.png
+INPUT .\img\experiments\2nnvsdeepnn.png
+INPUT .\img\experiments\2nnvsdeepnn.png
+INPUT .\img\experiments\2nnvsdeepnn.png
+INPUT .\img\experiments\2nnvsdeepnn.png
+INPUT .\img\experiments\2nnvsdeepnn.png
+INPUT .\img\experiments\3cnnvsdeepcnn.png
+INPUT .\img\experiments\3cnnvsdeepcnn.png
+INPUT .\img\experiments\3cnnvsdeepcnn.png
+INPUT .\img\experiments\3cnnvsdeepcnn.png
+INPUT .\img\experiments\3cnnvsdeepcnn.png
+INPUT .\img\experiments\3cnnvsdeepcnn.png
+INPUT .\img\experiments\3cnnvsdeepcnn.png
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\vf\public\mathpazo\zplmr7t.vf
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
-INPUT .\img\experiments\2nnvsdeepnn.png
-INPUT .\img\experiments\2nnvsdeepnn.png
-INPUT .\img\experiments\2nnvsdeepnn.png
-INPUT .\img\experiments\2nnvsdeepnn.png
-INPUT .\img\experiments\2nnvsdeepnn.png
-INPUT .\img\experiments\2nnvsdeepnn.png
-INPUT .\img\experiments\2nnvsdeepnn.png
-INPUT .\img\experiments\3cnnvsdeepcnn.png
-INPUT .\img\experiments\3cnnvsdeepcnn.png
-INPUT .\img\experiments\3cnnvsdeepcnn.png
-INPUT .\img\experiments\3cnnvsdeepcnn.png
-INPUT .\img\experiments\3cnnvsdeepcnn.png
-INPUT .\img\experiments\3cnnvsdeepcnn.png
-INPUT .\img\experiments\3cnnvsdeepcnn.png
 INPUT .\capitulos\conclusiones_trabajosfuturos.tex
 INPUT .\capitulos\conclusiones_trabajosfuturos.tex
 INPUT .\capitulos\conclusiones_trabajosfuturos.tex
@@ -1306,6 +1337,13 @@ INPUT .\img\experiments\epoch-wise3CNNoverparameterized.png
 INPUT .\img\experiments\epoch-wise3CNNoverparameterized.png
 INPUT .\img\experiments\epoch-wise3CNNoverparameterized.png
 INPUT .\img\experiments\epoch-wise3CNNoverparameterized.png
+INPUT .\img\experiments\epoch-wiseMNIST.png
+INPUT .\img\experiments\epoch-wiseMNIST.png
+INPUT .\img\experiments\epoch-wiseMNIST.png
+INPUT .\img\experiments\epoch-wiseMNIST.png
+INPUT .\img\experiments\epoch-wiseMNIST.png
+INPUT .\img\experiments\epoch-wiseMNIST.png
+INPUT .\img\experiments\epoch-wiseMNIST.png
 INPUT .\img\experiments\landscapemultimodal.png
 INPUT .\img\experiments\landscapemultimodal.png
 INPUT .\img\experiments\landscapemultimodal.png
@@ -1320,11 +1358,16 @@ INPUT .\img\experiments\landscapeunimodal.png
 INPUT .\img\experiments\landscapeunimodal.png
 INPUT .\img\experiments\landscapeunimodal.png
 INPUT .\img\experiments\landscapeunimodal.png
-INPUT .\glosario.tex
-INPUT .\glosario.tex
-INPUT .\glosario.tex
-INPUT .\glosario.tex
-INPUT glosario.tex
+INPUT .\glosario_mates.tex
+INPUT .\glosario_mates.tex
+INPUT .\glosario_mates.tex
+INPUT .\glosario_mates.tex
+INPUT glosario_mates.tex
+INPUT .\glosario_info.tex
+INPUT .\glosario_info.tex
+INPUT .\glosario_info.tex
+INPUT .\glosario_info.tex
+INPUT glosario_info.tex
 INPUT .\tfg.bbl
 INPUT .\tfg.bbl
 INPUT tfg.bbl
