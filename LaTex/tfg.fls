@@ -1,6 +1,6 @@
-PWD c:\Users\Juan Antonio\Desktop\ProyectoLaTex
+PWD c:\Users\Juan Antonio\Desktop\GitHub\Deep-Double-Descent\LaTex
 INPUT C:\Users\Juan Antonio\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\Juan Antonio\Desktop\ProyectoLaTex\tfg.tex
+INPUT c:\Users\Juan Antonio\Desktop\GitHub\Deep-Double-Descent\LaTex\tfg.tex
 OUTPUT tfg.log
 INPUT .\ugrTFG.cls
 INPUT ugrTFG.cls
@@ -1161,22 +1161,22 @@ INPUT .\img\experiments\noise-wise-dd3.png
 INPUT .\img\experiments\noise-wise-dd3.png
 INPUT .\img\experiments\noise-wise-dd3.png
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplri9d.tfm
+INPUT .\img\experiments\sample-wise-dd1.png
+INPUT .\img\experiments\sample-wise-dd1.png
+INPUT .\img\experiments\sample-wise-dd1.png
+INPUT .\img\experiments\sample-wise-dd1.png
+INPUT .\img\experiments\sample-wise-dd1.png
+INPUT .\img\experiments\sample-wise-dd1.png
+INPUT .\img\experiments\sample-wise-dd1.png
+INPUT .\img\experiments\sample-wise-dd2.png
+INPUT .\img\experiments\sample-wise-dd2.png
+INPUT .\img\experiments\sample-wise-dd2.png
+INPUT .\img\experiments\sample-wise-dd2.png
+INPUT .\img\experiments\sample-wise-dd2.png
+INPUT .\img\experiments\sample-wise-dd2.png
+INPUT .\img\experiments\sample-wise-dd2.png
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplri9d.vf
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplrij8r.tfm
-INPUT .\img\experiments\sample-wise-dd1.png
-INPUT .\img\experiments\sample-wise-dd1.png
-INPUT .\img\experiments\sample-wise-dd1.png
-INPUT .\img\experiments\sample-wise-dd1.png
-INPUT .\img\experiments\sample-wise-dd1.png
-INPUT .\img\experiments\sample-wise-dd1.png
-INPUT .\img\experiments\sample-wise-dd1.png
-INPUT .\img\experiments\sample-wise-dd2.png
-INPUT .\img\experiments\sample-wise-dd2.png
-INPUT .\img\experiments\sample-wise-dd2.png
-INPUT .\img\experiments\sample-wise-dd2.png
-INPUT .\img\experiments\sample-wise-dd2.png
-INPUT .\img\experiments\sample-wise-dd2.png
-INPUT .\img\experiments\sample-wise-dd2.png
 INPUT .\img\experiments\ratioparamsexamples.png
 INPUT .\img\experiments\ratioparamsexamples.png
 INPUT .\img\experiments\ratioparamsexamples.png
