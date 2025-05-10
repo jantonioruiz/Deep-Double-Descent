@@ -50,6 +50,7 @@ El \emph{Deep Double Descent} fue nombrado así, por primera vez, por Belkin et 
 
 Posteriormente, Nakkiran et al.\ en $2019$~\cite{Nakkiran2019} observaron que el doble descenso no solo dependía del tamaño del modelo, sino también del número de épocas de entrenamiento. Además, unificaron estos resultados mediante la introducción de una nueva medida de complejidad para un modelo: la \textbf{complejidad efectiva del modelo}, y conjeturaron bajo qué condiciones podía ocurrir en función de dicha medida. En este mismo trabajo, también formalizaron los distintos tipos que pueden manifestarse: en función del número de parámetros, del número de épocas y del tamaño del conjunto de entrenamiento, los cuales constituirán la base conceptual sobre la que desarrollaremos este proyecto.
 
+A modo de reflexión final, es importante destacar que, aunque hoy en día el \textit{Deep Double Descent} pueda parecer muy evidente, durante las últimas décadas la lógica predominante en la comunidad científica iba en otra dirección. En efecto, la mayoría de libros de texto y artículos científicos sobre redes neuronales profundas sostenían que debía controlarse el tamaño de los modelos para evitar el sobreajuste, siguiendo el paradigma clásico del equilibrio sesgo-varianza. Esta idea, que parecía una verdad absoluta e incuestionable, ha sido puesta en duda por estos nuevos comportamientos, motivados estrechamente por la enorme capacidad de cómputo de la que disponemos en la actualidad.
 
 \section{Avances recientes}\label{}
 
@@ -65,13 +66,11 @@ Por otra parte, estudios modernos han abordado este comportamiento desde la pers
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.6\linewidth]{img/grokking.png}
-    \caption[\textit{Grokking} y \textit{Deep Double Descent}.]{Error en entrenamiento y generalización para el caso de \textit{grokking} (línea verde) y para el doble descenso (línea naranja). Se observa que el \textit{grokking} implica una mejora abrupta en términos de generalización una vez superado el umbral de interpolación, mientras que el doble descenso muestra una mejora progresiva a partir de ese punto.}\label{fig:grokking}
+    \includegraphics[width=0.5\linewidth]{img/grokking.png}
+    \caption[\textit{Grokking} y \textit{Deep Double Descent}.]{Error en entrenamiento y test para el \textit{grokking} (línea verde) y el doble descenso (línea naranja). Se observa que el \textit{grokking} implica una mejora abrupta en términos de generalización una vez superado el umbral de interpolación, mientras que el doble descenso muestra una mejora progresiva a partir de ese punto.}\label{fig:grokking}
 \end{figure}
 
 Finalmente, investigaciones recientes han mostrado extensiones del doble descenso, pues este no está necesariamente limitado a dos descensos, sino que, bajo ciertas circunstancias, pueden observarse más de dos descensos~\cite{d_Ascoli2021, Chen2021}. Además, se ha estudiado su relación con otros sucesos emergentes en el aprendizaje profundo, como es el caso del \emph{grokking}~\cite{Power2022}. En este contexto, Davies et al. en $2023$~\cite{Davies2023} propusieron una conexión entre ambos, sugiriendo que el aprendizaje prolongado puede llevar a una mejora abrupta de la generalización (véase Figura~\ref{fig:grokking}). El \textit{grokking}, en particular, suele asociarse a conjuntos de datos pequeños y estructurados, tras un entrenamiento prolongado en el que el modelo transita abruptamente del sobreajuste a la generalización. Por su parte, el \textit{double descent} se manifiesta típicamente en modelos de gran capacidad entrenados con datos ruidosos, en los que se refleja una tendencia decreciente del error vinculada a la capacidad del modelo.
-
-Para concluir este capítulo, se presenta en la Tabla~\ref{tabla:resumen-contribuciones} un resumen de las principales publicaciones relacionadas con el doble descenso, aunque las primeras manifestaciones no utilizan la denominación actual, junto con sus contribuciones más relevantes. Asimismo, se incluye en la tabla el número de citas de cada publicación, obtenido a partir de \textit{Google Scholar}\footnote{Número de citas encontradas a día $12$ de abril de $2025$.}.
 
 \begin{table}[h]
     \centering
@@ -80,27 +79,29 @@ Para concluir este capítulo, se presenta en la Tabla~\ref{tabla:resumen-contrib
     \begin{NiceTabular}{c c c c}[hvlines,color-inside]
         \Block[fill={cyan!50}]{2-1}{\textbf{Año}} & \Block[fill={cyan!50}]{2-1}{\textbf{Referencia}} & \Block[fill={cyan!50}]{2-1}{\textbf{Principales contribuciones}} & \Block[fill={cyan!50}]{2-1}{\textbf{Citas}} \\ \\
         
-        \Block{3-1}{$1989$} & \Block{3-1}{Vallet et al.~\cite{Vallet1989}} & \Block{3-1}{Primera manifestación empírica del suceso \\ sobre datos artificiales en la física teórica.} & \Block{3-1}{$71$} \\ \\ \\
+        \Block{5-1}{$1989$} & \Block{5-1}{\textit{Linear and nonlinear extension} \\ \textit{of the pseudoinverse solution} \\ \textit{for learning boolean functions.} \\ Vallet et al.~\cite{Vallet1989}} & \Block{5-1}{Primera manifestación empírica sobre \\ datos artificiales en la física teórica.} & \Block{5-1}{$71$} \\ \\ \\ \\ \\
 
-        \Block{3-1}{$1991$} & \Block{3-1}{Krogh \& Hertz~\cite{Krogh1991}} & \Block{3-1}{Evidenciaron, parcialmente, el fenómeno en el \\ contexto de la regresión lineal.} & \Block{3-1}{$2654$} \\ \\ \\
+        \Block{4-1}{$1991$} & \Block{4-1}{\textit{A simple weight decay} \\ \textit{can improve generalization.} \\ Krogh \& Hertz~\cite{Krogh1991}} & \Block{4-1}{Evidenciaron, parcialmente, el fenómeno en el \\ contexto de la regresión lineal.} & \Block{4-1}{$2654$} \\ \\ \\ \\ 
 
-        \Block{3-1}{$1995$} & \Block{3-1}{Manfred Opper~\cite{Opper1995}} & \Block{3-1}{Primeros resultados teóricos formales \\ sobre datos artificiales.} & \Block{3-1}{$71$} \\ \\ \\
+        \Block{4-1}{$1995$} & \Block{4-1}{\textit{Statistical mechanics of} \\ \textit{learning: Generalization.} \\ Manfred Opper~\cite{Opper1995}} & \Block{4-1}{Primeros resultados teóricos formales \\ sobre datos artificiales.} & \Block{4-1}{$71$} \\ \\ \\ \\
 
-        \Block{3-1}{$2000$} & \Block{3-1}{Robert Duin~\cite{Duin2000}} & \Block{3-1}{Primeras evidencias empíricas usando \\ datos del mundo real.} & \Block{3-1}{$209$} \\ \\ \\
+        \Block{3-1}{$2000$} & \Block{3-1}{\textit{Classifiers in almost empty spaces.} \\ Robert Duin~\cite{Duin2000}} & \Block{3-1}{Primeras evidencias empíricas usando \\ datos del mundo real.} & \Block{3-1}{$209$} \\ \\ \\ 
 
-        \Block{3-1}{$2019$} & \Block{3-1}{Belkin et al.~\cite{Belkin2019}} & \Block{3-1}{Unificaron la sabiduría clásica con los enfoques \\ modernos y acuñaron el nombre de \textit{Deep Double Descent}.} & \Block{3-1}{$2331$} \\ \\ \\
+        \Block{5-1}{$2019$} & \Block{5-1}{\textit{Reconciling modern machine} \\ \textit{learning practice and the} \\ \textit{classical bias-variance trade-off.} \\ Belkin et al.~\cite{Belkin2019}} & \Block{5-1}{Unificaron la sabiduría clásica con los enfoques \\ modernos y acuñaron el nombre de \textit{Deep Double Descent}.} & \Block{5-1}{$2331$} \\ \\ \\ \\ \\
 
-        \Block{3-1}{$2019$} & \Block{3-1}{Nakkiran et al.~\cite{Nakkiran2019}} & \Block{3-1}{Introdujeron la complejidad efectiva del modelo \\ y los distintos tipos de doble descenso.} & \Block{3-1}{$1174$} \\ \\ \\
+        \Block{4-1}{$2019$} & \Block{4-1}{\textit{Deep double descent: Where bigger} \\ \textit{models and more data hurt.} \\ Nakkiran et al.~\cite{Nakkiran2019}} & \Block{4-1}{Introdujeron la complejidad efectiva del modelo \\ y los distintos tipos de doble descenso.} & \Block{4-1}{$1174$} \\ \\ \\ \\
 
-        \Block{3-1}{$2021$} & \Block{3-1}{Chen et al.~\cite{Chen2021}} & \Block{3-1}{Demostraron que el error puede presentar un \\ número arbitrario de ``picos'' y que pueden controlarse.} & \Block{3-1}{$80$} \\ \\ \\
+        \Block{4-1}{$2021$} & \Block{4-1}{\textit{Multiple descent: Design your} \\ \textit{own generalization curve.} \\ Chen et al.~\cite{Chen2021}} & \Block{4-1}{Demostraron que el error puede presentar un \\ número arbitrario de ``picos'' y que pueden controlarse.} & \Block{4-1}{$80$} \\ \\ \\ \\
 
-        \Block{3-1}{$2023$} & \Block{3-1}{Schaeffer et al.~\cite{Schaeffer2023}} & \Block{3-1}{Analizaron los factores que provocan su aparición \\ en modelos de regresión polinómica.} & \Block{3-1}{$29$} \\ \\ \\
+        \Block{5-1}{$2023$} & \Block{5-1}{\textit{Double descent demystified: Identifying} \\ \textit{interpreting \& ablating the sources} \\ \textit{of a deep learning puzzle.} \\ Schaeffer et al.~\cite{Schaeffer2023}} & \Block{5-1}{Analizaron los factores que provocan su aparición \\ en modelos de regresión polinómica.} & \Block{5-1}{$29$} \\ \\ \\ \\ \\
 
-        \Block{3-1}{$2023$} & \Block{3-1}{Mingard et al.~\cite{Mingard2023}} & \Block{3-1}{Proponen que las redes neuronales trabajan \\ siguiendo la filosofía de Ockham.} & \Block{3-1}{$13$} \\ \\ \\
+        \Block{4-1}{$2023$} & \Block{4-1}{\textit{Do deep neural networks have} \\ \textit{an inbuilt occam's razor?} \\ Mingard et al.~\cite{Mingard2023}} & \Block{4-1}{Proponen que las redes neuronales trabajan \\ siguiendo la filosofía de Ockham.} & \Block{4-1}{$13$} \\ \\ \\ \\
 
-        \Block{3-1}{$2023$} & \Block{3-1}{Davies et al.~\cite{Davies2023}} & \Block{3-1}{Plantean unificar el \textit{grokking} y el \\ \textit{double descent} bajo un marco conceptual común.} & \Block{3-1}{$37$} \\ \\ \\
+        \Block{3-1}{$2023$} & \Block{3-1}{\textit{Unifying grokking and double descent.} \\ Davies et al.~\cite{Davies2023}} & \Block{3-1}{Plantean unificar el \textit{grokking} y el \\ \textit{double descent} bajo un marco conceptual común.} & \Block{3-1}{$37$} \\ \\ \\
     \end{NiceTabular}
-    \caption{Resumen de los principales artículos junto con sus contribuciones.}\label{tabla:resumen-contribuciones}
+    \caption[Resumen de los principales artículos junto con sus contribuciones.]{Resumen de los principales artículos junto con sus contribuciones y citas, extraídas de \textit{Google Scholar}\textsuperscript{\ref{nota:scholar}}.}\label{tabla:resumen-contribuciones}
 \end{table}
+
+Para concluir este capítulo, en la Tabla~\ref{tabla:resumen-contribuciones} se presenta un resumen de las principales publicaciones relacionadas con el doble descenso, junto con sus contribuciones más relevantes y el número de citas, obtenidas a partir de Google Scholar\footnote{\label{nota:scholar}Número de citas encontradas a fecha 12 de abril de 2025.}.
 
 \endinput

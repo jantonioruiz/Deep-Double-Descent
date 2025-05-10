@@ -3,7 +3,7 @@
 
 \chapter{Análisis Empírico del Deep Double Descent}\label{ch:analisis-empirico-ddd}
 
-En este capítulo abordaremos, de manera práctica, el \textit{doble descenso profundo}. Comenzaremos con su estudio en ejemplos sencillos de regresión, lo cual nos permitirá obtener una primera visión clara e intuitiva de su comportamiento. A continuación y utilizando redes neuronales, se presentarán los principales tipos identificados por la comunidad científica. Asimismo, se explorarán algunos casos adicionales que, si bien no han sido tan estudiados, poseen una relevancia significativa en su análisis.
+En este capítulo abordaremos, de manera práctica, el \textit{Deep Double Descent}. Comenzaremos con su estudio en ejemplos sencillos de regresión, lo cual nos permitirá obtener una primera visión clara e intuitiva de su comportamiento. A continuación y utilizando redes neuronales, se presentarán los principales tipos identificados por la comunidad científica. Asimismo, se explorarán algunos casos adicionales que, si bien no han sido tan estudiados, poseen una relevancia significativa en su análisis.
 
 \section{Materiales y métodos}\label{sec:materiales-y-metodos}
 
@@ -42,14 +42,14 @@ Para terminar esta sección, se presenta una tabla a modo de resumen de los \tex
 Aunque los \textit{datasets} elegidos no son excesivamente grandes, con el fin de acelerar el proceso de entrenamiento durante un alto número de épocas, se utilizarán subconjuntos de estos en los experimentos. En particular, cuando se haga uso de un subconjunto, se empleará la siguiente notación:
 
 \[
-    \textit{dataset}[\text{\textit{train}/\textit{test}}],
+    \textit{dataset}[\text{\textit{train}/\textit{test}}]
 \]
 
 donde \textit{dataset} se refiere a uno de los conjuntos de datos previamente definidos, \textit{train} indica el número de ejemplos utilizados para entrenamiento, y \textit{test} representa el número de ejemplos en el conjunto de test. Un ejemplo sería MNIST[$4000/1000$], donde se indica que estamos utilizando un subconjunto de MNIST con $4000$ ejemplos de entrenamiento y $1000$ para test.
 
 \subsection{Protocolo de validación experimental}\label{subsec:protocolo-experimental}
 
-Para la validación y estimación del rendimiento de cada modelo, se emplea la técnica conocida como \textit{hold-out}. Esta técnica consiste en dividir el conjunto de datos en dos subconjuntos: uno destinado al entrenamiento del modelo y otro para la evaluación de su rendimiento (véase la imagen izquierda de la Figura~\ref{fig:protocolos}). En este enfoque, el conjunto de entrenamiento se utiliza para ajustar el modelo, mientras que el conjunto de tes se emplea para evaluar su capacidad de generalización frente a datos no vistos previamente. De este modo, la puntuación obtenida depende de cómo se dividan los datos entre estos subconjuntos.
+Para la validación y estimación del rendimiento de cada modelo, se emplea la técnica conocida como \textit{hold-out}. Esta técnica consiste en dividir el conjunto de datos en dos subconjuntos: uno destinado al entrenamiento del modelo y otro para la evaluación de su rendimiento (véase la imagen izquierda de la Figura~\ref{fig:protocolos}). En este enfoque, el conjunto de entrenamiento se utiliza para ajustar el modelo, mientras que el conjunto de test se emplea para evaluar su capacidad de generalización frente a datos no vistos previamente. 
 
 \begin{figure}[h]
     \centering
@@ -57,9 +57,9 @@ Para la validación y estimación del rendimiento de cada modelo, se emplea la t
     \caption[Protocolos de validación experimental.]{Protocolos de validación experimental. A la izquierda se muestra la técnica \textit{hold-out}, en la que el conjunto de datos se divide en dos subconjuntos: uno para el entrenamiento y otro para test. A la derecha se presenta \textit{$K$-fold cross validation}, donde el conjunto de entrenamiento se divide en $K$ pliegues, siendo uno de ellos utilizado como conjunto de test.}\label{fig:protocolos}
 \end{figure}
 
-Sin embargo, el método preferido para la validación de modelos suele ser la validación cruzada o \textit{$K$-fold cross validation}. Esta técnica consiste en dividir el conjunto de entrenamiento en $K$ subconjuntos o pliegues (véase la imagen derecha de la Figura~\ref{fig:protocolos}), donde en cada iteración uno de estos subconjuntos se utiliza como conjunto de test, mientras que los demás se emplean como conjunto de entrenamiento. Este proceso se repite hasta que cada subconjunto haya sido utilizado como conjunto de test en al menos una iteración. Así, cuando se utiliza un valor de $K = 1$, esta técnica se reduce a un \textit{hold-out}, lo que permite considerarla como una extensión de la misma. De este modo, se obtiene una estimación más robusta del rendimiento del modelo frente a datos no vistos previamente. Finalmente, el rendimiento del modelo se evalúa en el conjunto de prueba final, que no ha sido utilizado durante ninguna de las particiones de entrenamiento.
+Es importante destacar que el método habitualmente preferido para la validación de modelos suele ser la validación cruzada o \textit{$K$-fold cross validation}. Esta técnica consiste en dividir el conjunto de entrenamiento en $K$ subconjuntos o pliegues (véase la imagen derecha de la Figura~\ref{fig:protocolos}), donde en cada iteración uno de estos subconjuntos se utiliza como conjunto de test, mientras que los demás se emplean como conjunto de entrenamiento. Este proceso se repite hasta que cada subconjunto haya sido utilizado como conjunto de test en al menos una iteración. Así, cuando se utiliza un valor de $K = 1$, esta técnica se reduce a un \textit{hold-out}, lo que permite considerarla como una extensión de la misma. De este modo, se obtiene una estimación más robusta del rendimiento del modelo frente a datos no vistos previamente. Finalmente, el rendimiento del modelo se evalúa en el conjunto de prueba final, que no ha sido utilizado durante ninguna de las particiones de entrenamiento.
 
-Por tanto, la elección del método \textit{hold-out} se debe a su menor requerimiento de potencia computacional y tiempo, lo cual resulta fundamental, dado que nuestros experimentos son especialmente costosos en ambos aspectos. Las particiones utilizadas para generar los conjuntos de entrenamiento y test de los distintos conjuntos de datos son las predeterminadas que vienen con estos y que se han descrito en la sección anterior.
+Por tanto, la elección del método \textit{hold-out} se debe a su menor requerimiento de potencia computacional y tiempo, lo cual resulta fundamental, dado que nuestros experimentos son especialmente costosos en ambos aspectos (como se puede constatar en las tablas resumen incluidas en la parte experimental). Las particiones utilizadas para generar los conjuntos de entrenamiento y test de los distintos conjuntos de datos son las predeterminadas que vienen con estos y que se han descrito en la sección anterior.
 
 \subsection{Arquitecturas utilizadas}\label{subsec:arquitecturas}
 
@@ -67,7 +67,7 @@ En esta sección se presentan las tres arquitecturas diseñadas y utilizadas con
 
 \subsubsection{2NN}\label{subsubsec:2NN}
 
-Como primer modelo se propone una arquitectura muy simple, formada únicamente por dos capas densas. Para ello, primeramente se añade una capa de aplanamiento \textit{(flattening)} con el objetivo de convertir las imágenes proporcionadas en la entrada en un vector de píxeles unidimensional. A continuación, se añade la primera capa densa, cuya entrada está compuesta por el vector unidimensional anterior y su salida será un número variable de neuronas, todas ellas conectadas con cada entrada del vector. Finalmente, la última capa densa conectará las neuronas de salida de la primera capa densa con un número de neuronas que será igual al número de clases del datasets con el que estemos trabajando (véase Figura~\ref{fig:arquitecura2nn}).
+Como primer modelo se propone una arquitectura muy simple, formada únicamente por dos capas densas (un perceptrón multicapa (MLP) formado por dos capas). Para ello, primeramente se añade una capa de aplanamiento \textit{(flattening)} con el objetivo de convertir las imágenes proporcionadas en la entrada en un vector de píxeles unidimensional. A continuación, se añade la primera capa densa, cuya entrada está compuesta por el vector unidimensional anterior y su salida será un número variable de neuronas, todas ellas conectadas con cada entrada del vector. Finalmente, la última capa densa conectará las neuronas de salida de la primera capa densa con un número de neuronas que será igual al número de clases del datasets con el que estemos trabajando (véase Figura~\ref{fig:arquitecura2nn}).
 
 \begin{figure}[h]
     \centering
@@ -75,19 +75,52 @@ Como primer modelo se propone una arquitectura muy simple, formada únicamente p
     \caption[Arquitectura $2$NN.]{Arquitectura $2$NN. La capa de entrada está formada por un número de neuronas igual al número de píxeles de la imagen de entrada. Estas neuronas estarán conectadas a todas las neuronas de la capa oculta, y a su vez, estas últimas estarán conectadas a todas las neuronas de la capa de salida, la cual corresponde al número de clases del problema.}\label{fig:arquitecura2nn}
 \end{figure}
 
-El diseño y elección de este modelo se basa en su relativa sencillez, lo que lo convierte en una opción ideal para llevar a cabo una amplia variedad de experimentos al permitir tiempos de entrenamiento significativamente más bajos en comparación con otras arquitecturas utilizadas.
+El diseño y elección de este modelo se basa en su relativa sencillez, lo que lo convierte en una opción ideal para llevar a cabo una amplia variedad de experimentos, ya que tiempos de entrenamiento significativamente más bajos en comparación con otras arquitecturas utilizadas, permitiéndonos estudiar el DDD sin un alto coste computacional. No obstante, dado que los MLPs no cuentan con el \textit{inductive bias} adecuado para trabajar con imágenes, se espera obtener peores resultados en comparación con el uso de CNNs.
 
 Finalmente, se expone una tabla con el número de parámetros que conforman esta arquitectura. Este detalle es especialmente relevante para los experimentos, ya que el número de parámetros reflejará el nivel de complejidad de la arquitectura (véase Tabla~\ref{tab:numero-parametros}).
 
 \begin{table}[ht]
     \centering
     \renewcommand{\arraystretch}{1.5} 
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    \textbf{Entrada} & \textbf{N° clases} & \textbf{N° unidades} & \textbf{N° parámetros} \\ \hline
+    Imagen de tamaño $n \times n \times l$ & c & k & $(n^2 \times l) \times k + k + c \times k + c$ \\ \hline
+    \multirow{2}{*}{$28 \times 28 \times 1$} & \multirow{2}{*}{$10$} & $50$ & $39 760$ \\ \cline{3-4}
+    & & $100$ & $79 550$ \\ \hline
+    \multirow{4}{*}{$32 \times 32 \times 3$} & \multirow{2}{*}{$10$} & $50$ & $118 160$ \\ \cline{3-4}
+    & & $100$ & $236 310$ \\ \cline{2-4}
+    & \multirow{2}{*}{$100$} & $50$ & $122 750$ \\ \cline{3-4}
+    & & $100$ & $245 400$ \\ \hline
+    \end{tabular}
+    \caption[Resumen de las arquitecturas $2$NN.]{Resumen de las arquitecturas $2$NN. Se muestra el número de parámetros dada una determinada imagen de entrada, donde $k$ hace referencia al número de neuronas de salida de la primera capa densa y $c$ al número de clases del problema de clasificación. Además, se presentan algunos ejemplos de configuraciones.}\label{tab:numero-parametros}
+\end{table}
+
+\subsubsection{3CNN}\label{subsubsec:3CNN}
+
+Como segunda arquitectura, se propone una CNN compuesta por $3$ capas convolucionales (denominada $3$CNN), seguidas de capas de \textit{pooling} para reducir dimensionalidad y, finalmente, una capa densa de salida.
+
+Este modelo se presenta como una opción intermedia en términos de complejidad entre el modelo expuesto previamente y el siguiente modelo que se presentará, donde el número de filtros en cada capa se ajustará según un parámetro $k \in \mathbb{N}$, siguiendo la secuencia [$k$, $2k$, $4k$] (véase Figura~\ref{fig:3CNN}).
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\linewidth]{img/experiments/3CNN.png}
+    \caption[Arquitectura $3$CNN.]{Arquitectura $3$CNN. Podemos observar los $3$ bloques convolucionales (distinguidos por color), cada uno de ellos con su correspondiente número de filtros ([$k$, $2k$, $4k$] con $k \in \mathbb{N}$) y las correspondientes capas de \textit{pooling}.}\label{fig:3CNN}
+\end{figure}
+
+Finalmente y dado que el número de parámetros asociados a esta arquitectura es tedioso de indicar (debido a la cantidad de capas que la conforman), se exponen en la Tabla~\ref{tab:numero-parametros3cnn} los principales valores del parámetro $k$ (número de filtros) utilizados en el desarrollo del proyecto, lo que permite realizar una comparación con la arquitectura $2$NN anterior y con la siguiente. Cabe destacar que la última capa de \textit{pooling} es adaptativa, lo que permite que la salida tenga dimensiones fijas independientemente del tamaño de la imagen de entrada. No obstante, el número de parámetros experimentará una variación mínima al utilizar imágenes en formato escala de grises o en RGB, puesto que el número de capas permanecerá inalterado.
+
+\begin{table}[ht]
+    \centering
     \begin{tabular}{|c|c|c|}
     \hline
-    \textbf{Arquitectura}          & \textbf{Entrada}                                   & \textbf{Número de parámetros}                     \\ \hline
-    $2$NN                & Imagen de tamaño $n \times n \times l$                & $(n^2 \times l) \times k + k + c \times k + c$                                             \\ \hline
+    \textbf{Valor de $k$}           & \textbf{Número de parámetros}                     
+    \\ \hline
+    $20$                  & $\approx 103$\space K                                            \\ \hline
+    $45$                  & $\approx 512$\space K                                             \\ \hline
+    $64$                  & $\approx 1,03$\space M                                             \\ \hline
     \end{tabular}
-    \caption[Resumen de las arquitecturas $2$NN.]{Resumen de las arquitecturas $2$NN. En la tabla se muestra el número de parámetros dada una determinada imagen de entrada, donde $k$ hace referencia al número de neuronas de salida de la primera capa densa y $c$ al número de clases del problema de clasificación.}\label{tab:numero-parametros}
+    \caption[Número de parámetros de las arquitecturas $3$CNN.]{Número de parámetros de las arquitecturas $3$CNN. Se muestra el número total de parámetros para una entrada de tamaño $32 \times 32 \times 3$, considerando distintos valores del parámetro $k$ y para $10$ clases de salida.}\label{tab:numero-parametros3cnn}
 \end{table}
 
 \subsubsection{ResNet18 modificada}\label{subsubsec:resnet18-modificada}
@@ -102,9 +135,9 @@ ResNet$18$, como su nombre indica, tiene $18$ capas de profundidad. Su arquitect
     \caption[Arquitectura ResNet$18$ modificada.]{Arquitectura ResNet$18$ modificada. Podemos observar los $4$ bloques convolucionales (distinguidos por color), cada uno de ellos con su correspondiente número de filtros ([$k$, $2k$, $3k$, $4k$] con $k \in \mathbb{N}$), junto con las conexiones residuales.}\label{fig:resnet18}
 \end{figure}
 
-La arquitectura que usaremos durante el transcurso de los experimentos (PreActResNet$18$) es una modificación de la arquitectura ResNet$18$ original, dado que en la arquitectura original el número de filtros usados en cada bloque convolucional es [$64$, $128$, $256$, $512$], mientras que en nuestro caso será un número variable $k \in \mathbb{N}$, con el propósito de crear ``distintas'' arquitecturas. Para ello, usaremos como número de filtros para cada bloque convolucional la secuencia: [$k$, $2k$, $3k$, $4k$]~\cite{Nakkiran2019}, con el objetivo de comparar los resultados obtenidos con los de la literatura existente. Destacamos que, para el valor $k=64$, nuestra arquitectura es la propia arquitectura ResNet$18$ original.
+La arquitectura que usaremos durante el transcurso de los experimentos (PreActResNet$18$) es una modificación de la arquitectura ResNet$18$ original, dado que en la arquitectura original el número de filtros usados en cada bloque convolucional es [$64$, $128$, $256$, $512$], mientras que en nuestro caso será un número variable $k \in \mathbb{N}$, con el propósito de crear ``distintas'' arquitecturas. Para ello, usaremos como número de filtros para cada bloque convolucional la secuencia: [$k$, $2k$, $3k$, $4k$]~\cite{Nakkiran2019}, con el objetivo de comparar los resultados obtenidos con los de la literatura existente. Destacamos que, para el valor $k=64$, nuestra arquitectura es la propia arquitectura ResNet$18$ original. Además, de manera similar a la arquitectura anterior, se utiliza \textit{pooling} adaptativo en la última capa para preservar un tamaño de entrada común a la capa densa, independientemente del tamaño de entrada a la red.
 
-Finalmente y dado que el número de parámetros asociados a esta arquitectura es tedioso de indicar (debido a la gran cantidad de capas que la conforman), se expone una tabla con los principales valores del parámetro $k$ (número de filtros) utilizados en el desarrollo del proyecto (véase Tabla~\ref{tab:numero-parametrosresnet}).
+Finalmente, y al igual que en la arquitectura anterior, se presenta una tabla con los principales valores del parámetro $k$ utilizados en el desarrollo del proyecto (véase Tabla~\ref{tab:numero-parametrosresnet}), con el propósito de permitir una comparación directa de ambas arquitecturas.
 
 \begin{table}[ht]
     \centering
@@ -117,33 +150,6 @@ Finalmente y dado que el número de parámetros asociados a esta arquitectura es
     $64$                  & $\approx 11.1$\space M                                             \\ \hline
     \end{tabular}
     \caption[Número de parámetros de las arquitecturas ResNet$18$ modificadas.]{Número de parámetros de las arquitecturas ResNet$18$ modificadas. Se muestra el número de parámetros dado un determinado valor $k$ y para $10$ clases de salida.}\label{tab:numero-parametrosresnet}
-\end{table}
-
-\subsubsection{3CNN}\label{subsubsec:3CNN}
-
-Siguiendo la misma idea de la subsección anterior, en la que se modifica el número de filtros en cada capa convolucional, se propone una nueva arquitectura compuesta por $3$ capas convolucionales (denominada $3$CNN), seguidas de capas de \textit{pooling} para reducir dimensionalidad y, finalmente, una capa densa de salida.
-
-Este modelo se presenta como una opción intermedia en términos de complejidad entre los dos modelos expuestos previamente, donde el número de filtros en cada capa se ajustará según un parámetro $k \in \mathbb{N}$, siguiendo la secuencia [$k$, $2k$, $4k$] (véase Figura~\ref{fig:3CNN}).
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.8\linewidth]{img/experiments/3CNN.png}
-    \caption[Arquitectura $3$CNN.]{Arquitectura $3$CNN. Podemos observar los $3$ bloques convolucionales (distinguidos por color), cada uno de ellos con su correspondiente número de filtros ([$k$, $2k$, $4k$] con $k \in \mathbb{N}$).}\label{fig:3CNN}
-\end{figure}
-
-Finalmente, la Tabla~\ref{tab:numero-parametros3cnn} muestra el número de parámetros para algunos valores del parámetro $k$, lo que permite realizar una comparación con la arquitectura ResNet anterior.
-
-\begin{table}[ht]
-    \centering
-    \begin{tabular}{|c|c|c|}
-    \hline
-    \textbf{Valor de $k$}           & \textbf{Número de parámetros}                     
-    \\ \hline
-    $20$                  & $\approx 103$\space K                                            \\ \hline
-    $45$                  & $\approx 512$\space K                                             \\ \hline
-    $64$                  & $\approx 1,03$\space M                                             \\ \hline
-    \end{tabular}
-    \caption[Número de parámetros de las arquitecturas $3$CNN.]{Número de parámetros de las $3$CNN. Se muestra el número de parámetros dado un determinado valor $k$ y para $10$ clases de salida.}\label{tab:numero-parametros3cnn}
 \end{table}
 
 \subsection{Hiperparámetros}\label{subsec:hiperparametros}
@@ -183,9 +189,9 @@ Todo el código desarrollado, así como los distintos resultados obtenidos, pued
 
 \subsection{Entornos de desarrollo y ejecución}\label{subsec:entornos-desarrollo-ejecucion}
 
-Como preámbulo a los distintos experimentos que se detallan a continuación, se presentan las herramientas utilizadas para su realización. El lenguaje de programación empleado es \textit{Python}, en su versión más reciente, debido a su gran facilidad y versatilidad para trabajar con modelos de aprendizaje profundo. Asimismo, se hace uso de las bibliotecas \textit{PyTorch} junto con las necesarias de \textit{CUDA} para el entrenamiento de las diferentes arquitecturas, así como \textit{NumPy} y \textit{Pandas} para el procesamiento de datos, y \textit{Matplotlib} y \textit{Seaborn} para la generación de gráficos.
+Como preámbulo a los distintos experimentos que se detallan a continuación, se presentan las herramientas utilizadas para su realización. El lenguaje de programación empleado es \textit{Python}, en su versión más reciente ($3.13.3$), debido a su gran facilidad y versatilidad para trabajar con modelos de aprendizaje profundo. Asimismo, se hace uso de las bibliotecas \textit{PyTorch} junto con las necesarias de \textit{CUDA} para el entrenamiento de las diferentes arquitecturas, así como \textit{NumPy} y \textit{Pandas} para el procesamiento de datos, y \textit{Matplotlib} y \textit{Seaborn} para la generación de gráficos.
 
-Por otro lado, se proporcionan \textit{notebooks} de \textit{Google Colab} para los experimentos que no requieren el uso de redes neuronales y que no demandan grandes recursos. Además, se incluye en otro cuaderno el código necesario para visualizar las gráficas correspondientes a los resultados obtenidos por los modelos neuronales.
+Por otro lado, se proporcionan \textit{notebooks} de \textit{Google Colab} con el código asociado a los experimentos que no requieren el uso de redes neuronales y que no demandan grandes recursos. Para los experimentos que requieren el uso de redes neuronales (y que son tan costosos que no se pueden realizar en \textit{notebooks}), se proporciona el código en formato \textit{Python} junto con un script de ayuda para lanzar cualquier experimento realizado. Además, para este caso, se incluye en otro cuaderno el código necesario para visualizar las gráficas correspondientes a los resultados obtenidos por los modelos neuronales, con el propósito de evitar tener que ejecutar ningún proceso adicional para su visualización.
 
 El proceso de ejecución de los experimentos que utilizan redes neuronales se lleva a cabo en los nodos de cómputo (GPUs) de los servidores de la Universidad de Granada (UGR), a los cuales se accede de forma remota mediante SSH. Para el envío de los experimentos, se emplea un \textit{script} de Shell en el que se especifican tanto los parámetros del experimento como el nodo a utilizar. El servidor hace uso de SLURM como gestor de colas, siendo este el encargado de reservar los recursos necesarios en la partición ``dios'' del servidor. Finalmente, se utiliza la herramienta \textit{Conda} para gestionar tanto los entornos como los paquetes, asegurando que se disponga de todas las bibliotecas necesarias.
 

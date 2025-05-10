@@ -75,37 +75,37 @@
 \contentsline {subsection}{\numberline {7.1.2}Protocolo de validación experimental}{92}{subsection.7.1.2}%
 \contentsline {subsection}{\numberline {7.1.3}Arquitecturas utilizadas}{93}{subsection.7.1.3}%
 \contentsline {subsubsection}{\numberline {7.1.3.1}2NN}{93}{subsubsection.7.1.3.1}%
-\contentsline {subsubsection}{\numberline {7.1.3.2}ResNet18 modificada}{94}{subsubsection.7.1.3.2}%
-\contentsline {subsubsection}{\numberline {7.1.3.3}3CNN}{95}{subsubsection.7.1.3.3}%
-\contentsline {subsection}{\numberline {7.1.4}Hiperparámetros}{95}{subsection.7.1.4}%
-\contentsline {section}{\numberline {7.2}Experimentos}{96}{section.7.2}%
+\contentsline {subsubsection}{\numberline {7.1.3.2}3CNN}{94}{subsubsection.7.1.3.2}%
+\contentsline {subsubsection}{\numberline {7.1.3.3}ResNet18 modificada}{95}{subsubsection.7.1.3.3}%
+\contentsline {subsection}{\numberline {7.1.4}Hiperparámetros}{96}{subsection.7.1.4}%
+\contentsline {section}{\numberline {7.2}Experimentos}{97}{section.7.2}%
 \contentsline {subsection}{\numberline {7.2.1}Entornos de desarrollo y ejecución}{97}{subsection.7.2.1}%
-\contentsline {subsection}{\numberline {7.2.2}Aproximación polinómica}{98}{subsection.7.2.2}%
-\contentsline {subsubsection}{\numberline {7.2.2.1}Función lineal}{99}{subsubsection.7.2.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Aproximación polinómica}{99}{subsection.7.2.2}%
+\contentsline {subsubsection}{\numberline {7.2.2.1}Función lineal}{100}{subsubsection.7.2.2.1}%
 \contentsline {subsubsection}{\numberline {7.2.2.2}Función hiperbólica}{102}{subsubsection.7.2.2.2}%
-\contentsline {subsubsection}{\numberline {7.2.2.3}Discusión}{102}{subsubsection.7.2.2.3}%
+\contentsline {subsubsection}{\numberline {7.2.2.3}Discusión}{103}{subsubsection.7.2.2.3}%
 \contentsline {subsection}{\numberline {7.2.3}\textit {Noise-wise double descent}}{103}{subsection.7.2.3}%
 \contentsline {subsubsection}{\numberline {7.2.3.1}Discusión}{105}{subsubsection.7.2.3.1}%
-\contentsline {subsection}{\numberline {7.2.4}\textit {Sample-wise double descent}}{105}{subsection.7.2.4}%
-\contentsline {subsubsection}{\numberline {7.2.4.1}Ratio parámetros/ejemplos}{107}{subsubsection.7.2.4.1}%
+\contentsline {subsection}{\numberline {7.2.4}\textit {Sample-wise double descent}}{106}{subsection.7.2.4}%
+\contentsline {subsubsection}{\numberline {7.2.4.1}Ratio parámetros/ejemplos}{108}{subsubsection.7.2.4.1}%
 \contentsline {subsubsection}{\numberline {7.2.4.2}Discusión}{108}{subsubsection.7.2.4.2}%
-\contentsline {subsection}{\numberline {7.2.5}\textit {Model \& Epoch-wise double descent}}{108}{subsection.7.2.5}%
-\contentsline {subsubsection}{\numberline {7.2.5.1}2NN}{108}{subsubsection.7.2.5.1}%
+\contentsline {subsection}{\numberline {7.2.5}\textit {Model \& Epoch-wise double descent}}{109}{subsection.7.2.5}%
+\contentsline {subsubsection}{\numberline {7.2.5.1}2NN}{109}{subsubsection.7.2.5.1}%
 \contentsline {subsubsection}{\numberline {7.2.5.2}3CNN}{110}{subsubsection.7.2.5.2}%
 \contentsline {subsubsection}{\numberline {7.2.5.3}ResNet18 modificada}{111}{subsubsection.7.2.5.3}%
 \contentsline {subsubsection}{\numberline {7.2.5.4}Discusión}{112}{subsubsection.7.2.5.4}%
 \contentsline {subsection}{\numberline {7.2.6}\textit {Width vs Depth double descent}}{114}{subsection.7.2.6}%
-\contentsline {subsubsection}{\numberline {7.2.6.1}Discusión}{115}{subsubsection.7.2.6.1}%
-\contentsline {section}{\numberline {7.3}Discusión comparativa global}{115}{section.7.3}%
-\contentsline {part}{\numberline {IV}Conclusiones y Trabajos Futuros}{117}{part.4}%
-\contentsline {chapter}{\numberline {8}Conclusiones}{119}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Trabajos futuros}{121}{chapter.9}%
-\contentsline {part}{\numberline {V}Anexos}{122}{part.5}%
-\contentsline {chapter}{\numberline {A}Detalles Matemáticos Adicionales}{124}{appendix.Alph1}%
-\contentsline {chapter}{\numberline {B}Experimentos Adicionales: Hiperparámetros}{127}{appendix.Alph2}%
-\contentsline {chapter}{\numberline {C}Descenso de Gradiente en un Problema OLS}{129}{appendix.Alph3}%
-\contentsline {chapter}{\numberline {D}Irregularidades en la Dinámica del Error}{130}{appendix.Alph4}%
-\contentsline {chapter}{Glosario matemático}{133}{chapter*.98}%
-\contentsline {chapter}{Glosario informático}{135}{chapter*.99}%
+\contentsline {subsubsection}{\numberline {7.2.6.1}Discusión}{116}{subsubsection.7.2.6.1}%
+\contentsline {section}{\numberline {7.3}Discusión comparativa global}{116}{section.7.3}%
+\contentsline {part}{\numberline {IV}Conclusiones y Trabajos Futuros}{118}{part.4}%
+\contentsline {chapter}{\numberline {8}Conclusiones}{120}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Trabajos futuros}{122}{chapter.9}%
+\contentsline {part}{\numberline {V}Anexos}{123}{part.5}%
+\contentsline {chapter}{\numberline {A}Detalles Matemáticos Adicionales}{125}{appendix.Alph1}%
+\contentsline {chapter}{\numberline {B}Experimentos Adicionales: Hiperparámetros}{128}{appendix.Alph2}%
+\contentsline {chapter}{\numberline {C}Descenso de Gradiente en un Problema OLS}{130}{appendix.Alph3}%
+\contentsline {chapter}{\numberline {D}Irregularidades en la Dinámica del Error}{131}{appendix.Alph4}%
+\contentsline {chapter}{Glosario matemático}{134}{chapter*.98}%
+\contentsline {chapter}{Glosario informático}{136}{chapter*.99}%
 \contentsline {chapter}{\nonumberline Bibliograf\'{\i }a}{137}{chapter*.100}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
