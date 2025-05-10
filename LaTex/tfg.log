@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.14)  5 MAY 2025 21:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.14)  10 MAY 2025 12:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1216,12 +1216,18 @@ LaTeX Info: Redefining \% on input line 102.
 [9]
 Package tocbasic Info: Using my definition of `\numberline' on input line 102.
 Package tocbasic Info: Using my definition of `\numberline' on input line 103.
+
+Overfull \hbox (0.76772pt too wide) detected at line 103
+ \T1/Cabin-TLF/bold/n/12 122
+ []
+
 Package tocbasic Info: Using my definition of `\numberline' on input line 104.
 Package tocbasic Info: Using my definition of `\numberline' on input line 105.
 Package tocbasic Info: Using my definition of `\numberline' on input line 106.
 Package tocbasic Info: Using my definition of `\numberline' on input line 107.
 Package tocbasic Info: Using my definition of `\numberline' on input line 108.
 Package tocbasic Info: Using my definition of `\numberline' on input line 109.
+Package tocbasic Info: Using my definition of `\numberline' on input line 110.
 )
 \tf@toc=\write5
 \openout5 = `tfg.toc'.
@@ -1238,20 +1244,20 @@ LaTeX Info: Redefining \% on input line 1.
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 Package tocbasic Info: Using my definition of `\numberline' on input line 8.
-Package tocbasic Info: Using my definition of `\numberline' on input line 10.
+Package tocbasic Info: Using my definition of `\numberline' on input line 9.
 Package tocbasic Info: Using my definition of `\numberline' on input line 11.
-Package tocbasic Info: Using my definition of `\numberline' on input line 14.
+Package tocbasic Info: Using my definition of `\numberline' on input line 12.
 Package tocbasic Info: Using my definition of `\numberline' on input line 15.
+Package tocbasic Info: Using my definition of `\numberline' on input line 16.
 
-Overfull \hbox (1.08815pt too wide) in paragraph at lines 15--15
+Overfull \hbox (1.08815pt too wide) in paragraph at lines 16--16
  [][] [][][]\T1/pplj/m/n/10 (-10) Ejemplos de neu-ro-na bio-ló-gi-ca [[]] y neu-ro-na ar-ti-fi-cial (ba-sa-da en [[]]).[][] [][]  
  []
 
-Package tocbasic Info: Using my definition of `\numberline' on input line 16.
 Package tocbasic Info: Using my definition of `\numberline' on input line 17.
 Package tocbasic Info: Using my definition of `\numberline' on input line 18.
 Package tocbasic Info: Using my definition of `\numberline' on input line 19.
-Package tocbasic Info: Using my definition of `\numberline' on input line 21.
+Package tocbasic Info: Using my definition of `\numberline' on input line 20.
 Package tocbasic Info: Using my definition of `\numberline' on input line 22.
 Package tocbasic Info: Using my definition of `\numberline' on input line 23.
 Package tocbasic Info: Using my definition of `\numberline' on input line 24.
@@ -1259,11 +1265,11 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 25.
 Package tocbasic Info: Using my definition of `\numberline' on input line 26.
 Package tocbasic Info: Using my definition of `\numberline' on input line 27.
 Package tocbasic Info: Using my definition of `\numberline' on input line 28.
-Package tocbasic Info: Using my definition of `\numberline' on input line 30.
+Package tocbasic Info: Using my definition of `\numberline' on input line 29.
 Package tocbasic Info: Using my definition of `\numberline' on input line 31.
 Package tocbasic Info: Using my definition of `\numberline' on input line 32.
 Package tocbasic Info: Using my definition of `\numberline' on input line 33.
-Package tocbasic Info: Using my definition of `\numberline' on input line 35.
+Package tocbasic Info: Using my definition of `\numberline' on input line 34.
 Package tocbasic Info: Using my definition of `\numberline' on input line 36.
 Package tocbasic Info: Using my definition of `\numberline' on input line 37.
 Package tocbasic Info: Using my definition of `\numberline' on input line 38.
@@ -1272,7 +1278,7 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 40.
 Package tocbasic Info: Using my definition of `\numberline' on input line 41.
 Package tocbasic Info: Using my definition of `\numberline' on input line 42.
 Package tocbasic Info: Using my definition of `\numberline' on input line 43.
-Package tocbasic Info: Using my definition of `\numberline' on input line 45.
+Package tocbasic Info: Using my definition of `\numberline' on input line 44.
 Package tocbasic Info: Using my definition of `\numberline' on input line 46.
 Package tocbasic Info: Using my definition of `\numberline' on input line 47.
 Package tocbasic Info: Using my definition of `\numberline' on input line 48.
@@ -1302,12 +1308,13 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 66.
 Package tocbasic Info: Using my definition of `\numberline' on input line 67.
 Package tocbasic Info: Using my definition of `\numberline' on input line 68.
 Package tocbasic Info: Using my definition of `\numberline' on input line 69.
-Package tocbasic Info: Using my definition of `\numberline' on input line 74.
+Package tocbasic Info: Using my definition of `\numberline' on input line 70.
 Package tocbasic Info: Using my definition of `\numberline' on input line 75.
-Package tocbasic Info: Using my definition of `\numberline' on input line 77.
-Package tocbasic Info: Using my definition of `\numberline' on input line 79.
+Package tocbasic Info: Using my definition of `\numberline' on input line 76.
+Package tocbasic Info: Using my definition of `\numberline' on input line 78.
 Package tocbasic Info: Using my definition of `\numberline' on input line 80.
 Package tocbasic Info: Using my definition of `\numberline' on input line 81.
+Package tocbasic Info: Using my definition of `\numberline' on input line 82.
 )
 \tf@lof=\write6
 \openout6 = `tfg.lof'.
@@ -1362,13 +1369,13 @@ LaTeX Font Info:    Font shape `T1/Cabin-TLF/b/n' aliased to
 (Font)              `T1/Cabin-TLF/bold/n' on input line 24.
 LaTeX Font Info:    Font shape `T1/Cabin-TLF/bold/n' will be
 (Font)              scaled to size 13.67995pt on input line 24.
-<img/problem-definition.png, id=524, 1035.87pt x 591.20876pt>
+<img/problem-definition.png, id=528, 1035.87pt x 591.20876pt>
 File: img/problem-definition.png Graphic file (type png)
 <use img/problem-definition.png>
 Package pdftex.def Info: img/problem-definition.png  used on input line 28.
 (pdftex.def)             Requested size: 367.46489pt x 209.7227pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2418) has occurred while \output is active []
 
 
 
@@ -1387,9 +1394,19 @@ LaTeX Info: Redefining \% on input line 56.
 LaTeX Info: Redefining \. on input line 77.
 LaTeX Info: Redefining \% on input line 77.
 [18]
+<img/modelo_cascada.jpg, id=600, 741.972pt x 342.078pt>
+File: img/modelo_cascada.jpg Graphic file (type jpg)
+<use img/modelo_cascada.jpg>
+Package pdftex.def Info: img/modelo_cascada.jpg  used on input line 94.
+(pdftex.def)             Requested size: 326.63892pt x 150.59306pt.
 
-LaTeX Info: Redefining \. on input line 97.
-LaTeX Info: Redefining \% on input line 97.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+LaTeX Info: Redefining \. on input line 103.
+LaTeX Info: Redefining \% on input line 103.
 [19]
 
 Package nicematrix Warning: Key deprecated.
@@ -1403,17 +1420,17 @@ Package nicematrix Warning: Key deprecated.
 \c@iRow=\count378
 \c@jCol=\count379
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 134.
+(Font)              scaled to size 9.37807pt on input line 143.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 134.
+(Font)              scaled to size 7.29405pt on input line 143.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 134.
+(Font)              scaled to size 5.21004pt on input line 143.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 134.
+(Font)              scaled to size 9.37807pt on input line 143.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 134.
+(Font)              scaled to size 7.29405pt on input line 143.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 134.
+(Font)              scaled to size 5.21004pt on input line 143.
 \l__nicematrix_cell_box=\box72
 \l__nicematrix_the_array_box=\box73
 \l__nicematrix_left_delim_dim=\dimen345
@@ -1430,6 +1447,7 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 \g__nicematrix_block_box_10_box=\box83
 \g__nicematrix_block_box_11_box=\box84
 \g__nicematrix_block_box_12_box=\box85
+\g__nicematrix_block_box_13_box=\box86
 \g__nicematrix_ddots_int=\count380
 \g__nicematrix_iddots_int=\count381
 \g__nicematrix_delta_x_one_dim=\dimen347
@@ -1441,14 +1459,32 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 \l__nicematrix_final_i_int=\count384
 \l__nicematrix_final_j_int=\count385
 
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-LaTeX Info: Redefining \. on input line 187.
-LaTeX Info: Redefining \% on input line 187.
-[20])
+
+
+LaTeX Info: Redefining \. on input line 186.
+LaTeX Info: Redefining \% on input line 186.
+[20 <./img/modelo_cascada.jpg>]
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 8.33606pt on input line 197.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 8.33606pt on input line 197.
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 197.
+ (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/latex/inconsolata\t1zi4.fd
+File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
+)
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 8.0pt on input line 197.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `zi4' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+)
 
 LaTeX Info: Redefining \. on input line 77.
 LaTeX Info: Redefining \% on input line 77.
-[21]
+[21{C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/inconsolata/i4-t1-0.enc}]
 
 [22
 
@@ -1482,12 +1518,8 @@ l.79 \part{Fundamentos TeÃ³ricos}
 chapter 1.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
 (Font)              scaled to size 15.0049pt on input line 8.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 8.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 15.0049pt on input line 8.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 8.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 8.
@@ -1552,12 +1584,12 @@ LaTeX Info: Redefining \% on input line 373.
 LaTeX Info: Redefining \. on input line 411.
 LaTeX Info: Redefining \% on input line 411.
 [11]
-<img/experiments/unimodal.png, id=734, 587.19376pt x 439.6425pt>
+<img/experiments/unimodal.png, id=746, 587.19376pt x 439.6425pt>
 File: img/experiments/unimodal.png Graphic file (type png)
 <use img/experiments/unimodal.png>
 Package pdftex.def Info: img/experiments/unimodal.png  used on input line 449.
 (pdftex.def)             Requested size: 175.56476pt x 131.44429pt.
-<img/experiments/multimodal.png, id=735, 587.19376pt x 438.8897pt>
+<img/experiments/multimodal.png, id=747, 587.19376pt x 438.8897pt>
 File: img/experiments/multimodal.png Graphic file (type png)
 <use img/experiments/multimodal.png>
 Package pdftex.def Info: img/experiments/multimodal.png  used on input line 455.
@@ -1571,7 +1603,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Info: Redefining \. on input line 466.
 LaTeX Info: Redefining \% on input line 466.
 [12]
-<img/distribuciones-normales.png, id=745, 1344.52313pt x 400.49625pt>
+<img/distribuciones-normales.png, id=757, 1344.52313pt x 400.49625pt>
 File: img/distribuciones-normales.png Graphic file (type png)
 <use img/distribuciones-normales.png>
 Package pdftex.def Info: img/distribuciones-normales.png  used on input line 499.
@@ -1616,7 +1648,7 @@ LaTeX Info: Redefining \. on input line 4.
 LaTeX Info: Redefining \% on input line 4.
 [20]
 chapter 3.
-<img/clasi-regresion.png, id=833, 1005.7575pt x 411.78844pt>
+<img/clasi-regresion.png, id=845, 1005.7575pt x 411.78844pt>
 File: img/clasi-regresion.png Graphic file (type png)
 <use img/clasi-regresion.png>
 Package pdftex.def Info: img/clasi-regresion.png  used on input line 13.
@@ -1626,12 +1658,12 @@ Package pdftex.def Info: img/clasi-regresion.png  used on input line 13.
 [21
 
  <./img/clasi-regresion.png>]
-<img/biological-neuron.png, id=850, 2577.63pt x 1232.605pt>
+<img/biological-neuron.png, id=862, 2577.63pt x 1232.605pt>
 File: img/biological-neuron.png Graphic file (type png)
 <use img/biological-neuron.png>
 Package pdftex.def Info: img/biological-neuron.png  used on input line 29.
 (pdftex.def)             Requested size: 183.73244pt x 87.85222pt.
-<img/artificial-neuron.png, id=851, 1156.32pt x 616.55344pt>
+<img/artificial-neuron.png, id=863, 1156.32pt x 616.55344pt>
 File: img/artificial-neuron.png Graphic file (type png)
 <use img/artificial-neuron.png>
 Package pdftex.def Info: img/artificial-neuron.png  used on input line 31.
@@ -1645,7 +1677,7 @@ Overfull \hbox (3.80016pt too wide) in paragraph at lines 47--48
 \T1/pplj/m/n/10 (-10) Las re-des neu-ro-na-les con-vo-lu-cio-na-les o \T1/pplj/m/it/10 (-10) con-vo-lu-tio-nal neu-ral net-works (CNN) \T1/pplj/m/n/10 (-10) [[], []]
  []
 
-<img/cnn.png, id=870, 880.4895pt x 387.24675pt>
+<img/cnn.png, id=882, 880.4895pt x 387.24675pt>
 File: img/cnn.png Graphic file (type png)
 <use img/cnn.png>
 Package pdftex.def Info: img/cnn.png  used on input line 55.
@@ -1658,7 +1690,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Info: Redefining \. on input line 67.
 LaTeX Info: Redefining \% on input line 67.
 [23]
-<img/convolucion.png, id=881, 263.18324pt x 260.77425pt>
+<img/convolucion.png, id=893, 263.18324pt x 260.77425pt>
 File: img/convolucion.png Graphic file (type png)
 <use img/convolucion.png>
 Package pdftex.def Info: img/convolucion.png  used on input line 72.
@@ -1676,7 +1708,7 @@ LaTeX Font Info:    Font shape `T1/Cabin-TLF/b/it' aliased to
 (Font)              `T1/Cabin-TLF/bold/it' on input line 82.
 LaTeX Font Info:    Font shape `T1/Cabin-TLF/bold/it' will be
 (Font)              scaled to size 9.49997pt on input line 82.
-<img/pooling.png, id=892, 720.89325pt x 148.75575pt>
+<img/pooling.png, id=904, 720.89325pt x 148.75575pt>
 File: img/pooling.png Graphic file (type png)
 <use img/pooling.png>
 Package pdftex.def Info: img/pooling.png  used on input line 92.
@@ -1690,7 +1722,7 @@ LaTeX Info: Redefining \% on input line 94.
 LaTeX Info: Redefining \. on input line 112.
 LaTeX Info: Redefining \% on input line 112.
 [26 <./img/pooling.png>]
-<img/funcionesactivacion.png, id=910, 998.22937pt x 434.37282pt>
+<img/funcionesactivacion.png, id=922, 998.22937pt x 434.37282pt>
 File: img/funcionesactivacion.png Graphic file (type png)
 <use img/funcionesactivacion.png>
 Package pdftex.def Info: img/funcionesactivacion.png  used on input line 131.
@@ -1701,7 +1733,7 @@ LaTeX Info: Redefining \. on input line 135.
 LaTeX Info: Redefining \% on input line 135.
 [27 <./img/funcionesactivacion.png>]
 chapter 4.
-<img/learning-diagram.png, id=918, 1276.77pt x 1067.99pt>
+<img/learning-diagram.png, id=930, 1276.77pt x 1067.99pt>
 File: img/learning-diagram.png Graphic file (type png)
 <use img/learning-diagram.png>
 Package pdftex.def Info: img/learning-diagram.png  used on input line 156.
@@ -1718,7 +1750,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Info: Redefining \. on input line 174.
 LaTeX Info: Redefining \% on input line 174.
 [29 <./img/learning-diagram.png>]
-<img/gradientdescent.png, id=936, 1587.9325pt x 614.295pt>
+<img/gradientdescent.png, id=948, 1587.9325pt x 614.295pt>
 File: img/gradientdescent.png Graphic file (type png)
 <use img/gradientdescent.png>
 Package pdftex.def Info: img/gradientdescent.png  used on input line 179.
@@ -1732,7 +1764,7 @@ LaTeX Info: Redefining \% on input line 189.
 LaTeX Info: Redefining \. on input line 238.
 LaTeX Info: Redefining \% on input line 238.
 [31]
-<img/aprendizajegd.png, id=952, 167.4255pt x 118.041pt>
+<img/aprendizajegd.png, id=964, 167.4255pt x 118.041pt>
 File: img/aprendizajegd.png Graphic file (type png)
 <use img/aprendizajegd.png>
 Package pdftex.def Info: img/aprendizajegd.png  used on input line 246.
@@ -1792,12 +1824,12 @@ LaTeX Info: Redefining \% on input line 564.
 LaTeX Info: Redefining \. on input line 587.
 LaTeX Info: Redefining \% on input line 587.
 [39]
-<img/bias-variance.png, id=1035, 1031.855pt x 262.9825pt>
+<img/bias-variance.png, id=1046, 1031.855pt x 262.9825pt>
 File: img/bias-variance.png Graphic file (type png)
 <use img/bias-variance.png>
 Package pdftex.def Info: img/bias-variance.png  used on input line 591.
 (pdftex.def)             Requested size: 285.80672pt x 72.84006pt.
-<img/learning-curve.png, id=1040, 533.995pt x 419.5675pt>
+<img/learning-curve.png, id=1051, 533.995pt x 419.5675pt>
 File: img/learning-curve.png Graphic file (type png)
 <use img/learning-curve.png>
 Package pdftex.def Info: img/learning-curve.png  used on input line 609.
@@ -1811,7 +1843,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Info: Redefining \. on input line 618.
 LaTeX Info: Redefining \% on input line 618.
 [40 <./img/bias-variance.png>]
-<img/learning-curve-classicalvsmodern.png, id=1050, 951.555pt x 347.49825pt>
+<img/learning-curve-classicalvsmodern.png, id=1061, 951.555pt x 347.49825pt>
 File: img/learning-curve-classicalvsmodern.png Graphic file (type png)
 <use img/learning-curve-classicalvsmodern.png>
 Package pdftex.def Info: img/learning-curve-classicalvsmodern.png  used on input line 621.
@@ -1825,7 +1857,7 @@ LaTeX Info: Redefining \% on input line 628.
 LaTeX Info: Redefining \. on input line 664.
 LaTeX Info: Redefining \% on input line 664.
 [42]
-<img/biasvarianceunderoverfitting.png, id=1072, 639.5895pt x 443.85825pt>
+<img/biasvarianceunderoverfitting.png, id=1083, 639.5895pt x 443.85825pt>
 File: img/biasvarianceunderoverfitting.png Graphic file (type png)
 <use img/biasvarianceunderoverfitting.png>
 Package pdftex.def Info: img/biasvarianceunderoverfitting.png  used on input line 698.
@@ -1851,7 +1883,7 @@ LaTeX Info: Redefining \% on input line 772.
 LaTeX Info: Redefining \. on input line 806.
 LaTeX Info: Redefining \% on input line 806.
 [46]
-<img/vc-dimension.png, id=1102, 1084.05pt x 810.02625pt>
+<img/vc-dimension.png, id=1113, 1084.05pt x 810.02625pt>
 File: img/vc-dimension.png Graphic file (type png)
 <use img/vc-dimension.png>
 Package pdftex.def Info: img/vc-dimension.png  used on input line 809.
@@ -1877,17 +1909,7 @@ Package scrkbase Info: You've told me to use the font selection of the element
 
 [50] (capitulos/estado_arte.tex
 chapter 5.
-LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 7.
-(C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/latex/inconsolata\t1zi4.fd
-File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
-)
-LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 8.0pt on input line 7.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `zi4' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-<img/scopus_histogram.png, id=1129, 493.845pt x 367.97475pt>
+<img/scopus_histogram.png, id=1140, 493.845pt x 367.97475pt>
 File: img/scopus_histogram.png Graphic file (type png)
 <use img/scopus_histogram.png>
 Package pdftex.def Info: img/scopus_histogram.png  used on input line 11.
@@ -1896,8 +1918,8 @@ Package pdftex.def Info: img/scopus_histogram.png  used on input line 11.
 
 [51
 
-{C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/inconsolata/i4-t1-0.enc} <./img/scopus_histogram.png>]
-<img/estadoarte2.png, id=1145, 899.36pt x 630.355pt>
+ <./img/scopus_histogram.png>]
+<img/estadoarte2.png, id=1155, 899.36pt x 630.355pt>
 File: img/estadoarte2.png Graphic file (type png)
 <use img/estadoarte2.png>
 Package pdftex.def Info: img/estadoarte2.png  used on input line 27.
@@ -1907,7 +1929,7 @@ Package pdftex.def Info: img/estadoarte2.png  used on input line 27.
 LaTeX Info: Redefining \. on input line 34.
 LaTeX Info: Redefining \% on input line 34.
 [52 <./img/estadoarte2.png>]
-<img/estadoarte2.2.png, id=1172, 1399.2275pt x 513.92pt>
+<img/estadoarte2.2.png, id=1182, 1399.2275pt x 513.92pt>
 File: img/estadoarte2.2.png Graphic file (type png)
 <use img/estadoarte2.2.png>
 Package pdftex.def Info: img/estadoarte2.2.png  used on input line 47.
@@ -1925,12 +1947,11 @@ LaTeX Info: Redefining \% on input line 52.
 LaTeX Info: Redefining \. on input line 65.
 LaTeX Info: Redefining \% on input line 65.
 [54 <./img/estadoarte2.2.png>]
-<img/grokking.png, id=1214, 570.33075pt x 425.1885pt>
+<img/grokking.png, id=1224, 570.33075pt x 425.1885pt>
 File: img/grokking.png Graphic file (type png)
 <use img/grokking.png>
 Package pdftex.def Info: img/grokking.png  used on input line 68.
 (pdftex.def)             Requested size: 244.98074pt x 182.63284pt.
-\g__nicematrix_block_box_13_box=\box86
 \g__nicematrix_block_box_14_box=\box87
 \g__nicematrix_block_box_15_box=\box88
 \g__nicematrix_block_box_16_box=\box89
@@ -1996,7 +2017,7 @@ chapter 6.
 [59
 
 ]
-<img/planteamiento-teorico-dd.png, id=1265, 589.0005pt x 467.94826pt>
+<img/planteamiento-teorico-dd.png, id=1275, 589.0005pt x 467.94826pt>
 File: img/planteamiento-teorico-dd.png Graphic file (type png)
 <use img/planteamiento-teorico-dd.png>
 Package pdftex.def Info: img/planteamiento-teorico-dd.png  used on input line 42.
@@ -2006,7 +2027,7 @@ Package pdftex.def Info: img/planteamiento-teorico-dd.png  used on input line 42
 LaTeX Info: Redefining \. on input line 49.
 LaTeX Info: Redefining \% on input line 49.
 [60 <./img/planteamiento-teorico-dd.png>]
-<img/bias-variance-peak.png, id=1276, 1190.94937pt x 265.74281pt>
+<img/bias-variance-peak.png, id=1286, 1190.94937pt x 265.74281pt>
 File: img/bias-variance-peak.png Graphic file (type png)
 <use img/bias-variance-peak.png>
 Package pdftex.def Info: img/bias-variance-peak.png  used on input line 54.
@@ -2028,7 +2049,7 @@ Overfull \hbox (0.4058pt too wide) in paragraph at lines 172--173
 \T1/pplj/m/n/10 (-10) pre-dic-cio-nes. La zo-na so-bre-pa-ra-me-tri-za-da in-clu-ye el tér-mino adi-cio-nal $\OML/zplm/m/it/10 x[] \OMS/zplm/m/n/10 ^^A \OT1/zplm/m/n/10 (\OML/zplm/m/it/10 X[][][]X \OMS/zplm/m/n/10 ^^@
  []
 
-<img/marchenku-pastor.png, id=1302, 1003.75pt x 819.06pt>
+<img/marchenku-pastor.png, id=1312, 1003.75pt x 819.06pt>
 File: img/marchenku-pastor.png Graphic file (type png)
 <use img/marchenku-pastor.png>
 Package pdftex.def Info: img/marchenku-pastor.png  used on input line 180.
@@ -2069,7 +2090,7 @@ LaTeX Info: Redefining \% on input line 429.
 LaTeX Info: Redefining \. on input line 446.
 LaTeX Info: Redefining \% on input line 446.
 [71]
-<img/localglobalminima.png, id=1378, 1730.465pt x 544.0325pt>
+<img/localglobalminima.png, id=1388, 1730.465pt x 544.0325pt>
 File: img/localglobalminima.png Graphic file (type png)
 <use img/localglobalminima.png>
 Package pdftex.def Info: img/localglobalminima.png  used on input line 449.
@@ -2096,7 +2117,7 @@ Overfull \hbox (10.01395pt too wide) in paragraph at lines 582--583
 [][]\T1/pplj/b/n/10 (-10) Teorema 6.14 \T1/pplj/m/n/10 (-10) (Con-di-cio-na-mien-to uni-for-me $ \OT1/zplm/m/n/10 =[]\OMS/zplm/m/n/10 ) $ \T1/pplj/m/n/10 (-10) Con-di-ción $\OML/zplm/m/it/10 ^^V$\T1/pplj/m/n/10 (-10) -PL)\T1/pplj/b/n/10 (-10) . []\T1/pplj/m/it/10 (-10) Si $\OMS/zplm/m/n/10 F\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 w\OT1/zplm/m/n/10 )$ \T1/pplj/m/it/10 (-10) es-tá $\OML/zplm/m/it/10 ^^V$\T1/pplj/m/it/10 (-10) -uniformemente
  []
 
-<img/cosarara2.png, id=1428, 2706.11pt x 1324.95pt>
+<img/cosarara2.png, id=1438, 2706.11pt x 1324.95pt>
 File: img/cosarara2.png Graphic file (type png)
 <use img/cosarara2.png>
 Package pdftex.def Info: img/cosarara2.png  used on input line 611.
@@ -2109,12 +2130,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Info: Redefining \. on input line 622.
 LaTeX Info: Redefining \% on input line 622.
 [75]
-<img/experiments/legendre1.2.png, id=1439, 403.5075pt x 314.67563pt>
+<img/experiments/legendre1.2.png, id=1449, 403.5075pt x 314.67563pt>
 File: img/experiments/legendre1.2.png Graphic file (type png)
 <use img/experiments/legendre1.2.png>
 Package pdftex.def Info: img/experiments/legendre1.2.png  used on input line 629.
 (pdftex.def)             Requested size: 183.73244pt x 143.28326pt.
-<img/experiments/legendre1.3.png, id=1440, 405.01312pt x 319.94531pt>
+<img/experiments/legendre1.3.png, id=1450, 405.01312pt x 319.94531pt>
 File: img/experiments/legendre1.3.png Graphic file (type png)
 <use img/experiments/legendre1.3.png>
 Package pdftex.def Info: img/experiments/legendre1.3.png  used on input line 634.
@@ -2128,7 +2149,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Info: Redefining \. on input line 645.
 LaTeX Info: Redefining \% on input line 645.
 [76 <./img/cosarara2.png>]
-<img/ground-truth-reproducibility.png, id=1455, 871.75688pt x 464.4853pt>
+<img/ground-truth-reproducibility.png, id=1465, 871.75688pt x 464.4853pt>
 File: img/ground-truth-reproducibility.png Graphic file (type png)
 <use img/ground-truth-reproducibility.png>
 Package pdftex.def Info: img/ground-truth-reproducibility.png  used on input line 659.
@@ -2142,7 +2163,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Info: Redefining \. on input line 666.
 LaTeX Info: Redefining \% on input line 666.
 [77 <./img/experiments/legendre1.2.png> <./img/experiments/legendre1.3.png>]
-<img/types-of-bias.png, id=1465, 871.75688pt x 319.1925pt>
+<img/types-of-bias.png, id=1475, 871.75688pt x 319.1925pt>
 File: img/types-of-bias.png Graphic file (type png)
 <use img/types-of-bias.png>
 Package pdftex.def Info: img/types-of-bias.png  used on input line 671.
@@ -2151,7 +2172,7 @@ Package pdftex.def Info: img/types-of-bias.png  used on input line 671.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/overparametrization.png, id=1473, 603.75563pt x 305.64188pt>
+<img/overparametrization.png, id=1483, 603.75563pt x 305.64188pt>
 File: img/overparametrization.png Graphic file (type png)
 <use img/overparametrization.png>
 Package pdftex.def Info: img/overparametrization.png  used on input line 681.
@@ -2232,7 +2253,7 @@ LaTeX Font Info:    Trying to load font information for TS1+pplj on input line 3
  (C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1pplj.fd
 File: ts1pplj.fd 2004/09/06 font definitions for TS1/pplj.
 )
-<img/protocolo-experimental.png, id=1614, 1209.01688pt x 376.40625pt>
+<img/protocolo-experimental.png, id=1624, 1209.01688pt x 376.40625pt>
 File: img/protocolo-experimental.png Graphic file (type png)
 <use img/protocolo-experimental.png>
 Package pdftex.def Info: img/protocolo-experimental.png  used on input line 56.
@@ -2246,7 +2267,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Info: Redefining \. on input line 63.
 LaTeX Info: Redefining \% on input line 63.
 [92]
-<img/arquitectura2nn.png, id=1621, 992.20688pt x 624.83438pt>
+<img/arquitectura2nn.png, id=1631, 992.20688pt x 624.83438pt>
 File: img/arquitectura2nn.png Graphic file (type png)
 <use img/arquitectura2nn.png>
 Package pdftex.def Info: img/arquitectura2nn.png  used on input line 74.
@@ -2260,7 +2281,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Info: Redefining \. on input line 96.
 LaTeX Info: Redefining \% on input line 96.
 [93 <./img/protocolo-experimental.png>]
-<img/experiments/resnet18modified.png, id=1632, 1079.83424pt x 290.2845pt>
+<img/experiments/resnet18modified.png, id=1642, 1079.83424pt x 290.2845pt>
 File: img/experiments/resnet18modified.png Graphic file (type png)
 <use img/experiments/resnet18modified.png>
 Package pdftex.def Info: img/experiments/resnet18modified.png  used on input line 101.
@@ -2274,7 +2295,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Info: Redefining \. on input line 106.
 LaTeX Info: Redefining \% on input line 106.
 [94 <./img/arquitectura2nn.png>]
-<img/experiments/3CNN.png, id=1643, 1028.643pt x 261.97874pt>
+<img/experiments/3CNN.png, id=1653, 1028.643pt x 261.97874pt>
 File: img/experiments/3CNN.png Graphic file (type png)
 <use img/experiments/3CNN.png>
 Package pdftex.def Info: img/experiments/3CNN.png  used on input line 130.
@@ -2312,12 +2333,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Info: Redefining \. on input line 230.
 LaTeX Info: Redefining \% on input line 230.
 [98]
-<img/experiments/legendre1DDD.png, id=1684, 915.42pt x 511.15968pt>
+<img/experiments/legendre1DDD.png, id=1694, 915.42pt x 511.15968pt>
 File: img/experiments/legendre1DDD.png Graphic file (type png)
 <use img/experiments/legendre1DDD.png>
 Package pdftex.def Info: img/experiments/legendre1DDD.png  used on input line 275.
 (pdftex.def)             Requested size: 195.98085pt x 109.4292pt.
-<img/experiments/legendre1.4.png, id=1685, 915.42pt x 511.15968pt>
+<img/experiments/legendre1.4.png, id=1695, 915.42pt x 511.15968pt>
 File: img/experiments/legendre1.4.png Graphic file (type png)
 <use img/experiments/legendre1.4.png>
 Package pdftex.def Info: img/experiments/legendre1.4.png  used on input line 281.
@@ -2331,7 +2352,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Info: Redefining \. on input line 289.
 LaTeX Info: Redefining \% on input line 289.
 [99]
-<img/experiments/legendre1.1.png, id=1694, 405.76593pt x 317.68687pt>
+<img/experiments/legendre1.1.png, id=1704, 405.76593pt x 317.68687pt>
 File: img/experiments/legendre1.1.png Graphic file (type png)
 <use img/experiments/legendre1.1.png>
 Package pdftex.def Info: img/experiments/legendre1.1.png  used on input line 296.
@@ -2349,37 +2370,37 @@ Package pdftex.def Info: img/experiments/legendre1.3.png  used on input line 306
 LaTeX Info: Redefining \. on input line 312.
 LaTeX Info: Redefining \% on input line 312.
 [100 <./img/experiments/legendre1DDD.png> <./img/experiments/legendre1.4.png> <./img/experiments/legendre1.1.png>]
-<img/experiments/OLS1DDD.png, id=1708, 916.1728pt x 510.40688pt>
+<img/experiments/OLS1DDD.png, id=1718, 916.1728pt x 510.40688pt>
 File: img/experiments/OLS1DDD.png Graphic file (type png)
 <use img/experiments/OLS1DDD.png>
 Package pdftex.def Info: img/experiments/OLS1DDD.png  used on input line 319.
 (pdftex.def)             Requested size: 195.98085pt x 109.18237pt.
-<img/experiments/Redundant1DDD.png, id=1709, 914.66719pt x 508.90125pt>
+<img/experiments/Redundant1DDD.png, id=1719, 914.66719pt x 508.90125pt>
 File: img/experiments/Redundant1DDD.png Graphic file (type png)
 <use img/experiments/Redundant1DDD.png>
 Package pdftex.def Info: img/experiments/Redundant1DDD.png  used on input line 325.
 (pdftex.def)             Requested size: 195.98085pt x 109.0389pt.
-<img/experiments/OLS1.4.png, id=1710, 916.92563pt x 376.40625pt>
+<img/experiments/OLS1.4.png, id=1720, 916.92563pt x 376.40625pt>
 File: img/experiments/OLS1.4.png Graphic file (type png)
 <use img/experiments/OLS1.4.png>
 Package pdftex.def Info: img/experiments/OLS1.4.png  used on input line 335.
 (pdftex.def)             Requested size: 195.98085pt x 80.44905pt.
-<img/experiments/Redundant1.4.png, id=1711, 916.1728pt x 374.14781pt>
+<img/experiments/Redundant1.4.png, id=1721, 916.1728pt x 374.14781pt>
 File: img/experiments/Redundant1.4.png Graphic file (type png)
 <use img/experiments/Redundant1.4.png>
 Package pdftex.def Info: img/experiments/Redundant1.4.png  used on input line 341.
 (pdftex.def)             Requested size: 195.98085pt x 80.03487pt.
-<img/experiments/OLS1.1.png, id=1713, 405.76593pt x 318.43968pt>
+<img/experiments/OLS1.1.png, id=1723, 405.76593pt x 318.43968pt>
 File: img/experiments/OLS1.1.png Graphic file (type png)
 <use img/experiments/OLS1.1.png>
 Package pdftex.def Info: img/experiments/OLS1.1.png  used on input line 354.
 (pdftex.def)             Requested size: 130.65805pt x 102.5393pt.
-<img/experiments/OLS1.2.png, id=1714, 405.76593pt x 316.18124pt>
+<img/experiments/OLS1.2.png, id=1724, 405.76593pt x 316.18124pt>
 File: img/experiments/OLS1.2.png Graphic file (type png)
 <use img/experiments/OLS1.2.png>
 Package pdftex.def Info: img/experiments/OLS1.2.png  used on input line 359.
 (pdftex.def)             Requested size: 130.65805pt x 101.81207pt.
-<img/experiments/OLS1.3.png, id=1715, 404.26031pt x 317.68687pt>
+<img/experiments/OLS1.3.png, id=1725, 404.26031pt x 317.68687pt>
 File: img/experiments/OLS1.3.png Graphic file (type png)
 <use img/experiments/OLS1.3.png>
 Package pdftex.def Info: img/experiments/OLS1.3.png  used on input line 364.
@@ -2393,32 +2414,32 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Info: Redefining \. on input line 370.
 LaTeX Info: Redefining \% on input line 370.
 [101 <./img/experiments/OLS1DDD.png> <./img/experiments/Redundant1DDD.png> <./img/experiments/OLS1.4.png> <./img/experiments/Redundant1.4.png>]
-<img/experiments/hiperbolica_noiseless1.1.png, id=1725, 407.27156pt x 319.94531pt>
+<img/experiments/hiperbolica_noiseless1.1.png, id=1735, 407.27156pt x 319.94531pt>
 File: img/experiments/hiperbolica_noiseless1.1.png Graphic file (type png)
 <use img/experiments/hiperbolica_noiseless1.1.png>
 Package pdftex.def Info: img/experiments/hiperbolica_noiseless1.1.png  used on input line 380.
 (pdftex.def)             Requested size: 130.65805pt x 102.64333pt.
-<img/experiments/hiperbolica_noiseless1.2.png, id=1726, 404.26031pt x 317.68687pt>
+<img/experiments/hiperbolica_noiseless1.2.png, id=1736, 404.26031pt x 317.68687pt>
 File: img/experiments/hiperbolica_noiseless1.2.png Graphic file (type png)
 <use img/experiments/hiperbolica_noiseless1.2.png>
 Package pdftex.def Info: img/experiments/hiperbolica_noiseless1.2.png  used on input line 385.
 (pdftex.def)             Requested size: 130.65805pt x 102.67499pt.
-<img/experiments/hiperbolica_noiseless1.3.png, id=1727, 402.75468pt x 315.42844pt>
+<img/experiments/hiperbolica_noiseless1.3.png, id=1737, 402.75468pt x 315.42844pt>
 File: img/experiments/hiperbolica_noiseless1.3.png Graphic file (type png)
 <use img/experiments/hiperbolica_noiseless1.3.png>
 Package pdftex.def Info: img/experiments/hiperbolica_noiseless1.3.png  used on input line 390.
 (pdftex.def)             Requested size: 130.65805pt x 102.32532pt.
-<img/experiments/hiperbolica_noise1.1.png, id=1728, 406.51875pt x 318.43968pt>
+<img/experiments/hiperbolica_noise1.1.png, id=1738, 406.51875pt x 318.43968pt>
 File: img/experiments/hiperbolica_noise1.1.png Graphic file (type png)
 <use img/experiments/hiperbolica_noise1.1.png>
 Package pdftex.def Info: img/experiments/hiperbolica_noise1.1.png  used on input line 394.
 (pdftex.def)             Requested size: 130.65805pt x 102.34494pt.
-<img/experiments/hiperbolica_noise1.2.png, id=1729, 404.26031pt x 317.68687pt>
+<img/experiments/hiperbolica_noise1.2.png, id=1739, 404.26031pt x 317.68687pt>
 File: img/experiments/hiperbolica_noise1.2.png Graphic file (type png)
 <use img/experiments/hiperbolica_noise1.2.png>
 Package pdftex.def Info: img/experiments/hiperbolica_noise1.2.png  used on input line 398.
 (pdftex.def)             Requested size: 130.65805pt x 102.67499pt.
-<img/experiments/hiperbolica_noise1.3.png, id=1730, 404.26031pt x 316.18124pt>
+<img/experiments/hiperbolica_noise1.3.png, id=1740, 404.26031pt x 316.18124pt>
 File: img/experiments/hiperbolica_noise1.3.png Graphic file (type png)
 <use img/experiments/hiperbolica_noise1.3.png>
 Package pdftex.def Info: img/experiments/hiperbolica_noise1.3.png  used on input line 402.
@@ -2427,12 +2448,12 @@ Package pdftex.def Info: img/experiments/hiperbolica_noise1.3.png  used on input
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/experiments/hiperbolica_noiselessDDD.png, id=1732, 915.42pt x 510.40688pt>
+<img/experiments/hiperbolica_noiselessDDD.png, id=1742, 915.42pt x 510.40688pt>
 File: img/experiments/hiperbolica_noiselessDDD.png Graphic file (type png)
 <use img/experiments/hiperbolica_noiselessDDD.png>
 Package pdftex.def Info: img/experiments/hiperbolica_noiselessDDD.png  used on input line 413.
 (pdftex.def)             Requested size: 195.98085pt x 109.26804pt.
-<img/experiments/hiperbolica_noiseDDD.png, id=1733, 915.42pt x 510.40688pt>
+<img/experiments/hiperbolica_noiseDDD.png, id=1743, 915.42pt x 510.40688pt>
 File: img/experiments/hiperbolica_noiseDDD.png Graphic file (type png)
 <use img/experiments/hiperbolica_noiseDDD.png>
 Package pdftex.def Info: img/experiments/hiperbolica_noiseDDD.png  used on input line 419.
@@ -2445,12 +2466,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Info: Redefining \. on input line 433.
 LaTeX Info: Redefining \% on input line 433.
 [102 <./img/experiments/OLS1.1.png> <./img/experiments/OLS1.2.png> <./img/experiments/OLS1.3.png>]
-<img/experiments/noise-wise-dd1.png, id=1746, 814.54312pt x 565.36218pt>
+<img/experiments/noise-wise-dd1.png, id=1756, 814.54312pt x 565.36218pt>
 File: img/experiments/noise-wise-dd1.png Graphic file (type png)
 <use img/experiments/noise-wise-dd1.png>
 Package pdftex.def Info: img/experiments/noise-wise-dd1.png  used on input line 447.
 (pdftex.def)             Requested size: 183.73244pt x 127.52019pt.
-<img/experiments/noise-wise-dd2.png, id=1747, 815.29594pt x 572.89032pt>
+<img/experiments/noise-wise-dd2.png, id=1757, 815.29594pt x 572.89032pt>
 File: img/experiments/noise-wise-dd2.png Graphic file (type png)
 <use img/experiments/noise-wise-dd2.png>
 Package pdftex.def Info: img/experiments/noise-wise-dd2.png  used on input line 451.
@@ -2464,7 +2485,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Info: Redefining \. on input line 459.
 LaTeX Info: Redefining \% on input line 459.
 [103 <./img/experiments/hiperbolica_noiseless1.1.png> <./img/experiments/hiperbolica_noiseless1.2.png> <./img/experiments/hiperbolica_noiseless1.3.png> <./img/experiments/hiperbolica_noise1.1.png> <./img/experiments/hiperbolica_noise1.2.png> <./img/experiments/hiperbolica_noise1.3.png>]
-<img/experiments/noise-wise-dd3.png, id=1762, 814.54312pt x 571.38469pt>
+<img/experiments/noise-wise-dd3.png, id=1772, 814.54312pt x 571.38469pt>
 File: img/experiments/noise-wise-dd3.png Graphic file (type png)
 <use img/experiments/noise-wise-dd3.png>
 Package pdftex.def Info: img/experiments/noise-wise-dd3.png  used on input line 464.
@@ -2488,12 +2509,12 @@ LaTeX Info: Redefining \% on input line 490.
 LaTeX Info: Redefining \. on input line 500.
 LaTeX Info: Redefining \% on input line 500.
 [105 <./img/experiments/noise-wise-dd3.png>]
-<img/experiments/sample-wise-dd1.png, id=1782, 812.28468pt x 571.38469pt>
+<img/experiments/sample-wise-dd1.png, id=1792, 812.28468pt x 571.38469pt>
 File: img/experiments/sample-wise-dd1.png Graphic file (type png)
 <use img/experiments/sample-wise-dd1.png>
 Package pdftex.def Info: img/experiments/sample-wise-dd1.png  used on input line 507.
 (pdftex.def)             Requested size: 200.06781pt x 140.72719pt.
-<img/experiments/sample-wise-dd2.png, id=1783, 813.0375pt x 572.1375pt>
+<img/experiments/sample-wise-dd2.png, id=1793, 813.0375pt x 572.1375pt>
 File: img/experiments/sample-wise-dd2.png Graphic file (type png)
 <use img/experiments/sample-wise-dd2.png>
 Package pdftex.def Info: img/experiments/sample-wise-dd2.png  used on input line 512.
@@ -2503,7 +2524,7 @@ Package pdftex.def Info: img/experiments/sample-wise-dd2.png  used on input line
 LaTeX Info: Redefining \. on input line 536.
 LaTeX Info: Redefining \% on input line 536.
 [106 <./img/experiments/sample-wise-dd1.png> <./img/experiments/sample-wise-dd2.png>]
-<img/experiments/ratioparamsexamples.png, id=1793, 813.79031pt x 572.89032pt>
+<img/experiments/ratioparamsexamples.png, id=1803, 813.79031pt x 572.89032pt>
 File: img/experiments/ratioparamsexamples.png Graphic file (type png)
 <use img/experiments/ratioparamsexamples.png>
 Package pdftex.def Info: img/experiments/ratioparamsexamples.png  used on input line 544.
@@ -2513,7 +2534,7 @@ Package pdftex.def Info: img/experiments/ratioparamsexamples.png  used on input 
 LaTeX Info: Redefining \. on input line 551.
 LaTeX Info: Redefining \% on input line 551.
 [107 <./img/experiments/ratioparamsexamples.png>]
-<img/experiments/model-epoch2NNMNIST.png, id=1804, 1149.5447pt x 345.54094pt>
+<img/experiments/model-epoch2NNMNIST.png, id=1814, 1149.5447pt x 345.54094pt>
 File: img/experiments/model-epoch2NNMNIST.png Graphic file (type png)
 <use img/experiments/model-epoch2NNMNIST.png>
 Package pdftex.def Info: img/experiments/model-epoch2NNMNIST.png  used on input line 588.
@@ -2527,7 +2548,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Info: Redefining \. on input line 593.
 LaTeX Info: Redefining \% on input line 593.
 [108]
-<img/experiments/model-epoch2NNCIFAR10.png, id=1813, 1149.5447pt x 344.03531pt>
+<img/experiments/model-epoch2NNCIFAR10.png, id=1823, 1149.5447pt x 344.03531pt>
 File: img/experiments/model-epoch2NNCIFAR10.png Graphic file (type png)
 <use img/experiments/model-epoch2NNCIFAR10.png>
 Package pdftex.def Info: img/experiments/model-epoch2NNCIFAR10.png  used on input line 596.
@@ -2541,7 +2562,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Info: Redefining \. on input line 620.
 LaTeX Info: Redefining \% on input line 620.
 [109 <./img/experiments/model-epoch2NNMNIST.png>]
-<img/experiments/model-epoch3CNNMNIST30k.png, id=1822, 1148.03906pt x 342.5297pt>
+<img/experiments/model-epoch3CNNMNIST30k.png, id=1832, 1148.03906pt x 342.5297pt>
 File: img/experiments/model-epoch3CNNMNIST30k.png Graphic file (type png)
 <use img/experiments/model-epoch3CNNMNIST30k.png>
 Package pdftex.def Info: img/experiments/model-epoch3CNNMNIST30k.png  used on input line 623.
@@ -2551,12 +2572,12 @@ Package pdftex.def Info: img/experiments/model-epoch3CNNMNIST30k.png  used on in
 LaTeX Info: Redefining \. on input line 630.
 LaTeX Info: Redefining \% on input line 630.
 [110 <./img/experiments/model-epoch2NNCIFAR10.png> <./img/experiments/model-epoch3CNNMNIST30k.png>]
-<img/experiments/model-epoch3CNNCIFAR1025k.png, id=1835, 1149.5447pt x 344.03531pt>
+<img/experiments/model-epoch3CNNCIFAR1025k.png, id=1845, 1149.5447pt x 344.03531pt>
 File: img/experiments/model-epoch3CNNCIFAR1025k.png Graphic file (type png)
 <use img/experiments/model-epoch3CNNCIFAR1025k.png>
 Package pdftex.def Info: img/experiments/model-epoch3CNNCIFAR1025k.png  used on input line 633.
 (pdftex.def)             Requested size: 387.881pt x 116.08328pt.
-<img/experiments/model-epoch3CNNCIFAR10025k.png, id=1836, 1150.2975pt x 343.2825pt>
+<img/experiments/model-epoch3CNNCIFAR10025k.png, id=1846, 1150.2975pt x 343.2825pt>
 File: img/experiments/model-epoch3CNNCIFAR10025k.png Graphic file (type png)
 <use img/experiments/model-epoch3CNNCIFAR10025k.png>
 Package pdftex.def Info: img/experiments/model-epoch3CNNCIFAR10025k.png  used on input line 639.
@@ -2570,12 +2591,12 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Info: Redefining \. on input line 662.
 LaTeX Info: Redefining \% on input line 662.
 [111 <./img/experiments/model-epoch3CNNCIFAR1025k.png> <./img/experiments/model-epoch3CNNCIFAR10025k.png>]
-<img/experiments/model-epochPreActResNet18MNIST.png, id=1844, 1148.03906pt x 344.03531pt>
+<img/experiments/model-epochPreActResNet18MNIST.png, id=1854, 1148.03906pt x 344.03531pt>
 File: img/experiments/model-epochPreActResNet18MNIST.png Graphic file (type png)
 <use img/experiments/model-epochPreActResNet18MNIST.png>
 Package pdftex.def Info: img/experiments/model-epochPreActResNet18MNIST.png  used on input line 665.
 (pdftex.def)             Requested size: 387.881pt x 116.23552pt.
-<img/experiments/model-epochPreActResNet18CIFAR10augmented.png, id=1851, 1149.5447pt x 344.78813pt>
+<img/experiments/model-epochPreActResNet18CIFAR10augmented.png, id=1861, 1149.5447pt x 344.78813pt>
 File: img/experiments/model-epochPreActResNet18CIFAR10augmented.png Graphic file (type png)
 <use img/experiments/model-epochPreActResNet18CIFAR10augmented.png>
 Package pdftex.def Info: img/experiments/model-epochPreActResNet18CIFAR10augmented.png  used on input line 677.
@@ -2584,7 +2605,7 @@ Package pdftex.def Info: img/experiments/model-epochPreActResNet18CIFAR10augment
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/experiments/model-epochPreActResNet18CIFAR100augmented.png, id=1853, 1148.79187pt x 344.03531pt>
+<img/experiments/model-epochPreActResNet18CIFAR100augmented.png, id=1863, 1148.79187pt x 344.03531pt>
 File: img/experiments/model-epochPreActResNet18CIFAR100augmented.png Graphic file (type png)
 <use img/experiments/model-epochPreActResNet18CIFAR100augmented.png>
 Package pdftex.def Info: img/experiments/model-epochPreActResNet18CIFAR100augmented.png  used on input line 684.
@@ -2592,12 +2613,12 @@ Package pdftex.def Info: img/experiments/model-epochPreActResNet18CIFAR100augmen
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/experiments/PreActResNet18(45).png, id=1854, 580.41844pt x 441.14813pt>
+<img/experiments/PreActResNet18(45).png, id=1864, 580.41844pt x 441.14813pt>
 File: img/experiments/PreActResNet18(45).png Graphic file (type png)
 <use img/experiments/PreActResNet18(45).png>
 Package pdftex.def Info: img/experiments/PreActResNet18(45).png  used on input line 692.
 (pdftex.def)             Requested size: 195.98085pt x 148.95174pt.
-<img/experiments/PreActResNet18(64).png, id=1855, 569.87906pt x 441.14813pt>
+<img/experiments/PreActResNet18(64).png, id=1865, 569.87906pt x 441.14813pt>
 File: img/experiments/PreActResNet18(64).png Graphic file (type png)
 <use img/experiments/PreActResNet18(64).png>
 Package pdftex.def Info: img/experiments/PreActResNet18(64).png  used on input line 698.
@@ -2617,12 +2638,12 @@ LaTeX Info: Redefining \% on input line 726.
 LaTeX Info: Redefining \. on input line 727.
 LaTeX Info: Redefining \% on input line 727.
 [113 <./img/experiments/model-epochPreActResNet18CIFAR10augmented.png> <./img/experiments/model-epochPreActResNet18CIFAR100augmented.png>]
-<img/experiments/2nnvsdeepnn.png, id=1871, 813.79031pt x 452.4403pt>
+<img/experiments/2nnvsdeepnn.png, id=1881, 813.79031pt x 452.4403pt>
 File: img/experiments/2nnvsdeepnn.png Graphic file (type png)
 <use img/experiments/2nnvsdeepnn.png>
 Package pdftex.def Info: img/experiments/2nnvsdeepnn.png  used on input line 742.
 (pdftex.def)             Requested size: 191.90013pt x 106.68938pt.
-<img/experiments/3cnnvsdeepcnn.png, id=1872, 814.54312pt x 453.19313pt>
+<img/experiments/3cnnvsdeepcnn.png, id=1882, 814.54312pt x 453.19313pt>
 File: img/experiments/3cnnvsdeepcnn.png Graphic file (type png)
 <use img/experiments/3cnnvsdeepcnn.png>
 Package pdftex.def Info: img/experiments/3cnnvsdeepcnn.png  used on input line 748.
@@ -2667,19 +2688,30 @@ LaTeX Info: Redefining \. on input line 30.
 LaTeX Info: Redefining \% on input line 30.
 [120]
 chapter 9.
-) (apendices/apendice01.tex
+)
 
 [121
 
 ]
-chapter A.
+part V.
+Package scrkbase Info: You've told me to use the font selection of the element
+(scrkbase)             `partprefix' that is an alias of element `partnumber'
+(scrkbase)              on input line 105.
 
 
 [122
 
 ]
 
-[123]
+[123] (apendices/apendice01.tex
+chapter A.
+
+
+[124
+
+]
+
+[125]
 Overfull \hbox (43.97531pt too wide) detected at line 131
 []  \OT1/zplm/m/n/10 = \OMS/zplm/m/n/10 ^^@ [] [][] \OML/zplm/m/it/10 v[]H[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 w[] \OT1/zplm/m/n/10 + \OML/zplm/m/it/10 ^^N\OT1/zplm/m/n/10 )\OML/zplm/m/it/10 v \OT1/zplm/m/n/10 + [] [][] \OML/zplm/m/it/10 v[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 H[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 w[] \OT1/zplm/m/n/10 + \OML/zplm/m/it/10 ^^N\OT1/zplm/m/n/10 )\OML/zplm/m/it/10 v \OMS/zplm/m/n/10 ^^@ H[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 w[] \OMS/zplm/m/n/10 ^^@ \OML/zplm/m/it/10 ^^N\OT1/zplm/m/n/10 ))\OML/zplm/m/it/10 v
  []
@@ -2688,9 +2720,9 @@ Overfull \hbox (43.97531pt too wide) detected at line 131
 
 LaTeX Info: Redefining \. on input line 4.
 LaTeX Info: Redefining \% on input line 4.
-[124]
+[126]
 chapter B.
-<img/experiments/batch_sizes_ddd.png, id=1950, 813.79031pt x 453.19313pt>
+<img/experiments/batch_sizes_ddd.png, id=1969, 813.79031pt x 453.19313pt>
 File: img/experiments/batch_sizes_ddd.png Graphic file (type png)
 <use img/experiments/batch_sizes_ddd.png>
 Package pdftex.def Info: img/experiments/batch_sizes_ddd.png  used on input line 12.
@@ -2698,7 +2730,7 @@ Package pdftex.def Info: img/experiments/batch_sizes_ddd.png  used on input line
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<img/experiments/learning_rates_ddd.png, id=1953, 814.54312pt x 450.9347pt>
+<img/experiments/learning_rates_ddd.png, id=1972, 814.54312pt x 450.9347pt>
 File: img/experiments/learning_rates_ddd.png Graphic file (type png)
 <use img/experiments/learning_rates_ddd.png>
 Package pdftex.def Info: img/experiments/learning_rates_ddd.png  used on input line 37.
@@ -2708,41 +2740,41 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[125
+[127
 
  <./img/experiments/batch_sizes_ddd.png>]) (apendices/apendice03.tex
 
 LaTeX Info: Redefining \. on input line 4.
 LaTeX Info: Redefining \% on input line 4.
-[126 <./img/experiments/learning_rates_ddd.png>]
+[128 <./img/experiments/learning_rates_ddd.png>]
 chapter C.
-<img/experiments/LegendreFeaturesGD_DDD.png, id=1970, 916.92563pt x 510.40688pt>
+<img/experiments/LegendreFeaturesGD_DDD.png, id=1988, 916.92563pt x 510.40688pt>
 File: img/experiments/LegendreFeaturesGD_DDD.png Graphic file (type png)
 <use img/experiments/LegendreFeaturesGD_DDD.png>
 Package pdftex.def Info: img/experiments/LegendreFeaturesGD_DDD.png  used on input line 16.
 (pdftex.def)             Requested size: 195.98085pt x 109.08891pt.
-<img/experiments/PolyFeaturesGD_DDD.png, id=1971, 915.42pt x 511.15968pt>
+<img/experiments/PolyFeaturesGD_DDD.png, id=1989, 915.42pt x 511.15968pt>
 File: img/experiments/PolyFeaturesGD_DDD.png Graphic file (type png)
 <use img/experiments/PolyFeaturesGD_DDD.png>
 Package pdftex.def Info: img/experiments/PolyFeaturesGD_DDD.png  used on input line 22.
 (pdftex.def)             Requested size: 195.98085pt x 109.4292pt.
 ) (apendices/apendice04.tex
 
-[127
+[129
 
  <./img/experiments/LegendreFeaturesGD_DDD.png> <./img/experiments/PolyFeaturesGD_DDD.png>]
 chapter D.
-<img/experiments/epoch-wise3CNNunderparameterized.png, id=1986, 1148.79187pt x 325.96782pt>
+<img/experiments/epoch-wise3CNNunderparameterized.png, id=2004, 1148.79187pt x 325.96782pt>
 File: img/experiments/epoch-wise3CNNunderparameterized.png Graphic file (type png)
 <use img/experiments/epoch-wise3CNNunderparameterized.png>
 Package pdftex.def Info: img/experiments/epoch-wise3CNNunderparameterized.png  used on input line 14.
 (pdftex.def)             Requested size: 367.46489pt x 104.26706pt.
-<img/experiments/epoch-wise3CNNoverparameterized.png, id=1987, 1149.5447pt x 327.47343pt>
+<img/experiments/epoch-wise3CNNoverparameterized.png, id=2005, 1149.5447pt x 327.47343pt>
 File: img/experiments/epoch-wise3CNNoverparameterized.png Graphic file (type png)
 <use img/experiments/epoch-wise3CNNoverparameterized.png>
 Package pdftex.def Info: img/experiments/epoch-wise3CNNoverparameterized.png  used on input line 22.
 (pdftex.def)             Requested size: 367.46489pt x 104.67871pt.
-<img/experiments/epoch-wiseMNIST.png, id=1988, 815.29594pt x 452.4403pt>
+<img/experiments/epoch-wiseMNIST.png, id=2006, 815.29594pt x 452.4403pt>
 File: img/experiments/epoch-wiseMNIST.png Graphic file (type png)
 <use img/experiments/epoch-wiseMNIST.png>
 Package pdftex.def Info: img/experiments/epoch-wiseMNIST.png  used on input line 31.
@@ -2752,15 +2784,15 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[128
+[130
 
  <./img/experiments/epoch-wise3CNNunderparameterized.png> <./img/experiments/epoch-wise3CNNoverparameterized.png>]
-<img/experiments/landscapemultimodal.png, id=2000, 367.3725pt x 301.125pt>
+<img/experiments/landscapemultimodal.png, id=2018, 367.3725pt x 301.125pt>
 File: img/experiments/landscapemultimodal.png Graphic file (type png)
 <use img/experiments/landscapemultimodal.png>
 Package pdftex.def Info: img/experiments/landscapemultimodal.png  used on input line 45.
 (pdftex.def)             Requested size: 183.73244pt x 150.60347pt.
-<img/experiments/landscapeunimodal.png, id=2001, 319.1925pt x 183.68625pt>
+<img/experiments/landscapeunimodal.png, id=2019, 319.1925pt x 183.68625pt>
 File: img/experiments/landscapeunimodal.png Graphic file (type png)
 <use img/experiments/landscapeunimodal.png>
 Package pdftex.def Info: img/experiments/landscapeunimodal.png  used on input line 50.
@@ -2771,25 +2803,25 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[129 <./img/experiments/epoch-wiseMNIST.png>]) (glosario_mates.tex
+[131 <./img/experiments/epoch-wiseMNIST.png>]) (glosario_mates.tex
 
 LaTeX Info: Redefining \. on input line 4.
 LaTeX Info: Redefining \% on input line 4.
-[130 <./img/experiments/landscapemultimodal.png> <./img/experiments/landscapeunimodal.png>]
+[132 <./img/experiments/landscapemultimodal.png> <./img/experiments/landscapeunimodal.png>]
 
-[131
+[133
 
 ]) (glosario_info.tex
 
 LaTeX Info: Redefining \. on input line 4.
 LaTeX Info: Redefining \% on input line 4.
-[132])
+[134])
 
-[133
+[135
 
 ]
 
-[134
+[136
 
 
 ] (tfg.bbl
@@ -2806,29 +2838,29 @@ LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
 (Font)              scaled to size 9.0pt on input line 65.
 
 
-[135
+[137
 
 ]
 
 LaTeX Info: Redefining \. on input line 230.
 LaTeX Info: Redefining \% on input line 230.
-[136]
+[138]
 
 LaTeX Info: Redefining \. on input line 332.
 LaTeX Info: Redefining \% on input line 332.
-[137]
+[139]
 
 LaTeX Info: Redefining \. on input line 440.
 LaTeX Info: Redefining \% on input line 440.
-[138]
+[140]
 
 LaTeX Info: Redefining \. on input line 553.
 LaTeX Info: Redefining \% on input line 553.
-[139])
+[141])
 
-LaTeX Info: Redefining \. on input line 134.
-LaTeX Info: Redefining \% on input line 134.
-[140] (tfg.aux
+LaTeX Info: Redefining \. on input line 135.
+LaTeX Info: Redefining \% on input line 135.
+[142] (tfg.aux
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
 LaTeX Info: Redefining \. on input line 31.
@@ -2846,17 +2878,17 @@ Package rerunfilecheck Info: File `tfg.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 43456 strings out of 473536
- 883879 string characters out of 5711532
- 1423476 words of memory out of 5000000
- 64510 multiletter control sequences out of 15000+600000
- 876663 words of font info for 818 fonts, out of 8000000 for 9000
+ 43590 strings out of 473536
+ 886818 string characters out of 5711532
+ 1411670 words of memory out of 5000000
+ 64639 multiletter control sequences out of 15000+600000
+ 876780 words of font info for 819 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 122i,23n,131p,10964b,1403s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 122i,23n,131p,10964b,1419s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/impallari/cabin/Cabin-Bold.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/impallari/cabin/Cabin-BoldItalic.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/impallari/cabin/Cabin-Regular.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/eurosym/feymr10.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/fpl/fplbj8a.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbb.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/fpl/fplrc8a.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/fpl/fplrij8a.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplbi8a.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on tfg.pdf (166 pages, 12648210 bytes).
+Output written on tfg.pdf (168 pages, 12707970 bytes).
 PDF statistics:
- 2559 PDF objects out of 2984 (max. 8388607)
- 658 named destinations out of 1000 (max. 500000)
- 221284 words of extra memory for PDF output out of 221844 (max. 10000000)
+ 2581 PDF objects out of 2984 (max. 8388607)
+ 663 named destinations out of 1000 (max. 500000)
+ 221297 words of extra memory for PDF output out of 221844 (max. 10000000)
 

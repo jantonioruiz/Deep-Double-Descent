@@ -10,11 +10,11 @@
 
 \chapter{Introducción}
 
-En el contexto de la actual revolución tecnológica, el aprendizaje profundo y, en especial, las redes neuronales convolucionales se han consolidado como potentes mecanismos, particularmente en el campo de la visión por computador, debido a su gran capacidad para analizar grandes volúmenes de datos. Estas arquitecturas permiten capturar representaciones complejas de la información visual, logrando en muchos casos superar el rendimiento alcanzado por los humanos en tareas de clasificación y detección de imágenes.
+En el contexto de la actual revolución tecnológica, diversas arquitecturas de redes neuronales han demostrado ser especialmente eficaces en tareas complejas del ámbito del aprendizaje profundo. Modelos como las redes convolucionales, los Transformers y los modelos de difusión han mostrado un rendimiento notable en campos como la visión por computador, el procesamiento del lenguaje natural y la generación de contenido, debido a su gran capacidad para analizar grandes volúmenes de datos. En este trabajo, nos centraremos en las redes neuronales convolucionales, dada su consolidada capacidad para extraer representaciones significativas de la información visual, logrando en muchos casos superar el rendimiento alcanzado por los humanos en tareas de clasificación y detección de imágenes.
 
 En los últimos años y bajo este marco de expansión y evolución del aprendizaje, el \emph{Deep Double Descent} ha surgido como un importante campo de interés dentro de este ámbito, desafíando los principios clásicos del aprendizaje estadístico. La sabiduría tradicional sugiere que, a medida que aumenta la complejidad del modelo, el error fuera de la muestra disminuye hasta alcanzar un mínimo para, a continuación, aumentar debido al sobreajuste (formando la tradicional curva con forma de ``U'').
 
-Este concepto tradicional del aprendizaje automático, conocido como equilibrio entre sesgo y varianza, difiere de las recientes observaciones obtenidas, especialmente en modelos de aprendizaje profundo, en los que puede producirse una segunda disminución del error fuera de la muestra, alcanzando un nuevo mínimo y formando una nueva gráfica del error de generalización que presenta dos descensos. Este novedoso descubrimiento pone en tela de juicio la sabiduría clásica sobre el tema y proporciona nuevas perspectivas a la hora de crear y entrenar los modelos.
+Este concepto, conocido como equilibrio entre sesgo y varianza, difiere de las recientes observaciones obtenidas, especialmente en modelos de aprendizaje profundo, en los que puede producirse una segunda disminución del error fuera de la muestra, alcanzando un nuevo mínimo y formando una nueva gráfica del error de generalización que presenta dos descensos. Este novedoso hecho pone en tela de juicio la sabiduría clásica sobre el tema y proporciona nuevas perspectivas a la hora de crear y entrenar los modelos.
 
 Como consecuencia, este Trabajo de Fin de Grado (TFG) se ocupa de explorar el concepto de \emph{Deep Double Descent}, sus fundamentos teóricos y sus implicaciones para el aprendizaje automático moderno. Un área clave de interés es cómo este fenómeno se manifiesta en redes neuronales profundas, conocidas por su enorme complejidad en cuanto a número de párametros se refiere y su potencial de sobreajuste. A pesar de que los modelos de aprendizaje profundo han tenido gran éxito en diversas aplicaciones, como la visión por computador o el procesamiento de lenguaje natural, la curva del doble descenso aporta nuevo conocimiento sobre cómo estos modelos pueden llegar a generalizar en un régimen que ha sido vagamente estudiado y explorado: el régimen sobreparametrizado. La idea clave es la existencia de dos zonas de actuación del modelo claramente diferenciadas, la zona infraparametrizada y la zona sobreparametrizada. Sin embargo, formalizar esta idea no es trivial, dado que los modelos profundos funcionan como «cajas negras», lo que hace que, a medida que aumenta su complejidad, resulte cada vez más difícil interpretar y analizar su funcionamiento interno.
 
@@ -58,7 +58,7 @@ En conclusión, el \emph{Deep Double Descent} representa un cambio de paradigma,
 
 Los primeros indicios del \textit{Deep Double Descent} se remontan a la década de $1990$ y principios de los años $2000$~\cite{Vallet1989, Opper2001}, aunque no se utilizaba específicamente esa terminología. Estos estudios mostraban la relación entre la complejidad del modelo y el error de generalización, indicando que, en algunos casos, aumentar la complejidad del modelo más allá de cierto punto no incrementaba necesariamente el error de generalización. No obstante, no es hasta $2019$ cuando Belkin et al.~\cite{Belkin2019} abordan la primera investigación formal sobre este tema y le asignan su particular nombre. A partir de ese momento, la comunidad científica comienza a mostrar un creciente interés hasta el día de hoy, lo que nos lleva a catalogarlo como un acontecimiento novedoso.
 
-Por tanto, el objetivo principal de este TFG radica en tratar de ofrecer una explicación detallada y estructurada del reciente concepto del \emph{Deep Double Descent}. Este estudio se centrará en proporcionar una visión actualizada y rigurosa de sus fundamentos teóricos, implicaciones prácticas y relevancia en el desarrollo de modelos modernos, asegurando que el contenido se mantenga en concordancia con los avances más recientes en la investigación. Para alcanzar este objetivo, se han definido dos líneas de trabajo interrelacionadas: una orientada al desarrollo \textbf{matemático} y otra enfocada a la parte \textbf{informática}. Ambas se desarrollan de manera conjunta y complementaria, de modo que los avances teóricos guían la implementación práctica, mientras que los resultados experimentales permiten validar y enriquecer la comprensión teórica. A su vez, cada una de estas líneas de trabajo se descompone en una serie de objetivos parciales que, en conjunto, dirigen el desarrollo del proyecto.
+Por tanto, el objetivo principal de este TFG radica en tratar de \textbf{ofrecer una explicación detallada y estructurada del reciente concepto del \emph{Deep Double Descent}}. Este estudio se centrará en proporcionar una visión actualizada y rigurosa de sus fundamentos teóricos, implicaciones prácticas y relevancia en el desarrollo de modelos modernos, asegurando que el contenido se mantenga en concordancia con los avances más recientes en la investigación. Para alcanzar este objetivo, se han definido dos líneas de trabajo profundamente interrelacionadas: una orientada al desarrollo \textbf{matemático} y otra enfocada a la parte \textbf{informática}. Ambas se desarrollan de manera conjunta y complementaria, de modo que los avances teóricos guían la implementación práctica, mientras que los resultados experimentales permiten validar y enriquecer la comprensión teórica. A su vez, cada línea de trabajo se descompone en una serie de objetivos parciales que, en conjunto, dirigen el desarrollo del proyecto.
 
 \subsection{Objetivo matemático}
 
@@ -73,7 +73,7 @@ El objetivo fundamental para la parte matemática consiste en profundizar en la 
 
 \subsection{Objetivo informático}
 
-El objetivo esencial para la parte informática consiste en llevar a cabo la constatación experimental del \textit{Deep Double Descent} mediante la implementación y análisis de diversas arquitecturas que permitan validar y estudiar empíricamente su comportamiento. Esta parte experimental busca no solo ilustrar su aparición en distintos escenarios y arquitecturas, sino también corroborar y complementar los resultados obtenidos en la parte matemática, estableciendo así una conexión sólida entre la teoría y la práctica. Con el fin de abordar de forma sistemática las distintas fases de este análisis, el presente objetivo se descompondrá en los siguientes objetivos parciales:
+El objetivo esencial para la parte informática consiste en llevar a cabo la constatación experimental del \textit{Deep Double Descent} mediante la implementación y análisis de diversas arquitecturas que permitan validar y estudiar empíricamente este comportamiento. Esta parte experimental busca no solo ilustrar su aparición en distintos escenarios y arquitecturas, sino también corroborar y complementar los resultados obtenidos en la parte matemática, estableciendo así una conexión sólida entre la teoría y la práctica. Con el fin de abordar de forma sistemática las distintas fases de este análisis, el presente objetivo se descompondrá en los siguientes objetivos parciales:
 
 \begin{itemize}
     \item Llevar a cabo un estudio profundo y minucioso de los casos prácticos en los que se ha manifestado, revisando los principales comportamientos y patrones.
@@ -87,7 +87,13 @@ De cara a planificar el proyecto, es fundamental considerar que el TFG en el dob
 
 Dada la distribución temporal del segundo cuatrimestre, con aproximadamente $20$ semanas disponibles, se estima que la realización del proyecto requerirá $30$ horas semanales, equivalentes a $5$ horas diarias durante $6$ días a la semana. Esto se traduce en $120$ horas al mes que, durante un lapso de aproximadamente $4$ meses, suman un total de $480$ horas. Por tanto, se reservan $2$ semanas como margen para posibles imprevistos que puedan surgir durante el desarrollo del proyecto.
 
-Inicialmente, el TFG se estructuró siguiendo una metodología basada en el ciclo de vida en cascada~\cite{Pressman1994}. Sin embargo, este enfoque impide retroceder entre fases, lo que puede dificultar la adaptación a problemas o cambios identificados tras completar una etapa. Aunque el proyecto cuenta con requisitos y objetivos bien definidos, es común que surjan ajustes necesarios. Por ello, se emplea un modelo en cascada con retroalimentación, que permite revisar y modificar fases anteriores cuando sea necesario.
+Inicialmente, el TFG se estructuró siguiendo una metodología basada en el ciclo de vida en cascada~\cite{Pressman1994}. Sin embargo, este enfoque impide retroceder entre fases, lo que puede dificultar la adaptación a problemas o cambios identificados tras completar una etapa. Aunque el proyecto cuenta con requisitos y objetivos bien definidos, es común que surjan ajustes necesarios. Por ello, se emplea un modelo en cascada con retroalimentación, que permite revisar y modificar fases anteriores cuando sea necesario (véase Figura~\ref{fig:modelo_cascada}).
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\linewidth]{img/modelo_cascada.jpg}
+    \caption[Modelo en cascada realimentado.]{Modelo en cascada con realimentación. Las flechas continuas representan el flujo principal del proceso en cascada, mientras que las flechas punteadas indican las fases de realimentación.}\label{fig:modelo_cascada}
+\end{figure}
 
 El proyecto se organiza en las siguientes fases del ciclo de vida:
 
@@ -98,7 +104,7 @@ El proyecto se organiza en las siguientes fases del ciclo de vida:
     \item Pruebas: Consiste en la realización de diversos experimentos utilizando los conjuntos de datos y modelos previamente definidos. En esta fase se contempló (y efectivamente se llevó a cabo) la posibilidad de regresar a la fase de diseño, ya que, aunque algunos experimentos se definen inicialmente, la experimentación puede revelar nuevas posibilidades que deben ser evaluadas.
 \end{itemize}
 
-Además, de manera paralela a las etapas descritas anteriormente, se lleva a cabo un proceso continuo de redacción de la memoria del proyecto, en el que se formalizan todas las notas e investigaciones realizadas para cada capítulo, así como el detalle de cada decisión tomada durante el desarrollo del proyecto.
+Además, de manera paralela a las etapas descritas anteriormente, se lleva a cabo un proceso continuo de redacción y documentación de la memoria del proyecto, en el que se formalizan todas las notas e investigaciones realizadas para cada capítulo, así como el detalle de cada decisión tomada durante el desarrollo del proyecto.
 
 \begin{table}[h]
     \centering
@@ -130,9 +136,12 @@ Además, de manera paralela a las etapas descritas anteriormente, se lleva a cab
         \\ 
         \hline
         Pruebas & $9 - 270$ & & & & & & & & & & & & \Block[fill={gray!50}]{1-9} \\
+        \\ 
+        \hline
+        Documentación & -- & & & & & \Block[fill={gray!50}]{1-16} \\
     \end{NiceTabular}
     }
-    \caption{Planificación temporal inicial del proyecto.}\label{tabla:gantt-inicial}
+    \caption[Planificación temporal inicial del proyecto.]{Planificación temporal inicial del proyecto. La documentación se desarrolla de forma transversal a lo largo de la duración del proyecto, en paralelo al resto de fases.}\label{tabla:gantt-inicial}
 \end{table}
 
 \begin{table}[h]
@@ -165,12 +174,15 @@ Además, de manera paralela a las etapas descritas anteriormente, se lleva a cab
         \\ 
         \hline
         Pruebas & $9 - 270$ & & & & & & & & & & & & \Block[fill={gray!50}]{1-9} \\
+        \\ 
+        \hline
+        Documentación & -- & & & & & \Block[fill={gray!50}]{1-16} \\
     \end{NiceTabular}
     }
-    \caption{Planificación temporal final del proyecto.}\label{tabla:gantt-final}
+    \caption[Planificación temporal final del proyecto.]{Planificación temporal final del proyecto. La documentación se desarrolla de forma transversal a lo largo de la duración del proyecto, en paralelo al resto de fases.}\label{tabla:gantt-final}
 \end{table}
 
-La planificación inicial del proyecto se detalla en la Tabla~\ref{tabla:gantt-inicial}. No obstante, debido al carácter novedoso del trabajo y a los continuos avances por parte de la comunidad científica a lo largo de este año, la planificación inicial experimentó algunas modificaciones. Estos ajustes estuvieron motivados por nuevos descubrimientos que permitieron comprender el suceso con mayor claridad. De este modo, la planificación final del proyecto se presenta en la Tabla~\ref{tabla:gantt-final}, mientras que en la Tabla~\ref{tabla:resumen-duracion} se presenta un resumen de la duración total.
+La planificación inicial del proyecto se detalla en la Tabla~\ref{tabla:gantt-inicial}. No obstante, debido al carácter novedoso del trabajo y a los continuos avances por parte de la comunidad científica a lo largo de este año, la planificación inicial experimentó algunas modificaciones. Estos ajustes estuvieron motivados por nuevos descubrimientos que permitieron comprender el fenómeno con mayor claridad, lo que obligó a retroceder a la fase inicial del proyecto y prolongó su duración. De este modo, la planificación final del proyecto se presenta en la Tabla~\ref{tabla:gantt-final}, mientras que en la Tabla~\ref{tabla:resumen-duracion} se presenta un resumen de la duración total.
 
 \begin{table}[h]
     \centering
@@ -182,17 +194,17 @@ La planificación inicial del proyecto se detalla en la Tabla~\ref{tabla:gantt-i
     \caption{Resumen de las fechas de inicio y fin del proyecto, junto con la duración total.}\label{tabla:resumen-duracion}
 \end{table}
 
-Para la estimación del coste, partimos de la base de que el coste por hora de un investigador senior o responsable de I$+$D en una empresa tecnológica es de $35$\euro/hora. A esta cifra se deben sumar los gastos derivados de los distintos materiales utilizados, tales como el coste del portátil empleado en el desarrollo del TFG y el uso de un servidor GPU de altas prestaciones, junto a otros gastos misceláneos entre los que se incluye el consumo eléctrico. El desglose detallado de estos costes se puede consultar en la Tabla~\ref{tabla:estimacion-coste}.
+Para la estimación del coste, partimos de la base de que el coste por hora de un investigador senior o responsable de I$+$D en una empresa tecnológica española es de $15$\euro/hora, según el portal de transparencia empresarial Glassdoor\footnote{Se asume un salario anual de $30000$\euro\ según estimaciones publicadas en: \url{https://www.glassdoor.es/Sueldos/ingeniero-de-investigacion-y-desarrollo-sueldo-SRCH_KO0,39.htm}}, y de una duración final del proyecto de $690$ horas. A esta cifra se deben sumar los gastos derivados de los distintos materiales utilizados, tales como el coste del portátil empleado en el desarrollo del TFG y el uso de un servidor GPU de altas prestaciones, junto a otros gastos misceláneos entre los que se incluye el consumo eléctrico. El desglose detallado de estos costes se puede consultar en la Tabla~\ref{tabla:estimacion-coste}.
 
 Respecto al servidor GPU, y basándonos en sus especificaciones, se estima su valoración en $12000$\euro. Se asume una amortización proyectada a lo largo de dos años, lo que equivale a un coste diario de $16.44$\euro. Por ende, la contribución total de este servidor al coste del proyecto sería de $2186.52$\euro.
 
 \begin{table}[h]
     \centering
-    \begin{tabular}{|l|>{\raggedright\arraybackslash}p{2in}|} % Definimos una columna más larga
+    \begin{tabular}{|l|>{\raggedright\arraybackslash}p{2in}|} 
         \hline
         \cellcolor{cyan!50} \hspace{6em} \textbf{Item} & \cellcolor{cyan!50} \hspace{4.5em} \textbf{Costo} \\ 
         \hline
-        Salario & 16 800.00\euro \\
+        Salario & 10 350.00\euro \\
         \hline
         Portátil de Gama Media & 1 000.00\euro \\
         \hline
@@ -200,7 +212,7 @@ Respecto al servidor GPU, y basándonos en sus especificaciones, se estima su va
         \hline
         Otros & 300.00\euro \\
         \hline
-        \cellcolor{cyan!50} \hspace{12em} \textbf{Total} & 20 286.52\euro\\
+        \cellcolor{cyan!50} \hspace{12em} \textbf{Total} & 13 836.52\euro\\
         \hline
     \end{tabular}
     \caption{Estimación del coste del proyecto.}\label{tabla:estimacion-coste}
