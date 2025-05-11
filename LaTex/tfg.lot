@@ -23,20 +23,21 @@
 \contentsline {table}{\numberline {7.3}{\ignorespaces Número de parámetros de las arquitecturas $3$CNN.}}{95}{table.caption.55}%
 \contentsline {table}{\numberline {7.4}{\ignorespaces Número de parámetros de las arquitecturas ResNet$18$ modificadas.}}{96}{table.caption.57}%
 \contentsline {table}{\numberline {7.5}{\ignorespaces Resumen de las ideas principales de los experimentos realizados.}}{98}{table.caption.58}%
-\contentsline {table}{\numberline {7.6}{\ignorespaces Aproximaciones polinómicas de grado $n$ utilizadas para regresión polinomial.}}{99}{table.caption.59}%
-\contentsline {table}{\numberline {7.7}{\ignorespaces Resumen de los experimentos para el doble descenso por nivel de ruido.}}{105}{table.caption.69}%
-\contentsline {table}{\numberline {7.8}{\ignorespaces Resumen de los experimentos para el doble descenso por número de ejemplos de entrenamiento.}}{107}{table.caption.71}%
-\contentsline {table}{\numberline {7.9}{\ignorespaces Resumen del ratio parámetros/ejemplos.}}{109}{table.caption.73}%
-\contentsline {table}{\numberline {7.10}{\ignorespaces Resumen de los experimentos para el doble descenso por complejidad del modelo y épocas para la red $2$NN.}}{110}{table.caption.76}%
-\contentsline {table}{\numberline {7.11}{\ignorespaces Resumen de los experimentos para el doble descenso por complejidad del modelo y épocas para la arquitectura $3$CNN.}}{111}{table.caption.80}%
-\contentsline {table}{\numberline {7.12}{\ignorespaces Resumen de los experimentos para el doble descenso por complejidad del modelo y épocas para la red ResNet$18$ modificada.}}{113}{table.caption.85}%
-\contentsline {table}{\numberline {7.13}{\ignorespaces Resumen de los experimentos realizados sobre el doble descenso.}}{117}{table.caption.87}%
+\contentsline {table}{\numberline {7.6}{\ignorespaces Resumen del número de experimentos junto con el número de horas totales de GPU.}}{99}{table.caption.59}%
+\contentsline {table}{\numberline {7.7}{\ignorespaces Aproximaciones polinómicas de grado $n$ utilizadas para regresión polinomial.}}{100}{table.caption.60}%
+\contentsline {table}{\numberline {7.8}{\ignorespaces Resumen de los experimentos para el doble descenso por nivel de ruido.}}{106}{table.caption.70}%
+\contentsline {table}{\numberline {7.9}{\ignorespaces Resumen de los experimentos para el doble descenso por número de ejemplos de entrenamiento.}}{108}{table.caption.72}%
+\contentsline {table}{\numberline {7.10}{\ignorespaces Resumen del ratio parámetros/ejemplos.}}{109}{table.caption.74}%
+\contentsline {table}{\numberline {7.11}{\ignorespaces Resumen de los experimentos para el doble descenso por complejidad del modelo y épocas para la red $2$NN.}}{111}{table.caption.77}%
+\contentsline {table}{\numberline {7.12}{\ignorespaces Resumen de los experimentos para el doble descenso por complejidad del modelo y épocas para la arquitectura $3$CNN.}}{113}{table.caption.81}%
+\contentsline {table}{\numberline {7.13}{\ignorespaces Resumen de los experimentos para el doble descenso por complejidad del modelo y épocas para la red ResNet$18$ modificada.}}{114}{table.caption.86}%
+\contentsline {table}{\numberline {7.14}{\ignorespaces Resumen de los experimentos realizados sobre el doble descenso.}}{118}{table.caption.88}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {B.1}{\ignorespaces Resumen de los experimentos realizados para el doble descenso con distinto tamaño de lote.}}{129}{table.caption.90}%
-\contentsline {table}{\numberline {B.2}{\ignorespaces Resumen de los experimentos realizados para el doble descenso con distinto \textit {learning rate}.}}{129}{table.caption.93}%
+\contentsline {table}{\numberline {B.1}{\ignorespaces Resumen de los experimentos realizados para el doble descenso con distinto tamaño de lote.}}{130}{table.caption.91}%
+\contentsline {table}{\numberline {B.2}{\ignorespaces Resumen de los experimentos realizados para el doble descenso con distinto \textit {learning rate}.}}{130}{table.caption.94}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

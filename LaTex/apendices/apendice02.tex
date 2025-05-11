@@ -40,7 +40,7 @@ En la Figura~\ref{fig:dddbatchsizes} se observa que, para distintas configuracio
 
 En la Figura~\ref{fig:difflr} podemos observar cómo se manifiesta el doble descenso para distintas configuraciones de la tasa de aprendizaje. En particular, el pico del error de test se hace más pronunciado a medida que la tasa de aprendizaje aumenta, dado que para un \textit{learning rate} igual a $5 \times 10^{-4}$, el máximo error en test es mayor que para el valor por defecto de la tasa de aprendizaje ($10^{-4}$) del optimizador Adam, y este, a su vez, es mayor que el máximo valor que proporciona la mínima tasa de aprendizaje utilizada ($5 \times 10^{-5}$).
 
-En conclusión, esto nos indica que, si un modelo presenta el doble descenso, no es necesario preocuparse en exceso por ajustar de manera precisa la tasa de aprendizaje, puesto que, dentro de ciertos rangos de valores de este hiperparámetro, el modelo sigue presentando el suceso, lo que indica que el uso por defecto de la tasa de aprendizaje resulta ser suficiente.
+En conclusión, esto nos indica que, si un modelo presenta el \textit{Deep Double Descent}, no es necesario preocuparse en exceso por ajustar de manera precisa la tasa de aprendizaje, puesto que, dentro de ciertos rangos de valores de este hiperparámetro, el comportamiento característico del doble descenso se mantiene, lo que indica que el uso por defecto de la tasa de aprendizaje resulta ser suficiente.
 
 Finalmente, para concluir esta subsección se muestra en la Tabla~\ref{tab:difflr} un resumen de los experimentos realizados junto con sus respectivos tiempos de entrenamiento.
 
@@ -51,7 +51,7 @@ Finalmente, para concluir esta subsección se muestra en la Tabla~\ref{tab:diffl
     \textbf{Modelo}       & \textbf{Dataset} & \textbf{Tasa aprendizaje} & \textbf{Entrenamiento} \\ 
     \hline
     $2$NN ($1-100$)     & MNIST[$4000/1000 - 10$\% noise]      & $0.005$      & $23$h $53$min         \\ 
-    $2$NN ($1-100$)     & MNIST[$4000/1000 - 10$\% noise]      & $0.001$ (default)      & $26$h $50$min     \\ 
+    $2$NN ($1-100$)     & MNIST[$4000/1000 - 10$\% noise]      & $0.001$ (\textit{default})      & $26$h $50$min     \\ 
     $2$NN ($1-100$)     & MNIST[$4000/1000 - 10$\% noise]      & $0.0005$      & $27$h $32$min         \\ 
     \hline
     \end{tabular}

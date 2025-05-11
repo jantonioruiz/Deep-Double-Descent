@@ -134,7 +134,7 @@ Por tanto, las capas de activación se colocan después de cada capa lineal (com
 
 \chapter{El Dilema Clásico del Aprendizaje}\label{ch:dilema-aprendizaje}
 
-En este capítulo, como preámbulo antes de adentrarnos en el \textit{Deep Double Descent}, presentaremos algunos conceptos básicos de la sabiduría clásica del aprendizaje automático que nos harán entender de manera más precisa el suceso. Las fuentes principales utilizadas a lo largo de este capítulo son extractos de~\cite{Mostafa2012, Bishop2006}.
+En este capítulo, como preámbulo antes de adentrarnos en el \textit{Deep Double Descent}, presentaremos algunos conceptos básicos de la sabiduría clásica del aprendizaje automático que nos harán entenderlo de manera más precisa. Las fuentes principales utilizadas a lo largo de este capítulo son extractos de~\cite{Mostafa2012, Bishop2006}.
 
 \section{Concepto de aprendizaje}\label{sec:concepto-de-aprendizaje}
 El aprendizaje, dentro del marco del aprendizaje automático, puede considerarse como un proceso en el que se busca encontrar una función $g$ que aproxime lo máximo posible a la función objetivo $f$, que describe las relaciones y patrones subyacentes entre las entradas y salidas de los datos. Dado que la función objetivo es siempre desconocida, pues, en otro caso, no habría nada que aprender, serán los propios datos etiquetados los que nos ayuden, mediante el entrenamiento de modelos, a obtener una función aproximadora de dicha función objetivo.
@@ -589,7 +589,7 @@ Como conclusión, el equilibrio buscado en esta sección, con el objetivo de min
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.7\linewidth]{img/bias-variance.png}
-    \caption[Distintos casos del conjunto de hipótesis y de la función objetivo.] {Distintos casos del conjunto de hipótesis y de la función objetivo~\cite{Mostafa2012}. A la izquierda observamos como nuestro conjunto de hipótesis presenta únicamente una función candidata, alejada de la función objetivo $f$, lo que implica un alto sesgo y una varianza nula. A la derecha observamos un conjunto de hipótesis con numerosas funciones candidatas que incluye a la función objetivo, por lo que el sesgo es muy cercano a $0$ y la varianza es grande.}\label{fig:bias-variance}
+    \caption[Distintos casos del conjunto de hipótesis y de la función objetivo.] {Distintos casos del conjunto de hipótesis y de la función objetivo~\cite{Mostafa2012}. A la izquierda observamos como nuestro conjunto de hipótesis presenta únicamente una función candidata, alejada de la función objetivo $f$, lo que implica un alto sesgo y una varianza nula. A la derecha observamos un conjunto de hipótesis con numerosas funciones candidatas que incluye a la función objetivo, por lo que el sesgo es muy cercano a cero y la varianza es grande.}\label{fig:bias-variance}
 \end{figure}
 
 \subsection{Curva de aprendizaje}

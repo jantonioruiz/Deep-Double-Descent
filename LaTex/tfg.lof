@@ -38,7 +38,7 @@
 \contentsline {figure}{\numberline {6.3}{\ignorespaces Ejemplos de distribuciones de Marchenko-Pastur~\cite {Charles2018}.}}{65}{figure.caption.42}%
 \contentsline {figure}{\numberline {6.4}{\ignorespaces Ejemplos de paisajes de la función de pérdida en redes neuronales~\cite {Liu2021}.}}{72}{figure.caption.43}%
 \contentsline {figure}{\numberline {6.5}{\ignorespaces Ejemplo de función de pérdida que satisface la condición $\mu $-PL~\cite {Liu2021}.}}{76}{figure.caption.44}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Distintos modelos polinómicos para aproximar una función.}}{77}{figure.caption.45}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Distintos modelos polinómicos para aproximar una función, inspirada en~\cite {Schaeffer2023}.}}{77}{figure.caption.45}%
 \contentsline {figure}{\numberline {6.7}{\ignorespaces Fronteras de decisión para modelos con distinta capacidad~\cite {Somepalli2022}.}}{78}{figure.caption.46}%
 \contentsline {figure}{\numberline {6.8}{\ignorespaces Diferentes tipos de sesgo para el espacio de hipótesis~\cite {Wilson2025}.}}{79}{figure.caption.47}%
 \contentsline {figure}{\numberline {6.9}{\ignorespaces Aumentar la capacidad de un modelo mejora su generalización~\cite {Wilson2025}.}}{80}{figure.caption.48}%
@@ -47,38 +47,38 @@
 \contentsline {figure}{\numberline {7.2}{\ignorespaces Arquitectura $2$NN.}}{94}{figure.caption.52}%
 \contentsline {figure}{\numberline {7.3}{\ignorespaces Arquitectura $3$CNN.}}{95}{figure.caption.54}%
 \contentsline {figure}{\numberline {7.4}{\ignorespaces Arquitectura ResNet$18$ modificada.}}{96}{figure.caption.56}%
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Doble descenso al utilizar aproximación polinómica de Legendre y norma del vector de parámetros.}}{100}{figure.caption.60}%
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Intuición del \textit {Deep Double Descent} usando regresión polinómica.}}{101}{figure.caption.61}%
-\contentsline {figure}{\numberline {7.7}{\ignorespaces Error en entrenamiento y test para las distintas aproximaciones polinómicas.}}{102}{figure.caption.62}%
-\contentsline {figure}{\numberline {7.8}{\ignorespaces Normas del vector de parámetros para las aproximaciones polinómicas clásicas.}}{102}{figure.caption.63}%
-\contentsline {figure}{\numberline {7.9}{\ignorespaces Aproximaciones polinómicas clásicas de la función objetivo.}}{103}{figure.caption.64}%
-\contentsline {figure}{\numberline {7.10}{\ignorespaces Aproximaciones polinómicas de Legendre de la función objetivo, tanto sin ruido como con ruido.}}{104}{figure.caption.65}%
-\contentsline {figure}{\numberline {7.11}{\ignorespaces Ejemplos de doble descenso en regresión polinómica de Legendre para una función objetivo, tanto con ruido como sin ruido.}}{105}{figure.caption.66}%
-\contentsline {figure}{\numberline {7.12}{\ignorespaces Doble descenso para distintos niveles de ruido.}}{105}{figure.caption.67}%
-\contentsline {figure}{\numberline {7.13}{\ignorespaces Umbral de interpolación para el doble descenso con distintos niveles de ruido.}}{106}{figure.caption.68}%
-\contentsline {figure}{\numberline {7.14}{\ignorespaces Ejemplo de \textit {sample-wise double descent}.}}{107}{figure.caption.70}%
-\contentsline {figure}{\numberline {7.15}{\ignorespaces Ratio parámetros frente a número de ejemplos en el doble descenso.}}{108}{figure.caption.72}%
-\contentsline {figure}{\numberline {7.16}{\ignorespaces Doble descenso en función del tamaño del modelo y del número de épocas para la red $2$NN y un subconjunto de MNIST.}}{110}{figure.caption.74}%
-\contentsline {figure}{\numberline {7.17}{\ignorespaces Error en entrenamiento y test en función del tamaño del modelo y del número de épocas para la red $2$NN y un subconjunto de CIFAR$10$.}}{111}{figure.caption.75}%
-\contentsline {figure}{\numberline {7.18}{\ignorespaces Doble descenso en función del tamaño del modelo y del número de épocas para la red $3$CNN y un subconjunto de MNIST.}}{112}{figure.caption.77}%
-\contentsline {figure}{\numberline {7.19}{\ignorespaces Doble descenso en función del tamaño del modelo y del número de épocas para la red $3$CNN y un subconjunto de CIFAR$10$.}}{112}{figure.caption.78}%
-\contentsline {figure}{\numberline {7.20}{\ignorespaces Doble descenso en función del tamaño del modelo y del número de épocas para la red $3$CNN y un subconjunto de CIFAR$100$.}}{113}{figure.caption.79}%
-\contentsline {figure}{\numberline {7.21}{\ignorespaces Doble descenso en función del tamaño del modelo y del número de épocas para la red ResNet$18$ y el conjunto MNIST.}}{113}{figure.caption.81}%
-\contentsline {figure}{\numberline {7.22}{\ignorespaces Doble descenso en función del tamaño del modelo y del número de épocas para la red ResNet$18$ y el conjunto CIFAR$10$.}}{114}{figure.caption.82}%
-\contentsline {figure}{\numberline {7.23}{\ignorespaces Doble descenso en función del tamaño del modelo y del número de épocas para la red ResNet$18$ y el conjunto CIFAR$100$.}}{114}{figure.caption.83}%
-\contentsline {figure}{\numberline {7.24}{\ignorespaces Doble descenso en función del número de épocas para dos arquitecturas ResNet$18$ sobreparametrizadas y el conjunto CIFAR$10$.}}{115}{figure.caption.84}%
-\contentsline {figure}{\numberline {7.25}{\ignorespaces Comparativa del doble descenso entre arquitecturas anchas y profundas.}}{115}{figure.caption.86}%
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Doble descenso al utilizar aproximación polinómica de Legendre y norma del vector de parámetros.}}{101}{figure.caption.61}%
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Intuición del \textit {Deep Double Descent} usando regresión polinómica.}}{102}{figure.caption.62}%
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Error en entrenamiento y test para las distintas aproximaciones polinómicas.}}{102}{figure.caption.63}%
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Normas del vector de parámetros para las aproximaciones polinómicas clásicas.}}{103}{figure.caption.64}%
+\contentsline {figure}{\numberline {7.9}{\ignorespaces Aproximaciones polinómicas clásicas de la función objetivo.}}{103}{figure.caption.65}%
+\contentsline {figure}{\numberline {7.10}{\ignorespaces Aproximaciones polinómicas de Legendre de la función objetivo, tanto sin ruido como con ruido.}}{104}{figure.caption.66}%
+\contentsline {figure}{\numberline {7.11}{\ignorespaces Ejemplos de doble descenso en regresión polinómica de Legendre para una función objetivo, tanto con ruido como sin ruido.}}{105}{figure.caption.67}%
+\contentsline {figure}{\numberline {7.12}{\ignorespaces Doble descenso para distintos niveles de ruido.}}{106}{figure.caption.68}%
+\contentsline {figure}{\numberline {7.13}{\ignorespaces Umbral de interpolación para el doble descenso con distintos niveles de ruido.}}{106}{figure.caption.69}%
+\contentsline {figure}{\numberline {7.14}{\ignorespaces Ejemplo de \textit {sample-wise double descent}.}}{108}{figure.caption.71}%
+\contentsline {figure}{\numberline {7.15}{\ignorespaces Ratio parámetros frente a número de ejemplos en el doble descenso.}}{109}{figure.caption.73}%
+\contentsline {figure}{\numberline {7.16}{\ignorespaces Doble descenso en función del tamaño del modelo y del número de épocas para la red $2$NN y un subconjunto de MNIST.}}{110}{figure.caption.75}%
+\contentsline {figure}{\numberline {7.17}{\ignorespaces Error en entrenamiento y test en función del tamaño del modelo y del número de épocas para la red $2$NN y un subconjunto de CIFAR$10$.}}{111}{figure.caption.76}%
+\contentsline {figure}{\numberline {7.18}{\ignorespaces Doble descenso en función del tamaño del modelo y del número de épocas para la red $3$CNN y un subconjunto de MNIST.}}{112}{figure.caption.78}%
+\contentsline {figure}{\numberline {7.19}{\ignorespaces Doble descenso en función del tamaño del modelo y del número de épocas para la red $3$CNN y un subconjunto de CIFAR$10$.}}{112}{figure.caption.79}%
+\contentsline {figure}{\numberline {7.20}{\ignorespaces Doble descenso en función del tamaño del modelo y del número de épocas para la red $3$CNN y un subconjunto de CIFAR$100$.}}{113}{figure.caption.80}%
+\contentsline {figure}{\numberline {7.21}{\ignorespaces Doble descenso en función del tamaño del modelo y del número de épocas para la red ResNet$18$ y el conjunto MNIST.}}{114}{figure.caption.82}%
+\contentsline {figure}{\numberline {7.22}{\ignorespaces Doble descenso en función del tamaño del modelo y del número de épocas para la red ResNet$18$ y el conjunto CIFAR$10$.}}{115}{figure.caption.83}%
+\contentsline {figure}{\numberline {7.23}{\ignorespaces Doble descenso en función del tamaño del modelo y del número de épocas para la red ResNet$18$ y el conjunto CIFAR$100$.}}{116}{figure.caption.84}%
+\contentsline {figure}{\numberline {7.24}{\ignorespaces Doble descenso en función del número de épocas para dos arquitecturas ResNet$18$ sobreparametrizadas y el conjunto CIFAR$10$.}}{117}{figure.caption.85}%
+\contentsline {figure}{\numberline {7.25}{\ignorespaces Comparativa del doble descenso entre arquitecturas anchas y profundas.}}{118}{figure.caption.87}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Doble descenso para distintos tamaños de lote.}}{128}{figure.caption.89}%
-\contentsline {figure}{\numberline {B.2}{\ignorespaces Doble descenso para distinto \textit {learning rate}.}}{129}{figure.caption.92}%
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Doble descenso para distintos tamaños de lote.}}{129}{figure.caption.90}%
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Doble descenso para distinto \textit {learning rate}.}}{130}{figure.caption.93}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {C.1}{\ignorespaces Error en entrenamiento y test para las aproximaciones de Legendre y clásica utilizando el GD.}}{130}{figure.caption.94}%
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Error en entrenamiento y test para las aproximaciones de Legendre y clásica utilizando el GD.}}{131}{figure.caption.95}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {D.1}{\ignorespaces Comparativa \textit {epoch-wise double descent} entre un modelo infraparametrizado y uno sobreparametrizado en el que aparecen picos significativos en el error.}}{131}{figure.caption.95}%
-\contentsline {figure}{\numberline {D.2}{\ignorespaces Error en test respecto a distintas configuraciones altamente sobreparametrizadas de la red $2$NN.}}{132}{figure.caption.96}%
-\contentsline {figure}{\numberline {D.3}{\ignorespaces Paisajes de la función de pérdida para distintos modelos sobreparametrizados~\cite {Li2018}.}}{133}{figure.caption.97}%
+\contentsline {figure}{\numberline {D.1}{\ignorespaces Comparativa \textit {epoch-wise double descent} entre un modelo infraparametrizado y uno sobreparametrizado en el que aparecen picos significativos en el error.}}{132}{figure.caption.96}%
+\contentsline {figure}{\numberline {D.2}{\ignorespaces Error en test respecto a distintas configuraciones altamente sobreparametrizadas de la red $2$NN.}}{133}{figure.caption.97}%
+\contentsline {figure}{\numberline {D.3}{\ignorespaces Paisajes de la función de pérdida para distintos modelos sobreparametrizados~\cite {Li2018}.}}{134}{figure.caption.98}%
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
