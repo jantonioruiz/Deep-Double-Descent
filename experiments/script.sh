@@ -11,5 +11,5 @@ export PATH="/opt/anaconda/bin:$PATH"
 eval "$(conda shell.bash hook)"
 conda activate /mnt/homeGPU/jaruiz/testpy310
 export TFHUB_CACHE_DIR=.
-
+ 
 python main.py --dataset MNIST --model TwoLayerNN --output_train train.txt --output_test test.txt --units 1

@@ -3,7 +3,7 @@
 
 \chapter{Análisis Teórico del Deep Double Descent}\label{ch:analisis-teorico-ddd}
 
-En este capítulo, nos vamos a encargar de abordar, de manera teórica, el doble descenso profundo. En primer lugar, lo definiremos con la mayor precisión posible, ofreciendo una intuición clara a partir de un problema de regresión. A continuación, se presentarán los principales desarrollos presentes en la literatura científica, así como algunos avances recientes en el tema. Para concluir el capítulo, se abordará la teoría de la aproximación no lineal, ya que, a priori, presenta ciertas analogías con este fenómeno.
+En este capítulo, nos vamos a encargar de abordar, de manera teórica, el \textit{Deep Double Descent}. En primer lugar, lo definiremos con la mayor precisión posible, ofreciendo una intuición clara a partir de un problema de regresión. A continuación, se presentarán los principales desarrollos presentes en la literatura científica, así como algunos avances recientes en el tema. Para concluir el capítulo, se abordará la teoría de la aproximación no lineal, ya que, a priori, presenta ciertas analogías con este fenómeno.
 
 \section{Planteamiento teórico}\label{sec:planteamiento-teorico}
 
@@ -11,7 +11,7 @@ Siguiendo los resultados expuestos en la Sección~\ref{sec:subsec-underfitting-y
 
 De esta manera, se ha comprobado que, más allá de cierto umbral, el aumento de la capacidad de los modelos resulta beneficioso, ya que no conduce al sobreajuste y, en realidad, disminuye nuevamente el error de generalización. A esta nueva zona de funcionamiento de los modelos la denotaremos como \emph{régimen moderno} o zona sobreparametrizada, mientras que la región previa al umbral, en la que se produce la tradicional curva con forma de ``U'', la denominaremos como \textit{régimen clásico} o zona infraparametrizada.
 
-De cara a formalizar el fenómeno del doble descenso profundo y unificar la sabiduría clásica con la práctica moderna, introducimos una nueva medida de capacidad del modelo, propuesta por Nakkiran et al.\ en~\cite{Nakkiran2019}.
+De cara a formalizar el fenómeno del DDD y unificar la sabiduría clásica con la práctica moderna, introducimos una nueva medida de capacidad del modelo, propuesta por Nakkiran et al.\ en~\cite{Nakkiran2019}.
 
 \begin{definicion}[Complejidad efectiva del modelo]
     La \textbf{complejidad efectiva del modelo} (EMC, por sus siglas en inglés) de un algoritmo de aprendizaje $\mathcal{A}$, con respecto a la distribución de probabilidad conjunta $P[X, Y]$ de los datos del conjunto de entrenamiento $\mathcal{D}$, es el máximo número de ejemplos de entrenamiento $n$ en el que $\mathcal{A}$ obtiene, de media, un error de entrenamiento muy próximo a cero. Es decir, dado $\epsilon > 0$:
