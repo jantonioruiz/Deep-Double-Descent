@@ -3,19 +3,21 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torchvision.models as models
 
+# Neural network with one hidden layer
 class TwoLayerNN(nn.Module):
     def __init__(self, input_size, size=1, num_classes=10):
         super(TwoLayerNN, self).__init__()
-        self.flatten = nn.Flatten()  
-        self.fc1 = nn.Linear(input_size, size)  
-        self.fc2 = nn.Linear(size, num_classes) 
+        self.flatten = nn.Flatten() # Flatten input tensor
+        self.fc1 = nn.Linear(input_size, size) # First fully connected layer
+        self.fc2 = nn.Linear(size, num_classes) # Second fully connected layer: Output layer
 
     def forward(self, x):
         x = self.flatten(x)  
         x = torch.relu(self.fc1(x))  
         x = self.fc2(x)  
         return x
-
+    
+# Deeper fully connected network with multiple layers
 class DeepNN(nn.Module):
     def __init__(self, input_size, size=1, num_classes=10):
         super(DeepNN, self).__init__()
@@ -23,6 +25,7 @@ class DeepNN(nn.Module):
         hidden_size = (size + 1) // 2
         self.flatten = nn.Flatten()
 
+        # Sequence of fully connected layers with ReLU activations
         self.layers = nn.Sequential(
             nn.Linear(input_size, hidden_size), nn.ReLU(),
             nn.Linear(hidden_size, hidden_size), nn.ReLU(),
@@ -36,26 +39,30 @@ class DeepNN(nn.Module):
 
     def forward(self, x):
         x = self.flatten(x)  
-        x = self.layers(x)    
+        x = self.layers(x) # Forward through all layers
         return x
 
+# Convolutional neural network with 3 convolutional layers
 class ThreeLayerCNN(nn.Module):
     def __init__(self, in_channels, k, num_classes):
         super(ThreeLayerCNN, self).__init__()
+        # First conv layer
         self.conv1 = nn.Conv2d(in_channels, k, kernel_size=5, stride=1, padding=1)
         self.bn1 = nn.BatchNorm2d(k)
         self.relu1 = nn.ReLU()
         self.pool1 = nn.MaxPool2d(2)  
         
+        # Second conv layer
         self.conv2 = nn.Conv2d(k, 2 * k, kernel_size=5, stride=1, padding=1)
         self.bn2 = nn.BatchNorm2d(2 * k)
         self.relu2 = nn.ReLU()
         self.pool2 = nn.MaxPool2d(2)  
         
+        # Third conv layer
         self.conv3 = nn.Conv2d(2 * k, 4 * k, kernel_size=5, stride=1, padding=1)
         self.bn3 = nn.BatchNorm2d(4 * k)
         self.relu3 = nn.ReLU()
-        self.pool3 = nn.MaxPool2d(4)  
+        self.pool3 = nn.AdaptiveMaxPool2d((1, 1)) # Global max pooling to reduce each feature map to a single value (output size 1x1)
         
         self.flatten = nn.Flatten()  
         self.fc = nn.Linear(4 * k, num_classes)  
@@ -69,6 +76,7 @@ class ThreeLayerCNN(nn.Module):
         x = self.fc(x)
         return x
 
+# Deep convolutional neural network with 14 conv layers
 class DeepCNN(nn.Module):
   def __init__(self, in_channels, k, num_classes):
     super(DeepCNN, self).__init__()
@@ -128,12 +136,13 @@ class DeepCNN(nn.Module):
     self.bn14 = nn.BatchNorm2d(k)
     self.relu14 = nn.ReLU()
 
-    self.pool = nn.MaxPool2d(4)  
+    self.pool = nn.AdaptiveMaxPool2d((1, 1)) # Global max pooling to reduce each feature map to a single value (output size 1x1)
 
     self.flatten = nn.Flatten()
     self.fc = nn.Linear(k, num_classes)
 
   def forward(self, x):
+    # Apply each conv layer with ReLU and batch normalization
     x = self.relu1(self.bn1(self.conv1(x)))
     x = self.relu2(self.bn2(self.conv2(x)))
     x = self.relu3(self.bn3(self.conv3(x)))
@@ -152,7 +161,8 @@ class DeepCNN(nn.Module):
     x = self.flatten(x)
     x = self.fc(x)
     return x
-  
+
+# Residual block used in PreActResNet
 class PreActBlock(nn.Module):
     '''Pre-activation version of the BasicBlock.'''
     expansion = 1
@@ -164,6 +174,7 @@ class PreActBlock(nn.Module):
         self.bn2 = nn.BatchNorm2d(planes)
         self.conv2 = nn.Conv2d(planes, planes, kernel_size=3,stride=1, padding=1, bias=False)
 
+        # Shortcut connection (with 1x1 conv if dimensions mismatch)
         if stride != 1 or in_planes != self.expansion*planes:
             self.shortcut = nn.Sequential(
                 nn.Conv2d(in_planes, self.expansion*planes,
@@ -178,6 +189,7 @@ class PreActBlock(nn.Module):
         out += shortcut
         return out
 
+# Pre-activation ResNet using PreActBlock (following https://arxiv.org/abs/1603.05027)
 class PreActResNet(nn.Module):
     def __init__(self, block, num_blocks, in_channels, k=64, num_classes=10):
         super(PreActResNet, self).__init__()
@@ -192,7 +204,7 @@ class PreActResNet(nn.Module):
         self.linear = nn.Linear(8*c*block.expansion, num_classes)
 
     def _make_layer(self, block, planes, num_blocks, stride):
-        # eg: [2, 1, 1, ..., 1]. Only the first one downsamples.
+        # Only the first block in a layer performs downsampling (eg: [2, 1, 1, ..., 1])
         strides = [stride] + [1]*(num_blocks-1)
         layers = []
         for stride in strides:
@@ -210,7 +222,8 @@ class PreActResNet(nn.Module):
         out = out.view(out.size(0), -1)
         out = self.linear(out)
         return out
-    
+
+# Torchvision's ResNet18 with custom output layer
 class ResNet18(nn.Module):
     def __init__(self, num_classes=10):
         super(ResNet18, self).__init__()
@@ -219,8 +232,18 @@ class ResNet18(nn.Module):
     
     def forward(self, x):
         return self.model(x)
-    
+
+# Function to instantiate a neural network given its name
 def createNet(net_type, **kwargs):
+    '''
+    Creates and returns a neural network instance based on the specified name.
+    
+    Parameters:
+        net_type (str): Name of the network to instantiate. Must be one of the predefined keys.
+        **kwargs: Optional keyword arguments to override default parameters for the selected model.
+    '''
+
+    # Default parameters for each supported network architecture
     param_defaults = {
         'TwoLayerNN': {'input_size': 28*28, 'size': 64, 'num_classes': 10},
         'DeepNN': {'input_size': 28*28, 'size': 64, 'num_classes': 10},
@@ -230,9 +253,11 @@ def createNet(net_type, **kwargs):
         'ResNet18': {'num_classes': 10}
     }
     
+    # Raise an error if the given network name is not supported
     if net_type not in param_defaults:
-        raise ValueError(f"Red desconocida: {net_type}. Opciones disponibles: {list(param_defaults.keys())}")
+        raise ValueError(f"Unknown network: {net_type}. Available options: {list(param_defaults.keys())}")
     
     params = {**param_defaults[net_type], **kwargs}  
 
+    # Return an instance of the specified network class
     return globals()[net_type](**params)

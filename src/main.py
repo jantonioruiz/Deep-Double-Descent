@@ -7,8 +7,9 @@ import time
 from models import createNet
 from utils import loadDataset, splitData, saveHeader, train_and_evaluate_model
 
-
+# Main function
 def main(args):
+    # Convert arguments to a dictionary
     args_dict = vars(args)
 
     # Process and parse command-line arguments 
@@ -22,14 +23,13 @@ def main(args):
     noise = args_dict["noise"]
     num_epochs = args_dict["epochs"]
     batch_size = args_dict["batch_size"]
-    criterion_name = args_dict["criterion"]
-    optimizer_name = args_dict["optimizer"]
+    # criterion_name = args_dict["criterion"]  # Variable not used (we only use CrossEntropyLoss)
+    # optimizer_name = args_dict["optimizer"]  # Variable not used (we only use Adam optimizer)
     learning_rate = args_dict["learning_rate"]
 
-    
     units = args_dict["units"]
     units_range = args_dict["units_range"]
-
+    # If units_range is defined, extract the min and max values
     if units_range:
         units_min, units_max = units_range  
     else:
@@ -72,11 +72,11 @@ def main(args):
 
     # Set input size and number of channels based on the chosen dataset
     if dataset == 'MNIST':
-        input_size = 28*28
-        in_channels = 1
+        input_size = 28*28 
+        in_channels = 1 # Grayscale images
     else:
-        input_size = 32*32
-        in_channels = 3
+        input_size = 32*32 # For CIFAR10 & CIFAR100 datasets
+        in_channels = 3 # RGB images
 
     # Start time of the execution
     start_time = time.time()
@@ -124,7 +124,8 @@ def main(args):
         writer = csv.writer(file)
         writer.writerow([])
         writer.writerow([f"Total execution time: {hours} hour(s) {minutes} minute(s) and {seconds} second(s)."])
-    
+
+# Main block
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Train different neural network models on various datasets with customizable hyperparameters.")
@@ -179,6 +180,7 @@ if __name__ == "__main__":
     parser.add_argument("--learning_rate", type=float, default=0.001,
                         help="Learning rate for the optimizer (Default: 0.001)")
 
+    # Parse the arguments
     args = parser.parse_args()
 
     # Validation for units_range
@@ -191,4 +193,5 @@ if __name__ == "__main__":
     if args.noise < 0:
         parser.error("Invalid --noise: Noise level must be positive")
 
+    # Call the main function
     main(args)
