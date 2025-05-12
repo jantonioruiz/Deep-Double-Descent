@@ -7,8 +7,14 @@ The repository is organized as follows:
 
 ```plaintext
 deep-double-descent/  
-├── LaTex/         # LaTeX document with the project report  
-├── experiments/   # Experiment scripts and Jupyter notebooks for analysis  
-├── results/       # Results obtained from experiments (processed on NGPU)  
-├── src/           # Project source code
-├── README.md      # README with the project description and overview  
+├── LaTex/                                  # LaTeX document with the project report  
+├── experiments/                            # Experiment scripts and Jupyter notebooks for analysis and testing
+│   ├── PlotNGPUresults                     # Jupyter notebook to plot results from NGPU experiments  
+│   ├── Polynomial_approximation_(OLS_GD)   # Jupyter notebook for polynomial regression approximation (OLS + GD)
+│   └── script                              # Shell script to launch neural network experiments 
+├── results/                                # Results obtained from experiments (processed on NGPU)  
+├── src/                                    # Project source code for neural networks
+│   ├── main/                               # Main fucntion to execute the training process 
+│   ├── models/                             # Model architectures and definitions
+│   └── utils/                              # Utility functions for data loading, noise addition, data splitting, training, and evaluation
+├── README.md                               # README with the project description and overview   
