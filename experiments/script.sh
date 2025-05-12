@@ -21,7 +21,7 @@ export TFHUB_CACHE_DIR=.
 # --output_train:       Archivo donde guardar las métricas del entrenamiento
 # --output_test:        Archivo donde guardar las métricas de test
 # --units:              Número de unidades/filtros para las distintas arquitecturas (en caso de querer un determinado rango usar --units_range UNITS_MIN UNITS_MAX)
-# --data_augmentation:  Habilita el aumento de datos (Se aplica RandomCrop(32, 4) y RandomHorizontalFlip())
+# --data_augmentation:  Habilita el aumento de datos (se aplica RandomCrop(32, 4) y RandomHorizontalFlip())
 # --num_train_samples:  Número de ejemplos utilizados para el entrenamiento (por defecto: 4000)
 # --num_test_samples:   Número de ejemplos utilizados para evaluación o test (por defecto: 1000)
 # --noise:              Nivel de ruido para agregar a las etiquetas (por defecto: 0.1 = 10%)
