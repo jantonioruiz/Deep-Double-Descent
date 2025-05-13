@@ -6,7 +6,7 @@ The aim of this repository is to reproduce and expand on discoveries regarding D
 The repository is organized as follows:
 
 ```plaintext
-deep-double-descent/  
+Deep-Double-Descent/  
 ├── LaTex/                                  # LaTeX document with the project report  
 ├── experiments/                            # Experiment scripts and Jupyter notebooks for analysis and testing
 │   ├── PlotNGPUresults                     # Jupyter notebook to plot results from NGPU experiments  
