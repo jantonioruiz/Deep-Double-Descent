@@ -1,24 +1,50 @@
 <h1 style="font-size: 3em;">Deep Double Descent</h1>
 
----
-
 # Table of Contents
 
-- [🎓 Introduction](#1-️-Introduction)
-- [📁 Repository Structure](#2-️-Repository-Structure)
-- [🛠️ Installation](#3-️-Installation)
-  - [✅ Requirements](#requirements)
-  - [🔧 Setup Instructions](#setup-instructions)
-- [📄 License](#4-️-License)
+- [🎓 Introduction](#1-🎓-introduction)
+- [📈 Main Results](#2-📈-main-results)
+  - [🎯 Double Descent in Polynomial Regression](#️-double-descent-in-polynomial-regression)
+  - [🧠 Deep Double Descent in Neural Networks](#️-deep-double-descent-in-neural-networks)
+- [📁 Repository Structure](#3-📁-repository-structure)
+- [🛠️ Installation](#4-🛠️-installation)
+  - [✅ Requirements](#️-requirements)
+  - [🔧 Setup Instructions](#️-setup-instructions)
+- [📄 License](#5-📄-license)
 
 ---
 
 # 1. 🎓 Introduction
-Deep Double Descent is a phenomenon seen in deep learning models where the test error decreases, then increases, and finally decreases again as the model capacity or training time increases. This occurrence is especially noticeable in models with a high degree of overparameterization, challenging traditional notions of the bias-variance tradeoff.
 
-The aim of this repository is to reproduce and expand on discoveries regarding Deep Double Descent through conducting various experiments on common datasets, serving as a guide for researchers exploring this phenomenon.
+Machine learning, particularly deep learning, has become essential across many fields. However, as models grow more complex, unexpected behaviors like Deep Double Descent emerge—challenging classical concepts such as the bias-variance trade-off and exposing gaps between theory and empirical results.
 
-## 2. 📁 Repository Structure
+This project explores the computational and mathematical foundations behind Deep Double Descent, using both simple and advanced architectures. It aims to bridge traditional learning theory with modern trends, emphasizing interpretability, generalization, and the role of inductive biases in understanding overparameterized neural networks.
+
+# 2. 📈 Main Results
+
+Below are some of the key findings observed during our experiments. These results highlight the Deep Double Descent phenomenon in both simple polynomial regression and deep neural network settings.
+
+### 🎯 Double Descent in Legendre Polynomial Regression
+
+![Polynomial Regression Double Descent](LaTex/img/experiments/Legendre1DDD.png)
+Test error vs. model complexity showing the characteristic double descent curve in a simple regression using Legendre basis.
+
+<div style="display: flex; justify-content: space-between;">
+  <img src="LaTex/img/experiments/legendre1.1.png" alt="Polynomial Regression Double Descent" style="width: 32%;"/>
+  <img src="LaTex/img/experiments/legendre1.2.png" alt="Another Polynomial Regression Image" style="width: 32%;"/>
+  <img src="LaTex/img/experiments/legendre1.3.png" alt="Third Polynomial Regression Image" style="width: 32%;"/>
+</div>
+Different approximations across various parameterization zones, highlighting implicit regularization in the final overparameterized model (on the right), which results in a solution resembling the initial approximation.
+
+### 🧠 Double Descent in Neural Networks
+
+![Neural Network Double Descent](path/to/neural_dd_plot.png)
+
+---
+
+These results support the hypothesis that overparameterized models can generalize better under certain training regimes, challenging classical assumptions of the bias-variance trade-off.
+
+## 3. 📁 Repository Structure
 
 ```plaintext
 Deep-Double-Descent/  
@@ -36,7 +62,7 @@ Deep-Double-Descent/
 ├── README.md                               # README with the project description and overview   
 ```
 
-## 3. 🛠️ Installation
+## 4. 🛠️ Installation
 
 ### ✅ Requirements
 
@@ -58,7 +84,7 @@ source venv/bin/activate  # On Windows use: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-## 4. 📄 License
+## 5. 📄 License
 
 This project is licensed under the **MIT License**.  
 See the [LICENSE](LICENSE) file for full details.
