@@ -28,7 +28,7 @@ Below are some of the key findings observed during our experiments. These result
 
 <div style="text-align: center;">
   <img src="LaTex/img/experiments/legendre1DDD.png" alt="Polynomial Regression Double Descent" style="width: 95%;"/>
-  <p><strong>Test error vs. Model complexity (number of params)</strong> showing the characteristic double descent curve in a simple regression using Legendre basis.</p>
+  <p><em><strong>Test error vs. Model complexity (number of params)</strong> showing the characteristic double descent curve in a simple regression using Legendre basis.</em></p>
 </div>
 
 <div style="display: flex; justify-content: space-between;">
@@ -36,23 +36,24 @@ Below are some of the key findings observed during our experiments. These result
   <img src="LaTex/img/experiments/legendre1.2.png" alt="Another Polynomial Regression Image" style="width: 32%;"/>
   <img src="LaTex/img/experiments/legendre1.3.png" alt="Third Polynomial Regression Image" style="width: 32%;"/>
 </div>
-Different approximations across various parameterization zones, highlighting implicit regularization in the final overparameterized model (on the right), which results in a solution resembling the initial approximation.
+<em>Different approximations across various parameterization zones, highlighting implicit regularization in the final overparameterized model (on the right), which results in a solution resembling the initial approximation.</em>
+
 
 ### 🧠 Deep Double Double Descent in Neural Networks
 
 <div style="text-align: center;">
   <img src="LaTex/img/experiments/model-epoch3CNNMNIST30k.png" alt="Deep Double Descent Heatmap" style="width: 95%;"/>
-  <p><strong>Deep Double Descent by Model Capacity and Epochs</strong>, showing the test error (left image) in a heatmap versus model complexity (number of parameters) across varying epochs. The image highlights model-wise phenomena (horizontal lines) and epoch-wise phenomena (vertical lines). Additionally, the interpolation threshold can be observed in the train error heatmap (right image).</p>
+  <p><em><strong>Deep Double Descent by Model Capacity and Epochs</strong>, showing the test error (left image) in a heatmap versus model complexity (number of parameters) across varying epochs. The image highlights model-wise phenomena (horizontal lines) and epoch-wise phenomena (vertical lines). Additionally, the interpolation threshold can be observed in the train error heatmap (right image).</em></p>
 </div>
 
 <div style="text-align: center;">
   <img src="LaTex/img/experiments/epoch-wisePreActResNet18(45,64).png" alt="Epoch-wise Double Descent for PreActResNet" style="width: 95%;"/>
-  <p><strong>Epoch-wise Double Descent for PreActResNet</strong>, showing how test error decreases as the model approaches near-zero training error.</p>
+  <p><em><strong>Epoch-wise Double Descent for PreActResNet</strong>, showing how test error decreases as the model approaches near-zero training error.</em></p>
 </div>
 
 ---
 
-These results support the hypothesis that overparameterized models can generalize better under certain training regimes, challenging classical assumptions of the bias-variance trade-off.
+***These results support the hypothesis that overparameterized models can generalize better in the overparameterized regime, challenging traditional assumptions of the bias-variance trade-off.***
 
 ## 3. 📁 Repository Structure
 
