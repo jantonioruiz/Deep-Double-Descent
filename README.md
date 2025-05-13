@@ -27,7 +27,7 @@ Below are some of the key findings observed during our experiments. These result
 ### 🎯 Double Descent in Legendre Polynomial Regression
 
 <div style="text-align: center;">
-  <img src="LaTex/img/experiments/Legendre1DDD.png" alt="Polynomial Regression Double Descent" style="width: 80%;"/>
+  <img src="LaTex/img/experiments/legendre1DDD.png" alt="Polynomial Regression Double Descent" style="width: 80%;"/>
   <p><strong>Test error vs. Model complexity (number of params)</strong> showing the characteristic double descent curve in a simple regression using Legendre basis.</p>
 </div>
 
