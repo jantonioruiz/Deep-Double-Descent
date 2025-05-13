@@ -1,0 +1,12 @@
+numpy>=1.21
+scipy>=1.7
+matplotlib>=3.4
+scikit-learn>=1.0
+torch==1.12.1+cu113
+torchvision==0.13.1+cu113
+tqdm>=4.62
+jupyterlab>=3.0
+seaborn>=0.11
+
+# Optional tools
+ipykernel

@@ -17,4 +17,5 @@ Deep-Double-Descent/
 │   ├── main/                               # Main fucntion to execute the training process 
 │   ├── models/                             # Model architectures and definitions
 │   └── utils/                              # Utility functions for data loading, noise addition, data splitting, training, and evaluation
+├── requirements.txt                        # Python dependencies needed to run the project  
 ├── README.md                               # README with the project description and overview   
