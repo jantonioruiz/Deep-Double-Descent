@@ -7,7 +7,6 @@ The aim of this repository is to reproduce and expand on discoveries regarding D
 
 ## 📁 Repository Structure
 
-```plaintext
 Deep-Double-Descent/  
 ├── LaTex/                                  # LaTeX document with the project report  
 ├── experiments/                            # Experiment scripts and Jupyter notebooks for analysis and testing
