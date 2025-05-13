@@ -1,3 +1,14 @@
+# Table of Contents
+
+- [Deep Double Descent](#deep-double-descent)
+- [📁 Repository Structure](#-repository-structure)
+- [🛠️ Installation](#-installation)
+  - [✅ Requirements](#-requirements)
+  - [🔧 Setup Instructions](#-setup-instructions)
+- [📄 License](#-license)
+
+---
+
 # Deep Double Descent
 Deep Double Descent is a phenomenon seen in deep learning models where the test error decreases, then increases, and finally decreases again as the model capacity or training time increases. This occurrence is especially noticeable in models with a high degree of overparameterization, challenging traditional notions of the bias-variance tradeoff.
 
@@ -23,8 +34,6 @@ Deep-Double-Descent/
 ├── README.md                               # README with the project description and overview   
 ```
 
----
-
 ## 🛠️ Installation
 
 ### ✅ Requirements
@@ -46,7 +55,6 @@ source venv/bin/activate  # On Windows use: venv\Scripts\activate
 # Install required dependencies
 pip install -r requirements.txt
 ```
----
 
 ## 📄 License
 
