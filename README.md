@@ -1,22 +1,24 @@
-# Table of Contents
-
-- [Deep Double Descent](#deep-double-descent)
-- [📁 Repository Structure](#-repository-structure)
-- [🛠️ Installation](#-installation)
-  - [✅ Requirements](#-requirements)
-  - [🔧 Setup Instructions](#-setup-instructions)
-- [📄 License](#-license)
+<h1 style="font-size: 3em;">Deep Double Descent</h1>
 
 ---
 
-# Deep Double Descent
+# Table of Contents
+
+- [🎓 Introduction](#1-️-Introduction)
+- [📁 Repository Structure](#2-️-Repository-Structure)
+- [🛠️ Installation](#3-️-Installation)
+  - [✅ Requirements](#requirements)
+  - [🔧 Setup Instructions](#setup-instructions)
+- [📄 License](#4-️-License)
+
+---
+
+# 1. 🎓 Introduction
 Deep Double Descent is a phenomenon seen in deep learning models where the test error decreases, then increases, and finally decreases again as the model capacity or training time increases. This occurrence is especially noticeable in models with a high degree of overparameterization, challenging traditional notions of the bias-variance tradeoff.
 
 The aim of this repository is to reproduce and expand on discoveries regarding Deep Double Descent through conducting various experiments on common datasets, serving as a guide for researchers exploring this phenomenon.
 
----
-
-## 📁 Repository Structure
+## 2. 📁 Repository Structure
 
 ```plaintext
 Deep-Double-Descent/  
@@ -34,7 +36,7 @@ Deep-Double-Descent/
 ├── README.md                               # README with the project description and overview   
 ```
 
-## 🛠️ Installation
+## 3. 🛠️ Installation
 
 ### ✅ Requirements
 
@@ -56,7 +58,7 @@ source venv/bin/activate  # On Windows use: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-## 📄 License
+## 4. 📄 License
 
 This project is licensed under the **MIT License**.  
 See the [LICENSE](LICENSE) file for full details.
