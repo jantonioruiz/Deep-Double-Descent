@@ -22,6 +22,8 @@ Deep-Double-Descent/
 ├── requirements.txt                        # Python dependencies needed to run the project  
 ├── README.md                               # README with the project description and overview   
 
+---
+
 ## 🛠️ Installation
 
 ### ✅ Requirements
@@ -42,3 +44,10 @@ source venv/bin/activate  # On Windows use: venv\Scripts\activate
 
 # Install required dependencies
 pip install -r requirements.txt
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.  
+See the [LICENSE](LICENSE) file for full details.
