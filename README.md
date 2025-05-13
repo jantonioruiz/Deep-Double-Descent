@@ -7,6 +7,7 @@ The aim of this repository is to reproduce and expand on discoveries regarding D
 
 ## 📁 Repository Structure
 
+```plaintext
 Deep-Double-Descent/  
 ├── LaTex/                                  # LaTeX document with the project report  
 ├── experiments/                            # Experiment scripts and Jupyter notebooks for analysis and testing
@@ -20,6 +21,7 @@ Deep-Double-Descent/
 │   └── utils/                              # Utility functions for data loading, noise addition, data splitting, training, and evaluation
 ├── requirements.txt                        # Python dependencies needed to run the project  
 ├── README.md                               # README with the project description and overview   
+```
 
 ---
 
@@ -43,7 +45,7 @@ source venv/bin/activate  # On Windows use: venv\Scripts\activate
 
 # Install required dependencies
 pip install -r requirements.txt
-
+```
 ---
 
 ## 📄 License
