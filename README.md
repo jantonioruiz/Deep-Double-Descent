@@ -1,9 +1,11 @@
-# Deep-Double-Descent
+# Deep Double Descent
 Deep Double Descent is a phenomenon seen in deep learning models where the test error decreases, then increases, and finally decreases again as the model capacity or training time increases. This occurrence is especially noticeable in models with a high degree of overparameterization, challenging traditional notions of the bias-variance tradeoff.
 
 The aim of this repository is to reproduce and expand on discoveries regarding Deep Double Descent through conducting various experiments on common datasets, serving as a guide for researchers exploring this phenomenon.
 
-The repository is organized as follows:
+---
+
+## 📁 Repository Structure
 
 ```plaintext
 Deep-Double-Descent/  
@@ -19,3 +21,24 @@ Deep-Double-Descent/
 │   └── utils/                              # Utility functions for data loading, noise addition, data splitting, training, and evaluation
 ├── requirements.txt                        # Python dependencies needed to run the project  
 ├── README.md                               # README with the project description and overview   
+
+## 🛠️ Installation
+
+### ✅ Requirements
+
+- Python 3.10 (recommended)
+- pip for dependency management
+
+### 🔧 Setup Instructions
+
+```bash
+# Clone the repository
+git clone https://github.com/jantonioruiz/Deep-Double-Descent.git
+cd Deep-Double-Descent
+
+# (Optional) Create and activate a virtual environment
+python3.10 -m venv venv
+source venv/bin/activate  # On Windows use: venv\Scripts\activate
+
+# Install required dependencies
+pip install -r requirements.txt
