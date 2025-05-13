@@ -27,7 +27,7 @@ Below are some of the key findings observed during our experiments. These result
 ### 🎯 Double Descent in Legendre Polynomial Regression
 
 <div style="text-align: center;">
-  <img src="LaTex/img/experiments/legendre1DDD.png" alt="Polynomial Regression Double Descent" style="width: 80%;"/>
+  <img src="LaTex/img/experiments/legendre1DDD.png" alt="Polynomial Regression Double Descent" style="width: 95%;"/>
   <p><strong>Test error vs. Model complexity (number of params)</strong> showing the characteristic double descent curve in a simple regression using Legendre basis.</p>
 </div>
 
@@ -38,9 +38,17 @@ Below are some of the key findings observed during our experiments. These result
 </div>
 Different approximations across various parameterization zones, highlighting implicit regularization in the final overparameterized model (on the right), which results in a solution resembling the initial approximation.
 
-### 🧠 Double Descent in Neural Networks
+### 🧠 Deep Double Double Descent in Neural Networks
 
-![Neural Network Double Descent](path/to/neural_dd_plot.png)
+<div style="text-align: center;">
+  <img src="LaTex/img/experiments/model-epoch3CNNMNIST30k.png" alt="Deep Double Descent Heatmap" style="width: 95%;"/>
+  <p><strong>Deep Double Descent by Model Capacity and Epochs</strong>, showing the test error (left image) in a heatmap versus model complexity (number of parameters) across varying epochs. The image highlights model-wise phenomena (horizontal lines) and epoch-wise phenomena (vertical lines). Additionally, the interpolation threshold can be observed in the train error heatmap (right image).</p>
+</div>
+
+<div style="text-align: center;">
+  <img src="LaTex/img/experiments/epoch-wisePreActResNet18(45,64).png" alt="Epoch-wise Double Descent for PreActResNet" style="width: 95%;"/>
+  <p><strong>Epoch-wise Double Descent for PreActResNet</strong>, showing how test error decreases as the model approaches near-zero training error.</p>
+</div>
 
 ---
 
