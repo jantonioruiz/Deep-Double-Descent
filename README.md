@@ -10,11 +10,12 @@
 - [📈 Main Results](#2-📈-main-results)
   - [🎯 Double Descent in Polynomial Regression](#️-double-descent-in-polynomial-regression)
   - [🧠 Deep Double Descent in Neural Networks](#️-deep-double-descent-in-neural-networks)
-- [📁 Repository Structure](#3-📁-repository-structure)
-- [🛠️ Installation](#4-🛠️-installation)
+- [🧩 Key Findings](#3-📁-key-findings)
+- [📁 Repository Structure](#4-📁-repository-structure)
+- [🛠️ Installation](#5-🛠️-installation)
   - [✅ Requirements](#️-requirements)
   - [🔧 Setup Instructions](#️-setup-instructions)
-- [📄 License](#5-📄-license)
+- [📄 License](#6-📄-license)
 
 ---
 
@@ -50,7 +51,12 @@ Below are some of the key findings observed during our experiments. These result
 
 <div style="text-align: center;">
   <img src="LaTex/img/experiments/model-epoch3CNNMNIST30k.png" alt="Deep Double Descent Heatmap" style="width: 95%;"/>
-  <p><em><strong>Deep Double Descent by Model Capacity and Epochs</strong>, showing the test error (left image) in a heatmap versus model complexity (number of parameters) across varying epochs. The image highlights model-wise phenomena (horizontal lines) and epoch-wise phenomena (vertical lines). Additionally, the interpolation threshold can be observed in the train error heatmap (right image).</em></p>
+  <p><em><strong>Deep Double Descent by Model Capacity and Epochs</strong>, showing the test error (left image) in a heatmap versus model complexity (number of parameters) across varying epochs. The image highlights model-wise phenomena (horizontal lines) and epoch-wise phenomena (vertical lines). Additionally, the interpolation threshold — where the model achieves near-zero training error — can be observed in the train error heatmap (right image).</em></p>
+</div>
+
+<div style="text-align: center;">
+  <img src="LaTex/img/experiments/modelwisegh.png" alt="Epoch-wise Double Descent for PreActResNet" style="width: 95%;"/>
+  <p><em><strong>Model-wise Double Descent for 3CNN</strong>, revealing how test error decreases as model capacity increases, with the peak corresponding to the interpolation threshold.</em></p>
 </div>
 
 <div style="text-align: center;">
@@ -58,11 +64,28 @@ Below are some of the key findings observed during our experiments. These result
   <p><em><strong>Epoch-wise Double Descent for PreActResNet</strong>, showing how test error decreases as the model approaches near-zero training error.</em></p>
 </div>
 
+<div style="text-align: center;">
+  <img src="LaTex/img/experiments/epochwisegh.png" alt="Epoch-wise Double Descent for PreActResNet" style="width: 95%;"/>
+  <p><em><strong>Epoch-wise Double Descent for ResNet18</strong>, illustrating how test error can reach an even lower minimum after the second descent.</em></p>
+</div>
+
 ***These results support the hypothesis that overparameterized models can generalize better in the overparameterized regime, challenging traditional assumptions of the bias-variance trade-off.***
 
 ---
 
-## 3. 📁 Repository Structure
+## 3. 🧩 Key Findings
+
+- **The classical bias-variance trade-off, as traditionally understood, does not hold in the overparameterized regime**.
+- **Overparameterization ≠ Overfitting**.
+- **The choice of basis functions in polynomial approximation is crucial for the quality of the final approximations**.
+- **There are regions where paradoxically, increasing the number of parameters worsens model performance**.
+- **Noise contributes to the emergence and intensity of the phenomena**.
+- **Overparameterization can help achieve lower errors than those observed in the classical regime**.
+- **The implicit biases of learning algorithms play a fundamental role by favoring simpler solutions, following the philosophy of Occam’s razor**.
+
+---
+
+## 4. 📁 Repository Structure
 
 ```plaintext
 Deep-Double-Descent/  
@@ -80,7 +103,7 @@ Deep-Double-Descent/
 ├── README.md                               # README with the project description and overview   
 ```
 
-## 4. 🛠️ Installation
+## 5. 🛠️ Installation
 
 ### ✅ Requirements
 
@@ -102,7 +125,7 @@ source venv/bin/activate  # On Windows use: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-## 5. 📄 License
+## 6. 📄 License
 
 This project is licensed under the **MIT License**.  
 See the [LICENSE](LICENSE) file for full details.
