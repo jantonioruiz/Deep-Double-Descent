@@ -1,4 +1,8 @@
-<h1 style="font-size: 3em;">Deep Double Descent</h1>
+<h1 style="font-size: 3em; text-align: center;">Theoretical and Empirical Analysis of Deep Double Descent</h1>
+
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![Framework](https://img.shields.io/badge/Framework-PyTorch-orange)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 # Table of Contents
 
@@ -36,7 +40,10 @@ Below are some of the key findings observed during our experiments. These result
   <img src="LaTex/img/experiments/legendre1.2.png" alt="Another Polynomial Regression Image" style="width: 32%;"/>
   <img src="LaTex/img/experiments/legendre1.3.png" alt="Third Polynomial Regression Image" style="width: 32%;"/>
 </div>
-<em>Different approximations across various parameterization zones, highlighting implicit regularization in the final overparameterized model (on the right), which results in a solution resembling the initial approximation.</em>
+<div style="text-align: center;">
+  <em>Different approximations for Legendre basis across various parameterization zones, highlighting implicit regularization in the final overparameterized model (on the right), which results in a solution resembling the initial approximation.</em>
+</div>
+
 
 
 ### 🧠 Deep Double Double Descent in Neural Networks
@@ -77,7 +84,7 @@ Deep-Double-Descent/
 
 ### ✅ Requirements
 
-- Python 3.10 (recommended)
+- Python 3.10+ (recommended)
 - pip for dependency management
 
 ### 🔧 Setup Instructions
