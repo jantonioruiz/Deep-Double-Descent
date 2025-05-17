@@ -51,9 +51,9 @@ Below are some of the key findings observed during our experiments. These result
   <p><em><strong>Epoch-wise Double Descent for PreActResNet</strong>, showing how test error decreases as the model approaches near-zero training error.</em></p>
 </div>
 
----
-
 ***These results support the hypothesis that overparameterized models can generalize better in the overparameterized regime, challenging traditional assumptions of the bias-variance trade-off.***
+
+---
 
 ## 3. 📁 Repository Structure
 
