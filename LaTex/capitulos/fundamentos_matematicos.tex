@@ -7,40 +7,40 @@ En este capítulo se presentarán algunas definiciones y resultados de la teorí
 
 \section{Espacios de probabilidad y $\sigma$-álgebras}
 
-Para establecer la base teórica, consideraremos un conjunto arbitrario $\Omega$, al que nos referiremos como \emph{espacio muestral} y que representa el conjunto de todos los posibles resultados al realizar un experimento. Asimismo, llamaremos \emph{suceso} a cualquier subconjunto de $\Omega$.
+Para establecer la base teórica, consideraremos un conjunto arbitrario $\Omega$, al que nos referiremos como \textbf{espacio muestral} y que representa el conjunto de todos los posibles resultados al realizar un experimento. Asimismo, llamaremos \textbf{suceso} a cualquier subconjunto de $\Omega$.
 
-\begin{definicion}[\emph{$\sigma$-álgebra}]\label{def:sigma-algebra}
+\begin{definicion}[$\sigma$-álgebra]\label{def:sigma-algebra}
     Un conjunto $\mathcal{A}$ de subconjuntos de $\Omega$ ($\mathcal{A} \subseteq \mathcal{P}(\Omega)$) se dirá que es una \emph{$\sigma$-álgebra} si verifica las siguientes propiedades:
 
     \begin{enumerate}
-        \item $\Omega \in \mathcal{A}$,
-        \item Si $\mathrm{A} \in \mathcal{A}$, entonces $\mathrm{A}^c = \Omega \setminus \mathcal{A} \in \mathcal{A}$ ($\mathrm{A}$ es cerrado bajo complementarios),
-        \item Si $\mathrm{A}_{n} \in \mathcal{A}$, entonces $\bigcup_{n \in \mathbb{N}} \mathrm{A}_{n} \in \mathcal{A}$ (A es cerrado bajo uniones finitas)
+        \item $\Omega \in \mathcal{A}$.
+        \item Si $\mathrm{A} \in \mathcal{A}$, entonces $\mathrm{A}^c = \Omega \setminus \mathcal{A} \in \mathcal{A}$ ($\mathrm{A}$ es cerrado bajo complementarios).
+        \item Si $\mathrm{A}_{n} \in \mathcal{A}$, entonces $\bigcup_{n \in \mathbb{N}} \mathrm{A}_{n} \in \mathcal{A}$ (A es cerrado bajo uniones finitas).
     \end{enumerate}
 \end{definicion}
 
 Es fácil comprobar que $\mathcal{A}$ es cerrado bajo intersecciones finitas y que, además, la intersección de $\sigma$-álgebras es una $\sigma$-álgebra.
 
-\begin{definicion}[\emph{$\sigma$-álgebra de Borel}]\label{def:sigma-algebra-borel}
+\begin{definicion}[$\sigma$-álgebra de Borel]\label{def:sigma-algebra-borel}
     Para cada conjunto $\mathcal{C}$ de subconjuntos de $\Omega$, se define $\sigma(\mathcal{C})$ como la menor $\sigma$-álgebra $\mathcal{A}$ que contiene a $\mathcal{C}$. La $\sigma$-álgebra $\mathcal{A}$ es la intersección de todas las $\sigma$-álgebras que contienen a $\mathcal{C}$ y, por tanto, es una $\sigma$-álgebra.
 
     Si ($\mathrm{E}, \mathcal{O}$) es un espacio topológico, donde $\mathrm{O}$ es el conjunto formado por los conjuntos abiertos en E, entonces $\sigma(\mathcal{O})$ es llamada la \textbf{$\sigma$-álgebra de Borel} del espacio topológico.
 \end{definicion}
 
-Llamaremos \emph{espacio de medida} al conjunto ($\Omega, \mathcal{A}$) donde $\mathcal{A}$ es una $\sigma$-álgebra en $\Omega$.
+Llamaremos \textbf{espacio de medida} al conjunto ($\Omega, \mathcal{A}$) donde $\mathcal{A}$ es una $\sigma$-álgebra en $\Omega$.
 
-\begin{definicion}[\emph{Medida de probabilidad}]\label{def:medida-de-probabilidad}
+\begin{definicion}[Medida de probabilidad]\label{def:medida-de-probabilidad}
     Dado un espacio de medida ($\Omega, \mathcal{A}$), una función $\mathrm{P}: \mathcal{A} \to \mathbb{R}$ se llamará \emph{medida de probabilidad} si cumple las siguientes tres propiedades (conocidas como \textbf{axiomas de Kolmogorov}~\cite{Kolmogorov1956}):
 
     \begin{enumerate}
-        \item $\mathrm{P}[\mathrm{A}] \ge 0$ para todo $\mathrm{A} \in \mathcal{A}$,
-        \item $\mathrm{P}[\Omega]=1$,
+        \item $\mathrm{P}[\mathrm{A}] \ge 0$ para todo $\mathrm{A} \in \mathcal{A}$.
+        \item $\mathrm{P}[\Omega]=1$.
         \item $\mathrm{P}$ es $\sigma$-aditiva, es decir, si $\mathrm{A}_n \in \mathcal{A}$ con $n \in \mathbb{N}$ son conjuntos disjuntos dos a dos, entonces 
         \[ \mathrm{P}\left[\bigcup_{n \in \mathbb{N}} \mathrm{A}_{n}\right] = \sum\limits_{n \in \mathbb{N}} \mathrm{P}[\mathrm{A}_n]. \]
     \end{enumerate}
 \end{definicion}
 
-La primera condición nos asegura la no negatividad de la probabilidad, es decir, la probabilidad nunca será inferior a $0$. A su vez, la segunda condición nos establece que la probabilidad del espacio muestral completo ($\Omega$) debe ser igual a 1, es decir, refleja que uno de los eventos posibles siempre ocurrirá, conocido como \emph{suceso seguro}.
+La primera condición nos asegura la no negatividad de la probabilidad, es decir, la probabilidad nunca será inferior a $0$. A su vez, la segunda condición nos establece que la probabilidad del espacio muestral completo ($\Omega$) debe ser igual a $1$, es decir, refleja que uno de los eventos posibles siempre ocurrirá, conocido como \textbf{suceso seguro}.
 
 \begin{observacion}
 Como consecuencia de las propiedades $2$ y $3$ de la definición anterior, se sigue de manera inmediata que $\mathrm{P}(\emptyset) = 0$. Además, al conjunto $\emptyset$ se le suele denominar como \emph{evento imposible}.
@@ -52,7 +52,7 @@ Como consecuencia de las propiedades $2$ y $3$ de la definición anterior, se si
     \begin{enumerate}
         \item Si $\mathrm{A}, \mathrm{B} \in \mathcal{A}$ y $\mathrm{A} \subset B$, entonces $\mathrm{P}[\mathrm{A}] \le \mathrm{P}[\mathrm{B}]$.
         \item $\mathrm{P}[\mathrm{A^c}] = 1-\mathrm{P}[\mathrm{A}]$, para todo $\mathrm{A} \in \mathcal{A}$.
-        \item $0 \le \mathrm{P}[\mathrm{A}] \le 1$ para todo $\mathrm{A} \in \mathcal{A}$.
+        \item $0 \le \mathrm{P}[\mathrm{A}] \le 1$, para todo $\mathrm{A} \in \mathcal{A}$.
     \end{enumerate}
 \end{corolario}
 
@@ -60,7 +60,7 @@ Como consecuencia de las propiedades $2$ y $3$ de la definición anterior, se si
 Existen distintas formas de construir los axiomas para un espacio de probabilidad. Por ejemplo, se podrían sustituir las primeras dos propiedades de la definición de medida de probabilidad por las últimas dos propiedades enunciadas en el corolario anterior.
 \end{observacion}
 
-\begin{definicion}[\emph{Espacio de probabilidad}]\label{def:espacio-de-probabilidad}
+\begin{definicion}[Espacio de probabilidad]\label{def:espacio-de-probabilidad}
     Dado un espacio de medida ($\Omega, \mathcal{A}$), llamaremos \emph{espacio de probabilidad} a la tripleta ($\Omega, \mathcal{A}, \mathrm{P}$), donde $\mathrm{P}$ es una medida de probabilidad.
 \end{definicion}
 
@@ -68,19 +68,19 @@ Existen distintas formas de construir los axiomas para un espacio de probabilida
 
 Las variables aleatorias son funciones numéricas que asignan un valor numérico a cada posible resultado de un experimento aleatorio $w \in \Omega$. De manera intuitiva, una variable aleatoria puede verse como una cantidad numérica cuyo valor no es fijo y que puede tomar distintos valores, por lo que es necesario definir una distribución de probabilidad que asocie probabilidades a los distintos valores que pueda tomar la variable aleatoria. 
 
-\begin{definicion}[\emph{Función medible}]\label{def:funcion-medible}
+\begin{definicion}[Función medible]\label{def:funcion-medible}
     Una función $X: (\Omega_1, \mathcal{A}) \to (\Omega_2, \mathcal{B})$ se dice \emph{medible} si
 
-    \[ X^{-1}(\mathrm{B}) \in \mathcal{A} \quad \forall \, \mathrm{B}  \in \mathcal{B} \]
+    \[ X^{-1}(\mathrm{B}) \in \mathcal{A}, \quad \forall \mathrm{B}  \in \mathcal{B}, \]
 
     donde el conjunto $ X^{-1}(\mathrm{B})$ se encuentra formado por todos los puntos $x \in \Omega$ para los cuales $X(x) \in \mathrm{B}$.
 \end{definicion}
 
-\begin{definicion}[\emph{Variable aleatoria}]\label{def:variable-aleatoria}
+\begin{definicion}[Variable aleatoria]\label{def:variable-aleatoria}
     Dado un espacio de probabilidad ($\Omega_1, \mathcal{A}, \mathrm{P}$) y un espacio medible ($\Omega_2, \mathcal{B}$), decimos que $X: (\Omega_1, \mathcal{A}, \mathrm{P}) \to (\Omega_2, \mathcal{B})$ es una \emph{variable aleatoria} si $X$ es una función medible.
 \end{definicion}
 
-Además, si el espacio medible de llegada es $n$-dimensional, entonces la variable aleatoria $X$ es llamada \textit{vector aleatorio} y lo denotaremos por $X = (X_1, X_2, \ldots, X_n)$ donde cada componente $X_i$ con $i \in \{1, 2, \ldots, n\}$ es una variable aleatoria.
+Además, si el espacio medible de llegada es $n$-dimensional, entonces la variable aleatoria $X$ es llamada \textbf{vector aleatorio} y lo denotaremos por $X = (X_1, X_2, \ldots, X_n)$, donde cada componente $X_i$ con $i \in \{1, 2, \ldots, n\}$ es una variable aleatoria.
 
 \begin{observacion}
     En la mayoría de usos prácticos se tiene que el espacio medible de llegada más común es ($\mathbb{R}, \mathcal{B}(\mathbb{R})$), donde $\mathcal{B}(\mathbb{R})$ denota la $\sigma$-álgebra de Borel en $\mathbb{R}$.
@@ -91,15 +91,15 @@ Además, si el espacio medible de llegada es $n$-dimensional, entonces la variab
 \end{definicion}
 
 \begin{ejemplo}
-    Como ejemplo sencillo podemos considerar los posibles resultados obtenidos al lanzar un dado de seis caras, es decir, $w \in \{1,2,3,4,5,6\}$ y podemos definir la variable aleatoria discreta que asigna el valor de la cara superior del dado cuando se lanza. En este caso, la variable aleatoria se define como:
+    Como ejemplo sencillo podemos considerar los posibles resultados obtenidos al lanzar un dado de seis caras, es decir, $w \in \{1,2,3,4,5,6\}$, y podemos definir la variable aleatoria discreta que asigna a cada resultado el valor de la cara superior obtenida al realizar el lanzamiento. En este caso, la variable aleatoria se define como:
 
-    \[ X(w) = w \quad para \, w \in \{1,2,3,4,5,6\}. \]
+    \[ X(w) = w, \quad \text{para} \; w \in \{1,2,3,4,5,6\}. \]
 \end{ejemplo}
 
 \begin{definicion}[Función de distribución]\label{def:funcion-de-distribucion}
-    La función de distribución (acumulada) de una variable aleatoria $X$ es una función $F_X: \mathbb{R} \to [0,1]$ dada por
+    La \emph{función de distribución (acumulada)} de una variable aleatoria $X$ es la función $F_X: \mathbb{R} \to [0,1]$ definida por:
 
-    \[ F_X(\alpha) = P[\{ w:X(w) \le \alpha\}] \quad \forall \alpha \in \mathbb{R}. \]
+    \[ F_X(\alpha) = P[\{ w:X(w) \le \alpha\}], \quad \forall \alpha \in \mathbb{R}. \]
 \end{definicion}
 
 \begin{proposicion}
@@ -113,27 +113,27 @@ Además, si el espacio medible de llegada es $n$-dimensional, entonces la variab
 \end{proposicion}
 
 \begin{definicion}[Función de probabilidad]\label{def:funcion-de-probabilidad}
-    Sea $X$ una variable aleatoria discreta, llamaremos \emph{función (masa) de probabilidad}, a la función que asigna la probabilidad de que la variable aleatoria tome un valor en particular, es decir:
+    Sea $X$ una variable aleatoria discreta, llamaremos \emph{función (masa) de probabilidad} a la función que asigna la probabilidad de que la variable aleatoria tome un valor en particular, es decir:
 
-    \[ p_X(x) = P[X = x] \quad donde \; x \in \{x_1, \ldots, x_n\}. \]
+    \[ p_X(x) = P[X = x], \quad \text{con} \; x \in \{x_1, \ldots, x_n\}. \]
 \end{definicion}
 
-Las probabilidades asociadas con todos los posibles resultados del experimento deben ser no negativas y sumar $1$, es decir $ \sum_x p_X(x) = 1 $ y, además, $p_X(x) \ge 0$.
+Las probabilidades asociadas con todos los posibles resultados del experimento deben ser no negativas y sumar uno, es decir $ \sum_x p_X(x) = 1 $ y, además, $p_X(x) \ge 0$.
 
-Notemos que, el concepto de función de probabilidad, solo tiene sentido al hablar de variables aleatorias discretas. Para variables aleatorias continuas, el concepto análogo es el de función de densidad, donde deberemos integrar para obtener la probabilidad, pues la probabilidad asociada a un único punto en un intervalo es cero.
+Notemos que el concepto de función de probabilidad solo tiene sentido al hablar de variables aleatorias discretas. Para variables aleatorias continuas, el concepto análogo es el de función de densidad, donde deberemos integrar para obtener la probabilidad, pues la probabilidad asociada a un único punto en un intervalo es cero.
 
 \begin{definicion}[Función de densidad]\label{def:funcion-de-densidad}
-    Se dice que una función $f_X$ integrable de Lebesgue, no negativa en casi todas partes es la \emph{función de densidad} de una variable aleatoria continua $X$ si su función de distribución puede ser expresada como
+    Se dice que una función $f_X$, integrable de Lebesgue y no negativa en casi todas partes, es la \emph{función de densidad} de una variable aleatoria continua $X$ si su función de distribución puede ser expresada como
 
-    \[ F_X(\alpha) =  \int_{-\infty}^{\alpha} f_X(x) \, dx \quad \forall \alpha \in \mathbb{R}. \]
+    \[ F_X(\alpha) =  \int_{-\infty}^{\alpha} f_X(x) \, dx, \quad \forall \alpha \in \mathbb{R}. \]
 \end{definicion}
 
-Notemos que la función de densidad, de manera análoga a la función de probabilidad, cumple $ f_X(x) \ge 0$ y $ \int_{-\infty}^{\infty} f_X(x) = 1$.
+Notemos que la función de densidad, de manera análoga a la función de probabilidad, cumple $ f_X(x) \ge 0$ y $ \int_{-\infty}^{\infty} f_X(x) \, dx = 1$.
 
-\begin{definicion}[Esperanza de una variable aleatoria]\label{def:esperanza-variable-aleatoria}
-Sea $X$ una variable aleatoria en el espacio de probabilidad ($\Omega, \mathcal{A}, \mathrm{P}$). Definimos la \emph{esperanza o valor esperado} de $X$, denotado por $E[X]$ como la integral de Lebesgue siguiente:
+\begin{definicion}[\textbf{Esperanza de una variable aleatoria}]\label{def:esperanza-variable-aleatoria}
+Sea $X$ una variable aleatoria en el espacio de probabilidad ($\Omega, \mathcal{A}, \mathrm{P}$). Definimos el \textbf{valor esperado o esperanza} de $X$, denotada por $E[X]$, como la integral de Lebesgue siguiente:
 
-\[ \mathbb{E}[X] = \int_{\Omega} X(w)dP[w]. \]
+\[ \mathbb{E}[X] = \int_{\Omega} X(w) \, dP[w]. \]
 
 Para vectores aleatorios, su esperanza viene definida componente a componente:
 
@@ -141,24 +141,24 @@ Para vectores aleatorios, su esperanza viene definida componente a componente:
 \end{definicion}
 
 \begin{observacion}
-    Si $X$ es una variable aleatoria discreta con función de probabilidad $\mathrm{P}[X = x_i]$ con $i \in \{1,2,\ldots,n\}$, su esperanza viene definida por:
+    Si $X$ es una variable aleatoria discreta con función de probabilidad $\mathrm{P}[X = x_i]$, con $i \in \{1,2,\ldots,n\}$, su esperanza viene definida por:
 
-    \[ \mathbb{E}[X] = \sum_{i=1}^{n} x_i \: \mathrm{P}[X = x_i]. \]
+    \[ \mathbb{E}[X] = \sum_{i=1}^{n} x_i \: \mathrm{P}[X = x_i], \]
 
     donde $x_i$ denota cada posible resultado del experimento.
 \end{observacion}
 
 \begin{observacion}
-    Si $X$ es una variable aleatoria continua con función de densidad $f_X(x)$, su esperanza viene definida por:
+    Si $X$ es una variable aleatoria continua con función de densidad $f_X(x)$, su esperanza se define como:
 
-    \[ \mathbb{E}[X] =  \int_{\mathbb{R}} x \;f_X(x) \, dx. \]
+    \[ \mathbb{E}[X] =  \int_{\mathbb{R}} x f_X(x) \, dx. \]
 \end{observacion}
 
 \subsection{Probabilidad condicional}
 
 En esta sección introduciremos la noción clásica de \emph{probabilidad condicional} de sucesos, ligada al supuesto de conocer la probabilidad de un cierto suceso bajo la condición de que ocurra otro suceso. De igual manera, se introducirán resultados necesarios para el desarrollo del trabajo, tales como el teorema de Bayes.
 
-\begin{definicion}\label{def:probabilidad-condicional}
+\begin{definicion}[Probabilidad condicional]\label{def:probabilidad-condicional}
     Dados dos sucesos $A, B \in \mathcal{A}$ con $P[B] > 0$, definimos la \emph{probabilidad condicional} de $A$ con respecto a $B$ de la siguiente forma:
 
     \[ P[A|B] = \frac{P[A \cap B]}{P[B]}. \]
@@ -169,14 +169,14 @@ En esta sección introduciremos la noción clásica de \emph{probabilidad condic
 
     \begin{enumerate}
         \item $\bigcup\limits_{i=1}^n A_i = \Omega$.
-        \item $A_i \cap A_j = \emptyset$ para todo $i \neq j$.
+        \item $A_i \cap A_j = \emptyset$, para todo $i \neq j$.
     \end{enumerate}
 \end{definicion}
 
 Una partición finita cubre todo el espacio con un número finito de conjuntos (sucesos) disjuntos dos a dos.
 
 \begin{teorema}[Probabilidad total]\label{teo:probabilidad-total}
-    Sean $\{A_1, \ldots, A_n \}$ una partición finita de $\mathcal{A}$ y $B \in \mathcal{A}$ un suceso cualquiera del que se conocen las probabilidades condicionales $P[B|A_i] \; \forall \, i \in \{1, \ldots, n \}$, entonces la probabilidad del suceso $B$ viene dada por la siguiente expresión:
+    Sean $\{A_1, \ldots, A_n \}$ una partición finita de $\mathcal{A}$ y $B \in \mathcal{A}$ un suceso cualquiera del que se conocen las probabilidades condicionales $P[B|A_i] \; \forall i \in \{1, \ldots, n \}$. Entonces, la probabilidad del suceso $B$ viene dada por la siguiente expresión:
 
     \[ P[B] = \sum_{i=1}^{n} P[B|A_i]P[A_i]. \]
 \end{teorema}
@@ -186,16 +186,16 @@ Una partición finita cubre todo el espacio con un número finito de conjuntos (
 
     \[ B = (B \cap A_1) \cup (B \cap A_2) \cup \cdots \cup (B \cap A_n). \]
 
-    Usando la segunda propiedad de la Definición~\ref{def:particion-finita}, sabemos que $A_i \cap A_j = \emptyset, i \neq j$. Por tanto, obtenemos que los conjuntos $(B \cap A_i), \; i \in \{1, \ldots, n\}$ son, también, disjuntos dos a dos.
+    Utilizando la segunda propiedad de la Definición~\ref{def:particion-finita}, sabemos que $A_i \cap A_j = \emptyset, i \neq j$. Por tanto, obtenemos que los conjuntos $(B \cap A_i), \; i \in \{1, \ldots, n\}$ son, también, disjuntos dos a dos.
 
     Por consiguiente, podemos expresar la probabilidad del suceso $B$ como sigue:
 
     \[ P[B] = P[B \cap A_1] + P[B \cap A_2] + \cdots + P[B \cap A_n]. \]
 
-    Finalmente, usando la Definición~\ref{def:probabilidad-condicional}, obtenemos que 
-    \[ P[A_i \cap B] = P[A_i | B]P[B],\; \forall \; i \in \{1, \ldots, n\}. \]
+    A continuación, usando la Definición~\ref{def:probabilidad-condicional}, obtenemos que 
+    \[ P[A_i \cap B] = P[A_i | B]P[B],\quad \forall i \in \{1, \ldots, n\}. \]
     
-    Por tanto, obtenemos la expresión buscada:
+    Finalmente, obtenemos la expresión buscada:
     \begin{align*}
         P[B] &= P[B \cap A_1] + P[B \cap A_2] + \cdots + P[B \cap A_n] \\
              &= P[B|A_1]P[A_1] + P[B|A_2]P[A_2] + \cdots + P[B|A_n]P[A_n] \\
@@ -227,21 +227,21 @@ Llegados a este punto estamos en las condiciones necesarias de introducir un teo
 
 \subsection{Independencia de variables aleatorias}
 
-En esta sección nos centraremos en explicar el concepto de independencia en el contexto de las variables aleatorias. De manera intuitiva, el concepto de independencia, como su nombre indica, va ligado al hecho de que el conocimiento que poseamos de una de las variables no proporciona información adicional sobre el conocimiento de la otra. Para ello, también expandiremos el concepto de función de distribución para el caso de más de una variable aleatoria (vector aleatorio).
+En esta sección nos centraremos en explicar el concepto de independencia en el contexto de variables aleatorias. De manera intuitiva, el concepto de independencia, como su nombre indica, va ligado al hecho de que el conocimiento que poseamos de una de las variables no proporciona información adicional sobre el conocimiento de la otra. Para ello, también expandiremos el concepto de función de distribución para el caso de más de una variable aleatoria (vector aleatorio).
 
 \begin{definicion}[Función de distribución conjunta]\label{def:funcion-de-distribucion-conjunta}
-    Sean $X_1, \ldots, X_n$ variables aleatorias definidas sobre el mismo espacio de probabilidad $(\Omega, \mathcal{A}, \mathrm{P})$, la \emph{función de distribución conjunta} es una función $F_{X_{1}, \ldots, X_{n}}: \mathbb{R} \to [0,1]$ dada por
+    Sean $X_1, \ldots, X_n$ variables aleatorias definidas sobre el mismo espacio de probabilidad $(\Omega, \mathcal{A}, \mathrm{P})$, la \emph{función de distribución conjunta} es la función $F_{X_{1}, \ldots, X_{n}}: \mathbb{R} \to [0,1]$ definida por
 
     \[ F_{X_{1}, \ldots, X_{n}}(x_1, \ldots, x_n) = P[X_1 \leq x_1, \ldots, X_n \leq x_n], \quad x_1, \ldots, x_n \in \mathbb{R}. \]
 
-    Si interpretamos las n variables aleatorias como un vector aleatorio $X = (X_1, \ldots, X_n)$, podemos simplificar la notación de la siguiente forma:
+    Si interpretamos las $n$ variables aleatorias como un vector aleatorio $X = (X_1, \ldots, X_n)$, podemos simplificar la notación de la siguiente forma:
 
     \[ F_{X_{1}, \ldots, X_{n}}(x_1, \ldots, x_n) = F_X(x_1, \ldots, x_n). \]
 \end{definicion}
 
 De la misma forma, podemos extender las definiciones de \emph{función de probabilidad} y \emph{función de densidad} para el caso en el que dispongamos de más de una variable aleatoria.
 
-En primer lugar, comenzaremos definiendo y demostrando el resultado de la \emph{regla de la cadena} para probabilidades que nos será de gran utilidad para trabajar con las siguientes definiciones.
+En primer lugar, comenzaremos definiendo y demostrando el resultado de la \textbf{regla de la cadena} para probabilidades, que nos será de gran utilidad para trabajar con las siguientes definiciones.
 
 \begin{teorema}[Regla de la cadena]
     Sea ($\Omega, \mathcal{A}, P$) un espacio de probabilidad y $\{A_1, \ldots, A_n \} \in \mathcal{A}$ una serie de sucesos. Entonces, se verifica
@@ -250,7 +250,7 @@ En primer lugar, comenzaremos definiendo y demostrando el resultado de la \emph{
 \end{teorema}
 
 \begin{proof}
-    La demostración se realiza de manera sencilla por recursión teniendo en cuenta que en el primer caso se hace uso de la Definición~\ref{def:probabilidad-condicional}:
+    La demostración se realiza de manera sencilla por recursión, teniendo en cuenta que en el primer caso se hace uso de la Definición~\ref{def:probabilidad-condicional}:
 
     \[ P[A_1 \cap A_2] = P[A_1]P[A_2| A_1]. \]
 \end{proof}
@@ -265,23 +265,23 @@ En primer lugar, comenzaremos definiendo y demostrando el resultado de la \emph{
     \begin{align*}
         p_{X_1, \dots, X_n}(x_1, \dots, x_n) &= P(X_1 = x_1) \cdot P(X_2 = x_2 \mid X_1 = x_1) \cdot \\
         &\quad \cdot P(X_3 = x_3 \mid X_1 = x_1, X_2 = x_2) \cdots \\
-        &\quad \cdot P(X_n = x_n \mid X_1 = x_1, X_2 = x_2, \dots, X_{n-1} = x_{n-1})
+        &\quad \cdot P(X_n = x_n \mid X_1 = x_1, X_2 = x_2, \dots, X_{n-1} = x_{n-1}),
     \end{align*}
 
     donde se utiliza la definición de probabilidad condicionada y la regla de la cadena comentada en el teorema anterior.
 \end{definicion}
 
-Además, dado que estamos trabajando con probabilidades, se verifica que la suma total debe ser igual a 1, es decir 
-\[ \sum_{i}\sum_{j}\ldots\sum_{k}P[X_1=x_{1i}, X_2=x_{2j}, \ldots, X_n=x_{nk}] = 1 \] 
+Además, dado que estamos trabajando con probabilidades, se verifica que la suma total debe ser igual a uno, es decir 
+\[ \sum_{i}\sum_{j}\ldots\sum_{k}P[X_1=x_{1i}, X_2=x_{2j}, \ldots, X_n=x_{nk}] = 1, \] 
 donde los distintos índices ($i, j, \ldots, k$) recorren todos los posibles resultados de cada variable aleatoria.
 
 \begin{definicion}[Función de densidad conjunta]
-    Sean $X_1, \ldots, X_n$ variables aleatorias continuas. Se dice que una función $f_{X_{1}, \ldots, X_n}$ integrable Lebesgue no negativa en casi todas partes es la \emph{función de densidad conjunta} de las variables aleatorias continuas $X_1, \ldots, X_n$ si la función de distibución conjunta puede ser expresada como
+    Sean $X_1, \ldots, X_n$ variables aleatorias continuas. Se dice que una función $f_{X_{1}, \ldots, X_n}$, integrable de Lebesgue y no negativa en casi todas partes, es la \emph{función de densidad conjunta} de las variables aleatorias continuas $X_1, \ldots, X_n$ si la función de distribución conjunta puede ser expresada como
 
     \begin{align*}
         F_{X_{1}, \ldots, X_{n}}(x_1, \ldots, x_n) &=  
         \int_{-\infty}^{x_1} \cdots \int_{-\infty}^{x_n} 
-        f_{X_{1}, \ldots, X_n}(x_1, \ldots, x_n) \, dx_1 \cdots dx_n \\
+        f_{X_{1}, \ldots, X_n}(x_1, \ldots, x_n) \, dx_1 \cdots dx_n, \\
         &\quad \forall(x_1, \ldots, x_n) \in \mathbb{R}^n.
     \end{align*}
 
@@ -295,36 +295,36 @@ De manera análoga a la definición anterior y dado que estamos trabajando con d
 \[ \int_{-\infty}^{x_1} \cdots \int_{-\infty}^{x_n} f_{X_{1}, \ldots, X_n} (x_1, \ldots, x_n) \, dx_1, \ldots,  dx_n = 1. \]
 
 
-Una vez conocemos las funciones conjuntas de una serie de variables aleatorias es posible determinar la probabilidad de un suceso sin considerar la influencia de otras variables por medio de las funciones marginales.
+Una vez conocemos las funciones conjuntas de una serie de variables aleatorias, es posible determinar la probabilidad de un suceso sin considerar la influencia de otras variables por medio de las funciones marginales.
 
 \begin{definicion}[Función de distribución marginal]
-    Sean $X_1, \ldots, X_n$ variables aleatorias. Se define la \emph{función de probabilidad marginal} de la variable aleatoria $X_i, \; i \in \{1, \ldots, n\}$ de la siguiente manera:
+    Sean $X_1, \ldots, X_n$ variables aleatorias. Se define la \emph{función de probabilidad marginal} de la variable aleatoria $X_i$, para $i \in \{1, \ldots, n\}$, de la siguiente manera:
 
-    \[ \forall i = 1,\ldots,n  \qquad F_{X_i}(x_i) = F_{X_{1}, \ldots, X_{n}}(+\infty, \ldots,x_i, \ldots,+\infty) \quad \forall x_i \in \mathbb{R}. \]
+    \[ \forall i = 1,\ldots,n,  \qquad F_{X_i}(x_i) = F_{X_{1}, \ldots, X_{n}}(+\infty, \ldots,x_i, \ldots,+\infty), \quad \forall x_i \in \mathbb{R}. \]
 \end{definicion}
 
 \begin{definicion}[Función de probabilidad marginal]
-    Sean $X_1, \ldots, X_n$ variables aleatorias discretas. Se define la \emph{función (masa) de probabilidad marginal} de la variable aleatoria $X_i, \; i \in \{1, \ldots, n\}$ de la siguiente manera:
+    Sean $X_1, \ldots, X_n$ variables aleatorias discretas. Se define la \emph{función (masa) de probabilidad marginal} de la variable aleatoria $X_i$, para $i \in \{1, \ldots, n\}$, de la siguiente forma:
 
     \[ p_{X_i}(x_i) = \sum_{x_1}\ldots\sum_{x_{i-1}}\sum_{x_{i+1}}\ldots\sum_{x_{n}} p_{X_1, \ldots, X_n}(x_1, \ldots, x_n), \quad (x_1, \ldots, x_n) \in \mathbb{R^n}. \]
 \end{definicion}
 
 \begin{definicion}[Función de densidad marginal]
-    Sean $X_1, \ldots, X_n$ variables aleatorias continuas. Se define la \emph{función de densidad marginal} de la variable aleatoria $X_i, \; i \in \{1, \ldots, n\}$ de la siguiente manera:
+    Sean $X_1, \ldots, X_n$ variables aleatorias continuas. Se define la \emph{función de densidad marginal} de la variable aleatoria $X_i$, para $i \in \{1, \ldots, n\}$, como sigue:
 
-    \[ f_{X_i}(x_i) = \int_{-\infty}^{x_1} \cdots \int_{-\infty}^{x_n} f_{X_{1}, \ldots, X_n} (x_1, \ldots, x_n)\, dx_1, \ldots, dx_{i-1},dx_{i+1}, \ldots,  dx_n \! \! \quad \forall x_i \in \mathbb{R}. \]
+    \[ f_{X_i}(x_i) = \int_{-\infty}^{x_1} \cdots \int_{-\infty}^{x_n} f_{X_{1}, \ldots, X_n} (x_1, \ldots, x_n) \, dx_1, \ldots, dx_{i-1},dx_{i+1}, \ldots,  dx_n, \! \! \quad \forall x_i \in \mathbb{R}. \]
 \end{definicion}
 
 \begin{definicion}\label{def:variables-aleatorias-idénticamente-distribuidas}
-    Sean $X_1, \ldots, X_n$ variables aleatorias definidas sobre el mismo espacio de probabilidad $(\Omega, \mathcal{A}, \mathrm{P})$, con funciones de distribución $F_{X_1}, \ldots, F_{X_n}$ respectivamente. Decimos que las variables aleatorias son idénticamente distribuidas (id) si
+    Sean $X_1, \ldots, X_n$ variables aleatorias definidas sobre el mismo espacio de probabilidad $(\Omega, \mathcal{A}, \mathrm{P})$, con funciones de distribución $F_{X_1}, \ldots, F_{X_n}$ respectivamente. Decimos que las variables aleatorias son \textbf{idénticamente distribuidas (i.d.)} si
 
-    \[ F_{X_1}(x) = F_{X_j}(x), \; \forall j \in \{1, \ldots, n \} \; y \; \forall x \in \mathbb{R}. \]
+    \[ F_{X_1}(x) = F_{X_j}(x), \quad \forall j \in \{1, \ldots, n \} \; y \; \forall x \in \mathbb{R}. \]
 \end{definicion}
 
 \begin{definicion}\label{def:variables-aleatorias-independientes}
-    Sean $X_1, \ldots, X_n$ variables aleatorias definidas sobre el mismo espacio de probabilidad $(\Omega, \mathcal{A}, \mathrm{P})$, con funciones de distribución $F_{X_1}, \ldots, F_{X_n}$ respectivamente y función de distribución conjunta $F_{X}$. Decimos que las variables aleatorias son independientes si
+    Sean $X_1, \ldots, X_n$ variables aleatorias definidas sobre el mismo espacio de probabilidad $(\Omega, \mathcal{A}, \mathrm{P})$, con funciones de distribución $F_{X_1}, \ldots, F_{X_n}$ respectivamente y función de distribución conjunta $F_{X}$. Decimos que las variables aleatorias son \textbf{independientes} si
 
-    \[ F_X(x_1, \ldots, x_n) = F_{X_1}(x_1) \cdots F_{X_n}(x_n), \; \forall x_1, \ldots, x_n \in \mathbb{R}. \]
+    \[ F_X(x_1, \ldots, x_n) = F_{X_1}(x_1) \cdots F_{X_n}(x_n), \quad \forall x_1, \ldots, x_n \in \mathbb{R}. \]
 \end{definicion}
 
 \begin{observacion}
@@ -336,20 +336,20 @@ Una vez conocemos las funciones conjuntas de una serie de variables aleatorias e
 \end{observacion}
 
 \begin{definicion}
-    Las variables aleatorias que cumplan, de manera simultánea, la Definición~\ref{def:variables-aleatorias-idénticamente-distribuidas} y la Definición~\ref{def:variables-aleatorias-independientes} las llamaremos \emph{variables aleatorias independientes e idénticamente distribuidas} y se denotarán como \emph{variables aleatorias (i.d.d.)}.
+    Las variables aleatorias que cumplan, de manera simultánea, la Definición~\ref{def:variables-aleatorias-idénticamente-distribuidas} y la Definición~\ref{def:variables-aleatorias-independientes}, las llamaremos \emph{variables aleatorias independientes e idénticamente distribuidas} y se denotarán como \textbf{\emph{variables aleatorias (i.d.d.)}}.
 \end{definicion}
 
 \subsection{Propiedades de la esperanza y varianza}
-A continuación, se detallarán algunas de las propiedades fundamentales acerca de la esperanza de una variable aleatoria, que serán de gran utilidad de cara a realizar simplificaciones cuando trabajemos con variables aleatorias. Asimismo, se introduce el concepto de varianza, que está estrechamente relacionado con la esperanza y que usaremos en el devenir del trabajo.
+A continuación, se detallarán algunas de las propiedades fundamentales acerca de la esperanza de una variable aleatoria, que serán de gran utilidad de cara a realizar simplificaciones cuando trabajemos con variables aleatorias. Asimismo, se introduce el concepto de varianza, que está estrechamente relacionado con la esperanza y que usaremos de forma recurrente en el devenir del trabajo.
 
 \begin{proposicion}
     La esperanza matemática de una constante ($k \in \mathbb{R}$) para una variable aleatoria $X$ es la propia constante.
 \end{proposicion}
 
 \begin{proof}
-    \[ \mathbb{E}[k] = \int_{-\infty}^{+\infty} k f_{X}(x) \, dx = k\cdot \int_{-\infty}^{+\infty} f_{X}(x) = k \]
+    \[ \mathbb{E}[k] = \int_{-\infty}^{+\infty} k f_{X}(x) \, dx = k\cdot \int_{-\infty}^{+\infty} f_{X}(x) \, dx = k, \]
 
-    pues $f_{X}(x)$ es función de densidad de la variable aleatoria $X$ y, por tanto, el valor de su integral es 1.
+    pues $f_{X}(x)$ es función de densidad de la variable aleatoria $X$ y, por tanto, el valor de su integral es $1$.
 \end{proof}
 
 \begin{proposicion}[Linealidad de la esperanza]
@@ -363,23 +363,23 @@ A continuación, se detallarán algunas de las propiedades fundamentales acerca 
 \end{proof}
 
 \begin{teorema}
-    Sean $X_1, \ldots, X_n$ variables aleatorias independientes definidas sobre el mismo espacio de probabilidad $(\Omega, \mathcal{A}, \mathrm{P})$, tales que existe la esperanza de cada una de ellas, es decir, $\exists \ \mathbb{E}[X_i] \; \forall i \in \{1, \ldots, n \}$. Entonces existe $\mathbb{E}[X_1 \cdots X_n]$ y, además, se verifica
+    Sean $X_1, \ldots, X_n$ variables aleatorias independientes definidas sobre el mismo espacio de probabilidad $(\Omega, \mathcal{A}, \mathrm{P})$, tales que existe la esperanza de cada una de ellas, es decir, $\exists \ \mathbb{E}[X_i] \; \forall i \in \{1, \ldots, n \}$. Entonces, existe $\mathbb{E}[X_1 \cdots X_n]$ y, además, se verifica
 
     \[ \mathbb{E}[X_1 \cdots X_n] = \mathbb{E}[X_1] \cdots \mathbb{E}[X_n] = \prod_{i=1}^n \mathbb{E}[X_i]. \]
 \end{teorema}
 
 \begin{proof}
-    La demostración se sigue de manera sencilla utilizando el concepto de independencia. Para ello y por simplificar, consideramos el caso en el que tenemos dos variables aleatorias continuas, pues el resultado para el caso discreto y teniendo n variables aleatorias es análogo.
+    La demostración se sigue de manera sencilla utilizando el concepto de independencia. Para ello y por simplificar, consideramos el caso en el que tenemos dos variables aleatorias continuas, pues el resultado para el caso discreto y teniendo $n$ variables aleatorias es análogo.
 
     Por tanto, sean $X_1, X_2$ dos variables aleatorias continuas con función de densidad asociada $f_{X_1}$ y $f_{X_2}$ respectivamente. La esperanza de la multiplicación de dichas variables viene dada por
 
-    \[ \mathbb{E}[X_1X_2] = \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty} x_1x_2 f_{X_1, X_2} (x_1, x_2) \, dx_1dx_2 \]
+    \[ \mathbb{E}[X_1X_2] = \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty} x_1x_2 f_{X_1, X_2} (x_1, x_2) \, dx_1dx_2, \]
 
     donde $f_{X_1, X_2} (x_1, x_2)$ denota la función de densidad conjunta de las variables aleatorias. Dado que las variables aleatorias son independientes, la función de densidad conjunta se puede expresar como el producto de las funciones marginales de cada variable aleatoria, es decir
 
     \[ f_{X_1, X_2} (x_1, x_2) = f_{X_1}(x_1) f_{X_2}(x_2). \]
 
-    Finalmente, sustituyendo este resultado en la expresión anterior obtenemos el desenlace buscado:
+    Finalmente, sustituyendo este resultado en la expresión anterior obtenemos el resultado buscado:
 
     \begin{align*}
         \mathbb{E}[X_1 X_2] &= \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} x_1 x_2 f_{X_1, X_2}(x_1, x_2) \, dx_1 dx_2 \\
@@ -396,18 +396,18 @@ A continuación, se detallarán algunas de las propiedades fundamentales acerca 
 \end{proposicion}
 
 \begin{proof}
-    La demostración se basa en el hecho de que $X$ y $g$ son funciones medibles y la composición de funciones medibles es una función medible. Es decir $ g(X):(\Omega, \mathcal{A}, P) \to (\mathbb{R}, \mathcal{B}) $ definida por $g(X)(w) = g(X(w))$ con $w \in \Omega$ es una función medible desde el espacio de probabilidad $(\Omega, \mathcal{A}, P)$ hasta el espacio de medida $(\mathbb{R},\mathcal{B})$.
+    La demostración se basa en el hecho de que $X$ y $g$ son funciones medibles, y que la composición de funciones medibles es una función medible. Es decir, $ g(X):(\Omega, \mathcal{A}, P) \to (\mathbb{R}, \mathcal{B})$, definida por $g(X)(w) = g(X(w))$, con $w \in \Omega$, es una función medible desde el espacio de probabilidad $(\Omega, \mathcal{A}, P)$ hasta el espacio de medida $(\mathbb{R},\mathcal{B})$.
 \end{proof}
 
 \begin{observacion}
-    Sea $X$ una variable aleatoria continua con función de densidad $f_X$ y $g$ una función integrable de Lebesgue. La esperanza de la variable aleatoria continua $g(X)$ viene dada por
+    Sean $X$ una variable aleatoria continua con función de densidad $f_X$ y $g$ una función integrable de Lebesgue. La esperanza de la variable aleatoria continua $g(X)$ viene dada por
 
     \[ \mathbb{E}[g(X)] =  \int_{-\infty}^{+\infty} g(x) f_{X}(x) \, dx. \]
 
     Un resultado análogo se observaría para una variable aleatoria discreta, con la salvedad de que tendríamos la suma en lugar de la integral y la función de probabilidad en lugar de la función de densidad.
 \end{observacion}
 
-Es conveniente remarcar la observación anterior, pues es posible conocer la esperanza de la variable aleatoria $g(X)$ conociendo la distribución de probabilidad de la variable $X$, sin la necesidad de conocer la propia distribución de $g(X)$. De igual manera, destacamos que estas propiedades de la esperanza se pueden generalizar para vectores aleatorios.
+Es conveniente remarcar la observación anterior, dado que es posible conocer la esperanza de la variable aleatoria $g(X)$ conociendo la distribución de probabilidad de la variable $X$, sin la necesidad de conocer la propia distribución de $g(X)$. De igual manera, destacamos que estas propiedades de la esperanza se pueden generalizar para vectores aleatorios.
 
 A partir de la definición de esperanza de una variable aleatoria se puede construir el concepto de varianza de la variable aleatoria. A modo intuitivo, la varianza es una medida estadística que nos ayudará a cuantificar la dispersión de un conjunto de datos en relación con su media (esperanza).
 
@@ -426,7 +426,7 @@ A partir de la definición de esperanza de una variable aleatoria se puede const
         Var(X) &= \mathbb{E}[{(X - \mathbb{E}[X])}^2] \\
         &= \mathbb{E}[X^2 - 2X\mathbb{E}[X] + \mathbb{E}{[X]}^2] \\
         &=  \mathbb{E}[X^2] - 2\mathbb{E}[X]\mathbb{E}[X] + \mathbb{E}{[X]}^2 \\
-        &= \mathbb{E}[X^2]  - \mathbb{E}{[X]}^2.
+        &= \mathbb{E}[X^2]  - \mathbb{E}{[X]}^2,
     \end{align*}
 
     donde se han aplicado algunas de las propiedades de la esperanza comentadas anteriormente.
@@ -437,7 +437,7 @@ A partir de la definición de esperanza de una variable aleatoria se puede const
 Las distribuciones de probabilidad son funciones que describen el comportamiento de una variable aleatoria, indicando la probabilidad de que esta tome ciertos valores. Estas distribuciones pueden ser, como se ha comentado en la sección anterior, discretas o continuas, dependiendo de la naturaleza de la variable aleatoria.
 
 \begin{definicion}[Moda]
-    La \textit{moda} de una distribución de probabilidad se refiere al dato (o datos) que más se repite en un conjunto de observaciones. En otras palabras, corresponde al valor (o valores) donde la función de probabilidad alcanza su máximo, o la función de masa de probabilidad tiene la mayor frecuencia.
+    La \textit{moda} de una distribución de probabilidad se refiere al dato (o datos) que más se repite en un conjunto de observaciones. En otras palabras, corresponde al valor (o valores) donde la función de probabilidad alcanza su máximo, o la función masa de probabilidad tiene la mayor frecuencia.
 \end{definicion}
 
 A su vez, diremos que una distribución es \textit{unimodal} si posee un único valor de moda, \textit{bimodal} si tiene dos, y \textit{multimodal} si presenta varios (véase Figura~\ref{fig:unimodal-multimodal}).
@@ -459,16 +459,16 @@ A su vez, diremos que una distribución es \textit{unimodal} si posee un único 
 \end{figure}
 
 \subsection{Distribución Normal}
-La distribución normal o distribución de Gauss es la distribución de probabilidad más estudiada y utilizada en el ámbito de la inferencia estadística~\cite{Bryc1995TheND}, dadas sus propiedades matemáticas, como su simetría, la concentración de probabilidades alrededor de la media y su relación con otras distribuciones.
+La distribución normal, o distribución de Gauss, es la distribución de probabilidad más estudiada y utilizada en el ámbito de la inferencia estadística~\cite{Bryc1995TheND}, dadas sus propiedades matemáticas, como su simetría, la concentración de probabilidades alrededor de la media y su relación con otras distribuciones.
 
 \begin{definicion}[Distribución normal]
-    Sea $X$ una variable aleatoria continua. Decimos que $X$ sigue una \emph{distribución normal} si su función de densidad $f_X$ viene dada por
+    Sea $X$ una variable aleatoria continua. Decimos que $X$ sigue una \emph{distribución normal} si su función de densidad $f_X$ viene dada por:
 
-    \[ f_X(x) = \frac{1}{\sqrt{2\pi \sigma^2}} \cdot e^{-\frac{{(x - \mu)}^2}{2\sigma^2}} \]
+    \[ f_X(x) = \frac{1}{\sqrt{2\pi \sigma^2}} \cdot e^{-\frac{{(x - \mu)}^2}{2\sigma^2}}, \]
 
     donde $\mu, \sigma^2 \in \mathbb{R}$ denotan, respectivamente, la esperanza y varianza de la variable aleatoria $X$.
 
-    Además, si $X$ sigue una distribución normal lo denotaremos como $X \sim \mathcal{N}(\mu,\sigma^2)$. De igual modo, si $\mu = 0$ y $\sigma^2=1$, entonces diremos que la variable aleatoria $X \sim \mathcal{N}(0,1)$ sigue una \emph{distribución normal estándar}.
+    Además, si $X$ sigue una distribución normal, lo denotaremos como $X \sim \mathcal{N}(\mu,\sigma^2)$. De igual modo, si $\mu = 0$ y $\sigma^2=1$, entonces diremos que la variable aleatoria $X \sim \mathcal{N}(0,1)$ sigue una \emph{distribución normal estándar}.
 \end{definicion}
 
 \begin{proposicion}
@@ -497,7 +497,7 @@ Como consecuencia de la primera propiedad de la proposición anterior, se pueden
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.9\textwidth]{img/distribuciones-normales.png}
-    \caption[Ejemplos de distribuciones normales.] {Ejemplos de distribuciones normales. A la izquierda observamos distintas distribuciones normales, donde podemos notar como el parámetro $\mu$ determina el centro de la distribución y el parámetro $\sigma$ controla la dispersión de los datos. A la derecha observamos una distribución normal estándar, donde se puede apreciar con claridad que la distribución es simétrica con respecto a $\mu$.}\label{fig:distribuciones-normales}
+    \caption[Ejemplos de distribuciones normales.] {Ejemplos de distribuciones normales. A la izquierda observamos distintas distribuciones normales, donde podemos notar como el parámetro $\mu$ determina el centro de la distribución y el parámetro $\sigma$ controla la dispersión de los datos. A medida que el parámetro $\sigma$ incrementa, la distribución se vuelve más dispersa y su altura máxima disminuye. A la derecha observamos una distribución normal estándar, donde se puede apreciar con claridad que la distribución es simétrica con respecto a $\mu$.}\label{fig:distribuciones-normales}
 \end{figure}
 
 \subsection{Distribución de Rademacher}\label{subsec:distribucion-rademacher}
@@ -530,7 +530,7 @@ La distribución de Rademacher es una distribución de probabilidad discreta que
 
 \chapter{Descomposición en Valores Singulares y Pseudoinversa de una Matriz}\label{ch:descomposicion-valores-singulares-pseudoinversa}
 
-En este capítulo presentaremos dos conceptos fundamentales de cara al desarrollo del trabajo: la descomposición en valores singulares (SVD) y la pseudoinversa de una matriz. En cuanto a las referencias utilizadas a lo largo de este capítulo, debemos destacar~\cite{Friedberg2014linear, Strang2023, Poole2011}. Estos libros nos ayudaron a presentar los conceptos básicos más importantes, así como las demostraciones de los resultados más relevantes del capítulo.
+En este capítulo presentaremos dos conceptos fundamentales de cara al desarrollo del trabajo: la descomposición en valores singulares (SVD) y la pseudoinversa de una matriz. En cuanto a las referencias utilizadas a lo largo de este capítulo, debemos destacar~\cite{Friedberg2014linear, Strang2023, Poole2011}. Estos libros nos han ayudado a presentar los conceptos básicos más importantes, así como las demostraciones de los resultados más relevantes del capítulo.
 
 \section{Vectores y matrices}\label{sec:vectores-matrices}
 
@@ -544,7 +544,7 @@ Trabajaremos siempre con escalares reales y escribiremos los vectores de $\mathb
         v_{2} \\ 
         \vdots \\
         v_{n}
-    \end{pmatrix} = {(v_{1}, v_{2}, \ldots, v_{n})}^{T} \quad \text{donde } v_i \in \mathbb{R} \ \ \forall i \in \{1, \ldots, n \}.
+    \end{pmatrix} = {(v_{1}, v_{2}, \ldots, v_{n})}^{T}, \quad \text{donde } v_i \in \mathbb{R} \ \ \forall i \in \{1, \ldots, n \}.
 \]
 
 También se recuerdan los conceptos de norma y ortonormalidad de vectores, que serán de gran utilidad en el desarrollo de resultados posteriores. De esta manera, dados dos vectores $u, v \in \mathbb{R}^{n}$, denotaremos por $u \cdot v$ su producto escalar usual y por $\| u \|$ la norma euclídea del vector $u$. Así, diremos que dos vectores son ortogonales si su producto escalar es igual a cero.
@@ -552,10 +552,10 @@ También se recuerdan los conceptos de norma y ortonormalidad de vectores, que s
 Denotaremos por $\mathcal{M}_{m \times n}(\mathbb{R})$ al espacio vectorial de las matrices de orden $m$ por $n$ con entradas en $\mathbb{R}$. A la matriz cuyas entradas son todas iguales a cero la llamaremos matriz cero y la denotaremos por $O$. Además, podemos formar una matriz a partir de vectores columna, utilizando la notación $V = [v_1, v_2, \ldots, v_n]$, donde $\{v_1, v_2, \ldots, v_n\}$ son los vectores columna que componen la matriz V.
 
 \begin{definicion}
-    La matriz \textbf{traspuesta} $A^{T}$ de una matriz $A \in \mathcal{M}_{m \times n}(\mathcal{R})$ es la matriz de tamaño $n \times m$ que se obtiene de la matriz $A$ al intercambiar las filas por las columnas, es decir $(a^{T})_{ij} = a_{ji}$. Decimos que una matriz cuadrada $A$ es \textbf{simétrica} si cumple $A^{T} = A$ y decimos que es \textbf{ortogonal} si sus columnas están formadas por vectores ortonormales dos a dos.
+    La matriz \textbf{traspuesta} $A^{T}$ de una matriz $A \in \mathcal{M}_{m \times n}(\mathcal{R})$ es la matriz de tamaño $n \times m$ que se obtiene de la matriz $A$ al intercambiar las filas por las columnas, es decir, $(a^{T})_{ij} = a_{ji}$. Decimos que una matriz cuadrada $A$ es \textbf{simétrica} si cumple $A^{T} = A$ y decimos que es \textbf{ortogonal} si sus columnas están formadas por vectores ortonormales dos a dos.
 \end{definicion}
 
-Denotamos la delta de Kronecker $\delta_{ij}$ como la función dada por
+Denotamos la \textbf{delta de Kronecker} $\delta_{ij}$ como la función dada por
 
 \[
     \delta_{ij} =
@@ -568,7 +568,7 @@ Denotamos la delta de Kronecker $\delta_{ij}$ como la función dada por
 De esta manera, la \textbf{matriz identidad} de tamaño $n \times n$ ($I_{n}$) viene dada por $(I_n)_{ij} = \delta_{ij}$.
 
 \begin{definicion}
-    Sea $A$ una matriz de tamaño $m \times n$. Se dice que $A$ es una matriz \textbf{escalonada} si es $O$ o satisface las tres condiciones siguientes:
+    Sea $A$ una matriz de tamaño $m \times n$. Se dice que $A$ es una matriz \textbf{escalonada} si es la matriz $O$, o bien satisface las tres condiciones siguientes:
 
     \begin{enumerate}
         \item El primer elemento no nulo de cada fila, si existe, es un $1$.
@@ -601,7 +601,7 @@ De esta manera, la \textbf{matriz identidad} de tamaño $n \times n$ ($I_{n}$) v
         \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}, \quad
         \begin{pmatrix} 1 & $x$ \\ 0 & 0 \end{pmatrix} \quad y \quad
         \begin{pmatrix} 0 & 1 \\ 0 & 0
-        \end{pmatrix}
+        \end{pmatrix},
     \]
 
     donde $x \in \mathbb{R}$ puede ser cualquier escalar.
@@ -649,14 +649,14 @@ Para cualquier matriz $A \in \mathcal{M}_{m \times n}(\mathbb{R})$, la matriz $A
 LLegados a este punto, ya podemos presentar los principales contenidos sobre matrices abordados en este trabajo: la descomposición en valores singulares y la pseudoinversa. Cabe destacar que estos resultados se enuncian para matrices con escalares en el cuerpo $\mathbb{R}$, aunque su generalización a otros cuerpos es posible.
 
 \begin{definicion}
-    Si $A$ es una matriz de tamaño $m \times n$, los \textbf{valores singulares} de $A$ son las raíces cuadradas (positivas) de los valores propios de la matriz $A^{T}A$ y se denotan mediante $\sigma_{1}, \sigma_{2}, \ldots, \sigma_{n}$. Además, es convencional ordenar los valores singulares de manera que $\sigma_{1} \geq \sigma_{2} \geq \cdots \geq \sigma_{n}$.
+    Si $A$ es una matriz de tamaño $m \times n$, los \textbf{valores singulares} de $A$ son las raíces cuadradas (positivas) de los valores propios de la matriz $A^{T}A$, y se denotan mediante $\sigma_{1}, \sigma_{2}, \ldots, \sigma_{n}$. Además, es convencional ordenar los valores singulares de manera que $\sigma_{1} \geq \sigma_{2} \geq \cdots \geq \sigma_{n}$.
 \end{definicion}
 
 
 El siguiente resultado nos indica que toda matriz, independientemente de su estructura, puede ser factorizada como producto de tres matrices, dos de las cuales serán ortogonales.
 
 \begin{teorema}[Descomposición en valores singulares]
-    Sea $A \in \mathcal{M}_{m \times n}(\mathbb{R})$ una matriz cuyo rango es $r$ y con valores singulares positivos $\sigma_{1} \geq \sigma_{2} \geq \cdots \geq \sigma_{r}$ y sea $\Sigma$ la matriz de tamaño $m \times n$ definida por 
+    Sea $A \in \mathcal{M}_{m \times n}(\mathbb{R})$ una matriz cuyo rango es $r$ y con valores singulares positivos $\sigma_{1} \geq \sigma_{2} \geq \cdots \geq \sigma_{r}$, y sea $\Sigma$ la matriz de tamaño $m \times n$ definida por 
 
     \[
         \Sigma_{ij} =
@@ -672,19 +672,19 @@ El siguiente resultado nos indica que toda matriz, independientemente de su estr
         A = U \Sigma V^{T}.
     \]
 
-    A esta factorización la llamaremos \emph{descomposición en valores singulares (SVD)} de $A$.
+    A esta factorización la llamaremos \textbf{descomposición en valores singulares (SVD)} de $A$.
 \end{teorema}
 
 \begin{proof}
     La demostración se fundamenta en la construcción directa de las matrices $V$ y $U$, verificando posteriormente que se satisface el resultado buscado.
 
-    Para construir la matriz ortogonal $V$, basta tomar una base ortonormal $\{v_1, v_2, \ldots, v_n \}$ de $\mathbb{R}^{n}$ formada por vectores asociados a los valores propios $\{\lambda_1, \lambda_2, \ldots, \lambda_n\}$ de la matriz simétrica y cuadrada $A^{T}A$ de tamaño $n$. Entonces se tiene que $V = [v_1, v_2, \ldots, v_n]$ es una matriz ortogonal y cuadrada de tamaño $n$.
+    Para construir la matriz ortogonal $V$, basta tomar una base ortonormal $\{v_1, v_2, \ldots, v_n \}$ de $\mathbb{R}^{n}$ formada por vectores asociados a los valores propios $\{\lambda_1, \lambda_2, \ldots, \lambda_n\}$ de la matriz simétrica y cuadrada $A^{T}A$ de tamaño $n$. Entonces, se tiene que $V = [v_1, v_2, \ldots, v_n]$ es una matriz ortogonal y cuadrada de tamaño $n$.
 
     Para construir la matriz ortogonal $U$, primero notemos que $\{Av_1, Av_2, \ldots, Av_n \}$ es un conjunto ortogonal de vectores de $\mathbb{R}^{m}$. En efecto, para $i \neq j$, se cumple
 
-    \[ (Av_i)\cdot(Av_j) = (Av_i)^{T}Av_j=v_{i}^{T}A^{T}Av_j = v_{i}^{T}\lambda_j v_j=\lambda_j(v_i \cdot v_j) = 0\]
+    \[ (Av_i)\cdot(Av_j) = (Av_i)^{T}Av_j=v_{i}^{T}A^{T}Av_j = v_{i}^{T}\lambda_j v_j=\lambda_j(v_i \cdot v_j) = 0,\]
 
-    dado que los vectores propios $v_i$ son ortogonales. Recordamos ahora que los valores singulares satisfacen $\sigma_i = ||Av_i||$ y que los primeros $r$ valores singulares son distintos de cero. Por tanto, podemos normalizar $Av_1, \ldots, Av_r$ de la siguiente forma
+    dado que los vectores propios $v_i$ son ortogonales. Recordamos ahora que los valores singulares satisfacen $\sigma_i = ||Av_i||$ y que los primeros $r$ valores singulares son distintos de cero. Por tanto, podemos normalizar $Av_1, \ldots, Av_r$ de la siguiente forma:
 
     \begin{equation}
         u_i = \frac{1}{\sigma_i} A v_i \quad \text{para } i = 1, \ldots, r.
@@ -692,7 +692,7 @@ El siguiente resultado nos indica que toda matriz, independientemente de su estr
     \end{equation}
     
 
-    Esto garantiza que $\{ u_1, \ldots, u_r\}$ es un conjunto ortonormal de $\mathbb{R}^{m}$, pero si $r < m$ no será una base para $\mathbb{R}^{m}$. En este caso, se extiende el conjunto $\{u_1, \ldots, u_r \}$ a una base ortonormal $\{u_1, \ldots, u_m \}$ para $\mathbb{R}^{m}$. Entonces se tiene que $U$ es una matriz ortogonal. Ahora, falta comprobar que, con la construcción realizada, se satisface el resultado $A = U \Sigma V^{T}$. Dado que $V^{T} = V^{-1}$ (al ser la matriz $V$ ortogonal), esto equivale a demostrar que $AV = U\Sigma$.
+    Esto garantiza que $\{ u_1, \ldots, u_r\}$ es un conjunto ortonormal de $\mathbb{R}^{m}$, pero si $r < m$ no será una base para $\mathbb{R}^{m}$. En este caso, se extiende el conjunto $\{u_1, \ldots, u_r \}$ a una base ortonormal $\{u_1, \ldots, u_m \}$ para $\mathbb{R}^{m}$. En consecuencia, la matriz $U$ es ortogonal. Ahora, falta comprobar que, con la construcción realizada, se satisface el resultado $A = U \Sigma V^{T}$. Dado que $V^{T} = V^{-1}$ (al ser la matriz $V$ ortogonal), esto equivale a demostrar que $AV = U\Sigma$.
 
     En primer lugar, sabemos, a partir de la ecuación~\eqref{eq:singulares1}, que $Av_i=\sigma_i u_i$ para $i=1, \ldots, r$ y que $||A v_i|| = \sigma_i = 0$ para $i=r+1, \ldots,n$. En consecuencia, $Av_i = 0$ para $i=r+1, \ldots,n$. Por tanto, 
 
@@ -708,7 +708,7 @@ El siguiente resultado nos indica que toda matriz, independientemente de su estr
                    0 & \cdots & \sigma_r & O \\
                    O & O & O & O
                \end{bmatrix} \\
-            &= U \Sigma
+            &= U \Sigma,
     \end{align*}
 
     quedando probada la igualdad $AV = U \Sigma$.
@@ -716,7 +716,7 @@ El siguiente resultado nos indica que toda matriz, independientemente de su estr
 
 El siguiente resultado generaliza el concepto de matriz inversa cuando la matriz no es cuadrada.
 \begin{definicion}[Pseudoinversa]
-    Sea $A \in \mathcal{M}_{m \times n}(\mathbb{R})$ con $m > n$ y donde las columnas de $A$ son linealmente independientes. Se define la \textbf{pseudoinversa} \emph{(o inversa de Moore-Penrose)} de la matriz $A$ como la matriz $A^{\dagger}$ dada por
+    Sea $A \in \mathcal{M}_{m \times n}(\mathbb{R})$ con $m > n$ y cuyas columnas son linealmente independientes. Se define la \textbf{pseudoinversa} \emph{(o inversa de Moore-Penrose)} de la matriz $A$ como la matriz $A^{\dagger}$ dada por
 
     \[ A^{\dagger} = {(A^{T}A)}^{-1}A^{T}, \]
 
@@ -740,7 +740,7 @@ No obstante, dado que toda matriz se puede factorizar en su descomposición en v
 
 Presentamos una forma análoga de definir la pseudoinversa de una matriz, basándose en las propiedades que debe cumplir la pseudoinversa, que serán de gran utilidad en el desarrollo del trabajo.
 \begin{definicion}[Condiciones de Moore-Penrose]
-    Sea $A \in \mathcal{M}_{m \times n}(\mathbb{R})$ la pseudoinversa de $A$, $A^{\dagger} \in \mathcal{M}_{n \times m}(\mathbb{R})$, es la única matriz que satisface las siguientes propiedades, conocidas como las condiciones de Moore-Penrose:
+    Sea $A \in \mathcal{M}_{m \times n}(\mathbb{R})$ la pseudoinversa de $A$, $A^{\dagger} \in \mathcal{M}_{n \times m}(\mathbb{R})$, es la única matriz que satisface las siguientes propiedades, conocidas como las \textbf{condiciones de Moore-Penrose}:
 
     \begin{enumerate}
         \item $A A^{\dagger} A = A$.
@@ -748,7 +748,7 @@ Presentamos una forma análoga de definir la pseudoinversa de una matriz, basán
         \item ${(A A^{\dagger})}^{T}$ y ${(A^{\dagger} A)}^{T}$ son simétricas.
     \end{enumerate}
 
-    En particular, se tiene que $AA^{\dagger}$ y $A^{\dagger}A$ son proyecciones ortogonales sobre $Im(A)$ y ${Im(A)}^{T}$ respectivamente. Además, si $A$ es de rango completo, es decir, $rango(A) = r  = \min\{m, n\}$, entonces $A^{\dagger}$ puede expresarse de forma sencilla como sigue
+    En particular, se tiene que $AA^{\dagger}$ y $A^{\dagger}A$ son proyecciones ortogonales sobre $Im(A)$ y ${Im(A)}^{T}$ respectivamente. Además, si $A$ es de rango completo, es decir, $rango(A) = r  = \min\{m, n\}$, entonces $A^{\dagger}$ puede expresarse de forma sencilla como sigue:
 
     \begin{itemize}
         \item Si $r = m = n$, entonces la matriz $A$ es invertible y $A^{\dagger} = A^{-1}$.

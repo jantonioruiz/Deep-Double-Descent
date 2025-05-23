@@ -3,12 +3,12 @@
 
 \chapter{Detalles Matemáticos Adicionales}\label{ap:apendiceA}
 
-En este apéndice se muestran la demostraciones del Lema~\ref{lema:raro-clasificación-gd}, extraída de~\cite{Soudry2024} y de la Proposición~\ref{prop:non-conexity}.
+En este apéndice se muestran las demostraciones del Lema~\ref{lema:raro-clasificación-gd}, extraída de~\cite{Soudry2024} y de la Proposición~\ref{prop:non-conexity}.
 
 \textbf{Lema}~\ref{lema:raro-clasificación-gd}. Sea $\mathcal{L}(w)$ una función $\beta$-suave no negativa. Si $\eta < \frac{2}{\beta}$, entonces, para cualquier $w_0$ y utilizando el método del descenso de gradiente dado por:
 
 \[
-    w^{(\tau + 1)} = w^{(\tau)} - \eta \nabla \mathcal{L}(w)
+    w^{(\tau + 1)} = w^{(\tau)} - \eta \nabla \mathcal{L}(w),
 \]
 
 se tiene que $\sum_{u=0}^{\infty} \| \nabla\mathcal{L}(w^{(u)}) \|^{2} < \infty$ y, por tanto:
@@ -38,13 +38,13 @@ se tiene que $\sum_{u=0}^{\infty} \| \nabla\mathcal{L}(w^{(u)}) \|^{2} < \infty$
       \frac{\mathcal{L} (w^{(\tau)}) - \mathcal{L} (w^{(\tau + 1)})}{\eta \left( 1 - \frac{\beta \eta}{2} \right)} \geq \|\nabla \mathcal{L} (w^{(\tau)})\|^2,
   \]
 
-  lo que implica
+  lo que implica que
 
   \[
       \sum_{u=0}^{t} \|\nabla \mathcal{L} (w^{(u)})\|^2 \leq \sum_{u=0}^{t} \frac{\mathcal{L} (w^{(u)}) - \mathcal{L} (w^{(u+1)})}{\eta \left( 1 - \frac{\beta \eta}{2} \right)} = \frac{\mathcal{L} (w_0) - \mathcal{L} (w^{(\tau + 1)})}{\eta \left( 1 - \frac{\beta \eta}{2} \right)}.
   \]
 
-  El lado derecho está acotado por una constante finita, dado que $\mathcal{L} (w_0) < \infty$ y $0 \leq \mathcal{L} (w^{(\tau + 1)})$. Por tanto, esto implica que
+  El lado derecho está acotado por una constante finita, dado que $\mathcal{L} (w_0) < \infty$ y $0 \leq \mathcal{L} (w^{(\tau + 1)})$. Por tanto, se deduce que
 
   \[
       \sum_{u=0}^{\infty} \|\nabla \mathcal{L} (w^{(u)})\|^2 < \infty,
@@ -53,7 +53,7 @@ se tiene que $\sum_{u=0}^{\infty} \| \nabla\mathcal{L}(w^{(u)}) \|^{2} < \infty$
   y, finalmente, nos queda el resultado buscado: $\|\nabla \mathcal{L} (w^{(\tau)})\|^2 \to 0$.
 \end{proof}
 
-\textbf{Proposición}~\ref{prop:non-conexity}. Sea $w^{*}$ una solución, es decir, $\mathcal{L}(w^{*}) = 0$, y supongamos que $\frac{d}{dw}\frac{\partial \mathcal{L}}{\partial \mathcal{F}}(w^{*}) \neq 0$ y $rang(H_{\mathcal{F}_{i}}(w^{*})) > 2n$ para algún $i \in \{1, \ldots, n \}$. Entonces $\mathcal{L}(w)$ no es convexa en ningún entorno de $w^{*}$.
+\textbf{Proposición}~\ref{prop:non-conexity}. Sea $w^{*}$ una solución, es decir, $\mathcal{L}(w^{*}) = 0$, y supongamos que $\frac{d}{dw}\frac{\partial \mathcal{L}}{\partial \mathcal{F}}(w^{*}) \neq 0$ y $rang(H_{\mathcal{F}_{i}}(w^{*})) > 2n$ para algún $i \in \{1, \ldots, n \}$. Entonces, $\mathcal{L}(w)$ no es convexa en ningún entorno de $w^{*}$.
 
 \begin{proof}
     La matriz Hessiana de una función de pérdida $\mathcal{L}(\mathcal{F}(w))$ viene dada por:
@@ -75,7 +75,7 @@ se tiene que $\sum_{u=0}^{\infty} \| \nabla\mathcal{L}(w^{(u)}) \|^{2} < \infty$
     \begin{align}
         H_{\mathcal{L}}( w^* - \delta) &=  
         \underbrace{\mathcal{DF}( w^* - \delta)^T \frac{\partial^2 \mathcal{L}}{\partial \mathcal{F}^2}( w^* - \delta) \mathcal{DF}( w^* - \delta)}_{A( w^* - \delta)} \nonumber \\
-        &\quad - \sum_{i=1}^{n} \left( \frac{d}{d w} \left( \frac{\partial \mathcal{L}}{\partial \mathcal{F}}( w^*) \right) \delta \right)_i H_{\mathcal{F}_i}( w^* + \delta) + o(\|\delta\|).
+        &\quad - \sum_{i=1}^{n} \left( \frac{d}{d w} \left( \frac{\partial \mathcal{L}}{\partial \mathcal{F}}( w^*) \right) \delta \right)_i H_{\mathcal{F}_i}( w^* + \delta) + o(\|\delta\|),
     \end{align}
         
 
@@ -105,7 +105,7 @@ se tiene que $\sum_{u=0}^{\infty} \| \nabla\mathcal{L}(w^{(u)}) \|^{2} < \infty$
         - \sum_{i=1}^{n} \left( \frac{d}{d w} \left( \frac{\partial \mathcal{L}}{\partial \mathcal{F}}( w^*) \right) \delta \right)_i v^T H_{\mathcal{F}_i}( w^* - \delta) v + o(\|\delta\|).
     \end{align}
 
-    Para finalizar tenemos que mostrar que, para un $\delta$ suficientemente pequeño, $v^T H_{\mathcal{L}}(w^* + \delta) v$ y $v^T H_{\mathcal{L}}(w^* - \delta) v$ no pueden ser simultáneamente no negativos, lo que implica inmediatamente que $H_{\mathcal{L}}$ no es semidefinida positiva en un entorno cercano de $w^*$, y por tanto, $\mathcal{L}$ no es localmente convexa en $w^*$. Usando la condición 
+    Para finalizar tenemos que mostrar que, para un $\delta$ suficientemente pequeño, $v^T H_{\mathcal{L}}(w^* + \delta) v$ y $v^T H_{\mathcal{L}}(w^* - \delta) v$ no pueden ser simultáneamente no negativos, lo que implica inmediatamente que $H_{\mathcal{L}}$ no es semidefinida positiva en un entorno cercano de $w^*$ y, por tanto, $\mathcal{L}$ no es localmente convexa en $w^*$. Usando la condición 
     \[
     \frac{d}{dw} (\frac{\partial \mathcal{L}}{\partial \mathcal{F}}(w^*)) = 0,
     \]
