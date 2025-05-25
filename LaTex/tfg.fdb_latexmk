@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex tfg"] 1748162432.02588 "tfg.aux" "tfg.bbl" "tfg" 1748164783.61873 0
+["bibtex tfg"] 1748195574.46306 "tfg.aux" "tfg.bbl" "tfg" 1748196056.29814 0
   "./alpha-es.bst" 1739270953 23918 4d221338a3fa26695ca9ad8a86b90283 ""
   "./library.bib" 1745430720 34222 d74e72e17789bb0cecca6acdfa74d527 ""
-  "tfg.aux" 1748164782 168502 d46a1e7c0e349e1a9bbf12b9bc6fc3d8 "pdflatex"
+  "tfg.aux" 1748196055 168502 d46a1e7c0e349e1a9bbf12b9bc6fc3d8 "pdflatex"
   (generated)
   "tfg.bbl"
   "tfg.blg"
   (rewritten before read)
-["pdflatex"] 1748164769.81189 "c:/Users/Juan Antonio/Desktop/GitHub/Deep-Double-Descent/LaTex/tfg.tex" "tfg.pdf" "tfg" 1748164783.61952 0
+["pdflatex"] 1748196040.51351 "c:/Users/Juan Antonio/Desktop/GitHub/Deep-Double-Descent/LaTex/tfg.tex" "tfg.pdf" "tfg" 1748196056.29915 0
   "C:/Users/Juan Antonio/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1744794524 117479 142d3eb6ca56e4442bce1e0476081fb6 ""
   "C:/Users/Juan Antonio/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1736877118 12016817 d416b080b416458dfba37a6a99ba1248 ""
   "C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -286,7 +286,7 @@
   "capitulos/conclusiones_trabajosfuturos.tex" 1747997240 10985 188f7aa57c6bd1db3fdf5708cd353a07 ""
   "capitulos/desarrollo_informatico.tex" 1747072232 92117 78ea4e70950356304f223739f64b275b ""
   "capitulos/desarrollo_matematico.tex" 1746984612 109066 ffa145afaab84cdbf5eab2e3d759ad82 ""
-  "capitulos/estado_arte.tex" 1747936381 19735 a2f58296f3f93386747bdcb1cfc997d8 ""
+  "capitulos/estado_arte.tex" 1748196033 19843 d525edcf9398c442a1966b7b6282a059 ""
   "capitulos/fundamentos_informaticos.tex" 1748164769 88866 ad1a95e6fedf136bd32b679e21b14b6d ""
   "capitulos/fundamentos_matematicos.tex" 1748072385 54764 caa2b08de91051653c60c47baf6cb200 ""
   "glosario_info.tex" 1748163666 2475 77959ae38f7d3c8122db4eddb194f4f1 ""
@@ -382,13 +382,13 @@
   "preliminares/resumen.tex" 1746867338 3786 ec5a5de905c0c55d201174991d6dff02 ""
   "preliminares/summary.tex" 1746867399 3681 8686642edb6113c7bc4939e6f4aa59f3 ""
   "preliminares/tablacontenidos.tex" 1736876506 1283 676c9ae1f7969bc22e60398af089ff83 ""
-  "tfg.aux" 1748164782 168502 d46a1e7c0e349e1a9bbf12b9bc6fc3d8 "pdflatex"
-  "tfg.bbl" 1748162432 22625 bde8e868ad75b4dca0dfa11130034fc8 "bibtex tfg"
-  "tfg.lof" 1748164782 10522 167c07ee6e65144db09ff18887b248e4 "pdflatex"
-  "tfg.lot" 1748164782 3903 9f24b0c788f368d98e4929f39acd9a41 "pdflatex"
-  "tfg.out" 1748164771 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "tfg.aux" 1748196055 168502 d46a1e7c0e349e1a9bbf12b9bc6fc3d8 "pdflatex"
+  "tfg.bbl" 1748195574 22625 bde8e868ad75b4dca0dfa11130034fc8 "bibtex tfg"
+  "tfg.lof" 1748196055 10522 167c07ee6e65144db09ff18887b248e4 "pdflatex"
+  "tfg.lot" 1748196055 3903 9f24b0c788f368d98e4929f39acd9a41 "pdflatex"
+  "tfg.out" 1748196042 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "tfg.tex" 1746867932 4582 630ebdbdac2835b620e346d1d0fcb0ca ""
-  "tfg.toc" 1748164782 10307 b1b17f8ffe395ca6af240044a137403a "pdflatex"
+  "tfg.toc" 1748196055 10307 b1b17f8ffe395ca6af240044a137403a "pdflatex"
   "ugrTFG.cls" 1743752635 11817 d4a5635b99fb49704725a3284f12ca5c ""
   (generated)
   "tfg.aux"
