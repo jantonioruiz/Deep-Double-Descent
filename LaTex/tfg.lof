@@ -19,7 +19,7 @@
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Ejemplos de \textit {pooling} utilizados en CNN.}}{26}{figure.caption.25}%
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Ejemplos de funciones de activación utilizadas en CNN.}}{27}{figure.caption.26}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagrama representando el concepto básico de aprendizaje.}}{29}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagrama representando el concepto clásico de aprendizaje.}}{29}{figure.caption.27}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Distintas tasas de aprendizaje para el descenso de gradiente~\cite {Mostafa2012}.}}{30}{figure.caption.28}%
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Proceso de retropropagación del error~\cite {Bishop2006}.}}{32}{figure.caption.29}%
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Distintos casos del conjunto de hipótesis y de la función objetivo.}}{40}{figure.caption.30}%

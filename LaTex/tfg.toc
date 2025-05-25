@@ -43,7 +43,7 @@
 \contentsline {subsection}{\numberline {4.2.1}Formulación matemática del $E_{out}$}{33}{subsection.4.2.1}%
 \contentsline {section}{\numberline {4.3}Equilibrio clásico entre sesgo y varianza}{39}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Curva de aprendizaje}{40}{subsection.4.3.1}%
-\contentsline {section}{\numberline {4.4}\textit {Underfitting} y \textit {overfitting}}{41}{section.4.4}%
+\contentsline {section}{\numberline {4.4}\textit {Underfitting} y \textit {overfitting}}{42}{section.4.4}%
 \contentsline {section}{\numberline {4.5}Marcos de generalización clásicos}{44}{section.4.5}%
 \contentsline {part}{\numberline {II}Estado del Arte}{49}{part.2}%
 \contentsline {chapter}{\numberline {5}Trabajos Relacionados}{51}{chapter.5}%
