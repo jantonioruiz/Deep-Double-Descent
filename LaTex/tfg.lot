@@ -25,7 +25,7 @@
 \contentsline {table}{\numberline {7.5}{\ignorespaces Resumen de las ideas principales de los experimentos realizados.}}{98}{table.caption.58}%
 \contentsline {table}{\numberline {7.6}{\ignorespaces Resumen del número de experimentos junto con el número de horas totales de GPU.}}{99}{table.caption.59}%
 \contentsline {table}{\numberline {7.7}{\ignorespaces Aproximaciones polinómicas de grado $n$ utilizadas para regresión polinomial.}}{100}{table.caption.60}%
-\contentsline {table}{\numberline {7.8}{\ignorespaces Resumen de los experimentos para el doble descenso por nivel de ruido.}}{106}{table.caption.70}%
+\contentsline {table}{\numberline {7.8}{\ignorespaces Resumen de los experimentos para el DDD por nivel de ruido.}}{106}{table.caption.70}%
 \contentsline {table}{\numberline {7.9}{\ignorespaces Resumen de los experimentos para el doble descenso por número de ejemplos de entrenamiento.}}{108}{table.caption.72}%
 \contentsline {table}{\numberline {7.10}{\ignorespaces Resumen del ratio parámetros/ejemplos.}}{109}{table.caption.74}%
 \contentsline {table}{\numberline {7.11}{\ignorespaces Resumen de los experimentos para el doble descenso por complejidad del modelo y épocas para la red $2$NN.}}{111}{table.caption.77}%
@@ -36,8 +36,8 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {B.1}{\ignorespaces Resumen de los experimentos realizados para el doble descenso con distinto tamaño de lote.}}{130}{table.caption.91}%
-\contentsline {table}{\numberline {B.2}{\ignorespaces Resumen de los experimentos realizados para el doble descenso con distinto \textit {learning rate}.}}{130}{table.caption.94}%
+\contentsline {table}{\numberline {B.1}{\ignorespaces Resumen de los experimentos realizados para el \textit {Deep Double Descent} con distinto tamaño de \textit {batch}.}}{130}{table.caption.91}%
+\contentsline {table}{\numberline {B.2}{\ignorespaces Resumen de los experimentos realizados para el DDD con distinto \textit {learning rate}.}}{130}{table.caption.94}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
