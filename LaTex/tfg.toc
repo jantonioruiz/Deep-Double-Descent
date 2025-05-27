@@ -88,15 +88,15 @@
 \contentsline {subsubsection}{\numberline {7.2.3.1}Discusión}{107}{subsubsection.7.2.3.1}%
 \contentsline {subsection}{\numberline {7.2.4}\textit {Sample-wise double descent}}{107}{subsection.7.2.4}%
 \contentsline {subsubsection}{\numberline {7.2.4.1}Ratio parámetros/ejemplos}{108}{subsubsection.7.2.4.1}%
-\contentsline {subsubsection}{\numberline {7.2.4.2}Discusión}{109}{subsubsection.7.2.4.2}%
+\contentsline {subsubsection}{\numberline {7.2.4.2}Discusión}{110}{subsubsection.7.2.4.2}%
 \contentsline {subsection}{\numberline {7.2.5}\textit {Model \& Epoch-wise double descent}}{110}{subsection.7.2.5}%
 \contentsline {subsubsection}{\numberline {7.2.5.1}2NN}{110}{subsubsection.7.2.5.1}%
-\contentsline {subsubsection}{\numberline {7.2.5.2}3CNN}{111}{subsubsection.7.2.5.2}%
+\contentsline {subsubsection}{\numberline {7.2.5.2}3CNN}{112}{subsubsection.7.2.5.2}%
 \contentsline {subsubsection}{\numberline {7.2.5.3}ResNet18 modificada}{113}{subsubsection.7.2.5.3}%
-\contentsline {subsubsection}{\numberline {7.2.5.4}Discusión}{114}{subsubsection.7.2.5.4}%
-\contentsline {subsection}{\numberline {7.2.6}\textit {Width vs Depth double descent}}{115}{subsection.7.2.6}%
-\contentsline {subsubsection}{\numberline {7.2.6.1}Discusión}{116}{subsubsection.7.2.6.1}%
-\contentsline {section}{\numberline {7.3}Discusión comparativa global}{116}{section.7.3}%
+\contentsline {subsubsection}{\numberline {7.2.5.4}Discusión}{115}{subsubsection.7.2.5.4}%
+\contentsline {subsection}{\numberline {7.2.6}\textit {Width vs Depth double descent}}{116}{subsection.7.2.6}%
+\contentsline {subsubsection}{\numberline {7.2.6.1}Discusión}{117}{subsubsection.7.2.6.1}%
+\contentsline {section}{\numberline {7.3}Discusión comparativa global}{117}{section.7.3}%
 \contentsline {part}{\numberline {IV}Conclusiones y Trabajos Futuros}{119}{part.4}%
 \contentsline {chapter}{\numberline {8}Conclusiones}{121}{chapter.8}%
 \contentsline {chapter}{\numberline {9}Trabajos futuros}{123}{chapter.9}%

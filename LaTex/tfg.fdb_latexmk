@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex tfg"] 1748280415.44099 "tfg.aux" "tfg.bbl" "tfg" 1748283397.39227 0
+["bibtex tfg"] 1748336030.56078 "tfg.aux" "tfg.bbl" "tfg" 1748336044.37524 0
   "./alpha-es.bst" 1739270953 23918 4d221338a3fa26695ca9ad8a86b90283 ""
   "./library.bib" 1745430720 34222 d74e72e17789bb0cecca6acdfa74d527 ""
-  "tfg.aux" 1748283396 168769 dcae0d74bcc2e39f8b9faeb6fac688ec "pdflatex"
+  "tfg.aux" 1748336043 168800 6925032b6e5164e790fb329f49b716ec "pdflatex"
   (generated)
   "tfg.bbl"
   "tfg.blg"
   (rewritten before read)
-["pdflatex"] 1748283381.46306 "c:/Users/Juan Antonio/Desktop/GitHub/Deep-Double-Descent/LaTex/tfg.tex" "tfg.pdf" "tfg" 1748283397.3931 0
+["pdflatex"] 1748336030.8288 "c:/Users/Juan Antonio/Desktop/GitHub/Deep-Double-Descent/LaTex/tfg.tex" "tfg.pdf" "tfg" 1748336044.37608 0
   "C:/Users/Juan Antonio/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1744794524 117479 142d3eb6ca56e4442bce1e0476081fb6 ""
   "C:/Users/Juan Antonio/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1736877118 12016817 d416b080b416458dfba37a6a99ba1248 ""
   "C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -284,12 +284,12 @@
   "apendices/apendice04.tex" 1748283380 9730 376290cc48683c4cd285aa5892550c88 ""
   "c:/Users/Juan Antonio/Desktop/GitHub/Deep-Double-Descent/LaTex/tfg.tex" 1746867932 4582 630ebdbdac2835b620e346d1d0fcb0ca ""
   "capitulos/conclusiones_trabajosfuturos.tex" 1747997240 10985 188f7aa57c6bd1db3fdf5708cd353a07 ""
-  "capitulos/desarrollo_informatico.tex" 1748278254 92224 121f4e0d28a80c6d2c55b0c244644e54 ""
+  "capitulos/desarrollo_informatico.tex" 1748336016 93258 62eecbf38e8db899ee645a439022dde5 ""
   "capitulos/desarrollo_matematico.tex" 1748203082 109313 3167cb9de7ec101ee3449a38bbd1be59 ""
   "capitulos/estado_arte.tex" 1748196177 19843 d525edcf9398c442a1966b7b6282a059 ""
   "capitulos/fundamentos_informaticos.tex" 1748164769 88866 ad1a95e6fedf136bd32b679e21b14b6d ""
   "capitulos/fundamentos_matematicos.tex" 1748072385 54764 caa2b08de91051653c60c47baf6cb200 ""
-  "glosario_info.tex" 1748196529 2475 77959ae38f7d3c8122db4eddb194f4f1 ""
+  "glosario_info.tex" 1748287605 2599 a68c70738b3946f81ae89d28ef2da0c1 ""
   "glosario_mates.tex" 1748278344 2975 52c6499221b52aa6c720b14d2e57dba1 ""
   "img/aprendizajegd.png" 1740075939 9774 bb859429c410c7ef8cc9f80d5c9f81ff ""
   "img/arquitectura2nn.png" 1745690951 70126 64ce01cfab4cb3fae962f3e9845fed4f ""
@@ -382,13 +382,13 @@
   "preliminares/resumen.tex" 1746867338 3786 ec5a5de905c0c55d201174991d6dff02 ""
   "preliminares/summary.tex" 1746867399 3681 8686642edb6113c7bc4939e6f4aa59f3 ""
   "preliminares/tablacontenidos.tex" 1736876506 1283 676c9ae1f7969bc22e60398af089ff83 ""
-  "tfg.aux" 1748283396 168769 dcae0d74bcc2e39f8b9faeb6fac688ec "pdflatex"
-  "tfg.bbl" 1748280415 22625 bde8e868ad75b4dca0dfa11130034fc8 "bibtex tfg"
-  "tfg.lof" 1748283396 10569 67e84678195db5d75f6e4eda519fb89f "pdflatex"
-  "tfg.lot" 1748283396 3926 b61a15e0fec328df712d796f6c8d9115 "pdflatex"
-  "tfg.out" 1748283383 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "tfg.aux" 1748336043 168800 6925032b6e5164e790fb329f49b716ec "pdflatex"
+  "tfg.bbl" 1748336030 22625 bde8e868ad75b4dca0dfa11130034fc8 "bibtex tfg"
+  "tfg.lof" 1748336043 10569 4d2f61acea47da4a5cfd4495d7d1a38f "pdflatex"
+  "tfg.lot" 1748336043 3941 e72a1facb742049b633d20bb651e780e "pdflatex"
+  "tfg.out" 1748336032 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "tfg.tex" 1746867932 4582 630ebdbdac2835b620e346d1d0fcb0ca ""
-  "tfg.toc" 1748283396 10307 b1b17f8ffe395ca6af240044a137403a "pdflatex"
+  "tfg.toc" 1748336043 10307 99d53f2bee07fc6dad622c7503eb6912 "pdflatex"
   "ugrTFG.cls" 1743752635 11817 d4a5635b99fb49704725a3284f12ca5c ""
   (generated)
   "tfg.aux"

@@ -13,14 +13,15 @@
   \item[$\mathcal{H}$] Conjunto de hipótesis formado por las hipótesis candidatas y la función objetivo.
   \item[$\mathcal{A}$] Algoritmo de aprendizaje. 
   \item[$f$] Función objetivo. 
-  \item[$\bar{g}$] Hipótesis ideal.
+  \item[$\bar{g}$] Hipótesis promedio o ideal.
   \item[Sesgo] Error producido por la diferencia entre la hipótesis ideal y la función objetivo.
   \item[Varianza] Error producido por la diferencia entre la hipótesis elegida y la hipótesis ideal.
   \item[Descenso de gradiente] Método de optimización para minimizar una función de pérdida.
   \item[$\eta$] Tasa de aprendizaje o \textit{learning rate}.
   \item[$E_{out}$] Error fuera de la muestra o error de generalización. 
   \item[$E_{in}$] Error dentro de la muestra o error de entrenamiento.
-  \item[Sweet spot] Mínimo del error de generalización según la sabiduría clásica.
+  \item[Sweet spot] Mínimo del error de generalización según la sabiduría clásica (tras el primer descenso).
+  \item[$m_{\mathcal{H}}(n)$] Función de crecimiento para el conjunto $\mathcal{H}$.
   \item[$d_{vc}$] Dimensión de Vapnik-Chervonenkis.
   \item[$\mathcal{R}(\mathcal{K})$] Complejidad de Rademacher del conjunto $\mathcal{K}$.
   \item[Complejidad efectiva del modelo (EMC)] Máximo número de ejemplos de entrenamiento en el que el modelo obtiene un $E_{in}$ próximo a cero.

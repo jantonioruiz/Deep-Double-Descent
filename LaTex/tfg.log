@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.14)  26 MAY 2025 20:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.14)  27 MAY 2025 10:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2541,14 +2541,14 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-LaTeX Info: Redefining \. on input line 571.
-LaTeX Info: Redefining \% on input line 571.
+LaTeX Info: Redefining \. on input line 569.
+LaTeX Info: Redefining \% on input line 569.
 [108 <./img/experiments/sample-wise-dd1.png> <./img/experiments/sample-wise-dd2.png>]
 
-LaTeX Info: Redefining \. on input line 595.
-LaTeX Info: Redefining \% on input line 595.
+LaTeX Info: Redefining \. on input line 594.
+LaTeX Info: Redefining \% on input line 594.
 [109 <./img/experiments/ratioparamsexamples.png>]
-<img/experiments/model-epoch2NNMNIST.png, id=1840, 1149.5447pt x 345.54094pt>
+<img/experiments/model-epoch2NNMNIST.png, id=1839, 1149.5447pt x 345.54094pt>
 File: img/experiments/model-epoch2NNMNIST.png Graphic file (type png)
 <use img/experiments/model-epoch2NNMNIST.png>
 Package pdftex.def Info: img/experiments/model-epoch2NNMNIST.png  used on input line 608.
@@ -2564,120 +2564,119 @@ File: img/experiments/model-epoch2NNCIFAR10.png Graphic file (type png)
 Package pdftex.def Info: img/experiments/model-epoch2NNCIFAR10.png  used on input line 616.
 (pdftex.def)             Requested size: 387.881pt x 116.08328pt.
 
+Underfull \vbox (badness 1888) has occurred while \output is active []
+
+
 
 LaTeX Info: Redefining \. on input line 640.
 LaTeX Info: Redefining \% on input line 640.
 [111 <./img/experiments/model-epoch2NNCIFAR10.png>]
-<img/experiments/model-epoch3CNNMNIST30k.png, id=1859, 1148.03906pt x 342.5297pt>
+<img/experiments/model-epoch3CNNMNIST30k.png, id=1858, 1148.03906pt x 342.5297pt>
 File: img/experiments/model-epoch3CNNMNIST30k.png Graphic file (type png)
 <use img/experiments/model-epoch3CNNMNIST30k.png>
 Package pdftex.def Info: img/experiments/model-epoch3CNNMNIST30k.png  used on input line 643.
 (pdftex.def)             Requested size: 387.881pt x 115.72682pt.
-<img/experiments/model-epoch3CNNCIFAR1025k.png, id=1865, 1149.5447pt x 344.03531pt>
+<img/experiments/model-epoch3CNNCIFAR1025k.png, id=1864, 1149.5447pt x 344.03531pt>
 File: img/experiments/model-epoch3CNNCIFAR1025k.png Graphic file (type png)
 <use img/experiments/model-epoch3CNNCIFAR1025k.png>
-Package pdftex.def Info: img/experiments/model-epoch3CNNCIFAR1025k.png  used on input line 653.
+Package pdftex.def Info: img/experiments/model-epoch3CNNCIFAR1025k.png  used on input line 654.
 (pdftex.def)             Requested size: 387.881pt x 116.08328pt.
-<img/experiments/model-epoch3CNNCIFAR10025k.png, id=1866, 1150.2975pt x 343.2825pt>
-File: img/experiments/model-epoch3CNNCIFAR10025k.png Graphic file (type png)
-<use img/experiments/model-epoch3CNNCIFAR10025k.png>
-Package pdftex.def Info: img/experiments/model-epoch3CNNCIFAR10025k.png  used on input line 659.
-(pdftex.def)             Requested size: 387.881pt x 115.75594pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+<img/experiments/model-epoch3CNNCIFAR10025k.png, id=1865, 1150.2975pt x 343.2825pt>
+File: img/experiments/model-epoch3CNNCIFAR10025k.png Graphic file (type png)
+<use img/experiments/model-epoch3CNNCIFAR10025k.png>
+Package pdftex.def Info: img/experiments/model-epoch3CNNCIFAR10025k.png  used on input line 660.
+(pdftex.def)             Requested size: 387.881pt x 115.75594pt.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-LaTeX Info: Redefining \. on input line 680.
-LaTeX Info: Redefining \% on input line 680.
-[112 <./img/experiments/model-epoch3CNNMNIST30k.png> <./img/experiments/model-epoch3CNNCIFAR1025k.png>]
-<img/experiments/model-epochPreActResNet18MNIST.png, id=1873, 1148.03906pt x 344.03531pt>
+LaTeX Info: Redefining \. on input line 681.
+LaTeX Info: Redefining \% on input line 681.
+[112 <./img/experiments/model-epoch3CNNMNIST30k.png>]
+<img/experiments/model-epochPreActResNet18MNIST.png, id=1872, 1148.03906pt x 344.03531pt>
 File: img/experiments/model-epochPreActResNet18MNIST.png Graphic file (type png)
 <use img/experiments/model-epochPreActResNet18MNIST.png>
-Package pdftex.def Info: img/experiments/model-epochPreActResNet18MNIST.png  used on input line 685.
+Package pdftex.def Info: img/experiments/model-epochPreActResNet18MNIST.png  used on input line 686.
 (pdftex.def)             Requested size: 387.881pt x 116.23552pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/experiments/model-epochPreActResNet18CIFAR10augmented.png, id=1880, 1149.5447pt x 344.78813pt>
+
+
+LaTeX Info: Redefining \. on input line 693.
+LaTeX Info: Redefining \% on input line 693.
+[113 <./img/experiments/model-epoch3CNNCIFAR1025k.png> <./img/experiments/model-epoch3CNNCIFAR10025k.png>]
+<img/experiments/model-epochPreActResNet18CIFAR10augmented.png, id=1887, 1149.5447pt x 344.78813pt>
 File: img/experiments/model-epochPreActResNet18CIFAR10augmented.png Graphic file (type png)
 <use img/experiments/model-epochPreActResNet18CIFAR10augmented.png>
-Package pdftex.def Info: img/experiments/model-epochPreActResNet18CIFAR10augmented.png  used on input line 697.
+Package pdftex.def Info: img/experiments/model-epochPreActResNet18CIFAR10augmented.png  used on input line 698.
 (pdftex.def)             Requested size: 387.881pt x 116.3373pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<img/experiments/model-epochPreActResNet18CIFAR100augmented.png, id=1882, 1148.79187pt x 344.03531pt>
+<img/experiments/model-epochPreActResNet18CIFAR100augmented.png, id=1889, 1148.79187pt x 344.03531pt>
 File: img/experiments/model-epochPreActResNet18CIFAR100augmented.png Graphic file (type png)
 <use img/experiments/model-epochPreActResNet18CIFAR100augmented.png>
-Package pdftex.def Info: img/experiments/model-epochPreActResNet18CIFAR100augmented.png  used on input line 704.
+Package pdftex.def Info: img/experiments/model-epochPreActResNet18CIFAR100augmented.png  used on input line 705.
 (pdftex.def)             Requested size: 387.881pt x 116.15677pt.
 
+Underfull \vbox (badness 1383) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 706.
-LaTeX Info: Redefining \% on input line 706.
-[113 <./img/experiments/model-epoch3CNNCIFAR10025k.png>]
 
-LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/experiments/PreActResNet18(45).png, id=1890, 580.41844pt x 441.14813pt>
+LaTeX Info: Redefining \. on input line 707.
+LaTeX Info: Redefining \% on input line 707.
+[114 <./img/experiments/model-epochPreActResNet18MNIST.png> <./img/experiments/model-epochPreActResNet18CIFAR10augmented.png>]
+<img/experiments/PreActResNet18(45).png, id=1897, 580.41844pt x 441.14813pt>
 File: img/experiments/PreActResNet18(45).png Graphic file (type png)
 <use img/experiments/PreActResNet18(45).png>
-Package pdftex.def Info: img/experiments/PreActResNet18(45).png  used on input line 712.
+Package pdftex.def Info: img/experiments/PreActResNet18(45).png  used on input line 713.
 (pdftex.def)             Requested size: 195.98085pt x 148.95174pt.
-<img/experiments/PreActResNet18(64).png, id=1891, 569.87906pt x 441.14813pt>
+<img/experiments/PreActResNet18(64).png, id=1898, 569.87906pt x 441.14813pt>
 File: img/experiments/PreActResNet18(64).png Graphic file (type png)
 <use img/experiments/PreActResNet18(64).png>
-Package pdftex.def Info: img/experiments/PreActResNet18(64).png  used on input line 718.
+Package pdftex.def Info: img/experiments/PreActResNet18(64).png  used on input line 719.
 (pdftex.def)             Requested size: 195.98085pt x 151.70488pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-LaTeX Info: Redefining \. on input line 753.
-LaTeX Info: Redefining \% on input line 753.
-[114 <./img/experiments/model-epochPreActResNet18MNIST.png>]
-<img/experiments/2nnvsdeepnn.png, id=1900, 813.79031pt x 452.4403pt>
+LaTeX Info: Redefining \. on input line 754.
+LaTeX Info: Redefining \% on input line 754.
+[115 <./img/experiments/model-epochPreActResNet18CIFAR100augmented.png>]
+<img/experiments/2nnvsdeepnn.png, id=1906, 813.79031pt x 452.4403pt>
 File: img/experiments/2nnvsdeepnn.png Graphic file (type png)
 <use img/experiments/2nnvsdeepnn.png>
-Package pdftex.def Info: img/experiments/2nnvsdeepnn.png  used on input line 762.
+Package pdftex.def Info: img/experiments/2nnvsdeepnn.png  used on input line 763.
 (pdftex.def)             Requested size: 191.90013pt x 106.68938pt.
-<img/experiments/3cnnvsdeepcnn.png, id=1901, 814.54312pt x 453.19313pt>
+<img/experiments/3cnnvsdeepcnn.png, id=1907, 814.54312pt x 453.19313pt>
 File: img/experiments/3cnnvsdeepcnn.png Graphic file (type png)
 <use img/experiments/3cnnvsdeepcnn.png>
-Package pdftex.def Info: img/experiments/3cnnvsdeepcnn.png  used on input line 768.
+Package pdftex.def Info: img/experiments/3cnnvsdeepcnn.png  used on input line 769.
 (pdftex.def)             Requested size: 191.90013pt x 106.77008pt.
 
 
-LaTeX Info: Redefining \. on input line 784.
-LaTeX Info: Redefining \% on input line 784.
-[115 <./img/experiments/model-epochPreActResNet18CIFAR10augmented.png>]
+LaTeX Info: Redefining \. on input line 780.
+LaTeX Info: Redefining \% on input line 780.
+[116 <./img/experiments/PreActResNet18(45).png> <./img/experiments/PreActResNet18(64).png>]
 
 LaTeX Info: Redefining \. on input line 796.
 LaTeX Info: Redefining \% on input line 796.
-[116 <./img/experiments/model-epochPreActResNet18CIFAR100augmented.png>]
-Overfull \hbox (3.98932pt too wide) in paragraph at lines 804--837
+[117 <./img/experiments/2nnvsdeepnn.png> <./img/experiments/3cnnvsdeepcnn.png>]
+Overfull \hbox (3.98932pt too wide) in paragraph at lines 805--838
  [][] 
  []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 )
 
 LaTeX Info: Redefining \. on input line 90.
 LaTeX Info: Redefining \% on input line 90.
-[117 <./img/experiments/PreActResNet18(45).png> <./img/experiments/PreActResNet18(64).png>]
-
-LaTeX Info: Redefining \. on input line 90.
-LaTeX Info: Redefining \% on input line 90.
-[118 <./img/experiments/2nnvsdeepnn.png> <./img/experiments/3cnnvsdeepcnn.png>]
+[118]
 part IV.
 Package scrkbase Info: You've told me to use the font selection of the element
 (scrkbase)             `partprefix' that is an alias of element `partnumber'
@@ -2893,13 +2892,13 @@ Package rerunfilecheck Info: File `tfg.out' has not changed.
 Here is how much of TeX's memory you used:
  44328 strings out of 473536
  902236 string characters out of 5711532
- 1431863 words of memory out of 5000000
+ 1432871 words of memory out of 5000000
  65332 multiletter control sequences out of 15000+600000
  881072 words of font info for 847 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  122i,23n,131p,10964b,1494s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/impallari/cabin/Cabin-Bold.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/impallari/cabin/Cabin-BoldItalic.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/impallari/cabin/Cabin-Regular.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/eurosym/feymr10.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/fpl/fplbj8a.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbb.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/fpl/fplrc8a.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/public/fpl/fplrij8a.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplbi8a.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb><C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on tfg.pdf (170 pages, 12716126 bytes).
+Output written on tfg.pdf (170 pages, 12717223 bytes).
 PDF statistics:
  2610 PDF objects out of 2984 (max. 8388607)
  669 named destinations out of 1000 (max. 500000)

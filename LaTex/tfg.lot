@@ -29,9 +29,9 @@
 \contentsline {table}{\numberline {7.9}{\ignorespaces Resumen de los experimentos para el doble descenso por número de ejemplos de entrenamiento.}}{108}{table.caption.72}%
 \contentsline {table}{\numberline {7.10}{\ignorespaces Resumen del ratio parámetros/ejemplos.}}{109}{table.caption.74}%
 \contentsline {table}{\numberline {7.11}{\ignorespaces Resumen de los experimentos para el doble descenso por complejidad del modelo y épocas para la red $2$NN.}}{111}{table.caption.77}%
-\contentsline {table}{\numberline {7.12}{\ignorespaces Resumen de los experimentos para el doble descenso por complejidad del modelo y épocas para la arquitectura $3$CNN.}}{113}{table.caption.81}%
-\contentsline {table}{\numberline {7.13}{\ignorespaces Resumen de los experimentos para el doble descenso por complejidad del modelo y épocas para la red ResNet$18$ modificada.}}{114}{table.caption.86}%
-\contentsline {table}{\numberline {7.14}{\ignorespaces Resumen de los experimentos realizados sobre el doble descenso.}}{118}{table.caption.88}%
+\contentsline {table}{\numberline {7.12}{\ignorespaces Resumen de los experimentos para el doble descenso por complejidad del modelo y épocas para la arquitectura $3$CNN.}}{112}{table.caption.81}%
+\contentsline {table}{\numberline {7.13}{\ignorespaces Resumen de los experimentos para el doble descenso por complejidad del modelo y épocas para la red ResNet$18$ modificada.}}{115}{table.caption.86}%
+\contentsline {table}{\numberline {7.14}{\ignorespaces Resumen de los experimentos realizados sobre el \textit {Deep Double Descent}.}}{118}{table.caption.88}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
