@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex tfg"] 1748336030.56078 "tfg.aux" "tfg.bbl" "tfg" 1748336044.37524 0
+["bibtex tfg"] 1748502480.93789 "tfg.aux" "tfg.bbl" "tfg" 1748502655.1074 0
   "./alpha-es.bst" 1739270953 23918 4d221338a3fa26695ca9ad8a86b90283 ""
   "./library.bib" 1745430720 34222 d74e72e17789bb0cecca6acdfa74d527 ""
-  "tfg.aux" 1748336043 168800 6925032b6e5164e790fb329f49b716ec "pdflatex"
+  "tfg.aux" 1748502654 168823 d12bd394ebf14f81919d93cccae74224 "pdflatex"
   (generated)
   "tfg.bbl"
   "tfg.blg"
   (rewritten before read)
-["pdflatex"] 1748336030.8288 "c:/Users/Juan Antonio/Desktop/GitHub/Deep-Double-Descent/LaTex/tfg.tex" "tfg.pdf" "tfg" 1748336044.37608 0
+["pdflatex"] 1748502641.32945 "c:/Users/Juan Antonio/Desktop/GitHub/Deep-Double-Descent/LaTex/tfg.tex" "tfg.pdf" "tfg" 1748502655.10816 0
   "C:/Users/Juan Antonio/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1744794524 117479 142d3eb6ca56e4442bce1e0476081fb6 ""
   "C:/Users/Juan Antonio/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1736877118 12016817 d416b080b416458dfba37a6a99ba1248 ""
   "C:/Users/Juan Antonio/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -282,7 +282,7 @@
   "apendices/apendice02.tex" 1748279825 6100 20f54e401f07f95e52e61d7f4c12d939 ""
   "apendices/apendice03.tex" 1748281177 3622 3a8cd458e4941fa3d14fae8b563a26b8 ""
   "apendices/apendice04.tex" 1748283380 9730 376290cc48683c4cd285aa5892550c88 ""
-  "c:/Users/Juan Antonio/Desktop/GitHub/Deep-Double-Descent/LaTex/tfg.tex" 1746867932 4582 630ebdbdac2835b620e346d1d0fcb0ca ""
+  "c:/Users/Juan Antonio/Desktop/GitHub/Deep-Double-Descent/LaTex/tfg.tex" 1748501601 4622 0cf75c455c1ee5e0e50c7a84b903a37d ""
   "capitulos/conclusiones_trabajosfuturos.tex" 1747997240 10985 188f7aa57c6bd1db3fdf5708cd353a07 ""
   "capitulos/desarrollo_informatico.tex" 1748336016 93258 62eecbf38e8db899ee645a439022dde5 ""
   "capitulos/desarrollo_matematico.tex" 1748203082 109313 3167cb9de7ec101ee3449a38bbd1be59 ""
@@ -376,19 +376,20 @@
   "img/types-of-bias.png" 1743930054 189150 4ae40c55a250a72a4c3ea221b83a481e ""
   "img/vc-dimension.png" 1745139019 262669 e217e76eea0b1bbfed2a691f00044e06 ""
   "preliminares/agradecimientos.tex" 1746982603 1557 a88baa7a912a98a65c4546e74c4d3c18 ""
-  "preliminares/declaracion-originalidad.tex" 1736876506 691 bc1b86966b21ef61e435730bf37468bd ""
+  "preliminares/declaracion-originalidad.tex" 1748502175 733 f7f0bff439137d31ded0650293df9db8 ""
   "preliminares/dedicatoria.tex" 1746262685 401 367dbde4f99203d9328caf8505bb5fbf ""
+  "preliminares/informe-directores.tex" 1748502640 1271 cddd6b8afd0ca1f264cd814c99553790 ""
   "preliminares/introduccion.tex" 1747937857 26133 316459b51dcd434635d7ed65b6e9f629 ""
   "preliminares/resumen.tex" 1746867338 3786 ec5a5de905c0c55d201174991d6dff02 ""
   "preliminares/summary.tex" 1746867399 3681 8686642edb6113c7bc4939e6f4aa59f3 ""
   "preliminares/tablacontenidos.tex" 1736876506 1283 676c9ae1f7969bc22e60398af089ff83 ""
-  "tfg.aux" 1748336043 168800 6925032b6e5164e790fb329f49b716ec "pdflatex"
-  "tfg.bbl" 1748336030 22625 bde8e868ad75b4dca0dfa11130034fc8 "bibtex tfg"
-  "tfg.lof" 1748336043 10569 4d2f61acea47da4a5cfd4495d7d1a38f "pdflatex"
-  "tfg.lot" 1748336043 3941 e72a1facb742049b633d20bb651e780e "pdflatex"
-  "tfg.out" 1748336032 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "tfg.tex" 1746867932 4582 630ebdbdac2835b620e346d1d0fcb0ca ""
-  "tfg.toc" 1748336043 10307 99d53f2bee07fc6dad622c7503eb6912 "pdflatex"
+  "tfg.aux" 1748502654 168823 d12bd394ebf14f81919d93cccae74224 "pdflatex"
+  "tfg.bbl" 1748502481 22625 bde8e868ad75b4dca0dfa11130034fc8 "bibtex tfg"
+  "tfg.lof" 1748502654 10573 b36eb55485b9a989dbcf936185c3a2c2 "pdflatex"
+  "tfg.lot" 1748502654 3949 9822a1d9f941d0bb35c173e271f6497a "pdflatex"
+  "tfg.out" 1748502642 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "tfg.tex" 1748501601 4622 0cf75c455c1ee5e0e50c7a84b903a37d ""
+  "tfg.toc" 1748502654 10306 1f53649aff1a056361ff7da7e79943eb "pdflatex"
   "ugrTFG.cls" 1743752635 11817 d4a5635b99fb49704725a3284f12ca5c ""
   (generated)
   "tfg.aux"

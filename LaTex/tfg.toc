@@ -1,18 +1,18 @@
 \babel@toc {spanish}{}\relax 
-\contentsline {chapter}{\nonumberline Agradecimientos}{\es@scroman {iii}}{chapter*.3}%
-\contentsline {chapter}{\nonumberline Resumen}{\es@scroman {v}}{chapter*.4}%
+\contentsline {chapter}{\nonumberline Agradecimientos}{\es@scroman {v}}{chapter*.3}%
+\contentsline {chapter}{\nonumberline Resumen}{\es@scroman {vii}}{chapter*.4}%
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{\nonumberline Summary}{\es@scroman {vi}}{chapter*.5}%
+\contentsline {chapter}{\nonumberline Summary}{\es@scroman {viii}}{chapter*.5}%
 \babel@toc {spanish}{}\relax 
-\contentsline {chapter}{\nonumberline \'{I}ndice de figuras}{\es@scroman {xi}}{chapter*.9}%
-\contentsline {chapter}{\nonumberline \'{I}ndice de tablas}{\es@scroman {xiii}}{chapter*.11}%
-\contentsline {chapter}{\nonumberline Introducción}{\es@scroman {xv}}{chapter*.12}%
-\contentsline {section}{\numberline {1}Definición del problema}{\es@scroman {xvi}}{section.0.1}%
-\contentsline {section}{\numberline {2}Motivación}{\es@scroman {xvii}}{section.0.2}%
-\contentsline {section}{\numberline {3}Objetivos}{\es@scroman {xviii}}{section.0.3}%
-\contentsline {subsection}{\numberline {3.1}Objetivo matemático}{\es@scroman {xviii}}{subsection.0.3.1}%
-\contentsline {subsection}{\numberline {3.2}Objetivo informático}{\es@scroman {xix}}{subsection.0.3.2}%
-\contentsline {section}{\numberline {4}Planificación del proyecto}{\es@scroman {xix}}{section.0.4}%
+\contentsline {chapter}{\nonumberline \'{I}ndice de figuras}{\es@scroman {xiii}}{chapter*.9}%
+\contentsline {chapter}{\nonumberline \'{I}ndice de tablas}{\es@scroman {xv}}{chapter*.11}%
+\contentsline {chapter}{\nonumberline Introducción}{\es@scroman {xvii}}{chapter*.12}%
+\contentsline {section}{\numberline {1}Definición del problema}{\es@scroman {xviii}}{section.0.1}%
+\contentsline {section}{\numberline {2}Motivación}{\es@scroman {xix}}{section.0.2}%
+\contentsline {section}{\numberline {3}Objetivos}{\es@scroman {xx}}{section.0.3}%
+\contentsline {subsection}{\numberline {3.1}Objetivo matemático}{\es@scroman {xx}}{subsection.0.3.1}%
+\contentsline {subsection}{\numberline {3.2}Objetivo informático}{\es@scroman {xxi}}{subsection.0.3.2}%
+\contentsline {section}{\numberline {4}Planificación del proyecto}{\es@scroman {xxi}}{section.0.4}%
 \contentsline {part}{\numberline {I}Fundamentos Teóricos}{1}{part.1}%
 \contentsline {chapter}{\numberline {1}Probabilidad}{3}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Espacios de probabilidad y $\sigma $-álgebras}{3}{section.1.1}%

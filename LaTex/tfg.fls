@@ -401,6 +401,16 @@ INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palati
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplrc9d.tfm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplrc9d.vf
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplr8r.tfm
+INPUT .\preliminares\informe-directores.tex
+INPUT .\preliminares\informe-directores.tex
+INPUT .\preliminares\informe-directores.tex
+INPUT .\preliminares\informe-directores.tex
+INPUT preliminares\informe-directores.tex
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplbi9d.tfm
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplbi9d.vf
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplbi8r.tfm
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fplmbi.tfm
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplbij8r.tfm
 INPUT .\preliminares\dedicatoria.tex
 INPUT .\preliminares\dedicatoria.tex
 INPUT .\preliminares\dedicatoria.tex
@@ -522,11 +532,6 @@ INPUT .\img\problem-definition.png
 INPUT .\img\problem-definition.png
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\vf\impallari\cabin\Cabin-Bold-tlf-t1.vf
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\impallari\cabin\Cabin-Bold-tlf-t1--base.tfm
-INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplbi9d.tfm
-INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplbi9d.vf
-INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplbi8r.tfm
-INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fplmbi.tfm
-INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplbij8r.tfm
 INPUT .\img\modelo_cascada.jpg
 INPUT .\img\modelo_cascada.jpg
 INPUT .\img\modelo_cascada.jpg
