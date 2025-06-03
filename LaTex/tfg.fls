@@ -974,6 +974,7 @@ INPUT .\img\overparametrization.png
 INPUT .\img\overparametrization.png
 INPUT .\img\overparametrization.png
 INPUT .\img\overparametrization.png
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplr9d.tfm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\vf\public\mathpazo\zplmr7t.vf
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\impallari\cabin\Cabin-BoldItalic-tlf-t1.tfm
@@ -1018,6 +1019,11 @@ INPUT .\img\experiments\resnet18modified.png
 INPUT .\img\experiments\resnet18modified.png
 INPUT .\img\experiments\resnet18modified.png
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\inconsolata\t1-zi4r-0.tfm
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\vf\public\mathpazo\zplmr7v.vf
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fplmr.tfm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplri9d.tfm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplb9c.tfm
 INPUT C:\Users\Juan Antonio\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplr9d.tfm

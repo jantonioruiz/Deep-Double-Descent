@@ -14,7 +14,7 @@ En términos generales, el aprendizaje automático se divide en tres tipos: el a
     \caption[Ejemplos de problemas de clasificación y regresión.]{Ejemplos de problemas de clasificación y regresión. A la izquierda, se muestra un problema de clasificación binario, donde se busca encontrar el hiperplano (línea verde) que separe ambos conjuntos de datos etiquetados. A la derecha, se muestra un problema de regresión, donde se busca encontrar la mejor aproximación (línea negra) al conjunto de datos.}\label{fig:clasi-regresion}
 \end{figure}
 
-Dentro del marco del aprendizaje supervisado, donde el principal objetivo del modelo es aprender a predecir la salida correcta para nuevos ejemplos no conocidos, basándose en las relaciones y patrones extraídos al trabajar con los datos etiquetados, podemos dividir los problemas en dos categorías principales: problemas de clasificación en los que se asigna una salida o clase (discreta) a cada entrada y problemas de regresión en los que se predice un valor continuo para cada entrada (véase Figura~\ref{fig:clasi-regresion}). De cara al desarrollo de nuestro trabajo, abordaremos ambos tipos de problemas. En particular, en los problemas de clasificación nos centraremos en la clasificación de imágenes.
+Dentro del marco del aprendizaje supervisado, donde el principal objetivo del modelo es aprender a predecir la salida correcta para nuevos ejemplos no conocidos, basándose en las relaciones y patrones extraídos al trabajar con los datos etiquetados, podemos dividir los problemas en dos categorías principales: problemas de clasificación, en los que se asigna una salida o clase (discreta) a cada entrada, y problemas de regresión, en los que se predice un valor continuo para cada entrada (véase Figura~\ref{fig:clasi-regresion}). De cara al desarrollo de nuestro trabajo, abordaremos ambos tipos de problemas. En particular, en los problemas de clasificación, nos centraremos en la clasificación de imágenes.
 
 El aprendizaje profundo o \emph{deep learning (DL)}~\cite{Bishop2023, Prince2023, LeCun2015} representa un área del aprendizaje automático que utiliza redes neuronales artificiales, inspiradas en la estructura y funcionamiento del cerebro humano, con múltiples capas, conocidas como redes neuronales profundas~\cite{Goodfellow2016, Schmidhuber2015}, con el propósito de identificar y modelar patrones complejos y extraer representaciones jerárquicas en grandes volúmenes de datos.
 
@@ -38,9 +38,9 @@ En la capa oculta o capa de procesamiento, las unidades reciben las salidas de l
 
 Las redes neuronales artificiales pueden tener una gran cantidad de capas ocultas, lo que permite un procesamiento más profundo y detallado de la información. Cada capa oculta analiza la salida de la capa anterior, la procesa aún más y la pasa a la siguiente capa, de modo que, a medida que se avanza por la red, se generan representaciones internas cada vez más abstractas de la entrada original.
 
-Finalmente, en la última capa o capa de salida, la red produce el resultado final en función del problema que se trate y de la predicción calculada haciendo uso de los pesos ajustados en las capas ocultas. La naturaleza de la salida varía según el tipo de tarea que se realice: en un problema de clasificación, la salida es un valor discreto que indica la clase a la que pertenece la entrada, mientras que, en un problema de regresión, la salida es un valor continuo que representa una predicción numérica. Por tanto, esta capa es la que traduce la información procesada por la red en un resultado interpretable y acorde con el objetivo del problema.
+Finalmente, en la última capa o capa de salida, la red produce el resultado final en función del problema en cuestión y de la predicción calculada, haciendo uso de los pesos ajustados en las capas ocultas. La naturaleza de la salida varía según el tipo de tarea que se realice: en un problema de clasificación, la salida es un valor discreto que indica la clase a la que pertenece la entrada, mientras que, en regresión, la salida es un valor continuo que representa una predicción numérica. Por tanto, esta capa es la que traduce la información procesada por la red en un resultado interpretable y acorde con el objetivo del problema.
 
-Por consiguiente, el proceso de entrenamiento de una red neuronal artificial es un proceso iterativo en el que la red ajusta sus pesos para aprender a realizar tareas específicas. Para llevar a cabo este proceso, es fundamental un conjunto de datos o ejemplos de entrenamiento que sea lo suficientemente representativo, ya que de este conjunto se extraerán los patrones relevantes que la red aprenderá.
+Por consiguiente, el proceso de entrenamiento de una red neuronal artificial es un proceso iterativo en el que la red ajusta sus pesos para aprender a realizar tareas específicas. Para llevar a cabo este proceso, es fundamental un conjunto de datos o ejemplos de entrenamiento que sean lo suficientemente representativos, ya que de este conjunto se extraerán los patrones relevantes que la red aprenderá.
 
 \subsection{Redes neuronales convolucionales}\label{subsec:redes-neuronales-convolucionales}
 
@@ -56,7 +56,7 @@ Las CNN incluyen varias capas especializadas que las distinguen de las redes neu
     \caption[Ejemplo de CNN utilizada para clasificación de imágenes~\cite{CNNSwapna}.]{Ejemplo de CNN utilizada para clasificación de imágenes~\cite{CNNSwapna}. La entrada a la red es una imagen en formato RGB. La extracción de características se realiza mediante varias capas convolucionales, seguidas de funciones de activación y capas de \textit{pooling}, las cuales ayudan a reducir la dimensionalidad. Posteriormente, las características extraídas se aplanan (\textit{flattening}) y se envían a las capas totalmente conectadas. Finalmente, la salida pasa por una función de activación, en este caso \textit{softmax}, que genera una distribución de probabilidad sobre las posibles clases de salida.}\label{fig:cnn}
 \end{figure}
 
-A continuación se describen las principales capas que conforman una red neuronal convolucional. Se incluyen tanto las capas exclusivas de este tipo de red como aquellas que comparte con las redes neuronales tradicionales.
+A continuación, se describen las principales capas que conforman una red neuronal convolucional. Se incluyen tanto las capas exclusivas de este tipo de red como aquellas que comparte con las redes neuronales tradicionales.
 
 
 \subsubsection{Capa de convolución}
@@ -65,7 +65,7 @@ La capa convolucional es un componente fundamental y exclusivo de las CNN, dise�
 
 La convolución es una operación lineal que consiste en desplazar un filtro sobre la entrada, realizando en cada posición una multiplicación elemento a elemento entre los valores del filtro y los de la entrada (diferente de una multiplicación matricial convencional). Posteriormente, se suman estos productos para obtener un único valor de salida. Este proceso se repite hasta deslizar el filtro a lo largo de toda la entrada, obteniendo una nueva matriz denominada \textbf{mapa de características}.
 
-Los valores de los filtros actúan como los pesos que la propia red aprende y optimiza de forma iterativa para maximizar la extracción de características relevantes de la entrada. Además, el número de filtros aplicados sobre cada entrada influye directamente en el mapa de características de salida resultante. Así, a mayor cantidad de filtros, la profundidad del mapa de características resultantes también será mayor.
+Los valores de los filtros actúan como los pesos que la propia red aprende y optimiza de forma iterativa para maximizar la extracción de características relevantes de la entrada. Además, el número de filtros aplicados sobre cada entrada influye directamente en el mapa de características de salida. Así, a mayor cantidad de filtros, la profundidad del mapa de características resultante también será mayor.
 
 \begin{figure}[h]
     \centering
@@ -75,7 +75,7 @@ Los valores de los filtros actúan como los pesos que la propia red aprende y op
 
 Como se puede observar en la Figura~\ref{fig:convolucion}, la propia naturaleza de la operación de convolución modifica la dimensionalidad de la entrada. Sin embargo, esto no siempre es deseable, ya que en determinadas ocasiones preferiremos mantener la dimensión original de la entrada. Para solucionar este problema, se introduce el concepto de \textbf{relleno} o \emph{padding}, consistente en agregar información adicional alrededor de la entrada, con el fin de preservar su dimensionalidad.
 
-Por otra parte, la elección de la siguiente zona sobre la que se realizará la convolución viene determinada por el tamaño de paso o \emph{stride}. Generalmente, se utiliza un stride de $1$, lo que significa que desplazamos el filtro de manera adyacente una posición en cada paso. Sin embargo, también es posible reducir la dimensionalidad de la entrada modificando el stride, como puede observarse en la Figura~\ref{fig:convolucion}, donde, a pesar de utilizar un relleno de una posición para mantener la dimensionalidad, el tamaño del mapa de activación resultante es inferior al tamaño original de la entrada, pues se está utilizando un stride de $2$.
+Por otra parte, la elección de la siguiente zona sobre la que se realizará la convolución viene determinada por el tamaño de paso o \emph{stride}. Generalmente, se utiliza un \textit{stride} de $1$, lo que significa que desplazamos el filtro de manera adyacente una posición en cada paso. Sin embargo, también es posible reducir la dimensionalidad de la entrada modificando el \textit{stride}, como puede observarse en la Figura~\ref{fig:convolucion}, donde, a pesar de utilizar un relleno de una posición para mantener la dimensionalidad, el tamaño del mapa de activación resultante es inferior al tamaño original de la entrada, pues se está utilizando un \textit{stride} de $2$.
 
 En conlusión, el objetivo principal de la capa de convolución es extraer características relevantes de la entrada. Para ello, se utilizan filtros cuyos pesos son aprendidos y optimizados por la propia red. En las primeras capas convolucionales, dado que el tamaño de la entrada es mayor, se detectan principalmente características de bajo nivel, como bordes y texturas. A medida que la información avanza por la red, las capas posteriores capturan patrones más complejos y abstractos. De este modo, mediante la combinación de múltiples capas convolucionales, la red logra desarrollar una representación jerárquica de la entrada.
 
@@ -90,7 +90,7 @@ El tipo de \textit{pooling} más comúnmente utilizado es el denominado \emph{ma
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\linewidth]{img/pooling.png}
-    \caption[Ejemplos de \textit{pooling} utilizados en CNN.]{Ejemplos de \textit{pooling} utilizados en CNN. A la izquierda, se muestra el \textit{max pooling}, donde se selecciona el valor máximo de una determinada región (en este caso $2 \times 2$). A la derecha, se muestra el average pooling, donde se selecciona el valor promedio de la región influida por el filtro.}\label{fig:pooling}
+    \caption[Ejemplos de \textit{pooling} utilizados en CNN.]{Ejemplos de \textit{pooling} utilizados en CNN. A la izquierda, se muestra el \textit{max pooling}, donde se selecciona el valor máximo de una determinada región (en este caso $2 \times 2$). A la derecha, se visualiza el average pooling, donde se selecciona el valor promedio de la región influida por el filtro.}\label{fig:pooling}
 \end{figure}
 
 \subsubsection{Capa totalmente conectada}
@@ -99,7 +99,7 @@ Las capas totalmente conectadas o densas (\emph{fully connected}) son un compone
 
 Antes de entrar a una capa densa, la salida de las capas anteriores debe aplanarse (\emph{flattening}) en un vector unidimensional puesto que, generalmente, la salida de las capas anteriores tendrán forma matricial o tensorial, lo que impide que puedan ser procesadas directamente por las capas densas. De esta manera, el número de unidades de la primera capa densa se corresponde con el número de componentes del vector unidimensional.
 
-Estas capas combinan y procesan las características extraídas de las capas anteriores y tienen la posibilidad de capturar relaciones globales al conectar cada unidad de una capa con todas las unidades de la siguiente capa por medio de conexiones con pesos entrenables, lo que produce que la mayor parte de los pesos entrenables de una red suelan concentrarse en estas capas debido al elevado número de conexiones que presentan.
+Estas capas combinan y procesan las características extraídas de las capas anteriores, y tienen la posibilidad de capturar relaciones globales al conectar cada unidad de una capa con todas las unidades de la siguiente capa por medio de conexiones con pesos entrenables, lo que produce que la mayor parte de los pesos entrenables de una red suelan concentrarse en estas capas, debido al elevado número de conexiones que presentan.
 
 \subsubsection{Capa de activación}\label{subsubsec:capa-de-activacion}
 
@@ -124,14 +124,14 @@ Por tanto, las capas de activación se colocan después de cada capa lineal (com
         \text{Softmax}(x_i) = \frac{e^{x_i}}{\sum_{j=1}^{K} e^{x_j}},
     \]
 
-    donde $x_i$ representa la entrada correspondiente a la clase $i$-ésima antes de aplicar la activación y $K$ el número de clases. Esta función de activación es una generalización de la función sigmoide para clasificación multiclase. Por tanto, para el caso de $K=2$ (clasificación binaria), esta función se reduce a la función sigmoide.
+    donde $x_i$ representa la entrada correspondiente a la clase $i$-ésima antes de aplicar la activación y $K$ el número de clases. Esta función de activación es una generalización de la función sigmoide para clasificación multiclase. Es por esto que, para el caso de $K=2$ (clasificación binaria), esta función se reduce a la función sigmoide.
 
 \end{itemize}
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\linewidth]{img/funcionesactivacion.png}
-    \caption[Ejemplos de funciones de activación utilizadas en CNN.]{Ejemplos de funciones de activación utilizadas en CNN. A la izquierda, se muestra la función ReLU, donde se observa como deja invariante los valores positivos, estableciendo a cero los valores negativos. A la derecha, se muestra la función sigmoide, que mapea los valores de entrada a un rango entre $0$ y $1$.}\label{fig:funcionesactivacion}
+    \caption[Ejemplos de funciones de activación utilizadas en CNN.]{Ejemplos de funciones de activación utilizadas en CNN. A la izquierda, aparece la función ReLU, donde se observa como deja invariante los valores positivos, estableciendo a cero los valores negativos. A la derecha, se presenta la función sigmoide, que mapea los valores de entrada a un rango entre $0$ y $1$.}\label{fig:funcionesactivacion}
 \end{figure}
 
 \chapter{El Dilema Clásico del Aprendizaje}\label{ch:dilema-aprendizaje}
@@ -187,7 +187,7 @@ Asimismo, existen variantes del descenso de gradiente, como el descenso de gradi
 En resumen, el descenso de gradiente permite que la red neuronal mejore sus predicciones a lo largo de múltiples iteraciones o épocas. Cada vez que el modelo procesa un conjunto de datos, calcula el error y ajusta sus parámetros para aprender de los errores cometidos, repitiéndose este proceso hasta que la función de pérdida alcanza un valor mínimo aceptable.
 
 \subsubsection{Optimizador Adam}\label{subsubsec:optimizador-adam}
-En virtud del desarrollo de nuestro proyecto, trabajaremos con el optimizador \textbf{Adam} (\textit{Adaptive Moment Estimation}~\cite{Diederik2017}). Este optimizador se basa en las ideas de los algoritmos \textbf{Momentum} y \textbf{RMSProp}, combinando sus principales ventajas para lograr una convergencia más rápida y estable durante el entrenamiento de modelos de aprendizaje profundo.
+En virtud del desarrollo de nuestro proyecto, trabajaremos con el optimizador \textbf{Adam} (\textit{Adaptive Moment Estimation}~\cite{Diederik2017}). Este optimizador se basa en las ideas de los algoritmos \textit{\textbf{Momentum}} y \textit{\textbf{RMSProp}}, combinando sus principales ventajas para lograr una convergencia más rápida y estable durante el entrenamiento de modelos de aprendizaje profundo.
 
 El método de \textit{Momentum} mejora al SGD acumulando un promedio móvil de los gradientes pasados. La actualización de los parámetros se realiza de la siguiente forma:
 
@@ -200,7 +200,7 @@ El método de \textit{Momentum} mejora al SGD acumulando un promedio móvil de l
 
 donde el término $\beta$ actúa como un factor de decaimiento que regula la influencia de los gradientes anteriores en la actualización actual. Por su parte, $\eta$ representa la tasa de aprendizaje. Así, la variable $m_{\tau}$ corresponde al promedio móvil de los gradientes, es decir, una estimación de primer orden que suaviza la dirección de la actualización.
 
-El algoritmo \textit{RMSProp} adapta la tasa de aprendizaje en función de la magnitud reciente de los gradientes. Para lograrlo, calcula un promedio móvil de los cuadrados de los gradientes, lo que permite ajustar dinámicamente la escala de la actualización para cada parámetro:
+El algoritmo \textit{RMSProp} adapta la tasa de aprendizaje en función de la magnitud reciente de los gradientes. Para lograrlo, calcula un promedio móvil de los cuadrados de los gradientes, lo que permite ajustar, de manera dinámica, la escala de la actualización para cada parámetro:
 
 \[
     \begin{aligned}
@@ -211,7 +211,7 @@ El algoritmo \textit{RMSProp} adapta la tasa de aprendizaje en función de la ma
 
 donde el factor $\beta$ actúa, al igual que en el caso anterior, como un factor de olvido que determina cuánto influyen los valores anteriores en la media móvil. Así, $v_{\tau}$ representa una estimación de segundo orden, correspondiente al promedio móvil de los cuadrados de los gradientes. Además, el término $\epsilon$ se introduce para mejorar la estabilidad numérica, evitando divisiones por cero durante la actualización de los parámetros.
 
-Finalmente, \textit{Adam} combina los enfoques anteriores, manteniendo simultáneamente estimaciones de primer y segundo orden. Las actualizaciones se realizan de la siguiente manera:
+Finalmente, \textbf{Adam} combina los enfoques anteriores, manteniendo simultáneamente estimaciones de primer y segundo orden. Las actualizaciones se realizan de la siguiente manera:
 
 \begin{equation}
     \begin{aligned}
@@ -220,7 +220,7 @@ Finalmente, \textit{Adam} combina los enfoques anteriores, manteniendo simultán
     \end{aligned}
 \end{equation}
 
-Dado que $m_\tau$ y $v_\tau$ están inicializados a cero, Adam introduce una corrección de sesgo:
+Dado que $m_\tau$ y $v_\tau$ están inicializados a cero, se introduce una corrección de sesgo:
 
 \begin{equation}
     \begin{aligned}
@@ -235,11 +235,11 @@ Como paso final, los parámetros se actualizan de la siguiente forma:
     w_{\tau} = w_{\tau - 1} - \frac{\eta}{\sqrt{\hat{v}_{\tau}} + \epsilon} \cdot \hat{m}_{\tau}.
 \end{equation}
 
-Este enfoque combina la dirección promedio de los gradientes con una tasa de aprendizaje adaptativa. Por un lado, acumular gradientes pasados permite suavizar la trayectoria y evitar oscilaciones, mientras que, por otro, la normalización mediante una estimación de segundo orden ajusta la tasa de aprendizaje de manera dinámica para cada parámetro. Así, Adam consigue una optimización más eficiente, estable y con mejor convergencia en escenarios complejos o de alta dimensión.
+Este enfoque combina la dirección promedio de los gradientes con una tasa de aprendizaje adaptativa. Por un lado, acumular gradientes pasados permite suavizar la trayectoria y evitar oscilaciones, mientras que, por otro, la normalización mediante una estimación de segundo orden ajusta la tasa de aprendizaje dinámicamente para cada parámetro. Así, Adam consigue una optimización más eficiente, estable y con mejor convergencia en escenarios complejos o de alta dimensión.
 
 \subsubsection{Aprendizaje en una red neuronal}\label{subsubsec:aprendizaje-red-neuronal}
 
-Como se comentó en la \autoref{sec:redes-neuronales-artificiales}, la primera fase del aprendizaje consiste en la transmisión de la información desde la capa de entrada hacia la capa de salida, pasando por las capas ocultas, proceso conocido como propagación hacia delante o \emph{forward pass}. 
+Como se comentó en la Sección~\ref{sec:redes-neuronales-artificiales}, la primera fase del aprendizaje consiste en la transmisión de la información desde la capa de entrada hacia la capa de salida, pasando por las capas ocultas, proceso conocido como propagación hacia delante o \emph{forward pass}. 
 
 Durante este proceso, las entradas se multiplican por los pesos de la red y se suman los sesgos o \emph{biases}, consistente en un parámetro adicional que se suma al resultado de la combinación lineal antes de pasar por la función de activación, cuya función principal es permitir que el modelo ajuste su salida de manera más flexible, sin estar forzado a pasar por el origen. Finalmente, se aplican las funciones de activación para introducir no linealidad. Este flujo de datos permite que el modelo genere una predicción para cada entrada.
 
@@ -263,9 +263,9 @@ Seguidamente, se inicia la segunda fase del aprendizaje, cuyo objetivo es ajusta
 En conlusión, el \textit{forward pass} y la \textit{backpropagation} trabajan de manera conjunta para permitir que la red neuronal aprenda de manera efectiva. El \textit{forward pass} genera las predicciones para los datos de entrada, la función de pérdida evalúa el error cometido en dichas predicciones, la \textit{backpropagation} calcula la contribución de cada unidad a dicho error (véase Figura~\ref{fig:aprendizajegd}) y, por último, el descenso de gradiente ajusta los parámetros para mejorar las predicciones futuras, repitiéndose este ciclo a lo largo de múltiples iteraciones.
 
 \section{\textit{Bias-variance tradeoff}}\label{sec:capitulo-bias-variance-tradeoff}
-El objetivo del aprendizaje radica en obtener un bajo error de test o error de generalización ($E_{out}$) sobre datos desconocidos, lo que implicará que hemos conseguido aproximar de buena manera la función objetivo $f$. La capacidad para conseguir un bajo error de generalización está ligada directamente al conjunto de hipótesis ($\mathcal{H}$), donde si nuestro conjunto es suficientemente grande tendremos una mayor probabilidad de aproximar la función objetivo, al disponer de un mayor número de funciones candidatas.
+El objetivo del aprendizaje radica en obtener un bajo error de test o error de generalización ($E_{out}$) sobre datos desconocidos, lo que implicará que habremos conseguido una buena aproximación de la función objetivo $f$. La capacidad para conseguir un bajo error de generalización está ligada directamente al conjunto de hipótesis ($\mathcal{H}$), donde si nuestro conjunto es suficientemente grande, tendremos una mayor probabilidad de aproximar la función objetivo, al disponer de un mayor número de funciones candidatas.
 
-Sin embargo, si nuestro conjunto $\mathcal{H}$ es demasiado grande, puede darse el caso de que, al elegir una de las funciones candidatas (usando nuestro conjunto de entrenamiento), dicha función no sea la que mejor aproxime a la función objetivo, lo que provoque un mayor error de generalización. A este problema se le conoce como el problema del \textbf{equilibrio entre aproximación y generalización}. Adicionalmente, el conjunto de hipótesis ideal sería el formado únicamente por la función objetivo, es decir, $\mathcal{H} = \{f\}$.
+No obstante, si nuestro conjunto $\mathcal{H}$ es demasiado grande, puede darse el caso de que, al elegir una de las funciones candidatas (usando nuestro conjunto de entrenamiento), dicha función no sea la que mejor aproxime a la función objetivo, lo que provoque un mayor error de generalización. A este problema se le conoce como el problema del \textbf{equilibrio entre aproximación y generalización}. Adicionalmente, el conjunto de hipótesis ideal sería el formado únicamente por la función objetivo, es decir, $\mathcal{H} = \{f\}$.
 
 El \textbf{análisis sesgo-varianza} o \emph{bias-variance analysis} busca descomponer el error de generalización en dos términos principales:
 
@@ -286,7 +286,7 @@ El \textbf{error de generalización o error fuera de la muestra}, definido como 
     E_{out}(g^{\mathcal{(D)}}) = \mathbb{E}_{x}[{(g^{\mathcal{(D)}}(x) - f(x))}^2], \quad x \notin \mathcal{D},
 \end{equation}
 
-donde $\mathbb{E}_{x}$ denota el valor esperado con respecto a $x$ (basado en la distribución de probabilidad del espacio de entrada $\mathcal{X})$, con el objetivo de obtener el valor esperado del error en todo el espacio.
+donde $\mathbb{E}_{x}$ denota la esperanza con respecto a $x$ (basado en la distribución de probabilidad del espacio de entrada $\mathcal{X})$, con el objetivo de obtener el valor esperado del error en todo el espacio.
 
 Dado que la ecuación~\eqref{eq:E_out1} depende de un conjunto de datos en particular, podemos eliminar esta dependencia del conjunto de datos utilizado tomando el valor esperado de dicho error con respecto a todos los conjuntos de datos:
 
@@ -300,7 +300,7 @@ Cambiamos ahora el orden de las esperanzas dado que, en realidad, estamos integr
     \mathbb{E}_{\mathcal{D}}[E_{out}(g^{\mathcal{(D)}})] = \mathbb{E}_{x}[\mathbb{E}_{\mathcal{D}}[{(g^{\mathcal{(D)}}(x) - f(x))}^2]].
 \end{equation}
 
-Nos centramos en calcular $\mathbb{E}_{\mathcal{D}}[{(g^{\mathcal{(D)}}(x) - f(x))}^2]$, olvidándonos por ahora del valor esperado sobre $x$, dado que nos interesa calcular la esperanza con respecto a $\mathcal{D}$ hasta obtener una descomposición limpia del error. Para ello, vamos a definir el concepto de \textbf{hipótesis promedio} $\bar{g}(x)$ de la siguiente manera:
+Nos centramos en calcular $\mathbb{E}_{\mathcal{D}}[{(g^{\mathcal{(D)}}(x) - f(x))}^2]$, olvidándonos por ahora de la esperanza sobre $x$, dado que nos interesa calcular la esperanza con respecto a $\mathcal{D}$ hasta obtener una descomposición limpia del error. Para ello, vamos a definir el concepto de \textbf{hipótesis promedio} $\bar{g}(x)$ de la siguiente manera:
 
 \begin{equation}\label{eq:gbar}
     \bar{g}(x) = \mathbb{E}_{\mathcal{D}}[g^{\mathcal{(D)}}(x)],
@@ -308,7 +308,7 @@ Nos centramos en calcular $\mathbb{E}_{\mathcal{D}}[{(g^{\mathcal{(D)}}(x) - f(x
 
 que corresponde al valor esperado de todas las hipótesis que podemos obtener al aprender de los distintos conjuntos de datos que utilicemos. Destacamos que, en la ecuación~\eqref{eq:gbar}, tenemos $x$ (punto de prueba) fijo, por lo que $g^{\mathcal{(D)}}(x)$ es una variable aleatoria determinada por la elección de nuestros datos, donde si tomamos distintos conjuntos de datos, obtendremos distintos valores para la hipótesis en el punto $x$ fijado. 
 
-En la realidad nunca dispondremos de esta hipótesis promedio, pues tendríamos un número infinito de conjuntos de datos distintos. Además, cabe destacar que la hipótesis promedio no tiene asegurada su pertenencia al conjunto de hipótesis $\mathcal{(H)}$, aunque sea el promedio de hipótesis pertenecientes a $\mathcal{H}$.
+En la realidad, nunca dispondremos de esta hipótesis promedio, pues tendríamos un número infinito de conjuntos de datos distintos. Además, cabe destacar que la hipótesis promedio no tiene asegurada su pertenencia al conjunto de hipótesis $\mathcal{(H)}$, aunque sea el promedio de hipótesis pertenecientes a $\mathcal{H}$.
 
 Continuando con la descomposición, tenemos el siguiente resultado:
 
@@ -346,7 +346,7 @@ Por consiguiente, hemos obtenido una descomposición de la ecuación~\eqref{eq:E
 Por tanto, volviendo a la ecuación~\eqref{eq:E_out3}, nos queda:
 
 \begin{equation}\label{eq:E_out8}
-    \mathbb{E}_{\mathcal{D}}[E_{out}(g^{\mathcal{(D)}})] = \mathbb{E}_{x}[\mathbb{E}_{\mathcal{D}}[{(g^{\mathcal{(D)}}(x) - f(x))}^2]] = \mathbb{E}_{x}[\textbf{var(x)} + \textbf{bias(x)}]
+    \mathbb{E}_{\mathcal{D}}[E_{out}(g^{\mathcal{(D)}})] = \mathbb{E}_{x}[\mathbb{E}_{\mathcal{D}}[{(g^{\mathcal{(D)}}(x) - f(x))}^2]] = \mathbb{E}_{x}[\textbf{var(x)} + \textbf{bias(x)}],
 \end{equation}
 
 donde denotaremos por \textbf{sesgo} a $\mathbb{E}_{x}[\textbf{bias(x)}]$ y por \textbf{varianza} a $\mathbb{E}_{x}[\textbf{var(x)}]$.\newline
@@ -356,7 +356,7 @@ donde denotaremos por \textbf{sesgo} a $\mathbb{E}_{x}[\textbf{bias(x)}]$ y por 
 
     \[ E_{out}(g^{(\mathcal{D})}) = \mathbb{E}_{x, y}[g^{(\mathcal{D})}(x)-{y(x)}^{2}], \]
 
-    y, en este caso, se verifica
+    y, en este caso, se verifica:
 
     \[ \mathbb{E}_{\mathcal{D}}[E_{out}(g^{(\mathcal{D})})] = \sigma^{2} + bias + var. \]
 \end{observacion}
@@ -368,7 +368,7 @@ donde denotaremos por \textbf{sesgo} a $\mathbb{E}_{x}[\textbf{bias(x)}]$ y por 
         \mathbb{E}_{\mathcal{D}, \epsilon}[{(g^{\mathcal{(D)}}(x) - y(x))}^2] = \mathbb{E}_{\mathcal{D}, \epsilon}[{(g^{\mathcal{(D)}}(x) - f(x)) - \epsilon(x)}^2],
     \end{equation}
 
-    donde dado que $y$ depende del ruido, consideramos también el valor esperado con respecto a $\epsilon$ que afectará únicamente a $y$. Procediendo de manera similiar a la ecuación~\eqref{eq:E_out4}, obtenemos
+    donde, dado que $y$ depende del ruido, consideramos también el valor esperado con respecto a $\epsilon$, que afectará únicamente a $y$. Procediendo de manera similiar a la ecuación~\eqref{eq:E_out4}, obtenemos
 
     \begin{equation}
         \mathbb{E}_{\mathcal{D}, \epsilon}[{(g^{\mathcal{(D)}}(x) - \bar{g}(x) + \bar{g}(x) - f(x) - \epsilon(x))}^2],
@@ -392,7 +392,7 @@ donde denotaremos por \textbf{sesgo} a $\mathbb{E}_{x}[\textbf{bias(x)}]$ y por 
         \mathbb{E}_{\mathcal{D}, \epsilon}[{(g^{\mathcal{(D)}}(x) - y(x))}^2] = \mathbb{E}_{\mathcal{D}}[{(g^{\mathcal{(D)}}(x) - f(x))}^2] + \sigma^{2}.
     \end{equation}
 
-    Por último, aplicando el valor esperado sobre $x$ a la expresión anterior, obtenemos el resultado buscado.
+    Por último, aplicando la esperanza sobre $x$ a la expresión anterior, obtenemos el resultado buscado.
 \end{proof}
 
 Finalmente, con el objetivo de generalizar la descomposición del error en términos de sesgo y varianza para otras funciones de pérdida, incluidas aquellas que se emplean en tareas de clasificación, recurrimos al trabajo de Pedro Domingos~\cite{Domingos2000}.
@@ -466,7 +466,7 @@ Con las definiciones anteriores, podemos descomponer el error en términos de se
         \mathbb{E}_{x}[\mathcal{L}(f(x), g(x))] = \mathcal{L}(g(x)_*, g(x)) + c_0 \, \mathbb{E}_{x}[\mathcal{L}(f(x), g(x)_*)],
     \end{equation}
 
-    con $c_0 = 1$ si $g(x) = g(x)_*$ y $c_0 = -1$ si $g(x) \neq g(x)_*$, y donde $\mathcal{L}(a, b)$ representa la pérdida cero-uno. Si $g(x) = g(x)_*$, la ecuación~\eqref{eq:cero-uno1} es cierta de manera trivial usando $c_0 = 1$. Supongamos ahora que $g(x) \neq g(x)_*$. Dado que solo hay dos clases, si $g(x) \neq g(x)_*$ entonces $f(x) \neq g(x)$ implica que $f(x) = g(x)_*$ y viceversa. Por lo tanto, $P_{x}[f(x) = g(x)] = P_{x}[f(x) = g(x)_*]$, y se tiene
+    con $c_0 = 1$ si $g(x) = g(x)_*$ y $c_0 = -1$ si $g(x) \neq g(x)_*$, y donde $\mathcal{L}(a, b)$ representa la pérdida cero-uno. Si $g(x) = g(x)_*$, la ecuación~\eqref{eq:cero-uno1} es cierta de manera trivial usando $c_0 = 1$. Supongamos ahora que $g(x) \neq g(x)_*$. Dado que solo hay dos clases, si $g(x) \neq g(x)_*$ entonces $f(x) \neq g(x)$ implica que $f(x) = g(x)_*$ y viceversa. Por tanto, $P_{x}[f(x) = g(x)] = P_{x}[f(x) = g(x)_*]$, y se tiene
 
     \begin{align}
         \mathbb{E}_x[L(f(x), g(x))] 
@@ -572,7 +572,7 @@ Siguiendo con los resultados obtenidos en la Subsección~\ref{sec:formulacion-ma
 
 Conocemos que el sesgo viene definido por la medida en la que la predicción ideal obtenida de todos los conjuntos de datos difiere de la función objetivo, o expresado de manera similar, el sesgo es el resultado de la incapacidad del modelo para describir la función objetivo. Este resultado sugiere que podemos reducir este término de error haciendo que nuestro modelo sea más flexible, es decir, aumentando nuestro conjunto de hipótesis $\mathcal{H}$ (haciéndolo más complejo), con el objetivo de disponer de un mayor número de funciones candidatas para forzar que la hipótesis promedio se aproxime lo máximo posible a la función objetivo.
 
-Por otro lado, la varianza viene a ofrecernos la medida en la que varían las hipótesis para distintos conjuntos de datos con respecto a la hipótesis ideal, o expresado de manera similar, la varianza evalúa cómo de sensible es una hipótesis a la selección específica del conjunto de datos de entrenamiento $\mathcal{D}$. Este análisis revela que podemos reducir este término de error disminuyendo el conjunto de hipótesis ya que, en un espacio de hipótesis restringido, al haber menos hipótesis, las hipótesis son menos sensibles a las variaciones en el conjunto de datos. Como resultado, al cambiar el conjunto de datos para seleccionar una hipótesis, es más probable que se elijan hipótesis similares.
+Por otro lado, la varianza viene a ofrecernos la medida en la que varían las hipótesis para distintos conjuntos de datos con respecto a la hipótesis ideal, o expresado de manera similar, la varianza evalúa cómo de sensible es una hipótesis a la selección específica del conjunto de datos de entrenamiento $\mathcal{D}$. Este análisis revela que podemos reducir este término de error disminuyendo el conjunto de hipótesis ya que, en un espacio de hipótesis restringido, al haber menos hipótesis, estas son menos sensibles a las variaciones en el conjunto de datos. Como resultado, al cambiar el conjunto de datos para seleccionar una de ellas, es más probable que se elijan hipótesis similares.
 
 En consecuencia, observamos una dependencia de ambos términos de error con respecto a la \textbf{complejidad del conjunto de hipótesis} ($\mathcal{H}$) utilizado. Esta dependencia viene dada por:
 
@@ -589,12 +589,12 @@ Como conclusión, el equilibrio buscado en esta sección, con el objetivo de min
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.7\linewidth]{img/bias-variance.png}
-    \caption[Distintos casos del conjunto de hipótesis y de la función objetivo.] {Distintos casos del conjunto de hipótesis y de la función objetivo~\cite{Mostafa2012}. A la izquierda observamos como nuestro conjunto de hipótesis presenta únicamente una función candidata, alejada de la función objetivo $f$, lo que implica un alto sesgo y una varianza nula. A la derecha observamos un conjunto de hipótesis con numerosas funciones candidatas que incluye a la función objetivo, por lo que el sesgo es muy cercano a cero y la varianza es grande.}\label{fig:bias-variance}
+    \caption[Distintos casos del conjunto de hipótesis y de la función objetivo.] {Distintos casos del conjunto de hipótesis y de la función objetivo~\cite{Mostafa2012}. A la izquierda, observamos como nuestro conjunto de hipótesis presenta únicamente una función candidata, alejada de la función objetivo $f$, lo que implica un alto sesgo y una varianza nula. A la derecha, vemos un conjunto de hipótesis con numerosas funciones candidatas que incluye a la función objetivo, por lo que el sesgo es muy cercano a cero y la varianza es grande.}\label{fig:bias-variance}
 \end{figure}
 
 \subsection{Curva de aprendizaje}
 
-Para finalizar este capítulo, introduciremos el concepto de curva de aprendizaje o \emph{learning curve}, que será la principal herramienta que utilizaremos a lo largo de todo el proyecto para analizar el rendimiento de los distintos modelos que utilicemos.
+Para finalizar esta sección, introduciremos el concepto de curva de aprendizaje o \emph{learning curve}, que será la principal herramienta que utilizaremos a lo largo de todo el proyecto para analizar el rendimiento de los distintos modelos que utilicemos.
 
 En primer lugar y de manera análoga a la ecuación~\eqref{eq:E_out1}, definimos el \textbf{error de entrenamiento o error dentro de la muestra ($E_{in}$)} como la diferencia entre la predicción del modelo y los valores reales del conjunto de datos de entrenamiento, es decir:
 
@@ -607,19 +607,19 @@ Por consiguiente, después de aprender de un conjunto particular de datos $\math
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.4\linewidth]{img/learning-curve.png}
-    \caption[Ejemplo de curva de aprendizaje tradicional~\cite{Mostafa2012}.] {Ejemplo de curva de aprendizaje tradicional~\cite{Mostafa2012}. Observamos la curva de aprendizaje de un modelo con respecto al tamaño del conjunto de datos. Se puede comprobar como el $E_{out}$ decrece, mientras que el $E_{in}$ crece. Además, se puede apreciar la descomposición sesgo-varianza, donde la línea central en negrita denota la hipótesis promedio.}\label{fig:learning-curve-bias-variance}
+    \caption[Ejemplo de curva de aprendizaje tradicional~\cite{Mostafa2012}.] {Ejemplo de curva de aprendizaje tradicional~\cite{Mostafa2012}. Observamos la curva de aprendizaje de un modelo con respecto al tamaño del conjunto de datos. Se puede comprobar como el $E_{out}$ decrece, mientras que el $E_{in}$ crece en función de $N$. Además, se puede apreciar la descomposición sesgo-varianza, donde la línea central en negrita denota la hipótesis promedio.}\label{fig:learning-curve-bias-variance}
 \end{figure}
 
 Se denomina \textbf{curva de aprendizaje} a la representación gráfica que muestra la relación entre el rendimiento de un modelo y el tamaño del conjunto de datos utilizado para su entrenamiento, es decir, a la gráfica que incluye los errores esperados $\mathbb{E}_{\mathcal{D}}[E_{in}(g^{(\mathcal{D})})]$ y $\mathbb{E}_{\mathcal{D}}[E_{out}(g^{(\mathcal{D})})]$ como función de $N$.
 
-Además, dado que la curva de aprendizaje está ligada a los errores esperados del modelo tanto dentro como fuera de la muestra, podríamos analizar el equilibrio sesgo-varianza directamente sobre dicha gráfica. Sin embargo, para llevar a cabo dicho análisis, necesitaríamos conocer la hipótesis promedio $\bar{g}$ que, como sabemos de secciones anteriores, es imposible de calcular. No obstante, si tuvieramos dicha hipótesis promedio, podríamos realizar el análisis (véase \autoref{fig:learning-curve-bias-variance}), teniendo en cuenta que el $E_{out}$ es suma de sesgo y varianza (obviando el término de ruido).
+Además, dado que la curva de aprendizaje está ligada a los errores esperados del modelo tanto dentro como fuera de la muestra, podríamos analizar el equilibrio sesgo-varianza directamente sobre dicha gráfica. Sin embargo, para llevar a cabo dicho análisis, necesitaríamos conocer la hipótesis promedio $\bar{g}$ que, como sabemos de secciones anteriores, es imposible de calcular. No obstante, si tuvieramos dicha hipótesis promedio, podríamos realizar el análisis (véase Figura~\ref{fig:learning-curve-bias-variance}), teniendo en cuenta que el $E_{out}$ es suma de sesgo y varianza (obviando el término de ruido).
 
-Sin embargo, de cara a analizar el doble descenso a lo largo del proyecto, \textbf{no utilizaremos directamente la curva de aprendizaje} tal y como se ha definido, dado que nuestro objetivo es analizar el error con respecto a la capacidad del modelo y no en función del número de datos utilizados. Es por esto que, nuestra curva de aprendizaje será una modificación de la curva de aprendizaje original, donde en el eje $X$ de la gráfica aparecerá indistintamente la capacidad del modelo, y en el eje $Y$ el error esperado (véase~\autoref{fig:learning-curve-classicalvsmodern}), para un número fijo de datos de entrenamiento.
+Sin embargo, de cara a analizar el doble descenso a lo largo del proyecto, \textbf{no utilizaremos directamente la curva de aprendizaje} tal y como se ha definido, dado que nuestro objetivo es analizar el error con respecto a la capacidad del modelo y no en función del número de datos utilizados. Es por esto que, nuestra curva de aprendizaje será una modificación de la curva de aprendizaje original, donde en el eje $X$ de la gráfica aparecerá, indistintamente, la capacidad del modelo, y en el eje $Y$ el error esperado (véase Figura~\ref{fig:learning-curve-classicalvsmodern}), para un número fijo de datos de entrenamiento.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\linewidth]{img/learning-curve-classicalvsmodern.png}
-    \caption[Ejemplos de curvas de aprendizaje modificadas para este proyecto.] {Ejemplos de curvas de aprendizaje modificadas para este proyecto. A la izquierda se muestra la curva clásica de aprendizaje, donde el error de test aumenta, de manera progresiva, una vez superado un cierto punto. A la derecha, la curva moderna refleja que, al aumentar la complejidad del modelo más allá de lo establecido en la sabiduría clásica, el error de test vuelve a disminuir.}\label{fig:learning-curve-classicalvsmodern}
+    \caption[Ejemplos de curvas de aprendizaje modificadas para este proyecto.] {Ejemplos de curvas de aprendizaje modificadas para este proyecto. A la izquierda, se muestra la curva clásica de aprendizaje, donde el error de test aumenta, de manera progresiva, una vez superado un cierto punto. A la derecha, la curva moderna refleja que, al aumentar la complejidad del modelo más allá de lo establecido en la sabiduría clásica, el error de test vuelve a disminuir.}\label{fig:learning-curve-classicalvsmodern}
 \end{figure}
 
 \section{\textit{Underfitting} y \textit{overfitting}}\label{sec:subsec-underfitting-y-overfitting}
@@ -691,12 +691,12 @@ De este modo, la estrategia clásica a seguir en el aprendizaje automático es l
     \item Si el conjunto $\mathcal{H}$ es muy ``grande'', el límite de la Proposición~\ref{prop:min-riesgo-empirico} (máxima brecha de generalización sobre $\mathcal{H}$) aumentará, y la función candidata $\hat{g}$ elegida como minimizadora del riesgo empírico puede generalizar de forma no adecuada aún teniendo un error de entrenamiento bajo. A esta situación la llamaremos \textbf{sobreajuste} o \emph{overfitting}.
 \end{enumerate}
 
-Como conclusión de estas situaciones, se pone de manifiesto la fuerte dependencia de la minimización empírica del riesgo (error del modelo) del conjunto de hipótesis elegido, basado en la sabiduría convencional. Además, es posible establecer de manera clara la relación entre la descomposición del error de generalización como suma de sesgo y varianza y los fenómenos de \emph{underfitting} y \emph{overfitting} (véase Figura~\ref{fig:biasvarianceunderoverfitting}). De esta manera, cuando el modelo se encuentra en la zona de subajuste, su estructura es demasiado simple y no logra capturar los patrones presentes en los datos. Esto se traduce en un error elevado tanto en el conjunto de entrenamiento como en el de prueba, ligado a un alto sesgo.
+Como conclusión de estas situaciones, se pone de manifiesto la fuerte dependencia de la minimización empírica del riesgo (error del modelo) del conjunto de hipótesis elegido, basado en la sabiduría convencional. Además, es posible establecer de manera precisa la relación entre la descomposición del error de generalización como suma de sesgo y varianza y los fenómenos de \emph{underfitting} y \emph{overfitting} (véase Figura~\ref{fig:biasvarianceunderoverfitting}). De esta manera, cuando el modelo se encuentra en la zona de subajuste, su estructura es demasiado simple y no logra capturar los patrones presentes en los datos. Esto se traduce en un error elevado tanto en el conjunto de entrenamiento como en el de test, ligado a un alto sesgo.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\linewidth]{img/biasvarianceunderoverfitting.png}
-    \caption[Relación \textit{bias/variance} con \textit{underfitting} y \textit{overfitting} en el contexto clásico.] {Relación \textit{bias/variance} con \textit{underfitting} y \textit{overfitting} en el contexto clásico. Al principio, el modelo muestra un alto sesgo, incapaz de capturar adecuadamente las relaciones entre los datos. A medida que aumenta su complejidad, su rendimiento mejora hasta alcanzar un punto de equilibrio en el mínimo de la curva del error de generalización (\textit{sweet spot}). Al superar este punto óptimo, el modelo comienza a memorizar los datos, lo que provoca un aumento del error de generalización, ligado a una mayor varianza.}\label{fig:biasvarianceunderoverfitting}
+    \caption[Relación \textit{bias/variance} con \textit{underfitting} y \textit{overfitting} en el contexto clásico.] {Relación \textit{bias/variance} con \textit{underfitting} y \textit{overfitting} en el contexto clásico. Al principio, el modelo muestra un alto sesgo, incapaz de capturar adecuadamente las relaciones entre los datos. A medida que aumenta su complejidad, su rendimiento mejora hasta alcanzar un punto de equilibrio en el mínimo de la curva del error de generalización (\textbf{\textit{sweet spot}}). Al superar este punto óptimo, el modelo comienza a memorizar los datos, lo que provoca un aumento del error de generalización, ligado a una mayor varianza.}\label{fig:biasvarianceunderoverfitting}
 \end{figure}
 
 Por otro lado, cuando el modelo se encuentra en la zona de sobreajuste, se ajusta en exceso a los datos de entrenamiento, llegando a memorizar el ruido. En este caso, el modelo presenta un desempeño prácticamente perfecto en el conjunto de entrenamiento, pero su capacidad de generalización a nuevos datos es deficiente, ligado a una varianza elevada y un bajo nivel de sesgo.
@@ -747,7 +747,7 @@ Aplicando el hecho de que si $\mathcal{B}_1 \Rightarrow \mathcal{B}_2$ entonces 
     \leq 2M e^{-2\epsilon^2 n},
 \end{equation}
 
-donde $g$ es una hipótesis elegida por el algoritmo de aprendizaje dentro del conjunto $\mathcal{H}$. Cabe señalar que esta cota es más laxa que la que se obtiene para una hipótesis fija, ya que considera el peor caso sobre todo el conjunto $\mathcal{H}$. Sin embargo, dicha acotación sigue siendo útil siempre que $M$ sea finito, ya que, en ese caso, el crecimiento de la cota está controlado y permite garantizar una buena generalización con alta probabilidad.
+donde $g$ es una hipótesis elegida por el algoritmo de aprendizaje dentro del conjunto $\mathcal{H}$. Cabe señalar que esta cota es más laxa que la que se obtiene para una hipótesis fija, ya que considera el peor caso sobre todo el conjunto $\mathcal{H}$. Sin embargo, dicha acotación sigue siendo útil siempre que $M$ sea finito, puesto que, en ese caso, el crecimiento de la cota está controlado y permite garantizar una buena generalización con alta probabilidad.
 
 Por otra parte, la caracterización dada en la ecuación~\eqref{eq:Hoeffding-inequality} puede reformularse en términos de una cota probabilística más explícita. Para un valor de tolerancia $\delta \in (0,1)$, se puede afirmar que, con probabilidad al menos $1 - \delta$, se verifica:
 
@@ -814,7 +814,7 @@ donde el error fuera de la muestra queda acotado por el error dentro de la muest
     El análisis basado en la dimensión VC depende únicamente del conjunto de hipótesis $\mathcal{H}$, sin considerar explícitamente el algoritmo de aprendizaje $\mathcal{A}$. En contraste, en el análisis de sesgo-varianza, el algoritmo de aprendizaje sí desempeña un papel fundamental en la descomposición del error, ya que, dado un mismo conjunto $\mathcal{H}$, distintos algoritmos pueden producir hipótesis diferentes.
 \end{observacion}
 
-No obstante, el análisis VC proporciona una intuición similar a la obtenida en el análisis de sesgo-varianza, en cuanto al comportamiento del error de generalización conforme aumenta el tamaño de la muestra. El error de generalización puede acotarse mediante una cota que depende tanto del error empírico como de un término de complejidad vinculado a la dimensión VC del conjunto de hipótesis. Así, si la función de crecimiento es finita, el segundo término decrece con el tamaño de la muestra.
+No obstante, el análisis VC proporciona una intuición similar a la obtenida en el análisis de sesgo-varianza, en cuanto al comportamiento del error de generalización a medida que aumenta el tamaño de la muestra. El error de generalización puede acotarse mediante una cota que depende tanto del error empírico como de un término de complejidad vinculado a la dimensión VC del conjunto de hipótesis. Así, si la función de crecimiento es finita, el segundo término decrece con el tamaño de la muestra.
 
 Otra forma clásica de caracterizar la capacidad de generalización de un modelo es mediante la medición de su capacidad para ajustarse a datos aleatorios. Este enfoque proporciona una indicación de su capacidad para generalizar a datos no observados.
 

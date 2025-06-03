@@ -3,11 +3,11 @@
 
 \chapter{Análisis Teórico del Deep Double Descent}\label{ch:analisis-teorico-ddd}
 
-En este capítulo, nos vamos a encargar de abordar, de manera teórica, el \textit{Deep Double Descent}. En primer lugar, lo definiremos con la mayor precisión posible, ofreciendo una intuición clara a partir de un problema de regresión. A continuación, se presentarán los principales desarrollos presentes en la literatura científica, así como algunos avances recientes en el tema. Para concluir el capítulo, se abordará la teoría de la aproximación no lineal, ya que, a priori, presenta ciertas analogías con este fenómeno.
+En este capítulo nos vamos a encargar de abordar, de manera teórica, el \textit{Deep Double Descent}. En primer lugar, lo definiremos con la mayor precisión posible, ofreciendo una intuición clara a partir de un problema de regresión. A continuación, se presentarán los principales desarrollos presentes en la literatura científica, así como algunos avances recientes en el tema. Para concluir el capítulo, se abordará la teoría de la aproximación no lineal, ya que, a priori, presenta ciertas analogías con este fenómeno.
 
 \section{Planteamiento teórico}\label{sec:planteamiento-teorico}
 
-Siguiendo los resultados expuestos en la Sección~\ref{sec:subsec-underfitting-y-overfitting}, la sabiduría clásica adopta una visión en la cual sostiene que los modelos más grandes tienden a ser peores, ya que su capacidad de generalización empeora. En la práctica moderna, especialmente ahora en la era del \textit{deep learning}, es cada vez más común el uso de modelos de gran tamaño con suficientes parámetros para reducir el error de entrenamiento casi a cero. A pesar de ajustarse casi perfectamente a los datos, estos modelos logran generalizar sorprendentemente bien e incluso superar en rendimiento a modelos más simples.
+Siguiendo los resultados expuestos en la Sección~\ref{sec:subsec-underfitting-y-overfitting}, la sabiduría clásica adopta una visión en la cual sostiene que los modelos más grandes tienden a ser peores, ya que su capacidad de generalización empeora. En la práctica moderna, especialmente ahora en la era del \textit{deep learning}, es cada vez más común el uso de modelos de gran tamaño con suficientes parámetros para reducir el error de entrenamiento casi a cero. A pesar de ajustarse casi perfectamente a los datos, estos modelos consiguen generalizar sorprendentemente bien, e incluso superar en rendimiento a modelos más simples.
 
 De esta manera, se ha comprobado que, más allá de cierto umbral, el aumento de la capacidad de los modelos resulta beneficioso, ya que no conduce al sobreajuste y, en realidad, disminuye nuevamente el error de generalización. A esta nueva zona de funcionamiento de los modelos la denotaremos como \textbf{régimen moderno o zona sobreparametrizada}, mientras que la región previa al umbral, en la que se produce la tradicional curva con forma de ``U'', la denominaremos como \textbf{régimen clásico o zona infraparametrizada}.
 
@@ -17,10 +17,10 @@ De cara a formalizar el fenómeno del DDD y unificar la sabiduría clásica con 
     La \textbf{complejidad efectiva del modelo} (EMC, por sus siglas en inglés) de un algoritmo de aprendizaje $\mathcal{A}$, con respecto a la distribución de probabilidad conjunta $P[X, Y]$ de los datos del conjunto de entrenamiento $\mathcal{D}$, es el máximo número de ejemplos de entrenamiento ($n$) en el que $\mathcal{A}$ obtiene, de media, un error de entrenamiento muy próximo a cero. Es decir, dado $\epsilon > 0$:
 
     \[
-        EMC_{P, \epsilon}(\mathcal{A}) = \max\{ n \in \mathbb{N} \; | \; \mathbb{E}[L(g)] \leq \epsilon \},
+        EMC_{P, \epsilon}(\mathcal{A}) = \max\{ n \in \mathbb{N} \; | \; E_{in}[\mathcal{L}(g)] \leq \epsilon \},
     \]  
 
-    donde $L(g)$ hace referencia a la función de pérdida de la función candidata $g \in \mathcal{H}$.
+    donde $\mathcal{L}(g)$ hace referencia a la función de pérdida de la función candidata $g \in \mathcal{H}$.
 \end{definicion}
 
 Una vez definida la noción de complejidad efectiva del modelo, se expone uno de los resultados principales de este trabajo.
@@ -40,12 +40,12 @@ Esta hipótesis es informal en varios sentidos. En primer lugar, no disponemos d
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\linewidth]{img/planteamiento-teorico-dd.png}
-    \caption[Ejemplo de doble descenso con las distintas zonas de parametrización.]{Ejemplo de doble descenso con las distintas zonas de parametrización. Se puede observar la tradicional forma de ``U'' en la zona clásica (\textit{Classical regime}), seguida de la zona crítica (\textit{Critical regime}), donde el error de generalización es incierto, ya que puede aumentar o disminuir, y, finalmente, la zona moderna (\textit{Modern regime}), donde el error de generalización es incluso menor que el obtenido en la zona clásica.}\label{fig:planteamiento-teorico-dd.png}
+    \caption[Ejemplo de doble descenso con las distintas zonas de parametrización.]{Ejemplo de doble descenso con las distintas zonas de parametrización. Se puede observar la tradicional forma de ``U'' de la curva del error de generalización en la zona clásica (\textit{Classical regime}), seguida de la zona crítica (\textit{Critical regime}), donde el error de generalización es incierto, ya que puede aumentar o disminuir, y, finalmente, la zona moderna (\textit{Modern regime}), donde el error de generalización es incluso menor que el obtenido en la zona clásica.}\label{fig:planteamiento-teorico-dd.png}
 \end{figure}
 
 Por otra parte, la Hipótesis~\ref{hipotesis-general-double-descent} nos ayuda a unificar la sabiduría clásica con los resultados modernos en una curva de aprendizaje que abarca ambos mundos. Hasta el umbral de interpolación, la curva sigue la tradicional forma de ``U'', cuyo mínimo se alcanza en el \textit{sweet spot} (véase Figura~\ref{fig:biasvarianceunderoverfitting}) mientras que, aumentando la capacidad del modelo hasta alcanzar un error de entrenamiento muy próximo a cero, y tras superar la zona crítica donde se encuentra el umbral de interpolación, nos indica que el error de generalización comienza nuevamente a disminuir, pudiendo lograr un error menor que el obtenido en el \textit{sweet spot}.
 
-Este comportamiento, en el que la curva del error de generalización exhibe dos descensos, puede apreciarse en la Figura~\ref{fig:planteamiento-teorico-dd.png} y lo denotaremos como \textbf{doble descenso profundo}, o simplemente \textbf{doble descenso}. En este contexto, el adjetivo profundo hace referencia al uso de redes neuronales profundas como modelo base.
+Este comportamiento, en el que la curva del error de generalización exhibe dos descensos, puede apreciarse en la Figura~\ref{fig:planteamiento-teorico-dd.png} y lo denotaremos como \textbf{doble descenso profundo}, o simplemente \textbf{doble descenso}. En este contexto, el adjetivo profundo hace referencia al uso de redes neuronales profundas como modelo base para el aprendizaje.
 
 Aun habiendo unificado ambos puntos de vista, la descomposición del error en términos de sesgo y varianza, tal como se mencionó en la Sección~\ref{sec:capitulo-bias-variance-tradeoff}, sugiere que uno de estos dos componentes, tras alcanzar el valor máximo de error, comienza nuevamente a disminuir. La Figura~\ref{fig:bias-variance-peak} ilustra los tres comportamientos distintos que pueden surgir como resultado de dicha descomposición. Para nuestro análisis, resulta razonable suponer que es la varianza la que disminuye tras alcanzar el punto máximo del error, ya que sabemos que este término predomina a partir del \textit{sweet spot}, dando lugar a una curva unimodal.
 
@@ -57,10 +57,10 @@ Aun habiendo unificado ambos puntos de vista, la descomposición del error en t�
 
 De este modo, a medida que aumenta la capacidad del modelo, esto implica que, a pesar de disponer de un conjunto de hipótesis más amplio, el modelo se está concentrando en un subconjunto específico de dichas hipótesis, lo que reduce el error asociado a la varianza.
 
-A modo de resumen, estamos separando las distintas zonas de funcionamiento de un modelo en función, en cierta medida, de su conjunto de hipótesis $\mathcal{H}$. En la zona clásica, por lo general, no existe ninguna hipótesis que minimice completamente el riesgo real, es decir, no existe $g \in \mathcal{H}$ tal que $L(g) = 0$. Por el contrario, en la zona moderna, conforme aumenta la capacidad del modelo, aparece un conjunto cada vez más amplio $S \subset \mathcal{H}$ que interpola a la perfección los datos de entrenamiento. Este conjunto se define como:  
+A modo de resumen, estamos separando las distintas zonas de funcionamiento de un modelo en función, en cierta medida, de su conjunto de hipótesis $\mathcal{H}$. En la zona clásica, por lo general, no existe ninguna hipótesis que minimice completamente el riesgo real, es decir, no existe $g \in \mathcal{H}$ tal que $\mathcal{L}(g) = 0$. Por el contrario, en la zona moderna, conforme aumenta la capacidad del modelo, aparece un conjunto cada vez más amplio $S \subset \mathcal{H}$ que interpola a la perfección los datos de entrenamiento. Este conjunto se define como:  
 
 \[
-    S = \{ g \in \mathcal{H} \mid L(g) = 0 \}.
+    S = \{ g \in \mathcal{H} \mid \mathcal{L}(g) = 0 \}.
 \]
 
 En consecuencia, el verdadero problema radica en comprender por qué el algoritmo de aprendizaje $\mathcal{A}$, en la zona sobreparametrizada, tiende a seleccionar ``buenas'' soluciones dentro del conjunto $S$, es decir, aquellas que logran una buena generalización. Es importante destacar que esta cuestión no se puede responder únicamente a partir de los datos del conjunto de entrenamiento $\mathcal{D}$, ya que cualquier hipótesis de $S$ se ajusta perfectamente a esos datos. Por tanto, la clave para comprender el fenómeno vendrá dada por el sesgo inductivo que presentan algunos de los algoritmos de optimización más comunes, los cuales favorecen ciertas soluciones dentro de $S$.
@@ -85,7 +85,7 @@ En la zona infraparametrizada, es decir, cuando el número de ejemplos de entren
     w_{under} = {(X^{T}X)}^{-1}X^{T}Y.
 \end{equation}
 
-Por otra parte, en la zona sobreparametrizada, es decir, cuando el número de parámetros es mayor que el número de ejemplos de entrenamiento $(N < P)$, no se puede resolver el problema de minimización~\eqref{eq:minimos-cuadrados1} de manera convencional, dado que estaría mal planteado, debido al hecho de que existirían múltiples soluciones, ya que habría menos restricciones que parámetros. Por tanto, debemos seleccionar un problema de optimización distinto, que también se encuentre sujeto a las restricciones impuestas por los ejemplos de entrenamiento. En este contexto, elegimos el problema más simple que se podría imaginar, dado por:
+Por otra parte, en la zona sobreparametrizada, es decir, cuando el número de parámetros es mayor que el número de ejemplos de entrenamiento $(N < P)$, no se puede resolver el problema de minimización~\eqref{eq:minimos-cuadrados1} de manera convencional, dado que estaría mal planteado, debido al hecho de que existirían múltiples soluciones, puesto que habría menos restricciones que parámetros. Por tanto, debemos seleccionar un problema de optimización distinto, que también se encuentre sujeto a las restricciones impuestas por los ejemplos de entrenamiento. En este contexto, elegimos el problema más simple que se podría imaginar, dado por:
 
 \begin{equation}\label{eq:minimos-cuadrados2}
     \arg\min_{w}\| w \|^{2}, \quad \text{sujeto a} \; x_n \cdot w = y_n \quad \forall n \in \{1, \ldots, N\}.
@@ -113,7 +113,7 @@ No obstante y llegados a este punto, las diferencias al predecir un punto de pru
     y_n = x_n \cdot w^{*} + e_n,
 \]
 
-donde $w^{*} \in \mathbb{R}^{P} = \mathbb{R}^{D}$ representa el \textbf{vector de parámetros ideal} que realmente minimiza el error cuadrático medio y $e_n$ representa un término de error adicional presente en la propia naturaleza de los datos, es decir, un residuo que el modelo no puede capturar. Equivalentemente, en forma matricial, podemos escribir:
+donde $w^{*} \in \mathbb{R}^{P} = \mathbb{R}^{D}$ representa el \textbf{vector de parámetros ideal} que realmente minimiza el error cuadrático medio, y $e_n$ representa un término de error adicional presente en la propia naturaleza de los datos, es decir, un residuo que el modelo no puede capturar. Equivalentemente, en forma matricial, podemos escribir:
 
 \[
     Y = X \cdot w^{*} + E, \quad \text{con } E \in \mathbb{R}^{N \times 1}.
@@ -169,11 +169,11 @@ Las ecuaciones obtenidas son importantes, aunque, a simple vista, no nos proporc
         donde se ha utilizado que $V \Sigma^{\dagger} U^{T}$ corresponde a la descomposición en valores singulares de la pseudoinversa de $X$, dada por $X^{\dagger} = X^{T}{(XX^{T})}^{-1}$.
 \end{itemize}
 
-LLegados a este punto, podemos analizar con mayor claridad las diferencias entre ambas predicciones. La zona sobreparametrizada incluye el término adicional $x_{test} \cdot (X^{T}{(XX^{T})}^{-1}X - I_{D}) w^{*}$, que viene a ser una proyección del punto de prueba en el espacio de características. Recordemos que, en la zona sobreparametrizada, hay más parámetros que ejemplos de entrenamiento, por lo que, para $N$ ejemplos de entrenamiento en $D = P$ dimensiones, el modelo solo puede captar fluctuaciones de los datos en $N$ dimensiones, pero no tiene visibilidad para captar las fluctuaciones en las restantes $P - N$ dimensiones.
+LLegados a este punto, podemos analizar con mayor claridad las diferencias entre ambas predicciones. La zona sobreparametrizada incluye el término adicional $x_{test} \cdot (X^{T}{(XX^{T})}^{-1}X - I_{D}) w^{*}$, que viene a ser una proyección del punto de test en el espacio de características. Recordemos que, en la zona sobreparametrizada, hay más parámetros que ejemplos de entrenamiento, por lo que, para $N$ ejemplos de entrenamiento en $D = P$ dimensiones, el modelo solo puede captar fluctuaciones de los datos en $N$ dimensiones, pero no tiene visibilidad para captar las fluctuaciones en las restantes $P - N$ dimensiones.
 
-Esto provoca la pérdida de información sobre la relación lineal óptima del vector de pesos $w^{*}$, lo que a su vez aumenta el error de predicción. Este término es el asociado al sesgo (véase Sección~\ref{sec:capitulo-bias-variance-tradeoff}), pues, al encontrarnos en la zona sobreparametrizada, disponemos de gran cantidad de hipótesis ligadas a la falta de suficientes restricciones en comparación con el número de parámetros. Esto favorece que la hipótesis ideal se encuentre dentro de ese conjunto de posibles soluciones, lo cual, a su vez, facilita que este término sea cercano a cero.
+Esto provoca la pérdida de información sobre la relación lineal óptima del vector de pesos $w^{*}$, lo que a su vez aumenta el error de predicción. Este término es el asociado al sesgo (véase Sección~\ref{sec:capitulo-bias-variance-tradeoff}), pues, al encontrarnos en la zona sobreparametrizada, disponemos de gran cantidad de hipótesis debido a la falta de suficientes restricciones en comparación con el número de parámetros. Esto favorece que la hipótesis ideal se encuentre dentro de ese conjunto de posibles soluciones, lo cual, a su vez, facilita que este término sea cercano a cero.
 
-El otro término, $\sum_{r=1}^{R}\frac{1}{\sigma_r}(x_{test} \cdot v_r)(u_r \cdot E)$, representa la influencia de cada componente singular y es el causante del doble descenso en una regresión lineal resuelta mediante el método OLS. Este término se conoce como varianza y refleja el impacto de modelar las fluctuaciones de los datos en las direcciones singulares y si dicho equilibrio está correlacionado con los objetivos de regresión.
+El otro término, $\sum_{r=1}^{R}\frac{1}{\sigma_r}(x_{test} \cdot v_r)(u_r \cdot E)$, representa la influencia de cada componente singular y es el causante del doble descenso en una regresión lineal resuelta mediante el método OLS. Este término se conoce como varianza y refleja el impacto de modelar las fluctuaciones de los datos en las direcciones singulares, y si dicho equilibrio está correlacionado con los objetivos de regresión.
 
 \begin{figure}[h]
     \centering
@@ -181,7 +181,7 @@ El otro término, $\sum_{r=1}^{R}\frac{1}{\sigma_r}(x_{test} \cdot v_r)(u_r \cdo
     \caption[Ejemplos de distribuciones de Marchenko-Pastur~\cite{Charles2018}.]{Ejemplos de distribuciones de Marchenko-Pastur~\cite{Charles2018} para distintos valores de la relación de aspecto de la matriz ($Q = \frac{N}{P}$) y varianza fija. Cuando $Q = 1$, la mayoría de valores propios se acumulan alrededor del cero. A medida que $Q$ aumenta, los valores propios mínimos se alejan progresivamente de cero.}\label{fig:marchenkopastur}
 \end{figure}
 
-Por tanto, esos tres términos, multiplicados, determinan cuánto contribuye la $r$-ésima componente singular al error de predicción. Además, el ``pico'' del primer ascenso ocurre cerca del umbral de interpolación, debido a que el menor valor singular no nulo suele alcanzar su valor más bajo en dicho umbral, basado en la distribución de Marchenko-Pastur~\cite{Marchenko1967}.
+Por tanto, estos tres términos, multiplicados, determinan cuánto contribuye la $r$-ésima componente singular al error de predicción. Además, el ``pico'' del primer ascenso ocurre cerca del umbral de interpolación, debido a que el menor valor singular no nulo suele alcanzar su valor más bajo en dicho umbral, basado en la distribución de Marchenko-Pastur~\cite{Marchenko1967}.
 
 A grandes rasgos, esta distribución describe el comportamiento de los valores propios de matrices aleatorias y se aplica cuando se tiene una matriz aleatoria cuyas entradas son independientes e idénticamente distribuidas, como es el caso de la matriz $X \in \mathcal{M}_{N \times D}(\mathbb{R})$. En particular, la distribución de Marchenko-Pastur describe los valores propios de la matriz de covarianza $XX^{T}$, que a su vez determinan la varianza explicada por las componentes principales del modelo. De este modo, cuando la relación $\frac{N}{P}$ se aproxima a $1$, los valores propios más pequeños se acercan a $0$ (véase Figura~\ref{fig:marchenkopastur}), provocando que los valores singulares también sean casi nulos. Esto ocurre cerca del umbral de interpolación, donde $N = P = D$, y para evitar que el $N$-ésimo dato añada un valor singular pequeño no nulo a los datos de entrenamiento, deben cumplirse dos condiciones: 
 
@@ -190,7 +190,7 @@ A grandes rasgos, esta distribución describe el comportamiento de los valores p
     \item El $N$-ésimo dato debe presentar una variación considerable en esa dimensión.
 \end{itemize}
 
-Sin embargo, este escenario es muy poco probable debido a que, en la mayoría de los casos, los datos de entrenamiento se muestrean de manera independiente a partir de variables aleatorias que son i.i.d., lo que resulta en una distribución aleatoria de los datos en todas las dimensiones. Al superar este umbral de interpolación, la varianza explicada por cada dimensión de las covariables se hace más evidente y los valores singulares no nulos más pequeños se alejan de cero, lo que reduce nuevamente el término de varianza en las predicciones, pudiendo provocar el doble descenso.
+Sin embargo, este escenario es muy poco probable debido a que, en la mayoría de los casos, los datos de entrenamiento se muestrean de manera independiente a partir de variables aleatorias que son i.i.d., lo que resulta en una distribución aleatoria de los datos en todas las dimensiones. Al superar este umbral de interpolación, la varianza explicada por cada dimensión de las covariables se hace más notoria, y los valores singulares no nulos más pequeños se alejan de cero, lo que reduce nuevamente el término de varianza en las predicciones, pudiendo provocar el doble descenso.
 
 \section{Convergencia del descenso de gradiente}\label{sec:sesgo-implicito-descenso-gradiente}
 
@@ -268,7 +268,7 @@ Una vez que conocemos el conjunto de soluciones para nuestro problema de optimiz
     En particular, en los dos últimos casos, dado que $\ker(X)$ es trivial, la solución del problema es única.
 \end{observacion}
 
-Por tanto, nos interesa centrarnos en analizar cómo de tan buena es la solución que proporciona el descenso de gradiente en la región sobreparametrizada, es decir, cuando $N < D$, dado que es en este caso cuando se generan múltiples soluciones, mientras que en los otros casos la solución es única.
+Por tanto, nos interesa centrarnos en analizar cómo de buena es la solución que proporciona el descenso de gradiente en la región sobreparametrizada, es decir, cuando $N < D$, dado que es en este caso cuando se generan múltiples soluciones, mientras que en los otros casos la solución es única.
 
 \begin{teorema}
     Si el problema de mínimos cuadrados lineales~\eqref{eq:regresion-lineal-gd} se encuentra en la región sobreparametrizada, es decir, $(N < D)$ y $rang(X) = N$, entonces, usando el descenso de gradiente con una tasa de aprendizaje constante $0 < \eta < \frac{1}{\lambda_{\max}(X)}$, donde $\lambda_{\max}(X)$ es el mayor valor propio de $X$, y partiendo desde un punto inicial $w_0 \in Im(X^{T})$, se garantiza la convergencia hacia la solución de norma mínima.
@@ -365,10 +365,10 @@ Por tanto, nos interesa centrarnos en analizar cómo de tan buena es la solució
 En conclusión, tanto el gradiente descendente como la pseudoinversa llegan a la misma solución (bajo ciertas hipótesis) cuando se trata de resolver un problema de regresión lineal, ya que ambos buscan la solución interpolante de norma mínima, lo que los convierte en métodos equivalentes. De esta manera, \textbf{realizar el gradiente descendente hasta la convergencia, comenzando con una inicialización de todos los pesos a cero, es equivalente a aplicar directamente la pseudoinversa}. Por tanto, podemos interpretar que utilizar la pseudoinversa para resolver un problema de mínimos cuadrados es, en esencia, un caso particular del gradiente descendente aplicado al mismo problema.
 
 \subsection{Problema de clasificación con datos separables}\label{subsec:problema-clasificación-separable}
-En esta subsección, nos preocupamos de verificar el efecto de utilizar el descenso de gradiente como método de optimización en un problema de clasificación binaria con un conjunto de datos linealmente separable~\cite{Soudry2024}. Por simplicidad, condideramos un problema de clasificación binaria con un conjunto de datos separable, lo que facilita la intuición sobre el comportamiento del descenso de gradiente. No obstante, los principios que se discuten posteriormente pueden extenderse a problemas de clasificación multiclase~\cite{Ravi2024} y al uso del descenso de gradiente en redes neuronales~\cite{Gunasekar2019}.
+En esta subsección nos preocupamos de verificar el efecto de utilizar el descenso de gradiente como método de optimización en un problema de clasificación binaria con un conjunto de datos linealmente separable~\cite{Soudry2024}. Por simplicidad, condideramos un problema de clasificación binaria con un conjunto de datos separable, lo que facilita la intuición sobre el comportamiento del descenso de gradiente. No obstante, los principios que se discuten posteriormente pueden extenderse a problemas de clasificación multiclase~\cite{Ravi2024} y al uso del descenso de gradiente en redes neuronales~\cite{Gunasekar2019}.
 
 \begin{definicion}
-    Un conjunto de datos $\mathcal{D} = \{ (x_i, y_i) \; | \; i \in \{1, \ldots, N \}\}$ donde para todo $i \in \{1, \ldots, N \}$ se verifica que $(x_i, y_i) \in \mathbb{R}^{D} \times \{-1, 1\}$, es linealmente separable si existe $w_{*} \in \mathbb{R}^{D}$ de manera que $\forall i : y_i w_{*} x_i > 0$.
+    Un conjunto de datos $\mathcal{D} = \{ (x_i, y_i) \; | \; i \in \{1, \ldots, N \}\}$, donde para todo $i \in \{1, \ldots, N \}$ se verifica que $(x_i, y_i) \in \mathbb{R}^{D} \times \{-1, 1\}$, es linealmente separable si existe $w_{*} \in \mathbb{R}^{D}$ de manera que $\forall i : y_i w_{*} x_i > 0$.
 \end{definicion}
 
 Además, los resutados que se exponen en este apartado se cumplen para funciones de pérdida $\ell: \mathbb{R} \to \mathbb{R}_{+}$ que presentan las siguientes propiedades:
@@ -380,7 +380,7 @@ Además, los resutados que se exponen en este apartado se cumplen para funciones
 
 Estas propiedades incluyen funciones de pérdida comunes para problemas de clasificación binaria, incluyendo la función logística y la exponencial. Además, estas propiedades implican que $\mathcal{L}(w)$ (véase ecuación~\eqref{eq:funcion-perdida}) es una función $\beta \sigma^{2}_{\max}(X)$-suave (ligado al hecho de que $\ell$ es $\beta$-suave), donde $\sigma_{\max}(X)$ es el máximo valor singular de la matriz $X \in \mathbb{R}^{D \times N}$ que contiene los datos de entrenamiento.
 
-Por tanto, para nuestro problema, consideramos un conjunto de entrenamiento $\mathcal{D}$ linealmente separable formado por $N$-pares de datos de la forma $(x_i, y_i)$ con $x_i \in \mathbb{R}^{D}$ y $y_i \in \{ -1, 1\}$, donde $i \in \{1, \ldots, N \}$ y nos centramos en minimizar la función de pérdida dada por:
+Por tanto, para nuestro problema, consideramos un conjunto de entrenamiento $\mathcal{D}$ linealmente separable formado por $N$-pares de datos de la forma $(x_i, y_i)$ con $x_i \in \mathbb{R}^{D}$ e $y_i \in \{ -1, 1\}$, donde $i \in \{1, \ldots, N \}$, y nos centramos en minimizar la función de pérdida dada por:
 
 \begin{equation}\label{eq:funcion-perdida}
     \min_{w \in R^{D}}\mathcal{L}(w) = \min_{w \in R^{D}} \sum_{i=1}^{N} \ell(y_i w^{T}x_i),
@@ -411,7 +411,7 @@ De cara a estudiar esta solución, utilizaremos un lema auxiliar que nos ayudar�
 
 La demostración del lema se puede verificar en el Apéndice~\ref{ap:apendiceA}.
 
-Una vez conocemos el resultado anterior, podemos enunciar el principal teorema de esta subsección, que establece las condiciones necesarias para que el descenso de gradiente converja hacia un punto crítico.
+Una vez conocemos el resultado anterior, podemos enunciar el principal teorema de esta subsección, que establece las condiciones necesarias para que el descenso de gradiente converja hacia un punto crítico (minimizador global).
 
 \begin{teorema}\label{teorema:clasificación-gd}
     Sea $\mathcal{D}$ un conjunto de entrenamiento linealmente separable con $N$ ejemplos y $\ell: \mathbb{R} \to \mathbb{R}_{+}$ una función de pérdida verificando las propiedades~\ref{prop:positiva},~\ref{prop:smooth} y~\ref{prop:derivada_negativa}. Sean $w_t$ las iteraciones del descenso de gradiente usando una tasa de aprendizaje $0 < \eta < \frac{2}{\beta \sigma^{2}_{\max}(X)}$ y cualquier punto inicial $w_0$. Entonces, se cumplen:
@@ -430,7 +430,7 @@ Una vez conocemos el resultado anterior, podemos enunciar el principal teorema d
         w_{*}^{T}\nabla\mathcal{L}(w) = \sum_{i=1}^{N} \underbrace{\ell'(y_i w^{T} x_i)}_{< 0} \underbrace{y_i w_{*}^{T}x_i}_{> 0} < 0.
     \]
 
-    Para cualquier $w$ finito, la suma anterior no puede ser igual a $0$, ya que es una suma de términos negativos $(\forall i: y_i w_{*}^{T}x_i > 0)$ y $\forall u: \ell'(u) < 0$, debido a las propiedades que cumple la función de pérdida $\ell$. Por lo tanto, no hay puntos críticos finitos $w$ para los cuales $\nabla \mathcal{L}(w) = 0$. Sin embargo, el descenso de gradiente en una función de pérdida suave con una tasa de aprendizaje adecuada siempre garantiza converger a un punto crítico, es decir, $\nabla \mathcal{L}(w^{(t)}) \to 0$ (véase Lema~\ref{lema:raro-clasificación-gd}).
+    Para cualquier $w$ finito, la suma anterior no puede ser igual a $0$, ya que es una suma de términos negativos $(\forall i: y_i w_{*}^{T}x_i > 0)$ y $\forall u: \ell'(u) < 0$, debido a las propiedades que cumple la función de pérdida $\ell$. Por tanto, no hay puntos críticos finitos $w$ para los cuales $\nabla \mathcal{L}(w) = 0$. Sin embargo, el descenso de gradiente en una función de pérdida suave con una tasa de aprendizaje adecuada siempre garantiza converger a un punto crítico, es decir, $\nabla \mathcal{L}(w^{(t)}) \to 0$ (véase Lema~\ref{lema:raro-clasificación-gd}).
     
     Este hecho implica necesariamente que $\| w^{(t)} \| \to \infty$, que es la condición \textbf{($\boldsymbol{2}$)}, mientras se verifique que $\exists t_0 : \; \forall t > t_0, \; \forall i: y_i w_{t}^{T} x_i > 0$, que es la condición \textbf{($\boldsymbol{3}$)}, pues únicamente entonces se cumple $\ell'(y_i {w}^{(t)T} x_i) \to 0$. Entonces, se verifica que $\mathcal{L}(w^{(t)}) \to 0$ (condición \textbf{($\boldsymbol{1}$)}) y, por tanto, el descenso de gradiente converge hacia un mínimo global.
 \end{proof}
@@ -442,7 +442,7 @@ Como hemos observado en secciones anteriores, la sobreparametrización resulta b
 
 En el caso de que nuestra función de pérdida $\ell: \mathcal{Y} \to \mathbb{R}$ sea convexa y nuestro modelo $g: \mathcal{X} \to \mathcal{Y}$, elegido del conjunto de hipótesis, sea lineal, es fácil observar que $l \circ f$ es convexa (basta con aplicar las propiedades de la linealidad de $g$ junto con las propiedades de convexidad de $\ell$). Como resultado, se garantiza la convergencia hacia la mejor solución, es decir, el mínimo global de la función de pérdida, sin riesgo de quedar atrapados en mínimos locales.
 
-No obstante, en el marco del aprendizaje profundo, el modelo resultante es no lineal debido al uso de funciones de activación no lineales, lo que provoca que, en general, \textbf{el paisaje de la función de pérdida sea no convexo}. Esto implica que los métodos de optimización de primer orden, como el GD, puedan quedar atrapados en mínimos locales, ya que solo utilizan información local del gradiente, dependiendo así de su inicialización. Como resultado, los sistemas sobreparametrizados dan lugar a paisajes de la función de pérdida que son \textbf{esencialmente no convexos}, es decir, por lo general no existe un vecindario alrededor de ningún minimizador global en el que el paisaje de la función de pérdida sea convexo. Esto contrasta con lo que ocurre en los sistemas infraparametrizados, donde dicho vecindario suele existir, aunque sea extremadamente pequeño (véase Figura~\ref{fig:localglobalminima}).
+No obstante, en el marco del aprendizaje profundo, el modelo resultante es no lineal debido al uso de funciones de activación no lineales, lo que provoca que, en general, \textbf{el paisaje de la función de pérdida sea no convexo}. Esto implica que los métodos de optimización de primer orden, como el GD, puedan quedar atrapados en mínimos locales, ya que solo utilizan información local del gradiente, dependiendo así de su inicialización. Como resultado, los sistemas sobreparametrizados dan lugar a paisajes de la función de pérdida que son \textbf{esencialmente no convexos}, es decir, por lo general no existe un entorno alrededor de ningún minimizador global en el que el paisaje de la función de pérdida sea convexo. Esto contrasta con lo que ocurre en los sistemas infraparametrizados, donde dicho entorno suele existir, aunque sea extremadamente pequeño (véase Figura~\ref{fig:localglobalminima}).
 
 \begin{figure}[h]
     \centering
@@ -462,7 +462,7 @@ Matemáticamente, esto es equivalente a resolver un sistema con $N$ ecuaciones\f
     \mathcal{F}(w) = y, \; \text{donde} \; w \in \mathbb{R}^{P}, y \in \mathbb{R}^{N}, \mathcal{F}(\cdot):\mathbb{R}^{P} \to \mathbb{R}^{N}.
 \end{equation}
 
-De esta manera, $\mathcal{F}(w) = f(w; x_i)$. Una solución exacta de la ecuación~\eqref{eq:optimizacion-uno} corresponde a la interpolación.
+De esta manera, $\mathcal{F}_{i}(w) = f(w; x_i)$. Una solución exacta de la ecuación~\eqref{eq:optimizacion-uno} corresponde a la interpolación.
 
 Usamos $\mathcal{DF}$ para representar la derivada de la función $\mathcal{F}$, donde $\mathcal{DF} \in \mathcal{M}_{N \times P}(\mathbb{R})$, con $(\mathcal{DF})_{ij} = \frac{\partial \mathcal{F}_{i}}{\partial w_j}$. Denotamos la matriz hessiana de la función $\mathcal{F}$ como $H_{\mathcal{F}}$, que es un tensor de tamaño $N \times P \times P$ con $(H_{\mathcal{F}})_{ijk} = \frac{\partial^2 \mathcal{F}_{i}}{\partial w_j \partial w_k}$, y definimos la norma del tensor hessiano como $\| H_{\mathcal{F}} \| = \max_{i \in \{1, \ldots,N \}} \| H_{\mathcal{F}_{i}} \|$, donde $H_{\mathcal{F}_{i}} = \frac{\partial^2 \mathcal{F}_{i}}{\partial w^2}$. De manera análoga, denotamos la matriz hessiana de la función de pérdida como $H_{\mathcal{L}} = \frac{\partial^2 \mathcal{L}}{\partial w^2}$.
 
@@ -480,7 +480,7 @@ Para detallar de manera analítica la no convexidad en la zona sobreparametrizad
 
 Para el caso de sistemas infraparametrizados, los mínimos locales se encuentran generalmente aislados. Dado que $H_{\mathcal{L}}(w^{*})$ es definida positiva cuando $w^{*}$ es un mínimo aislado, por la continuidad de $H_{\mathcal{L}}(\cdot)$, la definición de positividad se preserva en el entorno de $w^{*}$. Por consiguiente, $\mathcal{L}(w)$ es localmente convexa alrededor de $w^{*}$.
 
-A su vez, en los sistemas sobreparametrizados contamos con más parámetros que constantes. En este caso, el sistema de ecuaciones general tiene múltiples soluciones exactas, las cuales forman una variedad continua de dimensión $P - N > 0$, de modo que ninguna de estas soluciones está aislada. Este hecho puede observarse en la Figura~\ref{fig:localglobalminima} y se encuentra demostrado en el Apéndice A de~\cite{Liu2021}. En cuanto a nuestro interés, podemos concluir que, para redes suficientemente parametrizadas, los mínimos globales siempre están rodeados por otro mínimo global en un vecindario relativamente pequeño.
+A su vez, en los sistemas sobreparametrizados contamos con más parámetros que constantes. En este caso, el sistema de ecuaciones general tiene múltiples soluciones exactas, las cuales forman una variedad continua de dimensión $P - N > 0$, de modo que ninguna de estas soluciones está aislada. Este hecho puede observarse en la Figura~\ref{fig:localglobalminima}, y se encuentra demostrado en el Apéndice A de~\cite{Liu2021}. En cuanto a nuestro interés, podemos concluir que, para redes suficientemente parametrizadas, \textbf{los mínimos globales siempre están rodeados por otro mínimo global en un entorno relativamente pequeño.}
 
 Estos resultados nos conducen a la conclusión de que, para el análisis de los sistemas sobreparametrizados, no podemos utilizar la convexidad, ni siquiera localmente, como base. En consecuencia, es necesario buscar una condición, a priori, más simple, que verifiquen las funciones de pérdida con el fin de analizar el comportamiento de dichos sistemas. Para ello, se recurre a una modificación de la condición de Polyak y Lojasiewicz.
 
@@ -493,7 +493,7 @@ Estos resultados nos conducen a la conclusión de que, para el análisis de los 
 \end{definicion}
 
 \begin{teorema}
-    Supongamos que la función de pérdida $\mathcal{L}(w)$ es $\beta$-suave y cumple la condición $\mu$-$PL$ en la bola $B(w_0, R) = \{ w \in \mathbb{R}^{P} : \| w - w_0 \| \leq R \}$ con $R = \frac{2 \sqrt{2 \beta \mathcal{L}(w_0)}}{\mu}$. Entonces se tiene:
+    Supongamos que la función de pérdida $\mathcal{L}(w)$ es $\beta$-suave y cumple la condición $\mu$-$PL$ en la bola $B(w_0, R) = \{ w \in \mathbb{R}^{P} : \| w - w_0 \| \leq R \}$, con $R = \frac{2 \sqrt{2 \beta \mathcal{L}(w_0)}}{\mu}$. Entonces se tiene:
 
     \begin{enumerate}
         \item (\textbf{Existencia de una solución}). Existe una solución (minimizador global de $\mathcal{L}$) $w^{*} \in B(w_0, R)$, de manera que $\mathcal{F}(w^{*}) = y$.
@@ -648,7 +648,7 @@ Por tanto, si $\| \cdot \|_{s}$ es cualquier norma funcional, o más generalment
     \min_{g \in S_2} \| g \|_{s} \leq \min_{g \in S_1} \| g \|_{s}.
 \]
 
-Suponiendo que $\| \cdot \|_{s}$ es el sesgo inductivo correcto, que mide esa suavidad (por ejemplo, una norma de Sobolev), entonces esperamos que la hipótesis elegida de $S_2$ sea más suave, debido a que este conjunto contiene un mayor número de hipótesis que el conjunto $S_1$ y, por tanto, este conjunto es más adecuado para resolver el problema, lo que lleva a una mejor generalización de la hipótesis elegida.
+Suponiendo que $\| \cdot \|_{s}$ es el sesgo inductivo correcto, que mide esa suavidad (por ejemplo, una norma de Sobolev), entonces esperamos que la hipótesis seleccionada de $S_2$ sea más suave, debido a que este conjunto contiene un mayor número de hipótesis que el conjunto $S_1$ y, por tanto, este conjunto es más adecuado para resolver el problema, lo que lleva a una mejor generalización de la hipótesis elegida.
 
 El principio enunciado anteriormente también permite explicar la aparición del máximo en el error de generalización cerca del umbral de interpolación, ya que en ese punto el modelo se ve forzado a pasar, exactamente, por cada uno de los puntos de entrenamiento. Esto conduce a una solución única que depende exclusivamente de los datos de entrenamiento, lo que obliga al modelo a seleccionar dicha solución independientemente de su ``suavidad''.
 
@@ -662,17 +662,17 @@ Ligado a esto, Somepalli et al.~\cite{Somepalli2022} analizaron la reproducibili
 
 Finalmente, a partir de una puntuación de reproducibilidad basada en dichas regiones de decisión, observaron que esta métrica toma valores más bajos cerca del umbral de interpolación. Esto sugiere que, en dicha región, el modelo seleccionado tiende a ser más particular y depende fuertemente de la inicialización de los parámetros de la red utilizada.
 
-Generalmente, puede pensarse que los sesgos inductivos introducidos por los algoritmos de optimización son de naturaleza restrictiva, es decir, imponen restricciones al espacio de hipótesis que están alineadas con el problema de interés. En otras palabras, dado que existen múltiples configuraciones del modelo que se ajustan adecuadamente a los datos pero generan una mala generalización, se prefiere restringir el espacio de hipótesis a aquellas configuraciones que tienden a generalizar mejor para el problema en cuestión, independientemente de si estas son óptimas en un sentido más amplio. Este enfoque está estrechamente relacionado con los principios de regularización.
+Generalmente, puede pensarse que los sesgos inductivos introducidos por los algoritmos de optimización son de naturaleza restrictiva, es decir, imponen restricciones al espacio de hipótesis que están alineadas con el problema de interés. En otras palabras, dado que existen múltiples configuraciones del modelo que se ajustan adecuadamente a los datos pero generan una mala generalización, se prefiere restringir el espacio de hipótesis a aquellas configuraciones que tienden a generalizar mejor para el problema en cuestión, independientemente de si estas son óptimas en un sentido más general. Este enfoque está estrechamente relacionado con los principios de regularización.
 
 Al reducir el espacio de hipótesis, este se ve más rápidamente limitado por los datos, ya que existen menos opciones para que el modelo se ajuste a ellos. No obstante, estos sesgos restrictivos pueden considerarse, en ciertos contextos, como indeseables. En efecto, lo que se busca es respaldar cualquier solución capaz de describir adecuadamente los datos, lo que implica favorecer un espacio de hipótesis lo suficientemente flexible.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\linewidth]{img/types-of-bias.png}
-    \caption[Diferentes tipos de sesgo para el espacio de hipótesis~\cite{Wilson2025}.]{Diferentes tipos de sesgo para el espacio de hipótesis~\cite{Wilson2025}. A la izquierda observamos un conjunto de hipótesis grande sobre el cual no se tiene preferencia por las soluciones que ajustan igualmente bien los datos. En este caso, el entrenamiento puede derivar en soluciones de sobreajuste que generalizan mal. En el centro, se presenta un conjunto de hipótesis flexible en combinación con un sesgo inductivo suave, que guía el entrenamiento hacia soluciones que generalizan bien. A la derecha, restringir el espacio de hipótesis puede ayudar a evitar el sobreajuste al considerar solo algunas soluciones. Sin embargo, al limitar la expresividad del modelo, se impide captar todos los matices de la realidad, lo que dificulta alcanzar la mejor generalización.}\label{fig:types-of-bias}
+    \caption[Diferentes tipos de sesgo para el espacio de hipótesis~\cite{Wilson2025}.]{Diferentes tipos de sesgo para el espacio de hipótesis~\cite{Wilson2025}. A la izquierda, observamos un conjunto de hipótesis grande sobre el cual no se tiene preferencia por las soluciones que ajustan igualmente bien los datos. En este caso, el entrenamiento puede derivar en soluciones de sobreajuste que generalizan mal. En el centro, se presenta un conjunto de hipótesis flexible en combinación con un sesgo inductivo suave, que guía el entrenamiento hacia soluciones que generalizan bien. A la derecha, restringir el espacio de hipótesis puede ayudar a evitar el sobreajuste al considerar solo algunas soluciones. Sin embargo, al limitar la expresividad del modelo, se impide captar todos los matices de la realidad, lo que dificulta alcanzar la mejor generalización.}\label{fig:types-of-bias}
 \end{figure}
 
-La idea general de preferir ciertas soluciones sobre otras, incluso cuando ambas se ajustan igualmente a los datos, se conoce como \textbf{sesgo inductivo suave}~\cite{Wilson2025}. La Figura~\ref{fig:types-of-bias} ilustra este concepto, distinguiéndolo de otros tipos de sesgo. El hecho de considerar estos sesgos inductivos suaves se relaciona directamente con la disminución de la varianza (y, por lo tanto, también del error) a medida que aumentamos la capacidad del modelo. Este tipo de sesgos se centra en una zona específica (y favorable) del espacio de hipótesis, reduciendo así la varianza asociada. Es comparable a utilizar un sesgo restrictivo, pero enfocado en un subconjunto adecuado de hipótesis, como puede observarse en la Figura~\ref{fig:types-of-bias}.
+La idea general de preferir ciertas soluciones sobre otras, incluso cuando ambas se ajustan igualmente a los datos, se conoce como \textbf{sesgo inductivo suave}~\cite{Wilson2025}. La Figura~\ref{fig:types-of-bias} ilustra este concepto, distinguiéndolo de otros tipos de sesgo. El hecho de considerar estos sesgos inductivos suaves se relaciona directamente con la disminución de la varianza (y, por tanto, también del error) a medida que aumentamos la capacidad del modelo. Este tipo de sesgos se centra en una zona específica (y favorable) del espacio de hipótesis, reduciendo así la varianza asociada. Es comparable a utilizar un sesgo restrictivo, pero enfocado en un subconjunto adecuado de hipótesis, como puede observarse en la Figura~\ref{fig:types-of-bias}.
 
 Por otro lado, a medida que aumenta la cantidad de parámetros, también crece el volumen de soluciones planas en el paisaje de la función de pérdida (como se ha observado en la subsección anterior), lo que facilita el acceso y la selección de una de ellas~\cite{Huang2020}. Así, los modelos más grandes (sobreparametrizados) presentan sesgos inductivos más pronunciados, como se puede observar en la Figura~\ref{fig:overparametrization}.
 
@@ -694,7 +694,7 @@ Ligado a la explicación del fenómeno de la generalización, también surge el 
     donde $\lambda_i$ son los valores propios de la matriz $A$ y $\alpha > 0$ es una constante de regularización.
 \end{definicion}
 
-Así, la dimensionalidad efectiva mide el número de valores propios relativamente grandes, lo que puede interpretarse como una medida de las direcciones significativas en el espacio de parámetros. En particular, la dimensionalidad efectiva de la matriz Hessiana de la función de pérdida, evaluada en el vector de parámetros $w$, cuantifica el número de direcciones agudas (direcciones con curvatura) en el paisaje de pérdidas, es decir, el número de parámetros que están determinados por los datos.
+Así, la dimensionalidad efectiva mide el número de valores propios relativamente grandes, lo que puede interpretarse como una medida de las direcciones significativas en el espacio de parámetros. En particular, la dimensionalidad efectiva de la matriz Hessiana de la función de pérdida, evaluada en el vector de parámetros $w$, cuantifica el número de direcciones agudas (direcciones con curvatura) en el paisaje de la función de pérdida, es decir, el número de parámetros que están determinados por los datos.
 
 Maddox et al.~\cite{Maddox2020} descubrieron que, después del entrenamiento, los modelos grandes tienen menos parámetros efectivos que los modelos más pequeños, al observar su dimensionalidad efectiva. En trabajos más recientes, Goldblum et al.~($2024$)~\cite{Goldblum2024} también demostraron que los LLM presentan un fuerte sesgo hacia soluciones más simples, y que este sesgo es una característica clave para un buen rendimiento. Estos resultados refuerzan la conjetura de que las soluciones más simples tienden a obtener mejores resultados, ya que son más comprensibles y siguen la filosofía de Ockham. Asimismo, el sesgo inductivo hacia estas soluciones contrarresta, de alguna manera, el crecimiento del número de soluciones que no son minimizadoras globales~\cite{Mingard2023}.
 
@@ -717,7 +717,7 @@ Estos nuevos marcos de generalización, aunque no son novedosos y han existido d
     
 Esta cota está relacionada con la cota para espacios finitos de hipótesis, pero incluye una distribución a priori $P(h)$ que pondera las distintas hipótesis, y un espacio de hipótesis numerable en lugar de finito. Además, podemos usar cualquier distribución a priori para evaluar la cota, sin necesidad de que contenga la hipótesis objetivo.
 
-A partir de la ecuación~\eqref{eq:pac-bayes1}, podemos derivar cotas más informativas utilizando una distribución a priori de Solomonoff $P(g) \leq 2^{-K(g|A)}$~\cite{Solomonoff1964}, donde $K$ es la \textbf{complejidad de Kolmogorov libre de prefijo} de $g$ (longitud del programa más corto que produce $g$ utilizando un lenguaje de programación fijo) al tomar como entrada la arquitectura del modelo $A$. Sustituyendo esta cota en la ecuación~\eqref{eq:pac-bayes1}, obtenemos:
+A partir de la ecuación~\eqref{eq:pac-bayes1}, podemos derivar cotas más informativas utilizando una distribución a priori de Solomonoff $P(g) \leq 2^{-K(g|A)}$~\cite{Solomonoff1964}, donde $K$ es la \textbf{complejidad de Kolmogorov libre de prefijo} de $g$ (longitud del programa más corto que produce $g$, utilizando un lenguaje de programación fijo) al tomar como entrada la arquitectura del modelo $A$. Sustituyendo esta cota en la ecuación~\eqref{eq:pac-bayes1}, obtenemos:
 
 \begin{equation}\label{eq:pac-bayes2}
     \mathcal{L}(g) \leq \mathcal{L}_{emp}(g) + \Delta \sqrt{ \frac{ K(g|A)\log (2) + \log \left( \frac{1}{\delta} \right) }{2n} }.
@@ -731,7 +731,7 @@ Aunque en general no podemos calcular el programa más corto, sí podemos acotar
     
 donde $C(g)$ es el número de bits requeridos para representar la hipótesis $g$ usando algún código específico predefinido. Por tanto, incluso modelos con mucha capacidad pueden tener garantías sólidas de generalización a través de la ecuación~\eqref{eq:pac-bayes2}.
 
-Las cotas PAC-Bayes permiten reducir la cantidad de bits desde $\log_2 \left( \frac{1}{P(g)} \right)$ hasta la divergencia de Kullback-Leibler $\text{KL}(Q \| P)$, al considerar una distribución de soluciones deseables $Q$. Estos marcos de generalización han sido adaptados para ofrecer garantías de generalización no triviales en modelos con millones de parámetros, incluyendo redes neuronales y grandes modelos de lenguaje (LLMs)~\cite{Lotfi2024}.
+Las cotas PAC-Bayes permiten reducir la cantidad de bits desde $\log_2 \left( \frac{1}{P(g)} \right)$ hasta la divergencia de Kullback-Leibler $\text{KL}(Q \| P)$\footnote{La divergencia de Kullback-Leibler ($\text{KL}(Q \| P)$) es una medida no simétrica del grado de diferencia o similitud entre dos distribuciones de probabilidad ($Q$ y $P$).}, al considerar una distribución de soluciones deseables $Q$. Estos marcos de generalización han sido adaptados para ofrecer garantías de generalización no triviales en modelos con millones de parámetros, incluyendo redes neuronales y grandes modelos de lenguaje (LLMs)~\cite{Lotfi2024}.
 
 En resumen, estos marcos sugieren que las cotas de generalización pueden interpretarse de la siguiente forma:
 
@@ -741,13 +741,13 @@ En resumen, estos marcos sugieren que las cotas de generalización pueden interp
 
 donde la compresibilidad proporciona una cierta formalización de complejidad.
 
-Este enfoque se relaciona con la \textbf{inducción de Solomonoff}, que propone un procedimiento de aprendizaje ideal y sobreparametrizado al máximo sin límite en la complejidad de la hipótesis~\cite{Solomonoff1964}. Al asignar pesos exponencialmente mayores a programas más simples, la inducción de Solomonoff garantiza que, aunque el espacio de hipótesis sea enorme, la hipótesis elegida será simple si se ajusta bien a los datos.
+Este enfoque se relaciona con la \textbf{inducción de Solomonoff}, que propone un procedimiento de aprendizaje ideal y sobreparametrizado al máximo, sin límite en la complejidad de la hipótesis~\cite{Solomonoff1964}. Al asignar pesos exponencialmente mayores a programas más simples, la inducción de Solomonoff garantiza que, aunque el espacio de hipótesis sea enorme, la hipótesis elegida será simple si se ajusta bien a los datos.
 
 En conclusión, estas ``nuevas'' cotas de generalización tienden a volverse más estrictas, y no más laxas como ocurre con las cotas clásicas, al utilizar modelos más grandes. Esto se debe a que dichos modelos tienden a seleccionar soluciones más simples, en línea con la noción de sesgos inductivos suaves, como se discutió en secciones anteriores. Además, estos límites pueden ser sorprendentemente precisos~\cite{Lotfi2022}.
 
 \section{Aproximación no lineal}\label{sec:aproximacion-no-lineal}
 
-En esta sección, introduciremos algunos elementos fundamentales de la teoría de la aproximación no lineal~\cite{DeVore1998}, la cual está relacionada con el problema del aprendizaje profundo. Además, desarrollaremos ciertos conceptos con el propósito de demostrar la existencia de analogías entre esta teoría y el fenómeno conocido como \textit{Deep Double Descent}, así como de proporcionar una posible explicación desde esta perspectiva.
+En esta sección, introduciremos algunos elementos fundamentales de la teoría de la aproximación no lineal~\cite{DeVore1998}, la cual está relacionada con el problema del aprendizaje profundo. Además, desarrollaremos ciertos conceptos con el propósito de demostrar la existencia de analogías entre esta teoría y el \textit{Deep Double Descent}, así como de proporcionar una posible explicación desde esta perspectiva.
 
 Comenzamos recordando que el problema principal de la teoría de la aproximación es encontrar una representación para una función, generalmente compleja, denominada función objetivo $f$, utilizando funciones más simples llamadas \textbf{aproximantes}. De esta manera, al igual que en el caso del aprendizaje, ambos enfoques buscan aproximar una determinada función a partir de otras más sencillas.
 
@@ -944,7 +944,7 @@ Por su parte, las ecuaciones~\eqref{eq:bases2} y~\eqref{eq:bases3} muestran que 
 
 Supongamos que $\mathbb{D}$ es un diccionario de funciones en $\mathcal{H}$. Para simplificar, asumimos (sin pérdida de generalidad en la aproximación de $n$ términos) que cada $g \in \mathbb{D}$ tiene norma uno, es decir, $\|g\|_{\mathcal{H}} = 1$, y que $-g \in \mathbb{D}$ siempre que $g \in \mathbb{D}$.
 
-Para cada $n \in \mathbb{N}$, definimos $\Sigma_n := \Sigma_n(\mathbb{D})$ como la colección de todas las funciones en $\mathcal{H}$ que pueden expresarse como una combinación lineal de, como máximo, $n$ elementos de $\mathbb{D}$. Así, cada función $S \in \Sigma_n$ puede escribirse de la forma:
+Para cada $n \in \mathbb{N}$, definimos $\Sigma_n = \Sigma_n(\mathbb{D})$ como la colección de todas las funciones en $\mathcal{H}$ que pueden expresarse como una combinación lineal de, como máximo, $n$ elementos de $\mathbb{D}$. Así, cada función $S \in \Sigma_n$ puede escribirse de la forma:
 
 \begin{equation}\label{eq:n-terms1}
     S = \sum_{g \in \Lambda} c_g g, \quad \Lambda \subset \mathbb{D}, \quad \#\Lambda \leq n,
@@ -956,7 +956,7 @@ donde $c_g \in \mathbb{R}$ son los coeficientes. Cabe destacar que un elemento d
     Para una función $f \in \mathcal{H}$, definimos su error de aproximación a partir de un diccionario $\mathbb{D}$ como:
 
     \[
-        \sigma_n(f) := \sigma_n(f, \mathbb{D})_{\mathcal{H}} := \inf_{S \in \Sigma_n} \| f - S \|_{\mathcal{H}}.
+        \sigma_n(f) = \sigma_n(f, \mathbb{D})_{\mathcal{H}} = \inf_{S \in \Sigma_n} \| f - S \|_{\mathcal{H}}.
     \]
 \end{definicion}
 
@@ -1054,7 +1054,7 @@ A modo de conclusión de este inciso sobre la teoría de la aproximación no lin
 
 En primer lugar, el objetivo tanto de la aproximación no lineal como del aprendizaje es esencialmente el mismo: \textbf{aproximar una función objetivo mediante funciones más simples}. En el contexto de la teoría de la aproximación, se suele asumir que se conocen los valores de ciertos funcionales lineales simples aplicados a la función objetivo. En cambio, en el aprendizaje, dicha función es completamente desconocida y solo se tiene acceso a un conjunto finito de observaciones, es decir, se puede interpretar como que se conoce el valor de la aplicación de un número finito de funcionales de evaluación. Asimismo, en ambos contextos se recurre al uso de ``\textbf{procesos no lineales}'' para aproximar la función objetivo, lo que permite capturar comportamientos complejos que no podrían representarse adecuadamente mediante aproximaciones provenientes de espacios lineales.
 
-La base a partir de la cual se construyen los aproximantes también desempeña un papel fundamental. Aunque en el caso de las redes neuronales lo que se utiliza propiamente es un diccionario, este diccionario será dependiente de la base elegida. De esta manera, cuando llevemos a cabo los experimentos relacionados con la aproximación polinómica, veremos cómo la elección de la base influye de manera significativa en los resultados obtenidos, tal como se discutió en la Subsección~\ref{subsubsec:seleccion-optima-bases}. En consecuencia, corroboraremos que ciertas bases resultan más adecuadas para aproximar determinadas funciones. 
+La base a partir de la cual se construyen los aproximantes también desempeña un papel fundamental. Aunque en el caso de utilizar redes neuronales lo que se usa propiamente es un diccionario, este diccionario será dependiente de la base elegida. De esta manera, cuando llevemos a cabo los experimentos relacionados con la aproximación polinómica, veremos cómo la elección de la base influye de manera significativa en los resultados obtenidos, tal como se discutió en la Subsección~\ref{subsubsec:seleccion-optima-bases}. En consecuencia, corroboraremos que ciertas bases resultan más adecuadas para aproximar determinadas funciones. 
 
 De este modo, se puede intuir que los modelos obtienen sus aproximantes a partir de la base elegida hasta alcanzar el umbral de interpolación. Precisamente en ese umbral, el aproximante queda determinado de forma única por el uso completo de la base, lo cual explica que su error de generalización no esté controlado y pueda alcanzar valores elevados.
 
@@ -1066,9 +1066,9 @@ En esta sección hemos expuesto de forma teórica y detallada el \textit{Deep Do
 
 Al mismo tiempo, a partir de la descomposición del error en la suma de sesgo y varianza, se introducen las distintas configuraciones que puede adoptar el error de un modelo. Entre ellas, destaca el fenómeno del doble descenso, el cual surge debido a que el sesgo y la varianza predominan en diferentes regiones del comportamiento del modelo, siendo la varianza la que presenta un comportamiento unimodal. También destacamos que, en la región sobreparametrizada, el conjunto de hipótesis disponibles es mayor. De este modo, el verdadero desafío para comprender el fenómeno reside en entender por qué el algoritmo de aprendizaje selecciona ciertas soluciones dentro de ese conjunto sobre otras, y por qué las hipótesis elegidas tienden a generalizar bien.
 
-A partir de un ejemplo de regresión, se introduce un análisis intuitivo del DDD, en el que se observa que su aparición está estrechamente vinculada al término de la varianza. En particular, se verifica que el máximo del error se produce cerca del umbral de interpolación, debido a la configuración de los valores propios que surgen al resolver el problema de regresión. Ligado a esto, se analiza la convergencia del descenso de gradiente, demostrando que, bajo ciertas hipótesis, dicho algoritmo converge hacia soluciones que son minimizadoras globales en la región sobreparametrizada. Esta propiedad se observa tanto en problemas de regresión como en escenarios con datos separables.
+A partir de un ejemplo de regresión, se introduce un análisis intuitivo del DDD, en el que se observa que su aparición está estrechamente vinculada al término de la varianza. En particular, se verifica que el máximo del error se produce cerca del umbral de interpolación, debido a la configuración de los valores propios que surgen al resolver el problema de regresión asociado. Ligado a esto, se analiza la convergencia del descenso de gradiente, demostrando que, bajo ciertas hipótesis, dicho algoritmo converge hacia soluciones que son minimizadoras globales en la región sobreparametrizada. Esta propiedad se observa tanto en problemas de regresión como en escenarios con datos separables.
 
-A continuación, se presenta la región sobreparametrizada desde el punto de vista de la optimización. En esta sección, se evidencia la existencia de múltiples soluciones dentro de dicha región, así como la ausencia de convexidad local de la función de pérdida en cualquier vecindad de dichas soluciones. Igualmente, se destaca que, mientras en la zona infraparametrizada las soluciones aparecen de forma aislada, en la zona sobreparametrizada estas conforman variedades continuas. 
+A continuación, se presenta la región sobreparametrizada desde el punto de vista de la optimización. En esta sección, se evidencia la existencia de múltiples soluciones dentro de dicha región, así como la ausencia de convexidad local de la función de pérdida en cualquier entorno de dichas soluciones. Igualmente, se destaca que, mientras en la zona infraparametrizada las soluciones aparecen de forma aislada, en la zona sobreparametrizada estas conforman variedades continuas. 
 
 Posteriormente, se introduce una propiedad más débil que la convexidad, la cual debe cumplir la función de pérdida para garantizar que el GD converja hacia un mínimo global en la región sobreparametrizada. A pesar de conocer la existencia de múltiples soluciones en la región moderna, es necesario entender por qué el algoritmo de aprendizaje tiende a seleccionar aquellas que generalizan adecuadamente. Para ello, se introduce, de forma informal, un concepto de suavidad funcional que orienta al modelo hacia hipótesis más simples, en línea con la filosofía de Ockham. De este modo, el algoritmo de aprendizaje induce un sesgo inductivo suave que lo lleva a concentrarse en subconjuntos óptimos dentro del espacio de hipótesis, lo que contribuye a reducir la varianza en esta región. En última instancia, se presentan los marcos de generalización aplicables en esta región, los cuales se basan en la preferencia de ciertas hipótesis sobre otras.
 
