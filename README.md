@@ -32,14 +32,14 @@ Below are some of the key findings observed during our experiments. These result
 ### 🎯 Double Descent in Legendre Polynomial Regression
 
 <div style="text-align: center;">
-  <img src="LaTex/img/experiments/legendre1DDD.png" alt="Polynomial Regression Double Descent" style="width: 95%;"/>
+  <img src="img/legendre1DDD.png" alt="Polynomial Regression Double Descent" style="width: 95%;"/>
   <p><em><strong>Test error vs. Model complexity (number of params)</strong> showing the characteristic double descent curve in a simple regression using Legendre basis.</em></p>
 </div>
 
 <div style="display: flex; justify-content: space-between;">
-  <img src="LaTex/img/experiments/legendre1.1.png" alt="Polynomial Regression Double Descent" style="width: 32%;"/>
-  <img src="LaTex/img/experiments/legendre1.2.png" alt="Another Polynomial Regression Image" style="width: 32%;"/>
-  <img src="LaTex/img/experiments/legendre1.3.png" alt="Third Polynomial Regression Image" style="width: 32%;"/>
+  <img src="img/legendre1.1.png" alt="Polynomial Regression Double Descent" style="width: 32%;"/>
+  <img src="img/legendre1.2.png" alt="Another Polynomial Regression Image" style="width: 32%;"/>
+  <img src="img/legendre1.3.png" alt="Third Polynomial Regression Image" style="width: 32%;"/>
 </div>
 <div style="text-align: center;">
   <em>Different approximations for Legendre basis across various parameterization zones, highlighting implicit regularization in the final overparameterized model (on the right), which results in a solution resembling the initial approximation.</em>
@@ -50,22 +50,22 @@ Below are some of the key findings observed during our experiments. These result
 ### 🧠 Deep Double Double Descent in Neural Networks
 
 <div style="text-align: center;">
-  <img src="LaTex/img/experiments/model-epoch3CNNMNIST30k.png" alt="Deep Double Descent Heatmap" style="width: 95%;"/>
+  <img src="img/model-epoch3CNNMNIST30k.png" alt="Deep Double Descent Heatmap" style="width: 95%;"/>
   <p><em><strong>Deep Double Descent by Model Capacity and Epochs</strong>, showing the test error (left image) in a heatmap versus model complexity (number of parameters) across varying epochs. The image highlights model-wise phenomena (horizontal lines) and epoch-wise phenomena (vertical lines). Additionally, the interpolation threshold — where the model achieves near-zero training error — can be observed in the train error heatmap (right image).</em></p>
 </div>
 
 <div style="text-align: center;">
-  <img src="LaTex/img/experiments/modelwisegh.png" alt="Epoch-wise Double Descent for PreActResNet" style="width: 95%;"/>
+  <img src="img/modelwisegh.png" alt="Epoch-wise Double Descent for PreActResNet" style="width: 95%;"/>
   <p><em><strong>Model-wise Double Descent for 3CNN</strong>, revealing how test error decreases as model capacity increases, with the peak corresponding to the interpolation threshold.</em></p>
 </div>
 
 <div style="text-align: center;">
-  <img src="LaTex/img/experiments/epoch-wisePreActResNet18(45,64).png" alt="Epoch-wise Double Descent for PreActResNet" style="width: 95%;"/>
+  <img src="img/epoch-wisePreActResNet18(45,64).png" alt="Epoch-wise Double Descent for PreActResNet" style="width: 95%;"/>
   <p><em><strong>Epoch-wise Double Descent for PreActResNet</strong>, showing how test error decreases as the model approaches near-zero training error.</em></p>
 </div>
 
 <div style="text-align: center;">
-  <img src="LaTex/img/experiments/epochwisegh.png" alt="Epoch-wise Double Descent for PreActResNet" style="width: 95%;"/>
+  <img src="img/epochwisegh.png" alt="Epoch-wise Double Descent for PreActResNet" style="width: 95%;"/>
   <p><em><strong>Epoch-wise Double Descent for ResNet18</strong>, illustrating how test error can reach an even lower minimum after the second descent.</em></p>
 </div>
 
@@ -92,7 +92,8 @@ Deep-Double-Descent/
 ├── experiments/                            # Experiment scripts and Jupyter notebooks for analysis and testing
 │   ├── PlotNGPUresults                     # Jupyter notebook to plot results from NGPU experiments  
 │   ├── Polynomial_approximation_(OLS_GD)   # Jupyter notebook for polynomial regression approximation (OLS + GD)
-│   └── script                              # Shell script to launch neural network experiments 
+│   └── script                              # Shell script to launch neural network experiments
+├── img/                                    # Images used in the README for documentation purposes
 ├── results/                                # Results obtained from experiments (processed on NGPU)  
 ├── src/                                    # Project source code for neural networks
 │   ├── main/                               # Main fucntion to execute the training process 
