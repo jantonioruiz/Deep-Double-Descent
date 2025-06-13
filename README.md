@@ -88,8 +88,7 @@ Below are some of the key findings observed during our experiments. These result
 ## 4. 📁 Repository Structure
 
 ```plaintext
-Deep-Double-Descent/  
-├── LaTex/                                  # LaTeX document with the project report  
+Deep-Double-Descent/   
 ├── experiments/                            # Experiment scripts and Jupyter notebooks for analysis and testing
 │   ├── PlotNGPUresults                     # Jupyter notebook to plot results from NGPU experiments  
 │   ├── Polynomial_approximation_(OLS_GD)   # Jupyter notebook for polynomial regression approximation (OLS + GD)
